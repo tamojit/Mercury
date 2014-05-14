@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#CEF6F5">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="100dp"
+        android:background="#008199">
+        
+    </LinearLayout>
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="vertical"
+      android:layout_marginLeft="100dp"     
+      android:layout_marginRight="100dp"
+      android:background="#008da7">
+        
+    </LinearLayout>
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:orientation="vertical"
+      android:layout_marginLeft="100dp"     
+      android:layout_marginRight="100dp"
+      android:background="#DBE0E4">
+      
+        <Button 
+            android:id="@+id/btnstart"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:text="START PRACTICE"
+            android:textColor="#ffffff"
+            android:textSize="18dp" 
+            android:background="@drawable/custom_button_blue"/>
+            
+        
+    </LinearLayout>
+  
+
+</LinearLayout>

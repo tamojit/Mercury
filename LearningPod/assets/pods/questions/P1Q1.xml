@@ -1,0 +1,43 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Read the sentence. Use context clues to help you figure out the meaning ..." data-uuid="24dcbbf8-fdeb-4f5e-91ce-d03df100ff82"xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+<choiceQuestion>
+<questionBody>
+<p>
+<b>
+Everyone was
+<u>jovial</u>
+, or cheerful and merry, at Ben's party.
+</b>
+</p>
+<p>
+<br/>
+</p>
+<p>
+Read the sentence. Use context clues to help you figure out the meaning of the word
+<i>jovial</i>
+. Then, choose the correct meaning of the word
+<i>jovial</i>
+.
+</p>
+<p></p>
+<p></p>
+</questionBody>
+<choiceInteraction singleSelect="true" interactionId="1">
+<simpleChoice correct="false" choiceId="1">
+<p>thoughtful and serious</p>
+<p></p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="2">
+<p>tired and worn out</p>
+<p></p>
+</simpleChoice>
+<simpleChoice correct="true" choiceId="3">
+<p>full of joy and good humor</p>
+<p></p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="4">
+<p>full of sadness and grief</p>
+<p></p>
+</simpleChoice>
+</choiceInteraction>
+</choiceQuestion>
+</learningpod>

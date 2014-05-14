@@ -1,0 +1,33 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Read the sentence. Use context clues to help you figure out the meaning of th... " data-uuid="24dcbbf8-fdeb-4f5e-91ce-d03df100ff82" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+<choiceQuestion>
+<questionBody>
+<p></p>
+<p>
+<img data-uuid="589fe41c-97f6-445d-a046-355b34fa1fa6"/>
+</p>
+<p></p>
+<p>
+Read the sentence. Use context clues to help you figure out the meaning of the word
+<i>jovial</i>
+. Then, choose the correct meaning of the word
+<i>jovial</i>
+.
+</p>
+<p></p>
+</questionBody>
+<choiceInteraction singleSelect="true" interactionId="1">
+<simpleChoice correct="false" choiceId="1">
+<p>thoughtful and serious</p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="2">
+<p>tired and worn out</p>
+</simpleChoice>
+<simpleChoice correct="true" choiceId="3">
+<p>full of joy and good humor</p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="4">
+<p>full of sadness and grief</p>
+</simpleChoice>
+</choiceInteraction>
+</choiceQuestion>
+</learningpod>

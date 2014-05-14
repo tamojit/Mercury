@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   
+     <item
+        android:id="@+id/terms"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Terms"/>
+      <item
+        android:id="@+id/about"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="About"/>
+       <item
+        android:id="@+id/help"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Help"/>
+        <item
+        android:id="@+id/login"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Logout"/>
+    
+    
+    
+  
+
+   </menu>
+    

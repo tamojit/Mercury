@@ -1,0 +1,53 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Based on its role in the sentence, what can you tell about the word bobolink? " data-uuid="c24edeb0-b747-4d8d-8fb6-557674a046f5" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+<choiceQuestion>
+<questionBody>
+<p>
+<b>
+As we walked through the forest, we could hear a 
+<u>bobolink</u>
+singing in the trees
+</b>
+</p>
+<p>
+<br/>
+</p>
+
+<p>
+Based on its role in the sentence, what can you tell about the word
+<i>bobolink</i>
+?
+</p>
+<p></p>
+</questionBody>
+<choiceInteraction singleSelect="true" interactionId="1">
+<simpleChoice correct="false" choiceId="1">
+<p>
+The word
+<i>bobolink</i>
+is an adjective. It describes the trees the people saw in the forest.
+</p>
+</simpleChoice>
+<simpleChoice correct="true" choiceId="2">
+<p>
+The word
+<i>bobolink</i>
+is a common noun. It is the thing the people heard in the forest.
+</p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="3">
+<p>
+The word
+<i>bobolink</i>
+is a verb. It tells what the people did in the forest.
+</p>
+</simpleChoice>
+<simpleChoice correct="false" choiceId="4">
+<p>
+The word
+<i>bobolink</i>
+is an adverb. It describes how the people walked.
+</p>
+</simpleChoice>
+</choiceInteraction>
+</choiceQuestion>
+</learningpod>

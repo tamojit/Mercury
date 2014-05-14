@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.learningpod.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/lpicon_small"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <activity
+            android:name="com.learningpod.android.activities.SplashActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity android:name = "com.learningpod.android.activities.HomeScreenActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>        
+        <activity android:name = "com.learningpod.android.activities.HomeScreenActivityWithSlidingMenu"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name = "com.learningpod.android.activities.GooglePlusSignInActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+        <activity android:name = "com.learningpod.android.activities.PodQuestionActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+         <activity android:name = "com.learningpod.android.activities.SummaryActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+         <activity android:name = "com.learningpod.android.activities.MapActivity"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+          <activity android:name = "com.learningpod.android.activities.MapActivityBeforeLogin"
+            android:label="@string/app_name" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+    	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    </application>
+	
+</manifest>

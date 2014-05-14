@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"	  
+       android:layout_width="300dp"
+	   android:layout_height="300dp"	
+       android:orientation="vertical" 
+       android:gravity="center_horizontal">
+	 
+	    <TextView
+	        android:id="@+id/text1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dp"
+	        android:gravity="center"
+	        android:text="Select the email"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	     
+	   <EditText
+	       android:id="@+id/recipient"
+       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:ems="10"
+	       android:inputType="textEmailAddress"
+	       android:hint="Recipient" />
+	 
+	   <EditText
+	       android:id="@+id/subject"
+	       android:layout_width="wrap_content"	     
+	         android:layout_height="wrap_content"
+	       android:ems="10"
+	       android:hint="Subject" />
+	 
+	   <EditText
+	       android:id="@+id/body"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:ems="10"
+	       android:hint="Message body" />
+	 
+	   <Button
+	       android:id="@+id/sendEmail"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_marginTop="30dp"
+	        android:gravity="right"
+	       android:text="Send" 
+	       />
+     
+	
+ 
+ <!--  <Button
+      android:layout_width="wrap_content"
+      android:id="@+id/btnOk"
+      android:text="close"
+     
+      android:gravity="center_horizontal"
+      android:layout_height="wrap_content">
+  </Button> -->
+ 
+  <Button
+      android:layout_width="wrap_content"
+      android:id="@+id/btnCancel"
+      android:text="Cancel"
+       android:gravity="center_horizontal"
+      android:layout_height="wrap_content">
+  </Button>   
+ 
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" podId="8a09f89dc-d43f-4e4a-826b-1b23e41eb6b8" xsi:noNamespaceSchemaLocation="learningpod-pod.xsd">
+  <title>Example Pod</title>
+  <description>This this is an example pod for documention purposes.</description>
+  <scorable>true</scorable>
+  <userId>2</userId>
+  <podElements>
+    <question itemId="24dcbbf8-fdeb-4f5e-91ce-d03df100ff82" accessId="2" elementId="3" version="1" score="5.0" questionNumber="2">
+      <explanations>
+        <explanation itemId="80e3611b-3d70-4ef7-b4b9-a44f2cad253d" accessId="1" elementId="4" />
+      </explanations>
+    </question>    
+  </podElements>
+</pod>

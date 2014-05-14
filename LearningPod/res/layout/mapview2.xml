@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map2" >
+    
+    
+        		<ImageButton 
+    		    android:id = "@+id/planet6"
+    		    android:layout_width="60dp"
+    		    android:layout_height="60dp"
+    		    android:layout_marginLeft="60dp"
+    		    android:layout_marginTop="75dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/plane7"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet6name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="14sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Multiple Meaning words"
+    		    android:layout_toRightOf="@+id/planet6"
+    		    android:layout_marginTop="90dp"
+    		    android:layout_marginLeft="5dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet6ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="70dp"
+    		    android:layout_marginTop="5dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="50dp"    		    
+    		    android:layout_height="5dp"
+    		    android:layout_marginTop="55dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_toRightOf="@+id/planet6ss"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet6pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="5dp"
+    		        android:visibility="invisible"
+    		        android:background="#FF0000"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet6pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="5dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    
+    	<ImageButton 
+    		    android:id = "@+id/planet7"
+    		    android:layout_width="50dp"
+    		    android:layout_height="50dp"
+    		    android:layout_marginLeft="250dp"
+    		    android:layout_marginTop="155dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/plane8"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet7name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="14sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Prefixes"
+    		    android:layout_toRightOf="@+id/planet7"
+    		    android:layout_marginTop="160dp"
+    		    android:layout_marginLeft="10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet7ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="255dp"
+    		    android:layout_marginTop="80dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="50dp"    		    
+    		    android:layout_height="5dp"
+    		    android:layout_marginTop="140dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_toRightOf="@+id/planet7ss"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet7pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="5dp"
+    		        android:visibility="invisible"
+    		        android:background="#FF0000"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet7pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="5dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    		<ImageButton 
+    		    android:id = "@+id/planet8"
+    		    android:layout_width="50dp"
+    		    android:layout_height="50dp"
+    		    android:layout_marginLeft="420dp"
+    		    android:layout_marginTop="120dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/plane9"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet8name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="14sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Suffixes"
+    		    android:layout_toRightOf="@+id/planet8"
+    		    android:layout_marginTop="120dp"
+    		    android:layout_marginLeft="5dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet8ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="425dp"
+    		    android:layout_marginTop="45dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="50dp"    		    
+    		    android:layout_height="5dp"
+    		    android:layout_marginTop="100dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_toRightOf="@+id/planet8ss"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet8pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="5dp"
+    		        android:visibility="invisible"
+    		        android:background="#FF0000"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet8pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="5dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    
+    		<ImageButton 
+    		    android:id = "@+id/planet9"
+    		    android:layout_width="50dp"
+    		    android:layout_height="50dp"
+    		    android:layout_marginLeft="550dp"
+    		    android:layout_marginTop="145dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/plane10"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet9name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="14sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Greek and Latin roots"
+    		    android:layout_toRightOf="@+id/planet9"
+    		    android:layout_marginTop="155dp"
+    		    android:layout_marginLeft="5dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet9ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="555dp"
+    		    android:layout_marginTop="70dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="50dp"    		    
+    		    android:layout_height="5dp"
+    		    android:layout_marginTop="125dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_toRightOf="@+id/planet9ss"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet9pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="5dp"
+    		        android:visibility="invisible"
+    		        android:background="#FF0000"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet9pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="5dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    <ImageButton 
+    		    android:id = "@+id/planet10"
+    		    android:layout_width="50dp"
+    		    android:layout_height="50dp"
+    		    android:layout_marginLeft="720dp"
+    		    android:layout_marginTop="255dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/plane11"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet10name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="14sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Vocabulary Acquisition &amp; use"
+    		    android:layout_toRightOf="@+id/planet10"
+    		    android:layout_marginTop="245dp"
+    		    android:layout_marginLeft="5dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet10ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="725dp"
+    		    android:layout_marginTop="178dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="50dp"    		    
+    		    android:layout_height="5dp"
+    		    android:layout_marginTop="225dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_toRightOf="@+id/planet10ss"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet10pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="5dp"
+    		        android:visibility="invisible"
+    		        android:background="#FF0000"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet10pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="5dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    
+    
+    
+    <ImageView
+    		    android:id = "@+id/planetnavigation3"
+    		    
+    		    android:layout_marginLeft="210dp"
+    		    android:layout_marginTop="280dp" 
+    		    android:layout_gravity="left"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/planetnavigation"/>
+    			
+    			 <ImageView
+    		    android:id = "@+id/planetnavigation2"
+    		    
+    		    android:layout_marginLeft="740dp"
+    		    android:layout_marginTop="280dp" 
+    		    android:layout_gravity="right"
+    		    android:layout_width="50dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/planetnavigation"/>
+    
+    
+    
+    
+    
+    			<Button android:layout_width="150dp" 
+    			    android:layout_marginTop="280dp"
+    			    android:layout_marginLeft="50dp"   			    
+	                android:id="@+id/btnmap2prev"	                 
+	                android:layout_height="75dp"
+	                android:textSize="18sp"
+	                android:text = "BACK"
+	                android:background="@drawable/previous"
+	                android:textColor="#ffffff"
+	                android:textStyle="bold"	                
+	                
+	                />
+    			
+    			<Button android:layout_width="150dp" 
+    			    android:layout_marginTop="280dp"
+    			    android:layout_marginLeft="800dp"   			    
+	                android:id="@+id/btnmap2next"
+	                android:layout_gravity="right"
+	                android:layout_height="75dp"
+	                android:textSize="18sp"
+	                android:text = "NEXT"
+	                android:background="@drawable/next"
+	                android:textColor="#ffffff"
+	                android:textStyle="bold"	                
+	                
+	                />
+    
+
+</RelativeLayout>
