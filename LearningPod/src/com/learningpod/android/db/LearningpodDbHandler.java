@@ -34,6 +34,7 @@ public class LearningpodDbHandler {
 	
 	public void deleteAllDataFromDB(){
 		database.delete(LearningpodSqliteHelper.USER_PROGRESS_TRACKER_TABLE, null, null);
+		database.delete(LearningpodSqliteHelper.USER_TEACHER_TABLE, null, null);
 	}
 	public void close() {
 		dbHelper.close();
@@ -77,6 +78,14 @@ public class LearningpodDbHandler {
 			}
 		}
 		return userProgressList;
+	}
+	
+	public void storeUserTeacherMapping(String userId, String teacheremail){
+		
+	}
+	
+	public String getTeacherEmail(String userId){
+		return "";
 	}
 	
 }
