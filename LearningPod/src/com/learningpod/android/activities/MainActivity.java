@@ -235,7 +235,7 @@ public class MainActivity extends Activity implements OnClickListener,
 	 * */
 	@Override
 	public void onClick(View v) {
-		switch (v.getId()) {
+		/*switch (v.getId()) {
 		case R.id.btn_sign_in:
 			// Signin button clicked
 			signInWithGplus();
@@ -248,7 +248,7 @@ public class MainActivity extends Activity implements OnClickListener,
 			// Revoke access button clicked
 			revokeGplusAccess();
 			break;
-		}
+		}*/
 	}
 
 	/**
