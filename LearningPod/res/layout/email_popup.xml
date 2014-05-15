@@ -1,66 +1,31 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"	  
-       android:layout_width="300dp"
-	   android:layout_height="300dp"	
-       android:orientation="vertical" 
-       android:gravity="center_horizontal">
-	 
-	    <TextView
-	        android:id="@+id/text1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginBottom="20dp"
-	        android:gravity="center"
-	        android:text="Select the email"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	     
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="640dp"
+    android:layout_height="450dp"
+    android:orientation="vertical"
+    android:background="@drawable/emailpanelpop"
+  >  
+	
 	   <EditText
-	       android:id="@+id/recipient"
-       android:layout_width="wrap_content"
+	       android:id="@+id/toaddress"
+           android:layout_width="520dp"
 	       android:layout_height="wrap_content"
 	       android:ems="10"
+	       android:textSize="25dp"
+	       android:textColor="#EADB66"
+	       android:layout_marginTop="226dp"
+	       android:layout_marginLeft="73dp"
 	       android:inputType="textEmailAddress"
-	       android:hint="Recipient" />
-	 
-	   <EditText
-	       android:id="@+id/subject"
-	       android:layout_width="wrap_content"	     
-	         android:layout_height="wrap_content"
-	       android:ems="10"
-	       android:hint="Subject" />
-	 
-	   <EditText
-	       android:id="@+id/body"
-	       android:layout_width="wrap_content"
-	       android:layout_height="wrap_content"
-	       android:ems="10"
-	       android:hint="Message body" />
+	      />
 	 
 	   <Button
 	       android:id="@+id/sendEmail"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"
-	       android:layout_marginTop="30dp"
-	        android:gravity="right"
-	       android:text="Send" 
+	       android:layout_marginTop="350dp"
+	       android:layout_marginLeft="420dp"
+	       android:gravity="right"
+	       android:background="@drawable/mailsendbutton"
+	       android:text="" 
 	       />
-     
-	
- 
- <!--  <Button
-      android:layout_width="wrap_content"
-      android:id="@+id/btnOk"
-      android:text="close"
-     
-      android:gravity="center_horizontal"
-      android:layout_height="wrap_content">
-  </Button> -->
- 
-  <Button
-      android:layout_width="wrap_content"
-      android:id="@+id/btnCancel"
-      android:text="Cancel"
-       android:gravity="center_horizontal"
-      android:layout_height="wrap_content">
-  </Button>   
- 
-</LinearLayout>
+    
+</RelativeLayout>

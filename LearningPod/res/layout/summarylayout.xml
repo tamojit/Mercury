@@ -77,12 +77,14 @@
 						    android:textColor="#028199" />
                	      
                	      </RelativeLayout>
-               	      <Button
-               				android:id="@+id/sendMailBt"
-              				 android:layout_width="wrap_content"
-              					 android:layout_height="wrap_content"
-               	android:background="@android:color/white"
-               android:text="Send Mail" />
+                     <Button
+               		  android:id="@+id/sendMailBt"
+              		  android:layout_width="240dp"
+              		  android:layout_height="wrap_content"
+               	      android:layout_marginTop="20dp"
+               	      android:layout_marginLeft="10dp"
+                      
+                      android:background="@drawable/emailresults" />
                	      
                	  </LinearLayout>
                	   <LinearLayout 

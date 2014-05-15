@@ -288,20 +288,20 @@
     <ImageView
     		    android:id = "@+id/planetnavigation3"
     		    
-    		    android:layout_marginLeft="210dp"
-    		    android:layout_marginTop="280dp" 
+    		    android:layout_marginLeft="227dp"
+    		    android:layout_marginTop="290dp" 
     		    android:layout_gravity="left"
-    		    android:layout_width="50dp"
+    		    android:layout_width="83dp"
     		    android:layout_height="80dp"
     		    android:src="@drawable/planetnavigation"/>
     			
     			 <ImageView
     		    android:id = "@+id/planetnavigation2"
     		    
-    		    android:layout_marginLeft="740dp"
-    		    android:layout_marginTop="280dp" 
+    		    android:layout_marginLeft="694dp"
+    		    android:layout_marginTop="290dp" 
     		    android:layout_gravity="right"
-    		    android:layout_width="50dp"
+    		    android:layout_width="83dp"
     		    android:layout_height="80dp"
     		    android:src="@drawable/planetnavigation"/>
     
