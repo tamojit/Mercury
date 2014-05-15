@@ -164,7 +164,8 @@
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:orientation="horizontal" >
+               android:orientation="horizontal"
+               android:layout_marginRight="35dp" >
 
                <ImageView
                    android:id="@+id/choiceresulticon"
@@ -192,7 +193,8 @@
                android:id="@+id/choicecontainer"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:orientation="vertical" >
+               android:orientation="vertical"
+               android:layout_marginRight="35dp" >
            </LinearLayout>
 
            <LinearLayout
