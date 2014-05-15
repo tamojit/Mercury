@@ -9,12 +9,12 @@ public class LearningpodSqliteHelper extends SQLiteOpenHelper{
 	
 	  public static  String DATABASE_NAME = "lpProddb";
 	  public static final String USER_PROGRESS_TRACKER_TABLE = "UserProgressTracker";
-	  
+	  public static final String USER_TEACHER_TABLE="UserTeacherTable";
 	  private static final int DATABASE_VERSION = 1;
 
 	  // Table creation statements
 	  public static final String USER_PROGRESS_TRACKER_QUERY = "create table UserProgressTracker ( UserId Text Not Null, PodId Text Not Null, QuestionId Text, ChoiceId Text, ChoiceStatus INTEGER);";
-	  public static final String USER_TEACHER_TABLE = "create table UserTeacherTable UserId text Not Null, TeacherEmail text);";
+	  public static final String USER_TEACHER_TABLE_QUERY = "create table UserTeacherTable( UserId text Not Null, TeacherEmail text);";
 	  public LearningpodSqliteHelper(Context context) {
 	    super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	  }
@@ -22,7 +22,7 @@ public class LearningpodSqliteHelper extends SQLiteOpenHelper{
 	  @Override
 	  public void onCreate(SQLiteDatabase database) {
 	    database.execSQL(USER_PROGRESS_TRACKER_QUERY);
-	    database.execSQL(USER_TEACHER_TABLE);
+	    database.execSQL(USER_TEACHER_TABLE_QUERY);
 	    
 	  }
 

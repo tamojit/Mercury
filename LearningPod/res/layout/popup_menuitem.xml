@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="400dp"
-    android:layout_height="200dp"
+   android:layout_width="600dp"
+    android:layout_height="450dp"
     android:orientation="vertical"
-   android:background="#BC6BDF"
+   android:background="@drawable/popupmenu"
      >  
     
     
@@ -12,17 +12,23 @@
        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
        android:text=""
        android:textColor="@android:color/white"
-       android:textSize="16dip" />
+       android:textSize="22dip" />
+      
        <Button
         android:id="@+id/close"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Close" 
+        android:text="CLOSE" 
+        android:textSize="20dip"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sendbuttonbg"
         />
    
 </RelativeLayout>

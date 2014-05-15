@@ -11,6 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class LearningpodDbHandler {
 
@@ -81,11 +82,28 @@ public class LearningpodDbHandler {
 	}
 	
 	public void storeUserTeacherMapping(String userId, String teacheremail){
+		String id= userId;
+		ContentValues values = new ContentValues();
+		values.put("TeacherEmail", teacheremail);
+	   /*  if(getTeacherEmail(id)!="")
+	     {
+	    	 database.update(dbHelper.USER_TEACHER_TABLE, values,"UserId='" + id + "'", null);
+	     }*/
 		
-	}
+	     values.put("UserId", id);
+		database.insert(dbHelper.USER_TEACHER_TABLE,null,values);
+		Log.i("emailstored", "email="+teacheremail);
+	  }
 	
-	public String getTeacherEmail(String userId){
-		return "";
+	public String getTeacherEmail(String userID){
+		
+		Cursor cursor = database.rawQuery("select * from UserTeacherTable where UserId ='" +userID + "'" , null);
+		if(cursor.moveToFirst()){
+			return cursor.getString(1);
+		}
+		else return "";
+		
+		
 	}
 	
 }

@@ -28,9 +28,9 @@ public class BaseActivity extends Activity implements
 
 	private ProgressDialog progressDialog;
 	private AlertDialog alertDialog;
-	private PopupWindow loginWindow;
+	private PopupWindow menuitempopup;
 	private Account[] accounts = null;
-	public String detail;
+	
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +46,12 @@ public class BaseActivity extends Activity implements
 		this.alertDialog.setCancelable(false);
 	}
 
-	private void initPopup(String detail) {
+	private void menupopup(String detail) {
 
-		loginWindow = new PopupWindow(400, 200);
+		menuitempopup = new PopupWindow(600, 450);
 		View loginWindowView = getLayoutInflater().inflate(
 				R.layout.popup_menuitem, null);
-		loginWindow.setContentView(loginWindowView);
+		menuitempopup.setContentView(loginWindowView);
 		//
 		TextView textinpopup = (TextView) loginWindowView
 				.findViewById(R.id.text);
@@ -65,7 +65,7 @@ public class BaseActivity extends Activity implements
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				{
-					loginWindow.dismiss();
+					menuitempopup.dismiss();
 				}
 
 			}
@@ -92,21 +92,21 @@ public class BaseActivity extends Activity implements
 		// TODO Auto-generated method stub
 		if (item.getItemId() == R.id.help) {
 
-			detail = "help";
-			initPopup("help");
-			loginWindow.showAtLocation(findViewById(android.R.id.content)
+			
+			menupopup("help");
+			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		}
 
 		else if (item.getItemId() == R.id.about) {
-			detail = "about";
-			initPopup("about");
-			loginWindow.showAtLocation(findViewById(android.R.id.content)
+		
+			menupopup("about");
+			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		} else if (item.getItemId() == R.id.terms) {
-			detail = "terms";
-			initPopup("terms");
-			loginWindow.showAtLocation(findViewById(android.R.id.content)
+			
+			menupopup("terms");
+			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		} else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
