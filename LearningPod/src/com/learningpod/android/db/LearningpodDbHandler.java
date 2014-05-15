@@ -82,17 +82,16 @@ public class LearningpodDbHandler {
 	}
 	
 	public void storeUserTeacherMapping(String userId, String teacheremail){
-		String id= userId;
-		ContentValues values = new ContentValues();
-		values.put("TeacherEmail", teacheremail);
-	   /*  if(getTeacherEmail(id)!="")
-	     {
-	    	 database.update(dbHelper.USER_TEACHER_TABLE, values,"UserId='" + id + "'", null);
-	     }*/
 		
-	     values.put("UserId", id);
-		database.insert(dbHelper.USER_TEACHER_TABLE,null,values);
-		Log.i("emailstored", "email="+teacheremail);
+		ContentValues values = new ContentValues();		
+	     if(getTeacherEmail(userId).equals("")){
+	    	 values.put("TeacherEmail", teacheremail);
+	    	 database.update(dbHelper.USER_TEACHER_TABLE, values,"UserId='" + userId + "'", null);
+	     }
+	     else{
+	    	 values.put("UserId", userId);
+	 		database.insert(dbHelper.USER_TEACHER_TABLE,null,values);
+	     } 
 	  }
 	
 	public String getTeacherEmail(String userID){
@@ -102,8 +101,6 @@ public class LearningpodDbHandler {
 			return cursor.getString(1);
 		}
 		else return "";
-		
-		
 	}
 	
 }

@@ -751,38 +751,44 @@ public class PodQuestionActivity extends BaseActivity {
 				popupmail.dismiss();
 			}
 		});
+		// set the focus on send button so that the keyboard is not open when the 
+		// popup window is displayed
+		sendBtn.setFocusable(true);
+		sendBtn.setFocusableInTouchMode(true);
+		sendBtn.requestFocus();
 		popupmail.show();
 	}
 
-	private void sendEmailold(String recipient) {
-
-		Intent sendIntent = new Intent();
-		sendIntent.setAction(Intent.ACTION_SEND);
-		sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-		sendIntent.setType("text/plain"); 
-	}
-
+	
 	private void sendEmail(String recipient) {
 
-		Intent email = new Intent(Intent.ACTION_SEND);	
+		Intent email = new Intent(Intent.ACTION_SEND);
 		email.setType("text/html");
-		List<android.content.pm.ResolveInfo> resInfo = getPackageManager().queryIntentActivities(email, 0);
+		List<android.content.pm.ResolveInfo> resInfo = getPackageManager()
+				.queryIntentActivities(email, 0);
 
-		if (!resInfo.isEmpty())
-		{
-		    for (android.content.pm.ResolveInfo info : resInfo) 
-		    {
-		    if (info.activityInfo.packageName.toLowerCase().contains("gmail") || info.activityInfo.name.toLowerCase().contains("gmail")) 
-		    {
-		            email.putExtra(android.content.Intent.EXTRA_TEXT, "summay body");
-		            email.setPackage(info.activityInfo.packageName);   
-		            startActivity(Intent.createChooser(email, ""));
-		        }
-		    } 
+		if (!resInfo.isEmpty()) {
+			for (android.content.pm.ResolveInfo info : resInfo) {
+				if (info.activityInfo.packageName.toLowerCase().contains(
+						"gmail")
+						|| info.activityInfo.name.toLowerCase().contains(
+								"gmail")) {
+					email.putExtra(android.content.Intent.EXTRA_TEXT,
+							createSummaryMailBody());
+					email.setPackage(info.activityInfo.packageName);
+					startActivity(Intent.createChooser(email, ""));
+				}
+			}
 		}
-		//email.setType("message/rfc822");
-		//startActivity(Intent.createChooser(email, "Choose an Email client :"));
-
+		else{
+			 email.setType("message/rfc822");
+			 startActivity(Intent.createChooser(email,
+			 "Choose an Email client :"));
+		}
+	}
+	
+	private String createSummaryMailBody(){
+		return "summary body";
 	}
 
 	private void animateAlienImageView() {

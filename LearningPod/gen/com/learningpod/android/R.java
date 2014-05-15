@@ -372,10 +372,11 @@ containing a value of this type.
         public static final int spaceshipwithoutflag=0x7f0200a1;
         public static final int star=0x7f0200a2;
         public static final int summary_question=0x7f0200a3;
-        public static final int tick=0x7f0200a4;
-        public static final int twitter=0x7f0200a5;
-        public static final int yahoo=0x7f0200a6;
-        public static final int yammer=0x7f0200a7;
+        public static final int summarybg=0x7f0200a4;
+        public static final int tick=0x7f0200a5;
+        public static final int twitter=0x7f0200a6;
+        public static final int yahoo=0x7f0200a7;
+        public static final int yammer=0x7f0200a8;
     }
     public static final class id {
         public static final int about=0x7f060098;

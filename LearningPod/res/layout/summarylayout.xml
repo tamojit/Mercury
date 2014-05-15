@@ -14,7 +14,7 @@
            <LinearLayout             
 	       		android:layout_width="match_parent"
 	     		android:layout_height="match_parent"    
-			    android:background="@drawable/bg1"
+			    android:background="@drawable/summarybg"
 			    android:weightSum="1"
 			    android:orientation="horizontal">
                
@@ -79,7 +79,7 @@
                	      </RelativeLayout>
                      <Button
                		  android:id="@+id/sendMailBt"
-              		  android:layout_width="240dp"
+              		  android:layout_width="320dp"
               		  android:layout_height="wrap_content"
                	      android:layout_marginTop="20dp"
                	      android:layout_marginLeft="10dp"
