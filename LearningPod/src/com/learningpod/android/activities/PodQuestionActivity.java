@@ -283,7 +283,7 @@ public class PodQuestionActivity extends BaseActivity {
 			if(isCurrentSelectedChoiceCorrect){
 				TextView choiceLabelText = (TextView)findViewById(R.id.choicelabel);						
 				choiceLabelText.setText("Yay! The correct answer is " + choiceSeqArr[currentSelectedChoiceIndex]);
-				choiceLabelText.setTextColor(Color.parseColor("#74DF00"));
+				choiceLabelText.setTextColor(Color.parseColor("#9acc4e"));
 				choiceLabelText.setTextSize(18);
 				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
 				// show the correct/wrong icon			
@@ -302,7 +302,7 @@ public class PodQuestionActivity extends BaseActivity {
 				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
 				// show the correct/wrong icon			
 				resultIcon.setVisibility(View.VISIBLE);
-				resultIcon.setBackgroundResource(R.drawable.crossnew);
+				resultIcon.setBackgroundResource(R.drawable.cross);
 				// set the border image for the choice selected
 				choiceViewList.get(currentSelectedChoiceIndex).setBackgroundResource(R.drawable.choice_selected_wrong);
 				// set the border image for the correct choice
