@@ -12,6 +12,6 @@
       android:bottomRightRadius="0dp"
       android:bottomLeftRadius="0dp" />
   <stroke
-      android:width="6dp"
+      android:width="4dp"
       android:color="#e6855b" />
 </shape>

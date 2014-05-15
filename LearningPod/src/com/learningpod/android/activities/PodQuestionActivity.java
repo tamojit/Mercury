@@ -155,10 +155,10 @@ public class PodQuestionActivity extends BaseActivity {
 		// clear the progress layout
 		progressLayout.removeAllViews();
 		//convert the desired dp value to pixel for creating layout parameters
-		int progressViewWidthInPx = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30, getResources().getDisplayMetrics());
+		int progressViewWidthInPx = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25, getResources().getDisplayMetrics());
 		LinearLayout.LayoutParams progressLayoutParams = new LinearLayout.LayoutParams(progressViewWidthInPx,progressViewWidthInPx);
 		//set the margins after necessary conversions from pixels to dp
-		progressLayoutParams.setMargins((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics())
+		progressLayoutParams.setMargins((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics())
 				, (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics())
 				, 0, 0);
 		progressLayoutParams.gravity = Gravity.TOP;
@@ -284,7 +284,7 @@ public class PodQuestionActivity extends BaseActivity {
 				TextView choiceLabelText = (TextView)findViewById(R.id.choicelabel);						
 				choiceLabelText.setText("Yay! The correct answer is " + choiceSeqArr[currentSelectedChoiceIndex]);
 				choiceLabelText.setTextColor(Color.parseColor("#74DF00"));
-				choiceLabelText.setTextSize(20);
+				choiceLabelText.setTextSize(18);
 				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
 				// show the correct/wrong icon			
 				resultIcon.setVisibility(View.VISIBLE);
@@ -298,11 +298,11 @@ public class PodQuestionActivity extends BaseActivity {
 				TextView choiceLabelText = (TextView)findViewById(R.id.choicelabel);						
 				choiceLabelText.setText("Oops! The correct answer is " + choiceSeqArr[quesToCorrectAnswerMap.get(Integer.valueOf(currentQuestionIndex))]);
 				choiceLabelText.setTextColor(Color.parseColor("#e6855b"));
-				choiceLabelText.setTextSize(20);
+				choiceLabelText.setTextSize(18);
 				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
 				// show the correct/wrong icon			
 				resultIcon.setVisibility(View.VISIBLE);
-				resultIcon.setBackgroundResource(R.drawable.cross);
+				resultIcon.setBackgroundResource(R.drawable.crossnew);
 				// set the border image for the choice selected
 				choiceViewList.get(currentSelectedChoiceIndex).setBackgroundResource(R.drawable.choice_selected_wrong);
 				// set the border image for the correct choice
@@ -333,7 +333,7 @@ public class PodQuestionActivity extends BaseActivity {
 			TextView choiceLabelText = (TextView)findViewById(R.id.choicelabel);	
 			choiceLabelText.setText("CHOOSE THE CORRECT ANSWER");
 			choiceLabelText.setTextColor(Color.parseColor("#ffffff"));
-			choiceLabelText.setTextSize(13);
+			choiceLabelText.setTextSize(15);
 			choiceLabelText.setTypeface(Typeface.DEFAULT);
 			ImageView resultIcon = (ImageView)findViewById(R.id.choiceresulticon);
 			resultIcon.setVisibility(View.GONE);
@@ -648,7 +648,7 @@ public class PodQuestionActivity extends BaseActivity {
 	      sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
 	      sendIntent.setType("text/plain");
 	    
-	      startActivity(Intent.createChooser(sendIntent, getResources().getText(R.id.toaddress)));
+	      //startActivity(Intent.createChooser(sendIntent, getResources().getText(R.id.toaddress)));
     try {
 	       
 	      } catch (android.content.ActivityNotFoundException ex) {
