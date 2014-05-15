@@ -19,6 +19,7 @@ import com.learningpod.android.beans.questions.QuestionChoiceBean;
 import com.learningpod.android.db.LearningpodDbHandler; 
 import com.learningpod.androind.listeners.ChoiceSelectListner;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager; 
 import android.graphics.BitmapFactory;
@@ -45,7 +46,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ActionBar;
-
+import android.app.Dialog;
+import android.app.Activity;
 public class PodQuestionActivity extends BaseActivity {
 
 	private ArrayList<QuestionBean> questions;
@@ -65,7 +67,11 @@ public class PodQuestionActivity extends BaseActivity {
 	private boolean isBackButtonPressed = false;
 	private Typeface font = null;
 	private Typeface headerFont = null;
-	
+	private PopupWindow popupmail;
+	private String putinmailaddress;
+	private String teacheremail;
+	private String userId;
+	final Context context = this;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -586,73 +592,70 @@ public class PodQuestionActivity extends BaseActivity {
 				
 				createEmailPopUp();
 			}
-
-			
 		});
 		
 	}
 	private void createEmailPopUp() {
-		final PopupWindow mpopup;
-        View popUpView = getLayoutInflater().inflate(R.layout.email_popup, null); // inflating popup layout
-        mpopup = new PopupWindow(popUpView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true); //Creation of popup
-        mpopup.setAnimationStyle(android.R.style.Animation_Dialog);  
-        mpopup.showAtLocation(popUpView, Gravity.CENTER, 0, 0);    // Displaying popup
-       
+		Log.i("dee", "in method");
+      //  View popUpView = getLayoutInflater().inflate(R.layout.email_popup, null); // inflating popup layout
+      //  popupmail = new PopupWindow(popUpView, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true); //Creation of popup
+     //   popupmail.setAnimationStyle(android.R.style.Animation_Dialog);  
+     //   popupmail.showAtLocation(popUpView, Gravity.CENTER, 0, 0);    // Displaying popup
+		final Dialog popupmail = new Dialog(context);
+		popupmail.setContentView(R.layout.email_popup);
+   //     final EditText recipient = (EditText)popupmail.findViewById(R.id.toaddress);
+  //      Log.i("inside", "email=");
         
-        final EditText recipient = (EditText) popUpView.findViewById(R.id.recipient);
-        final EditText subject = (EditText) popUpView.findViewById(R.id.subject);
-        final EditText body = (EditText) popUpView.findViewById(R.id.body);
-        	       
-        	    Button sendBtn = (Button)popUpView.findViewById(R.id.sendEmail);
-              sendBtn.setOnClickListener(new View.OnClickListener() {
-       	         public void onClick(View view) {
-        	             sendEmail(recipient.getText().toString(),subject.getText().toString()
-        	            		 ,body.getText().toString());
-        	             // after sending the email, clear the fields
-                     recipient.setText("");
-       	             subject.setText("");
-        	         body.setText("");
-        	         }
-
-				
-              });
-           
+ //    LearningpodDbHandler dbHandler = new LearningpodDbHandler(PodQuestionActivity.this);
+  //   dbHandler.open();
+       
+  //  String userId = ContentCacheStore.getContentCache().getLoggedInUserProfile().getId();
+ //   Log.i("uid", "email="+userId);
+  //  String mail =dbHandler.getTeacherEmail(userId);
+//    Log.i("emailADD", "email="+mail);
+//    Log.i("emaillen", "emaillenght="+mail.length());
+   //  if(dbHandler.getTeacherEmail(userId)!= "")
+   //  { 
+   // 	  putinmailaddress=dbHandler.getTeacherEmail(userId);
+    //	  recipient.setText(putinmailaddress);
+              
+   //  }
+     
+   //     dbHandler.close();
+//        Button sendBtn = (Button)popupmail.findViewById(R.id.sendEmail);
+//        sendBtn.setOnClickListener(new View.OnClickListener() {
+//        public void onClick(View view) {
+            		 
+         // after sending the email, clear the fields
+     //   LearningpodDbHandler dbHandler = new LearningpodDbHandler(PodQuestionActivity.this);
+     //   dbHandler.open();        
+    //    String userId = ContentCacheStore.getContentCache().getLoggedInUserProfile().getId();
+   //     teacheremail=recipient.getText().toString();
+    //    dbHandler.storeUserTeacherMapping(userId,teacheremail);
+   //     dbHandler.close();
+          Log.i("final", "email="+userId);
+//          sendEmail(recipient.getText().toString());
+ //                  popupmail.dismiss();
+//           }
+	
+ //        });
         
-       
-       
-        Button btnCancel = (Button)popUpView.findViewById(R.id.btnCancel);
-        btnCancel.setOnClickListener(new OnClickListener()
-        {                   
-            @Override
-            public void onClick(View v)
-            {
-                mpopup.dismiss(); //dismissing the popup
-            }
-        });
-    
 	}
-   
-      	 
-    private void sendEmail(String recipient,String subject,String body) {
+    private void sendEmail(String recipient) {
 					
-
-   
 	      Intent sendIntent = new Intent();
 	      sendIntent.setAction(Intent.ACTION_SEND);
 	      sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
 	      sendIntent.setType("text/plain");
 	    
-	      startActivity(Intent.createChooser(sendIntent, getResources().getText(R.id.recipient)));
+	      startActivity(Intent.createChooser(sendIntent, getResources().getText(R.id.toaddress)));
     try {
-	        
-        
-	         
+	       
 	      } catch (android.content.ActivityNotFoundException ex) {
        Toast.makeText(PodQuestionActivity.this, "No email client installed.",
                Toast.LENGTH_LONG).show();
 	      }
-	   
-					
+	 			
 	}
 	private void animateAlienImageView(){
 		final ImageView alienForQues = (ImageView)findViewById(R.id.alienforquestion);
