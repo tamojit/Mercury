@@ -8,11 +8,13 @@ import com.learningpod.android.BackgroundTasks;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
+
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 import com.learningpod.android.db.LearningpodDbHandler;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -287,7 +289,6 @@ public class MapActivity extends BaseActivity implements OnClickListener{
             mapFlipper.showPrevious();
 		}
 		 
-		
 	}
 
 
