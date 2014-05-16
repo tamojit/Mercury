@@ -8,12 +8,14 @@ import com.learningpod.android.BackgroundTasks;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
+
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -209,10 +211,10 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
 			
 		}
+		
 	}
 	
 	public void showLoginWindow(){
 		loginWindow.showAtLocation(mapFlipper, Gravity.CENTER, 0, 0);
 	}
 }
-//bbbbb
