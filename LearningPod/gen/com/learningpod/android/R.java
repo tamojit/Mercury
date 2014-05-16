@@ -542,27 +542,28 @@ containing a value of this type.
         public static final int activity_account_selector=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_main_old=0x7f030002;
-        public static final int choice_view=0x7f030003;
-        public static final int custm=0x7f030004;
-        public static final int customprog=0x7f030005;
-        public static final int drawer_list_item=0x7f030006;
-        public static final int email_popup=0x7f030007;
-        public static final int fragment_home=0x7f030008;
-        public static final int fragment_pod=0x7f030009;
-        public static final int google_plus_signin=0x7f03000a;
-        public static final int home_screen=0x7f03000b;
-        public static final int loginpopup=0x7f03000c;
-        public static final int mapview1=0x7f03000d;
-        public static final int mapview2=0x7f03000e;
-        public static final int mapview3=0x7f03000f;
-        public static final int pod=0x7f030010;
-        public static final int pod_view=0x7f030011;
-        public static final int podquestionrelativeview=0x7f030012;
-        public static final int popup_menuitem=0x7f030013;
-        public static final int questionlayout=0x7f030014;
-        public static final int summary_question_view=0x7f030015;
-        public static final int summarylayout=0x7f030016;
-        public static final int testpop=0x7f030017;
+        public static final int activity_word_list=0x7f030003;
+        public static final int choice_view=0x7f030004;
+        public static final int custm=0x7f030005;
+        public static final int customprog=0x7f030006;
+        public static final int drawer_list_item=0x7f030007;
+        public static final int email_popup=0x7f030008;
+        public static final int fragment_home=0x7f030009;
+        public static final int fragment_pod=0x7f03000a;
+        public static final int google_plus_signin=0x7f03000b;
+        public static final int home_screen=0x7f03000c;
+        public static final int loginpopup=0x7f03000d;
+        public static final int mapview1=0x7f03000e;
+        public static final int mapview2=0x7f03000f;
+        public static final int mapview3=0x7f030010;
+        public static final int pod=0x7f030011;
+        public static final int pod_view=0x7f030012;
+        public static final int podquestionrelativeview=0x7f030013;
+        public static final int popup_menuitem=0x7f030014;
+        public static final int questionlayout=0x7f030015;
+        public static final int summary_question_view=0x7f030016;
+        public static final int summarylayout=0x7f030017;
+        public static final int testpop=0x7f030018;
     }
     public static final class menu {
         public static final int common_menu=0x7f0c0000;
@@ -676,6 +677,7 @@ containing a value of this type.
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f07001a;
+        public static final int title_activity_word_list=0x7f070024;
     }
     public static final class style {
         /** 
@@ -704,12 +706,14 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b0001;
+        public static final int ButtonBar=0x7f0b0002;
+        public static final int ButtonBarButton=0x7f0b0003;
         /**  the theme applied to the application or activity 
          */
-        public static final int CustomActionBarTheme=0x7f0b0002;
+        public static final int CustomActionBarTheme=0x7f0b0004;
         /**  ActionBar styles 
          */
-        public static final int MyActionBar=0x7f0b0003;
+        public static final int MyActionBar=0x7f0b0005;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.

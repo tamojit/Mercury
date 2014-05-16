@@ -807,7 +807,7 @@ public class PodQuestionActivity extends BaseActivity {
 			summary.append("\n");
 			summary.append("\tCorrect Answer : " + getCorrectChoiceSequence(userProgress.getQuestionId()));
 			summary.append("\n");
-			summary.append("\tResult : " + (userProgress.isChoiceCorrect()?"true":"false"));
+			summary.append("\tResult : " + (userProgress.isChoiceCorrect()?"Correct":"Incorrect"));
 			summary.append("\n\n");
 		}
 		summary.append("Overall Percentage : " +  percentage + "%");
