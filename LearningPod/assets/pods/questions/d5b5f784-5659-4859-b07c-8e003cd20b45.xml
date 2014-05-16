@@ -1,0 +1,21 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="d5b5f784-5659-4859-b07c-8e003cd20b45" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Choose the sentence in which <i>sensitivity</i> is used correctly.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>
+	Sensitivity in springtime is a good way to deal with problems related to pollen.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice2"><p>
+	As a result of a sensitivity to pollen, Kate avoided staying outside in the springtime.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>
+	Whenever the season is springtime, pollen increases its own sensitivity.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>
+	Sensitivity aside, pollen is an important part of enjoying the springtime.
+</p><p> </p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

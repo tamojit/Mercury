@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier III Vocabulary" data-uuid="23c306ba-60c3-4a2f-a319-0b7bb3c18116" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>The bowls of food and water contained enough __________ to make the dog's mouth water.</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>strolls</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>ratios</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice3"><p>stimuli</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>vials</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

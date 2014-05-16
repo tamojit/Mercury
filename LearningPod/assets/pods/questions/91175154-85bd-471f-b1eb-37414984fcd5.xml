@@ -1,0 +1,20 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="91175154-85bd-471f-b1eb-37414984fcd5" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Choose the sentence in which <i>component</i> is used correctly.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>
+	An elected component required teachers to review communication skills.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>
+	Every teacher knows that components play an important role in education.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice3"><p>
+	There are three components to the language app: speaking, listening, and writing.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>
+	My strongest component is speaking, which I very much prefer as opposed to writing.</p><p> </p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

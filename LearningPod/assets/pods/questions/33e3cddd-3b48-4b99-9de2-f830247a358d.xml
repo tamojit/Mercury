@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier III Vocabulary" data-uuid="33e3cddd-3b48-4b99-9de2-f830247a358d" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>The __________ of teachers to students was high, so each child would get a good deal of attention.</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>vial</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice2"><p>ratio</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>drought</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>irrigation</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

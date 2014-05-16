@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the nonsense word blomp? [IMA..." data-uuid="f9c25857-a951-4bf9-8b72-9e71311babeb" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>They carefully <u>blomp</u> down the icy hill.</b></p><p>In this sentence, what could you substitute for the nonsense word <i>blomp</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>another adjective that describes the hill</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>another verb that shows what they did</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>another adverb that describes how they do something</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>another noun that names the hill</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

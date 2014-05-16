@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Verbs" data-uuid="7173f95a-037a-4a5e-8c0f-304b988e78d3" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Identify an antonym for <i>stabilize</i>.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="answerChoice1"><p>Change</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>Steady</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>Improve</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>Cross</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

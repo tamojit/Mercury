@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Based on its role in the sentence, what can you tell about the word vague? [I..." data-uuid="2ac62788-85a2-4ba7-9772-f926ad1302a9" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Helen had <u>vague</u> memories of the trip she took to China ten years earlier.</b></p><p>Based on its role in the sentence, what can you tell about the word <i>vague</i>?</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>The word <i>vague</i> is a noun. It names a place that Helen visited in China.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>The word <i>vague</i> is an adverb. It describes how Helen went to China.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The word <i>vague</i> is a verb. It tells what Helen did in China.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>The word <i>vague</i> is an adjective. It describes Helen's memories.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

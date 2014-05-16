@@ -1,34 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" podId="a09f89dc-d43f-4e4a-826b-1b23e41eb6b8" xsi:noNamespaceSchemaLocation="learningpod-pod.xsd">
-  <title>Context Clues - Level A</title>
-  <description>Determine the meaning of the unknown word</description>
-  <scorable>true</scorable>
-  <userId>2</userId> 
-  <podElements>
-    <question itemId="P1Q1" accessId="2" elementId="3" version="1" score="5.0" questionNumber="1">
-      <explanations>
-        <explanation itemId="P1E1" accessId="1" elementId="4" />
-      </explanations>
-    </question>   
-	<question itemId="P1Q2" accessId="2" elementId="3" version="1" score="5.0" questionNumber="2">
-      <explanations>
-        <explanation itemId="P1E2" accessId="1" elementId="4" />
-      </explanations>
-    </question>    
-	<question itemId="P1Q3" accessId="2" elementId="3" version="1" score="5.0" questionNumber="3">
-      <explanations>
-        <explanation itemId="P1E3" accessId="1" elementId="4" />
-      </explanations>
-    </question> 
-	<question itemId="P1Q4" accessId="2" elementId="3" version="1" score="5.0" questionNumber="4">
-      <explanations>
-        <explanation itemId="P1E4" accessId="1" elementId="4" />
-      </explanations>
-    </question> 
-	<question itemId="P1Q5" accessId="2" elementId="3" version="1" score="5.0" questionNumber="5	">
-      <explanations>
-        <explanation itemId="P1E5" accessId="1" elementId="4" />
-      </explanations>
-    </question>  
-  </podElements>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pod podId="47cd399e-c565-4a24-945b-0167b73d0416" >
+
+    <title>Context Clues - Nonsense Words</title>
+
+    <description>Make sense out of these nonsense words by using context clues.</description>
+
+    <scorable>
+true
+    </scorable>
+
+    <searchable>
+true
+    </searchable>
+
+    <penaltyType>
+1
+    </penaltyType>
+
+    <published>
+true
+    </published>
+
+    <userId>
+8516
+    </userId>
+
+    <podElements>
+
+        <question
+            accessId="1"
+            elementId="1"
+            itemId="025f84d5-56b7-4b98-8b8c-60aea38585c7"
+            questionNumber="1"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="2"
+                    itemId="27a5a88c-a2d2-4826-ae38-3c0b294b825c" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="2"
+            elementId="3"
+            itemId="377c938d-9204-4e86-bdef-acbf1a3c9a3a"
+            questionNumber="2"
+            score="1.0"
+            version="3" >
+
+            <explanations><explanation accessId="1" elementId="4" itemId="9fd23398-f4a4-422d-829d-63556b1aab76" /></explanations>
+        </question>
+
+        <question
+            accessId="3"
+            elementId="5"
+            itemId="a1dc3c5e-0c47-414d-ad65-6150b2dfe234"
+            questionNumber="3"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="6"
+                    itemId="d453d98c-3201-4d75-abe6-3ec3e4f47602" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="4"
+            elementId="7"
+            itemId="ad46f124-baff-479f-bca4-f82db29aba1e"
+            questionNumber="4"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="8"
+                    itemId="763940d9-e8a6-4612-9e43-e8907203ead3" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="5"
+            elementId="9"
+            itemId="f9c25857-a951-4bf9-8b72-9e71311babeb"
+            questionNumber="5"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="10"
+                    itemId="2062fc8f-eb84-4ca3-a782-eac525f680bd" />
+            </explanations>
+        </question>
+    </podElements>
+
 </pod>

@@ -84,12 +84,13 @@ public class LearningpodDbHandler {
 	public void storeUserTeacherMapping(String userId, String teacheremail){
 		
 		ContentValues values = new ContentValues();		
-	     if(getTeacherEmail(userId).equals("")){
+	     if(!getTeacherEmail(userId).equals("")){
 	    	 values.put("TeacherEmail", teacheremail);
 	    	 database.update(dbHelper.USER_TEACHER_TABLE, values,"UserId='" + userId + "'", null);
 	     }
 	     else{
 	    	 values.put("UserId", userId);
+	    	 values.put("TeacherEmail", teacheremail);
 	 		database.insert(dbHelper.USER_TEACHER_TABLE,null,values);
 	     } 
 	  }

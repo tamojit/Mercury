@@ -1,0 +1,15 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Verbs" data-uuid="7f5b905d-80cb-4048-be21-729e07fbaf49" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Identify a synonym for  <i>stroll</i>.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>
+	Hike
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>Jog</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>Race</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice4"><p>Walk</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

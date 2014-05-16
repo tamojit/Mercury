@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Use what you know about root words to help you choose the best word to comple... " data-uuid="e9491f27-fe05-4a9b-936b-a0ff1e1b9d70" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+<b>From the measurement on the _________, I know the air pressure is dropping outside.</b></p><p>Use what you know about root words to help you choose the <i>best</i> word to complete the sentence.</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>hydrogen</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>prediction</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>temperature</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>barometer</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

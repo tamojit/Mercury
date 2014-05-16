@@ -29,7 +29,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Context Clues -  Level A"
+    		    android:text = "Context Clues – Nonsense WordsA"
     		    android:layout_toRightOf="@+id/planet1"
     		    android:layout_marginTop="90dp"
     		    android:layout_marginLeft="5dp"/>
@@ -85,7 +85,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Context Clues -  Level B"
+    		    android:text = "Tier II Nouns"
     		    android:layout_toRightOf="@+id/planet2"
     		    android:layout_marginTop="185dp"
     		    android:layout_marginLeft="5dp"/>
@@ -140,7 +140,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Context Clues -  Level C"
+    		    android:text = "Tier II Verbs"
     		    android:layout_toRightOf="@+id/planet3"
     		    android:layout_marginTop="270dp"
     		    android:layout_marginLeft="5dp"/>
@@ -196,7 +196,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words Level A"
+    		    android:text = "Tier III Vocabulary"
     		    android:layout_toRightOf="@+id/planet4"
     		    android:layout_marginTop="200dp"
     		    android:layout_marginLeft="5dp"/>
@@ -253,7 +253,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words Level B"
+    		    android:text = "Context Clues – Level A"
     		    android:layout_toRightOf="@+id/planet5"
     		    android:layout_marginTop="170dp"
     		    android:layout_marginLeft="5dp"/>

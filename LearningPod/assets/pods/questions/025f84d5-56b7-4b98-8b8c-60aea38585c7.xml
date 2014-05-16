@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the nonsense word grickle? [I..." data-uuid="025f84d5-56b7-4b98-8b8c-60aea38585c7" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Oliver ate a bowl of <u>grickle</u> and six sausages for breakfast.</b></p><p>In this sentence, what could you substitute for the nonsense word <i>grickle</i>?</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>another verb that tells what Oliver did at breakfast</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>another adjective that describes the sausages</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>another adverb that explains how Oliver ate the sausages</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>another noun, like <i>sausages</i>, that names a thing Oliver ate</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

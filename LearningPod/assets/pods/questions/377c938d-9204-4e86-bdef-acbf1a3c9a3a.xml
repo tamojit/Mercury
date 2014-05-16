@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Conventions of Standard English): Context Clues" data-uuid="377c938d-9204-4e86-bdef-acbf1a3c9a3a" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Unlike her more graceful sister, Claudia moved <u>trumbily</u> and was rarely invited to dance.</b></p><p>Based on its role in the sentence, what can you tell about the nonsense word <i>trumbily</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>The word <i>trumbily</i> is a proper noun, naming a dance Claudia performed.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>The word <i>trumbily</i> is a verb, telling what Claudia did.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The word <i>trumbily</i> is an adjective, describing how Claudia looked.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>The word <i>trumbily</i> is an adverb, describing how Claudia moved.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

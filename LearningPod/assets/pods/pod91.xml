@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pod podId="fa2bec0d-a60d-4222-9791-cfdd38628ef4" >
+
+    <title>Greek and Latin Roots</title>
+
+    <description>Roots are at the core of words.</description>
+
+    <scorable>
+true
+    </scorable>
+
+    <searchable>
+true
+    </searchable>
+
+    <penaltyType>
+1
+    </penaltyType>
+
+    <published>
+true
+    </published>
+
+    <userId>
+8516
+    </userId>
+
+    <podElements>
+
+        <question
+            accessId="1"
+            elementId="1"
+            itemId="15e6e570-4983-440c-b1d8-4039dbfdefca"
+            questionNumber="1"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="2"
+                    itemId="ae64379b-80ca-4051-b1d2-13c763f0ea2b" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="2"
+            elementId="3"
+            itemId="47f1f2f9-90bb-4c97-9281-19450099943e"
+            questionNumber="2"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="4"
+                    itemId="da2c3fe1-a82a-4450-ae71-479bb0408c57" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="3"
+            elementId="5"
+            itemId="57d965cf-2384-4a28-b7d7-a6d0ffc59335"
+            questionNumber="3"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="6"
+                    itemId="d09ae565-8eef-46b8-988b-9da15dbd44ac" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="4"
+            elementId="7"
+            itemId="fd3fde5b-8313-4210-9b2f-730380909e2d"
+            questionNumber="4"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="8"
+                    itemId="773b7c74-17df-4e19-9dd1-ab7995e64988" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="5"
+            elementId="9"
+            itemId="e9491f27-fe05-4a9b-936b-a0ff1e1b9d70"
+            questionNumber="5"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="10"
+                    itemId="9275d493-cae2-41cc-a226-5146301504bd" />
+            </explanations>
+        </question>
+    </podElements>
+
+</pod>

@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the word demurely? [IMAGE] In..." data-uuid="95b9500c-dee1-449e-ada2-3e4034711dbb" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Sara sat <u>demurely</u>, with her hands in her lap, and waited for the teacher to call her name.</b></p><p>In this sentence, what could you substitute for the word <i>demurely</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>another adverb that describes how Sara sat</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>another verb that tells what Sara did</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>another noun that names the furniture Sara sat on</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>another adjective that describes Sara</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

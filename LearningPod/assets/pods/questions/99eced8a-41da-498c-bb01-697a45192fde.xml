@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Vocabulary): Multiple-Meaning Words" data-uuid="99eced8a-41da-498c-bb01-697a45192fde" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>The word <i>restore</i> has more than one meaning. Choose the sentence in which <i>restore </i>means &quot;to store again.&quot;</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>After you are done using the chairs you took from the closet, please <u>restore</u> them.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>Jack found a wallet on the street, and he will <u>restore</u> it to its rightful owner.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>Marianne should <u>restore</u> peace in the family by apologizing to her sister.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>The antique chair that Mrs. Singh bought is not in good condition, but she plans to <u>restore</u> it.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

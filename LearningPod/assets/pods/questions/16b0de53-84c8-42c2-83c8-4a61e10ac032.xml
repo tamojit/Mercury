@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word stalk has more than one meaning. Choose the sentence in which stalk means &quot;a... " data-uuid="16b0de53-84c8-42c2-83c8-4a61e10ac032" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>The word <i>stalk</i> has more than one meaning. Choose the sentence in which <i>stalk</i> means &quot;a plant's main stem.&quot;</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>The amusement-park ride has a central <u>stalk</u> from which the cars are suspended.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>By the end of the summer, the <u>stalk</u> of the sunflower I had planted was six feet tall.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>I am going to <u>stalk</u> into my brother's room and tell him that I don't like him using my cellphone.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>Rory likes to watch his cat <u>stalk</u> its toy mouse.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

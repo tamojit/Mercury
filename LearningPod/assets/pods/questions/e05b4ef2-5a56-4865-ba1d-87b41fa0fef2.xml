@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word sewer has more than one meaning. Choose the sentence in which sewer means &quot;a... " data-uuid="e05b4ef2-5a56-4865-ba1d-87b41fa0fef2" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>The word <i>sewer </i>has more than one meaning. Choose the sentence in which <i>sewer </i>means &quot;an underground channel.&quot;</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>A vast <u>sewer</u> system has been draining the city's water since the 13th century.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>I need to learn to be a good <u>sewer</u> so I can stitch and repair my own clothes.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>If the woman doesn't give me the money she owes me, I am going to <u>sewer</u>.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

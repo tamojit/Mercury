@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word well has more than one meaning. Choose the sentence in which well means &quot;in ... " data-uuid="33a8cb9a-7303-4d0f-95d1-1ba4039bbe9d" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>The word <i>well </i>has more than one meaning. Choose the sentence in which <i>well </i>means &quot;in a good way.&quot;</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>&quot;<u>Well</u>,&quot; Uncle Bob said, &quot;I suppose you want me to help fix your bike.&quot;</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>The old house had a <u>well</u> out back with good, clean water.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>Mara told us that her work training the dogs was going <u>well</u>.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>When I watched the movie, tears began to <u>well</u> up in my eyes.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>
