@@ -23,6 +23,7 @@ public class PodParser implements GenericParser {
 		XStream xs = new XStream();
 		
 		xs.autodetectAnnotations(true);
+		xs.ignoreUnknownElements();
 		// set aliases
 		xs.alias("pod",PodBean.class);
 		xs.alias("question", PodQuestionBean.class);

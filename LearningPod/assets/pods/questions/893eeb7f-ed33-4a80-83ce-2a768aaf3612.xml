@@ -1,0 +1,21 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="893eeb7f-ed33-4a80-83ce-2a768aaf3612" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Choose the sentence in which <i>incentive</i> is used correctly.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>
+	Mr. Sparks assigned an incentive, which the students were able to turn in for extra credit.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>
+	Mr. Sparks understood that students responded with incentive, so he gave them extra credit.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice3"><p>
+	Mr. Sparks gave extra credit, enough of an incentive to turn the assignment in early.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>
+	Mr. Sparks liked to provide opportunities for the students to improve their incentive.
+</p><p> </p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

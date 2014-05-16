@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the nonsense word vliss? [IMA..." data-uuid="ad46f124-baff-479f-bca4-f82db29aba1e" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p><b>The climbers held the <u>vliss</u> tightly as they scrambled up the steep, rocky surface of the mountain.</b></p><p>In this sentence, what could you substitute for the nonsense word <i>vliss</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>another verb that tells what the climbers did</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>another adverb that describes how the climbers moved</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>another noun that names what the climbers held</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>another adjective that describes what the climbers held</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

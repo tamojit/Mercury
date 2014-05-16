@@ -1,0 +1,14 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the word garrison? [IMAGE] In..." data-uuid="0ad3ef25-4774-4210-b3c7-59b1e41455ec" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+<b>More than 1,500 troops are stationed at the <u>garrison</u>.</b>
+</p><p>In this sentence, what could you substitute for the word <i>garrison</i>?</p>
+</questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>another noun that tells where the troops are stationed</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>another adjective that describes the troops</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>another adverb that explains how the troops are stationed</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>another verb that tells what the troops did</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

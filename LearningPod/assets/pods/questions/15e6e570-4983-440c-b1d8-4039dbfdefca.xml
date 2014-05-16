@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Read the sentence and then choose the correct definition of the Latin root st... " data-uuid="15e6e570-4983-440c-b1d8-4039dbfdefca" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+<b>When will the <u>construction</u> of the new stadium begin?</b>
+</p><p>Read the sentence and then choose the correct definition of the Latin root <i>struct</i>.</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>play</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>start</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>ruin</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>build</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

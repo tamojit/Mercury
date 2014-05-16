@@ -1,0 +1,21 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="fd512614-d682-4a04-9a1d-ef45846c46af" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+	Choose the sentence in which <i>priority</i> is used correctly.
+</p><p> </p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>
+	In addition to priority, the package should be kept refrigerated.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>
+	Refrigeration is an important way for a food to become a priority.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>
+	When food is left in the refrigerator, a priority is likely to develop.
+</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice4"><p>
+	The package contained food, so refrigeration was a high priority.
+</p><p> </p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

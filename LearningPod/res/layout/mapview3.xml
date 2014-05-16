@@ -21,7 +21,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words"
+    		    android:text = "Greek and Latin Roots"
     		    android:layout_toRightOf="@+id/planet11"
     		    android:layout_marginTop="180dp"
     		    android:layout_marginLeft="5dp"/>
@@ -76,7 +76,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words"
+    		    android:text = "Prefixes"
     		    android:layout_toRightOf="@+id/planet12"
     		    android:layout_marginTop="115dp"
     		    android:layout_marginLeft="5dp"/>
@@ -131,7 +131,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words"
+    		    android:text = "Suffixes"
     		    android:layout_toRightOf="@+id/planet13"
     		    android:layout_marginTop="140dp"
     		    android:layout_marginLeft="5dp"/>
@@ -186,7 +186,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words"
+    		    android:text = "Relationship and Transition Words"
     		    android:layout_toRightOf="@+id/planet14"
     		    android:layout_marginTop="200dp"
     		    android:layout_marginLeft="5dp"/>
@@ -241,7 +241,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Multiple Meaning words"
+    		    android:text = "Vocabulary Acquisition and Use (Reference Materials)"
     		    android:layout_toRightOf="@+id/planet15"
     		    android:layout_marginTop="185dp"
     		    android:layout_marginLeft="5dp"/>

@@ -111,9 +111,15 @@ public class BaseActivity extends Activity implements
 		} else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
 				// perform login
+				((MapActivityBeforeLogin)this).showLoginWindow();
 			}
 			else {
 				// perform logout
+				ContentCacheStore.getContentCache().setLoggedInUserProfile(null);
+				Intent intent = new Intent(this,MapActivityBeforeLogin.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+				this.finish();
 			}
 		}
 		

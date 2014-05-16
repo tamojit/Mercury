@@ -1,0 +1,14 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="R5_L029_Q03 [IMAGE] Based on its role in the sentence, what can you tell about the word vexed ?" data-uuid="8361e9ff-217c-42f3-bbfd-8f0855ac5f7f" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody>
+<p><b>A sore throat <u>vexed</u> Lucas in the week before the talent show.</b></p>
+<p>Based on its role in the sentence, what can you tell about the word <i>vexed</i> ?</p>
+</questionBody>
+    <choiceInteraction interactionId="1" singleSelect="true">
+      <simpleChoice choiceId="1" correct="true">The word <i>vexed</i> is a verb. It tells what the sore throat did to Lucas.</simpleChoice>
+      <simpleChoice choiceId="2" correct="false">The word <i>vexed</i> is an adjective. It describes Lucas.</simpleChoice>
+      <simpleChoice choiceId="3" correct="false">The word <i>vexed</i> is an adverb. It describes how Lucas felt.</simpleChoice>
+      <simpleChoice choiceId="4" correct="false">The word <i>vexed</i> is a noun. It names an illness.</simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

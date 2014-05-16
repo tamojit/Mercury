@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Read the sentence and then choose the correct definition of the Latin root jur. " data-uuid="fd3fde5b-8313-4210-9b2f-730380909e2d" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>The <u>jury</u> is deciding whether or not the driver's actions were legal.</b></p><p>Read the sentence and then choose the correct definition of the Latin root <i>jur</i>.</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>law</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>drive</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>break</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>people</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

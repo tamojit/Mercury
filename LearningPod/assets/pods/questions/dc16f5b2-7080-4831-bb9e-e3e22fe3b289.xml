@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Which sentence uses the compound word earthenware correctly? Which sentence uses the ..." data-uuid="dc16f5b2-7080-4831-bb9e-e3e22fe3b289" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>Which sentence uses the compound word <i>earthenware</i> correctly?</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>The ground shook during the earthenware.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>We ate a simple meal served on earthenware plates.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The astronaut took an earthenware photo through the ship's window.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>His computer could not run the school's new earthenware program.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

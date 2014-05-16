@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): If the Latin root agri means &quot;fields,&quot; what do you think the word agriculture means? " data-uuid="57d965cf-2384-4a28-b7d7-a6d0ffc59335" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>If the Latin root <i>agri</i> means "fields," what do you think the word <i><u>agriculture</u></i> means?</b></p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>the art and science of painting and sculpture</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>the art of playing outdoor sports</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>the science of the oceans and marine life</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>the art and science of raising crops and animals</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

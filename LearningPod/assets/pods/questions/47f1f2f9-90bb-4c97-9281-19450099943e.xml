@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] Read the sentence and then choose the correct definition of the Latin root sc... " data-uuid="47f1f2f9-90bb-4c97-9281-19450099943e" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>The doctor wrote a <u>prescription</u> for my allergy medicine.</b></p><p>Read the sentence and then choose the correct definition of the Latin root <i>script</i>.</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="true" choiceId="1"><p>write</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>sick</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>cold</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>medicine</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

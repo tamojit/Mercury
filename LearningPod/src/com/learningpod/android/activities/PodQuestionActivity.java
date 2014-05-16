@@ -14,6 +14,7 @@ import com.learningpod.android.R.layout;
 import com.learningpod.android.beans.UserProgressInfo;
 import com.learningpod.android.beans.explanations.ExplanationBean;
 import com.learningpod.android.beans.pods.PodBean;
+import com.learningpod.android.beans.pods.PodQuestionBean;
 import com.learningpod.android.beans.questions.QuestionBean;
 import com.learningpod.android.beans.questions.QuestionChoiceBean;
 import com.learningpod.android.db.LearningpodDbHandler;
@@ -76,6 +77,7 @@ public class PodQuestionActivity extends BaseActivity {
 	final Context context = this;
 	private String mail;
 	private String uid;
+	private int percentage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -695,7 +697,7 @@ public class PodQuestionActivity extends BaseActivity {
 			summaryQuesContainer.addView(view);
 		}
 
-		int percentage = (int) ((correctAnswers * 100 / totalQuestions));
+		 percentage = (int) ((correctAnswers * 100 / totalQuestions));
 		((TextView) findViewById(R.id.correctpercentage)).setText(percentage
 				+ "%");
 		if (percentage == 100) {
@@ -775,6 +777,8 @@ public class PodQuestionActivity extends BaseActivity {
 								"gmail")) {
 					email.putExtra(android.content.Intent.EXTRA_TEXT,
 							createSummaryMailBody());
+					email.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Result");
+					email.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{recipient});					
 					email.setPackage(info.activityInfo.packageName);
 					startActivity(Intent.createChooser(email, ""));
 				}
@@ -788,7 +792,63 @@ public class PodQuestionActivity extends BaseActivity {
 	}
 	
 	private String createSummaryMailBody(){
-		return "summary body";
+		StringBuffer summary = new StringBuffer();
+		summary.append("Name : " + ContentCacheStore.getContentCache().getLoggedInUserProfile().getName());
+		summary.append("\n");
+		summary.append("Email Id : " + ContentCacheStore.getContentCache().getCurrentUserEmailId());
+		summary.append("\n\n");
+		
+		
+		for(int idx=0;idx<userProgressCompleted.size();idx++){
+			UserProgressInfo userProgress = userProgressCompleted.get(idx);
+			summary.append("Question #" + (idx+1));
+			summary.append("\n");
+			summary.append("\tSelected Answer : "  + getChoiceSequence(userProgress.getQuestionId(), userProgress.getChoiceId()));
+			summary.append("\n");
+			summary.append("\tCorrect Answer : " + getCorrectChoiceSequence(userProgress.getQuestionId()));
+			summary.append("\n");
+			summary.append("\tResult : " + (userProgress.isChoiceCorrect()?"true":"false"));
+			summary.append("\n\n");
+		}
+		summary.append("Overall Percentage : " +  percentage + "%");
+		return summary.toString();
+	}
+	
+	private String getChoiceSequence(String questionId, String choiceId){
+		 // find the question	
+		for(int idx=0;idx<selectedPod.getPodElements().size();idx++){
+			PodQuestionBean ques = selectedPod.getPodElements().get(idx);
+			if(ques.getItemId().equalsIgnoreCase(questionId)){
+				
+				for(int idx1=0;idx1<questions.get(idx).getChoiceQuestion().getChoiceInteraction().size();idx1++){
+					QuestionChoiceBean choice =questions.get(idx).getChoiceQuestion().getChoiceInteraction().get(idx1);
+					if(choice.getChoiceId().equalsIgnoreCase(choiceId)){
+						// found by choice index
+						return choiceSeqArr[idx1];
+					}
+				}
+				
+			}
+		}
+		 
+		return "";
+	}
+	
+	private String getCorrectChoiceSequence(String questionId){
+		 // find the question	
+		for(int idx=0;idx<selectedPod.getPodElements().size();idx++){
+			PodQuestionBean ques = selectedPod.getPodElements().get(idx);
+			if(ques.getItemId().equalsIgnoreCase(questionId)){
+				
+				for(int idx1=0;idx1<questions.get(idx).getChoiceQuestion().getChoiceInteraction().size();idx1++){
+					QuestionChoiceBean choice =questions.get(idx).getChoiceQuestion().getChoiceInteraction().get(idx1);
+					if(choice.getCorrect().equalsIgnoreCase("true")){
+						return choiceSeqArr[idx1];
+					}
+				}
+			}
+		}
+		return "";			 
 	}
 
 	private void animateAlienImageView() {
@@ -807,7 +867,7 @@ public class PodQuestionActivity extends BaseActivity {
 		TranslateAnimation animation = new TranslateAnimation(0,
 				destLocation[0] - origLocation[0], 0, destLocation[1]
 						- origLocation[1]);
-		animation.setDuration(3000);
+		animation.setDuration(2000);
 		animation.setFillAfter(false);
 		// animation.setZAdjustment(Animation.ZORDER_TOP);
 		animation.setAnimationListener(new AnimationListener() {

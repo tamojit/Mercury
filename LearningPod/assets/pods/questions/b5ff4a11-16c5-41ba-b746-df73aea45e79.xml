@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] The word root has more than one meaning. Read the following definition. Which... " data-uuid="b5ff4a11-16c5-41ba-b746-df73aea45e79" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>root: to move things around while looking for something</b></p><p>The word <i>root</i> has more than one meaning. Read the following definition. Which sentence correctly uses the word <i>root </i>according to this definition?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>Having the wrong ingredients was the <u>root</u> of my problem when I made that recipe.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>I plan to <u>root</u> for my favorite team, even if I think they will lose.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>He had to <u>root</u> in the drawer to find the right pen.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>The tree <u>root</u> grew up through the sidewalk.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word husky has more than one meaning. Choose the sentence in which husky means &quot;r... " data-uuid="8a07a9bd-24ed-4bc4-bfae-308154872867" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p>The word <i>husky</i> has more than one meaning. Choose the sentence in which <i>husky </i>means &quot;rough or gruff sounding.&quot;</p><p>
+</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>I can't pass my jeans down to my younger brother because he's <u>husky</u> and wouldn't fit into them.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>Jason's uncle has a gray and white <u>husky</u> named Hans that he uses to pull a sled in the winter.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>I must have woken her up because when she answered the phone, her voice was <u>husky</u>.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>Gemma's little sister was supposed to clean the corn, but it was still a little <u>husky</u>.</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

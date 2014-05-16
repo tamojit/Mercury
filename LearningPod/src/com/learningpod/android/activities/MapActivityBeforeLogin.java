@@ -181,7 +181,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		// TODO Auto-generated method stub
 		// go to login screen
 		if(v instanceof ImageButton){
-			loginWindow.showAtLocation(mapFlipper, Gravity.CENTER, 0, 0);
+			showLoginWindow();
 		}
 		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
 			 // set the required Animation type to mapFlipper
@@ -205,9 +205,14 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 			Account selectedAccount = accounts[v.getId()];
 			HashMap<String, Object> params = new HashMap<String, Object>();
 			params.put("selectedAccount", selectedAccount);
+			ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
 			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
 			
 		}
+	}
+	
+	public void showLoginWindow(){
+		loginWindow.showAtLocation(mapFlipper, Gravity.CENTER, 0, 0);
 	}
 }
 //bbbbb

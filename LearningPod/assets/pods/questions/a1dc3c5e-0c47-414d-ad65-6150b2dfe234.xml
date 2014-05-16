@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In this sentence, what could you substitute for the nonsense word stoxily? [I..." data-uuid="a1dc3c5e-0c47-414d-ad65-6150b2dfe234" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+</p><p><b>The tiger waited <u>stoxily</u> as the deer ate the tall grass.</b></p><p>In this sentence, what could you substitute for the nonsense word <i>stoxily</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>another noun that tells where the tiger waited</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>another adverb that describes how the tiger did something</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>another verb that shows what the tiger did</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>another adjective that describes how the tiger looked</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

@@ -1,14 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" podId="6a09f89dc-d43f-4e4a-826b-1b23e41eb6b8" xsi:noNamespaceSchemaLocation="learningpod-pod.xsd">
-  <title>Example Pod</title>
-  <description>This this is an example pod for documention purposes.</description>
-  <scorable>true</scorable>
-  <userId>2</userId>
-  <podElements>
-    <question itemId="24dcbbf8-fdeb-4f5e-91ce-d03df100ff82" accessId="2" elementId="3" version="1" score="5.0" questionNumber="2">
-      <explanations>
-        <explanation itemId="80e3611b-3d70-4ef7-b4b9-a44f2cad253d" accessId="1" elementId="4" />
-      </explanations>
-    </question>    
-  </podElements>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pod podId="c000e355-96f9-4cd1-a3fa-521e92d96623" >
+
+    <title>Context Clues - Level B</title>
+
+    <description>More challenging sentences to determine the meaning of a word.</description>
+
+    <scorable>
+true
+    </scorable>
+
+    <searchable>
+true
+    </searchable>
+
+    <penaltyType>
+1
+    </penaltyType>
+
+    <published>
+true
+    </published>
+
+    <userId>
+8516
+    </userId>
+
+    <podElements>
+
+        <question
+            accessId="1"
+            elementId="1"
+            itemId="8361e9ff-217c-42f3-bbfd-8f0855ac5f7f"
+            questionNumber="1"
+            score="1.0"
+            version="1" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="2"
+                    itemId="e45ba5b8-b2a0-4697-886a-fe38c6ac798e" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="2"
+            elementId="3"
+            itemId="95b9500c-dee1-449e-ada2-3e4034711dbb"
+            questionNumber="2"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="4"
+                    itemId="688558af-2053-4a5b-b3a2-a0cbdd86aa59" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="3"
+            elementId="5"
+            itemId="dc16f5b2-7080-4831-bb9e-e3e22fe3b289"
+            questionNumber="3"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="6"
+                    itemId="0b8b7fef-8569-474c-aad4-19a14975c1ac" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="4"
+            elementId="7"
+            itemId="2ac62788-85a2-4ba7-9772-f926ad1302a9"
+            questionNumber="4"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="8"
+                    itemId="ddc4cdd6-f857-4313-9f8a-5780e118ab5c" />
+            </explanations>
+        </question>
+
+        <question
+            accessId="5"
+            elementId="9"
+            itemId="0ad3ef25-4774-4210-b3c7-59b1e41455ec"
+            questionNumber="5"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="10"
+                    itemId="42164f57-d57f-401a-8c49-6675598edd5b" />
+            </explanations>
+        </question>
+    </podElements>
+
 </pod>

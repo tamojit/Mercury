@@ -77,7 +77,14 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 	
 	private View createMap1View(){
 		// get the user id
-		String userId = ContentCacheStore.getContentCache().getLoggedInUserProfile().getId();
+		
+		if(ContentCacheStore.getContentCache().getLoggedInUserProfile()!=null){
+			String userId = ContentCacheStore.getContentCache().getLoggedInUserProfile().getId();
+		}else{
+			String test = "user profile is null";
+			Toast.makeText(this, "user profile is null", 1000);
+		}
+		
 		// get Inflater instance
 		LayoutInflater inflater = getLayoutInflater();
 		View mapView1 = inflater.inflate(R.layout.mapview1, null);
@@ -90,7 +97,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		
 		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
 		for(int i=0;i<5;i++){
-			PodBean pod1 = pods.get(0);
+			PodBean pod1 = pods.get(i);
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView1.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView1.findViewById(txtPlntArry[i]);
@@ -100,7 +107,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag("0");
+			btnPlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -135,7 +142,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		
 		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
 		for(int i=5;i<10;i++){
-			PodBean pod1 = pods.get(0);
+			PodBean pod1 = pods.get(i);
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView2.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView2.findViewById(txtPlntArry[i]);
@@ -145,7 +152,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag("0");
+			btnPlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -179,7 +186,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		
 		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
 		for(int i=10;i<15;i++){
-			PodBean pod1 = pods.get(0);
+			PodBean pod1 = pods.get(i);
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView3.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView3.findViewById(txtPlntArry[i]);
@@ -189,7 +196,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag("0");
+			btnPlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -264,6 +271,9 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		// TODO Auto-generated method stub
 		if(v instanceof ImageButton){
 			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
+			if(!(selectedPlatentId==0 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
+				return;
+			}
 			PodBean selectedPod = pods.get(selectedPlatentId);
 			HashMap<String,Object> params = new HashMap<String,Object>();
 			params.put("selectedPod",selectedPod);			

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pod podId="b5d743d0-ae02-4413-ba94-7393f3f7c263" >
+
+    <title>Vocabulary Acquisition and Use (Reference Materials)</title>
+
+    <description>What resources help you determine meaning?</description>
+
+    <scorable>
+true
+    </scorable>
+
+    <searchable>
+true
+    </searchable>
+
+    <penaltyType>
+1
+    </penaltyType>
+
+    <published>
+true
+    </published>
+
+    <userId>
+8516
+    </userId>
+
+    <podElements>
+
+        <question
+            accessId="1"
+            elementId="1"
+            itemId="504a4273-c74d-4ccc-b1de-e5844047c1a6"
+            questionNumber="1"
+            score="1.0"
+            version="2" >
+
+            <explanations><explanation accessId="1" elementId="4" itemId="9fd23398-f4a4-422d-829d-63556b1aab76" /></explanations>
+        </question>
+
+        <question
+            accessId="2"
+            elementId="2"
+            itemId="fbe25ab0-aa4c-4462-a4b0-e81b084c24c9"
+            questionNumber="2"
+            score="1.0"
+            version="2" >
+
+            <explanations><explanation accessId="1" elementId="4" itemId="9fd23398-f4a4-422d-829d-63556b1aab76" /></explanations>
+        </question>
+
+        <question
+            accessId="3"
+            elementId="3"
+            itemId="cee11fb7-558d-4b11-b034-3656519d1324"
+            questionNumber="3"
+            score="1.0"
+            version="2" >
+
+            <explanations><explanation accessId="1" elementId="4" itemId="9fd23398-f4a4-422d-829d-63556b1aab76" /></explanations>
+        </question>
+
+        <question
+            accessId="4"
+            elementId="4"
+            itemId="d2479227-26c3-4d53-91c8-2c94fc64ab34"
+            questionNumber="4"
+            score="1.0"
+            version="2" >
+
+            <explanations><explanation accessId="1" elementId="4" itemId="9fd23398-f4a4-422d-829d-63556b1aab76" /></explanations>
+        </question>
+
+        <question
+            accessId="5"
+            elementId="5"
+            itemId="cd7722ed-3d88-439e-9a1c-cc861fa10c32"
+            questionNumber="5"
+            score="1.0"
+            version="2" >
+
+            <explanations>
+
+                <explanation
+                    accessId="1"
+                    elementId="4"
+                    itemId="9fd23398-f4a4-422d-829d-63556b1aab76" />
+            </explanations>
+
+        </question>
+    </podElements>
+
+</pod>
