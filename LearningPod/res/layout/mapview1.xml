@@ -29,7 +29,7 @@
     		    android:textSize="14sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
-    		    android:text = "Context Clues – Nonsense WordsA"
+    		    android:text = "Context Clues – Nonsense Words"
     		    android:layout_toRightOf="@+id/planet1"
     		    android:layout_marginTop="90dp"
     		    android:layout_marginLeft="5dp"/>

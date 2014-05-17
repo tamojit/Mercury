@@ -8,7 +8,6 @@ import com.learningpod.android.BackgroundTasks;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
-
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 
@@ -16,7 +15,10 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -41,6 +43,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		// get user profile and pods from content cache
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache().getLoggedInUserProfile();		
 		//get list of pods. getting 
@@ -81,7 +84,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
-				
+		
+		mapView1.setBackground(new BitmapDrawable(getResources(), getScaledBitmap()));
 		
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		
@@ -90,6 +94,19 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		setContentView(mapFlipper);
 		initPopup();
 		
+	}
+	
+	private Bitmap getScaledBitmap(){
+		Bitmap currBitmap = BitmapFactory.decodeResource(getResources(),
+                R.drawable.map1);
+		// Calculate ActionBar height
+		TypedValue tv = new TypedValue();
+		int actionBarHeight=0;
+		if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
+		{
+		    actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+		}
+		return Bitmap.createScaledBitmap(currBitmap, currBitmap.getWidth(), currBitmap.getHeight()-actionBarHeight, false);
 	}
 	
 	private void initPopup(){

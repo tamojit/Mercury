@@ -40,6 +40,7 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -753,12 +754,15 @@ public class PodQuestionActivity extends BaseActivity {
 				popupmail.dismiss();
 			}
 		});
-		// set the focus on send button so that the keyboard is not open when the 
+		// set the focus on dummy button so that the keyboard is not open when the 
 		// popup window is displayed
-		sendBtn.setFocusable(true);
-		sendBtn.setFocusableInTouchMode(true);
-		sendBtn.requestFocus();
+		Button dummyBtn = (Button)popupmail.findViewById(R.id.sendEmailDummy);
+		dummyBtn.setFocusable(true);
+		dummyBtn.setFocusableInTouchMode(true);
+		dummyBtn.requestFocus();
 		popupmail.show();
+		 
+
 	}
 
 	

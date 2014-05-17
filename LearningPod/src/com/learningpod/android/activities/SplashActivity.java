@@ -20,14 +20,15 @@ import android.widget.LinearLayout.LayoutParams;
 public class SplashActivity extends BaseActivity {
 
 	//Splash screen timer
-	private static int SPLASH_TIME_OUT = 2000;
+	private static int SPLASH_TIME_OUT = 500;
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        LinearLayout.LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
-	        ImageView splashImage = new ImageView(this);
-	        splashImage.setBackgroundResource(R.drawable.app_title);
-	        setContentView(splashImage);
+	        //this.getActionBar().hide();
+	        //LinearLayout.LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
+	        //ImageView splashImage = new ImageView(this);
+	        //splashImage.setBackgroundResource(R.drawable.app_title);
+	        //setContentView(splashImage);
 	        new Handler().postDelayed(new Runnable() {
 	        	 
 	            /*

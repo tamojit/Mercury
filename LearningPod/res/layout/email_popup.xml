@@ -27,5 +27,16 @@
 	       android:background="@drawable/mailsendbutton"
 	       android:text="" 
 	       />
+	   
+	    <Button
+	       android:id="@+id/sendEmailDummy"
+	       android:layout_width="wrap_content"
+	       android:layout_height="0dp"
+	       android:layout_alignLeft="@+id/sendEmail"
+	       android:layout_marginTop="130dp"
+	       android:text = "dummy"	       
+	       android:gravity="right"
+	       android:visibility="visible"
+	       />
     
 </RelativeLayout>
