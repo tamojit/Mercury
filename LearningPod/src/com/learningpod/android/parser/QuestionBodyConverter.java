@@ -36,6 +36,7 @@ public class QuestionBodyConverter  implements Converter {
 		String questionBody = "";
 		String questionBodyHighlighted = "";
 		String parentNodeName = reader.getNodeName();
+		String previousNodeName = parentNodeName;
 		boolean flag  = true;
 		while(flag){
 			String nodeName = reader.getNodeName();
@@ -46,7 +47,13 @@ public class QuestionBodyConverter  implements Converter {
 				questionBody = questionBody + nodeValue;
 			}
 			if(nodeName.equals("i") && !nodeValue.equalsIgnoreCase("")){
-				questionBody = questionBody + " <i>" + nodeValue + "</i>";
+				if(previousNodeName.equals("p")){ 
+					questionBody = questionBody + " <i>" + nodeValue + "</i>";
+				}
+				if(previousNodeName.equals("b")){
+					questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i>";
+				}
+				
 			}
 			
 			/*Parsing region for getting the question highlighted content*/
@@ -54,7 +61,15 @@ public class QuestionBodyConverter  implements Converter {
 				questionBodyHighlighted = questionBodyHighlighted + nodeValue;
 			}
 			if(nodeName.equals("u") && !nodeValue.equalsIgnoreCase("")){
-				questionBodyHighlighted = questionBodyHighlighted + " <u><b>" + nodeValue + "</b></u> ";
+				if(previousNodeName.equals("p")){ 
+					questionBody = questionBody + " <u><b>" + nodeValue + "</b></u> ";
+				}
+				if(previousNodeName.equals("b")){
+					questionBodyHighlighted = questionBodyHighlighted + " <u><b>" + nodeValue + "</b></u> ";
+				}	
+				if(previousNodeName.equals("i")){
+					questionBodyHighlighted = questionBodyHighlighted + " <i><u><b>" + nodeValue + "</b></u></i> ";
+				}
 			}
 			
 			
@@ -62,6 +77,7 @@ public class QuestionBodyConverter  implements Converter {
 				body.setQuestionImage(reader.getAttribute(0));
 			}
 			if(reader.hasMoreChildren()){
+				previousNodeName = reader.getNodeName();
 				reader.moveDown();
 			}else{
 				if(reader.getNodeName().equalsIgnoreCase(parentNodeName)){
@@ -69,6 +85,7 @@ public class QuestionBodyConverter  implements Converter {
 				}
 				reader.moveUp();
 			}
+			
 		}
 		body.setQuestionBodyStr(questionBody);
 		body.setQuestionBodyHighlighted(questionBodyHighlighted);

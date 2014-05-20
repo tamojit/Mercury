@@ -11,4 +11,11 @@
            parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">#0B243B</item>
     </style>
+    
+    <!-- Splash screen style -->
+    <style name="MySplashTheme" parent="android:style/Theme">
+	    <item name="android:windowNoTitle">true</item>
+	    <item name="android:windowContentOverlay">@null</item>
+	    <item name="android:windowBackground">@drawable/app_title</item>
+	</style>
 </resources>

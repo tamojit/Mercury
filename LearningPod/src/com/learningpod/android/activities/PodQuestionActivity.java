@@ -40,6 +40,7 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -753,12 +754,15 @@ public class PodQuestionActivity extends BaseActivity {
 				popupmail.dismiss();
 			}
 		});
-		// set the focus on send button so that the keyboard is not open when the 
+		// set the focus on dummy button so that the keyboard is not open when the 
 		// popup window is displayed
-		sendBtn.setFocusable(true);
-		sendBtn.setFocusableInTouchMode(true);
-		sendBtn.requestFocus();
+		Button dummyBtn = (Button)popupmail.findViewById(R.id.sendEmailDummy);
+		dummyBtn.setFocusable(true);
+		dummyBtn.setFocusableInTouchMode(true);
+		dummyBtn.requestFocus();
 		popupmail.show();
+		 
+
 	}
 
 	
@@ -807,7 +811,7 @@ public class PodQuestionActivity extends BaseActivity {
 			summary.append("\n");
 			summary.append("\tCorrect Answer : " + getCorrectChoiceSequence(userProgress.getQuestionId()));
 			summary.append("\n");
-			summary.append("\tResult : " + (userProgress.isChoiceCorrect()?"true":"false"));
+			summary.append("\tResult : " + (userProgress.isChoiceCorrect()?"Correct":"Incorrect"));
 			summary.append("\n\n");
 		}
 		summary.append("Overall Percentage : " +  percentage + "%");

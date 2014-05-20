@@ -209,6 +209,7 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 			intent.putExtra("explanations",explanations );
 			currentActivity.startActivity(intent);
 			currentActivity.getProgressDialog().hide();
+			currentActivity.finish();
 		}
 		
 	}

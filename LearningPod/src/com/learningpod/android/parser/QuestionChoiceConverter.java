@@ -50,8 +50,8 @@ public class QuestionChoiceConverter implements Converter {
 	
 	private QuestionChoiceBean parserEachChoice(HierarchicalStreamReader reader){
 		QuestionChoiceBean choiceBean = new QuestionChoiceBean();
-		choiceBean.setCorrect(reader.getAttribute(0));
-		choiceBean.setChoiceId(reader.getAttribute(1));
+		choiceBean.setCorrect(reader.getAttribute("correct"));
+		choiceBean.setChoiceId(reader.getAttribute("choiceId"));
 		
 		String parentNodeName = reader.getNodeName();
 		String choiceBody = "";

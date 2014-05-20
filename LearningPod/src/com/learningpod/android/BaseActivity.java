@@ -48,7 +48,7 @@ public class BaseActivity extends Activity implements
 
 	private void menupopup(String detail) {
 
-		menuitempopup = new PopupWindow(600, 450);
+		menuitempopup = new PopupWindow(1200, 550);
 		View loginWindowView = getLayoutInflater().inflate(
 				R.layout.popup_menuitem, null);
 		menuitempopup.setContentView(loginWindowView);
@@ -93,19 +93,19 @@ public class BaseActivity extends Activity implements
 		if (item.getItemId() == R.id.help) {
 
 			
-			menupopup("help");
+			menupopup("HELP");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		}
 
 		else if (item.getItemId() == R.id.about) {
 		
-			menupopup("about");
+			menupopup("ABOUT");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		} else if (item.getItemId() == R.id.terms) {
 			
-			menupopup("terms");
+			menupopup("TERMS");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		} else if(item.getItemId()==R.id.login){
@@ -116,8 +116,7 @@ public class BaseActivity extends Activity implements
 			else {
 				// perform logout
 				ContentCacheStore.getContentCache().setLoggedInUserProfile(null);
-				Intent intent = new Intent(this,MapActivityBeforeLogin.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				Intent intent = new Intent(this,MapActivityBeforeLogin.class);				
 				startActivity(intent);
 				this.finish();
 			}
@@ -143,6 +142,30 @@ public class BaseActivity extends Activity implements
 	public void onClick(DialogInterface dialog, int which) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	@Override
+	public void onBackPressed() {
+	    // your code.
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	    builder.setTitle("Exit");
+	    builder.setMessage("Do you wish to exit the application?");
+
+	    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                    dialog.dismiss();
+	                    finish();
+	            }
+	        });
+
+	    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+	        @Override
+	        public void onClick(DialogInterface dialog, int which) {
+	            dialog.dismiss();
+	        }
+	    });
+	    AlertDialog alert = builder.create();
+	    alert.show();
 	}
 
 }
