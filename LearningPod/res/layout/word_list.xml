@@ -6,21 +6,20 @@
 
     <TextView
     	android:id="@+id/wordListText"
-    	android:layout_width="match_parent"
-    	android:textStyle="bold"
-    	android:textSize="24dp"
+    	android:layout_width="match_parent"  	
+    	android:textSize="19dp"
     	android:textColor="#FFFFFF"
-    	android:layout_height="54dp"
-    	android:paddingLeft="15dp"
+    	android:layout_height="46dp"
+    	android:paddingLeft="38dp"
     	android:paddingTop="8dp"
     	android:text="Medium Text"
     	android:textAppearance="?android:attr/textAppearanceMedium" />
    
    <View android:layout_width="fill_parent"
-    android:layout_height="2dip"
+    android:layout_height="1.5dip"
     android:background="#FFFFFF" 
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"/>
+    android:layout_marginLeft="35dp"
+    android:layout_marginRight="36dp"/>
     
     <LinearLayout 
 	android:id="@+id/sectionBar" 
@@ -28,6 +27,7 @@
 	android:layout_width="match_parent"
 	android:orientation="horizontal"
 	android:weightSum="1"
+	android:layout_marginLeft="10dp"
 	>
   
     <TextView
@@ -37,25 +37,25 @@
     	android:layout_height="45dp"
     	android:layout_weight=".37"
     	android:layout_width="match_parent"
-    	android:text="WORD"
+    	android:text="WORD"    
+    	android:textStyle="bold"
     	android:textColor="#ABEB99"
-        android:textSize="22dp"
-        android:textStyle="bold"
-         android:paddingTop="7dp"
-    	android:layout_marginLeft="20dp" />
+        android:textSize="17dp"
+        android:paddingTop="8dp"
+    	android:layout_marginLeft="35dp" />
     
     <TextView
         android:id="@+id/secondColumnText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="PART OF SPEECH"
-        android:textSize="22dp"
-         android:paddingLeft="4dp"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
         android:ellipsize="end"
         android:textColor="#ABEB99"
-        android:layout_weight=".35"
-         android:textStyle="bold" 
-        
+        android:layout_weight=".38"
+       
        >
     </TextView>
     
@@ -64,24 +64,24 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="MEANING"
-        android:textStyle="bold"
         android:ellipsize="end"
-        android:textSize="22dp"
-       
+        android:textSize="17dp" 
+        android:textStyle="bold"     
         android:layout_marginRight="10dp"
-        android:layout_weight=".25"
+        android:layout_weight=".23"
         android:textColor="#ABEB99"
         >
     </TextView>
     
-    
- 
-</LinearLayout>
-	 <View android:layout_width="fill_parent"
-    android:layout_height="2dip"
-    android:background="#FFFFFF"
-    android:layout_marginRight="15dp"
-     android:layout_marginLeft="15dp" />
+   </LinearLayout>
+	 
+	 <View 
+	       android:layout_width="fill_parent"
+           android:layout_height="1.5dip"
+           android:background="#FFFFFF"
+           android:layout_marginRight="36dp"
+           android:layout_marginLeft="35dp" />
+	 
     <ListView
     	android:clickable="false"
     	android:focusable="false"
@@ -93,9 +93,9 @@
     	android:longClickable="false"
     	android:scrollbarAlwaysDrawVerticalTrack="false"
     	android:scrollbars="none"
-    	android:paddingLeft="10dp"
-    	android:paddingRight="15dp"
-    	 >
+    	android:paddingLeft="35dp"
+    	android:paddingRight="36dp"
+     	 >
     	
     </ListView>
     

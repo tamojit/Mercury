@@ -11,6 +11,7 @@ import com.learningpod.android.R;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,13 +25,13 @@ public class ListviewAdapter extends BaseAdapter
 {
 	public ArrayList<HashMap<String,String>> list;
 	Activity activity;
-	
+    
 	public ListviewAdapter(Activity activity, ArrayList<HashMap<String,String>> list) {
 		super();
 		this.activity = activity;
 		this.list = list;
 	}
-
+	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
@@ -67,7 +68,9 @@ public class ListviewAdapter extends BaseAdapter
 				LayoutInflater inflater =  activity.getLayoutInflater();
 
 				if (convertView == null)
-				{
+				{   
+					
+					
 					convertView = inflater.inflate(R.layout.listview_row, null);
 					holder = new ViewHolder();
 					holder.txtFirst = (TextView) convertView.findViewById(R.id.FirstText);

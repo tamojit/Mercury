@@ -57,6 +57,10 @@
         <item>Noun</item>
         <item>Amount of force or strength</item>
         
+        <item>Resolution</item>
+        <item>Noun</item>
+        <item>Process of working through or determining</item>
+        
         </string-array>
       
        <string-array name="verbwordlist">
@@ -66,19 +70,19 @@
      
         <item>Combact</item>
         <item>Verb</item>
-        <item>sense difference or judge</item>
+        <item>Sense difference or judge</item>
         
         <item>Distinguish</item>
         <item>Verb</item>
-        <item>difference between</item>
+        <item>Difference between</item>
         
         <item>Instal</item>
         <item>Verb</item>
-        <item>put in place</item>
+        <item>Put in place</item>
         
         <item>Overlap</item>
         <item>Verb</item>
-        <item>put in place</item>
+        <item>Put in place</item>
         
        </string-array>
       

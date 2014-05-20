@@ -5,19 +5,19 @@
 	android:layout_width="match_parent"
 	android:orientation="horizontal"
 	android:weightSum="1"
-	
-	xmlns:android="http://schemas.android.com/apk/res/android">
+	android:layout_marginLeft="25dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
  
     	android:id="@+id/FirstText"
-    	android:layout_height="45dp"
+    	android:layout_height="43dp"
     	android:layout_weight=".37"
-    	android:textSize="24dp"
+    	android:textSize="18dp"
     	android:layout_width="fill_parent"
     	android:text="First"
-    	android:paddingLeft="10dp"
-    	android:paddingTop="4dp"
+    	android:layout_marginLeft="10dp"
+    	android:paddingTop="8dp"
     	android:textStyle="bold"
     	android:textColor="#ffffff"
     	/>
@@ -25,26 +25,25 @@
     <TextView
         android:id="@+id/SecondText"
         android:layout_width="fill_parent"
-        android:layout_height="45dp"
+        android:layout_height="43dp"
         android:text="Second"
-       
-        android:textSize="24dp"
-        android:paddingTop="4dp"
+        android:textSize="18dp"
+        android:paddingTop="8dp"
         android:textColor="#ffffff"  
-        android:layout_weight=".35"
+        android:layout_weight=".38"
         >
     </TextView>
     
     <TextView
         android:id="@+id/ThirdText"
         android:layout_width="fill_parent"
-        android:layout_height="45dp"
+        android:layout_height="43dp"
         android:text="Third"
-        android:paddingLeft="5dp"
-        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:paddingTop="8dp"
         android:textColor="#ffffff"
-        android:textSize="24dp"
-        android:layout_weight=".16"
+        android:textSize="18dp"
+        android:layout_weight=".14"
         >
     </TextView>
     

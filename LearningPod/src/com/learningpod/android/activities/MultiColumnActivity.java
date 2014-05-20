@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.DocumentsContract.Document;
 import android.util.Log;
@@ -40,7 +41,8 @@ public class MultiColumnActivity extends BaseActivity
 	private ArrayList<HashMap<String,String>> list;
 	LinearLayout wordListContentView;
 	ListviewAdapter adapter;
-	//int noun[]={R.array.nounwordlist1,R.array.nounwordlist2};
+	private Typeface headerFont = null;
+	private Typeface Font = null;
 	int i=0;
 	int verb=0;
 	int vocabulary=0;
@@ -48,28 +50,34 @@ public class MultiColumnActivity extends BaseActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        headerFont = Typeface.createFromAsset(getAssets(),
+    			"fonts/PaytoneOne.ttf");
+        
         modifyActionBar();
         wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
         createWordList();
+        
     }    
-   // String []description1={"Tier1","Tier2","Tier3"};
+    
+    // String []description1={"Tier1","Tier2","Tier3"};
     String []ListHeading = {"TIER II NOUNS","TIER II VERBS","TIER III VOCABULARY"};
     
 	private void modifyActionBar() {
 		// get the action bar
 		ActionBar actionBar = getActionBar();
 		// getActionBar().setTitle(goToMapView.getText().toString());
-		getActionBar().setIcon(R.drawable.arrow);
+		getActionBar().setIcon(R.drawable.arrow);	 
 		actionBar.setCustomView(R.layout.custm);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
-		goToMapButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+		goToMapButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19);
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
-		podTitle.setText("WORDLIST");
-		podTitle.setPadding(100, 5, 0, 0);
-	
-		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+		podTitle.setText("Word List");
+		podTitle.setPadding(160, 0, 0, 0);
+		podTitle.setTypeface(headerFont);
+		
+		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
 
 		//	podTitle.setTypeface(headerFont);
 		goToMapButton.setOnClickListener(new OnClickListener() {
@@ -97,11 +105,13 @@ public class MultiColumnActivity extends BaseActivity
 		ListView wordList=(ListView)wordListView.findViewById(R.id.wordList);
 		
 		TextView ListHeadings=(TextView)wordListView.findViewById(R.id.wordListText);
+		ListHeadings.setTypeface(headerFont);
 		ListHeadings.setText(ListHeading[i]);
+		//TextView word=(TextView)wordListView.findViewById(R.id.FirstcolumnText);
 		
 		populateList(i);
 		adapter =new ListviewAdapter(MultiColumnActivity.this, list);
-		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*62));
+		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*58));
 		wordList.setAdapter(adapter);
 		wordListContentView.addView(wordListView);
     	}
@@ -142,9 +152,7 @@ public class MultiColumnActivity extends BaseActivity
 	      	list.add(temp);
     		}
     	          break;
-		
-    	
-    	
+	
     	case 2:
         	
     		list = new ArrayList<HashMap<String,String>>();
