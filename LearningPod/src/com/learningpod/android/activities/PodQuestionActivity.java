@@ -672,14 +672,15 @@ public class PodQuestionActivity extends BaseActivity {
 		LinearLayout summaryQuesContainer = (LinearLayout) findViewById(R.id.summaryquestioncontainer);
 		// ((TextView)findViewById(R.id.summarypodname)).setText("Summary of "+
 		// selectedPod.getTitle());
-		LayoutInflater inflater = getLayoutInflater();
+		((TextView)findViewById(R.id.summaryLabel)).setTypeface(font);
+		LayoutInflater inflater = getLayoutInflater();		
 		for (int idx = 0; idx < userProgressCompleted.size(); idx++) {
 			UserProgressInfo progress = userProgressCompleted.get(idx);
 			View view = inflater.inflate(R.layout.summary_question_view, null);
 			TextView quesSeq = (TextView) view
 					.findViewById(R.id.summaryquestionsequence);
 			quesSeq.setText(Integer.valueOf(idx + 1).toString() + ". ");
-
+			quesSeq.setTypeface(headerFont);
 			ImageView quesImage = (ImageView) view
 					.findViewById(R.id.summaryQuestionicon);
 			if (progress.isChoiceCorrect()) {

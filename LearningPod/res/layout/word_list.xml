@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="0dp"
+	android:layout_width="match_parent"
+	android:orientation="vertical" >
+
+    <TextView
+    	android:id="@+id/wordListText"
+    	android:layout_width="match_parent"
+    	android:textStyle="bold"
+    	android:textSize="24dp"
+    	android:textColor="#FFFFFF"
+    	android:layout_height="54dp"
+    	android:paddingLeft="15dp"
+    	android:paddingTop="8dp"
+    	android:text="Medium Text"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+   
+   <View android:layout_width="fill_parent"
+    android:layout_height="2dip"
+    android:background="#FFFFFF" 
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"/>
+    
+    <LinearLayout 
+	android:id="@+id/sectionBar" 
+	android:layout_height="wrap_content" 
+	android:layout_width="match_parent"
+	android:orientation="horizontal"
+	android:weightSum="1"
+	>
+  
+    <TextView
+    	
+    	android:ellipsize="end"
+    	android:id="@+id/FirstcolumnText"
+    	android:layout_height="45dp"
+    	android:layout_weight=".37"
+    	android:layout_width="match_parent"
+    	android:text="WORD"
+    	android:textColor="#ABEB99"
+        android:textSize="22dp"
+        android:textStyle="bold"
+         android:paddingTop="7dp"
+    	android:layout_marginLeft="20dp" />
+    
+    <TextView
+        android:id="@+id/secondColumnText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="PART OF SPEECH"
+        android:textSize="22dp"
+         android:paddingLeft="4dp"
+        android:ellipsize="end"
+        android:textColor="#ABEB99"
+        android:layout_weight=".35"
+         android:textStyle="bold" 
+        
+       >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/thirdColumnText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="MEANING"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:textSize="22dp"
+       
+        android:layout_marginRight="10dp"
+        android:layout_weight=".25"
+        android:textColor="#ABEB99"
+        >
+    </TextView>
+    
+    
+ 
+</LinearLayout>
+	 <View android:layout_width="fill_parent"
+    android:layout_height="2dip"
+    android:background="#FFFFFF"
+    android:layout_marginRight="15dp"
+     android:layout_marginLeft="15dp" />
+    <ListView
+    	android:clickable="false"
+    	android:focusable="false"
+    	android:focusableInTouchMode="false"
+    	android:id="@+id/wordList"
+       	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:layout_width="match_parent"
+    	android:longClickable="false"
+    	android:scrollbarAlwaysDrawVerticalTrack="false"
+    	android:scrollbars="none"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="15dp"
+    	 >
+    	
+    </ListView>
+    
+</LinearLayout>
