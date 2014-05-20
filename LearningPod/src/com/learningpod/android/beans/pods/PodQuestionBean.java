@@ -14,7 +14,7 @@ public class PodQuestionBean implements Serializable {
 	@XStreamAsAttribute
 	private String elementId;
 	@XStreamAsAttribute
-	private String version;
+	private String version;	
 	@XStreamAsAttribute
 	private String score;
 	@XStreamAsAttribute
@@ -35,6 +35,8 @@ public class PodQuestionBean implements Serializable {
 	public void setExplanations(List<PodQuestionExplanation> explanations) {
 		this.explanations = explanations;
 	}
-	
+	public String getVersion() {
+		return version;
+	}
 	
 }

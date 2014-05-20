@@ -41,7 +41,8 @@
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
-    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		   
+    		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
@@ -97,7 +98,7 @@
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
-    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
@@ -152,7 +153,7 @@
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
-    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
@@ -208,7 +209,7 @@
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
-    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
@@ -239,7 +240,7 @@
     		    android:layout_width="50dp"
     		    android:layout_height="50dp"
     		    android:layout_marginLeft="720dp"
-    		    android:layout_marginTop="255dp"
+    		    android:layout_marginTop="265dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane11"/>
     		
@@ -252,23 +253,23 @@
     		    android:textStyle="bold"
     		    android:text = "Homographs and Homophones"
     		    android:layout_toRightOf="@+id/planet10"
-    		    android:layout_marginTop="245dp"
+    		    android:layout_marginTop="250dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet10ss"
     		    android:visibility="invisible"
     		    android:layout_marginLeft="725dp"
-    		    android:layout_marginTop="178dp" 
+    		    android:layout_marginTop="188dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
-    		    android:src="@drawable/spaceshipwithoutflag"/>
+    		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
     		    android:layout_height="5dp"
-    		    android:layout_marginTop="225dp" 
+    		    android:layout_marginTop="235dp" 
     		    android:orientation="horizontal"    		     
     		    android:layout_toRightOf="@+id/planet10ss"
     		    android:weightSum="1">
@@ -295,8 +296,8 @@
     <ImageView
     		    android:id = "@+id/planetnavigation3"
     		    
-    		    android:layout_marginLeft="227dp"
-    		    android:layout_marginTop="290dp" 
+    		    android:layout_marginLeft="207dp"
+    		    android:layout_marginTop="300dp" 
     		    android:layout_gravity="left"
     		    android:layout_width="83dp"
     		    android:layout_height="80dp"
@@ -306,7 +307,7 @@
     		    android:id = "@+id/planetnavigation2"
     		    
     		    android:layout_marginLeft="694dp"
-    		    android:layout_marginTop="290dp" 
+    		    android:layout_marginTop="300dp" 
     		    android:layout_gravity="right"
     		    android:layout_width="83dp"
     		    android:layout_height="80dp"
@@ -316,25 +317,25 @@
     
     
     
-    			<Button android:layout_width="150dp" 
-    			    android:layout_marginTop="280dp"
+    			<Button android:layout_width="120dp" 
+    			    android:layout_marginTop="290dp"
     			    android:layout_marginLeft="50dp"   			    
 	                android:id="@+id/btnmap2prev"	                 
-	                android:layout_height="75dp"
+	                android:layout_height="70dp"
 	                android:textSize="18sp"
 	                android:text = "BACK"
-	                android:background="@drawable/previous"
+	                android:background="@drawable/mapbackbuttonbg"
 	                android:textColor="#ffffff"
 	                android:textStyle="bold"	                
 	                
 	                />
     			
-    			<Button android:layout_width="150dp" 
-    			    android:layout_marginTop="280dp"
+    			<Button android:layout_width="120dp" 
+    			    android:layout_marginTop="290dp"
     			    android:layout_marginLeft="800dp"   			    
 	                android:id="@+id/btnmap2next"
 	                android:layout_gravity="right"
-	                android:layout_height="75dp"
+	                android:layout_height="70dp"
 	                android:textSize="18sp"
 	                android:text = "NEXT"
 	                android:background="@drawable/next"
