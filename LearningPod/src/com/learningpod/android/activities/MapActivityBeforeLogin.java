@@ -81,7 +81,9 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
-				
+		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
+		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
+		mapView3.findViewById(R.id.wordlist3).setOnClickListener(this);		
 		
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		
@@ -202,6 +204,15 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
            // Show the previous Screen
            mapFlipper.showPrevious();
 		}
+		else if (v.getId()==R.id.wordlist || v.getId()==R.id.wordlist2 || v.getId()==R.id.wordlist3){
+            
+	           // set the required Animation type to mapFlipper
+	           // The Next screen will come in form Left and current Screen will go OUT from Right 
+			Intent i = new Intent(this, MultiColumnActivity.class);
+			startActivity(i); 
+			}
+		
+		
 		else if(v instanceof TextView){
 		 
 			Account selectedAccount = accounts[v.getId()];

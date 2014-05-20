@@ -8,7 +8,7 @@
     	android:id="@+id/wordListText"
     	android:layout_width="match_parent"
     	android:textStyle="bold"
-    	android:textSize="25dp"
+    	android:textSize="24dp"
     	android:textColor="#FFFFFF"
     	android:layout_height="54dp"
     	android:paddingLeft="15dp"
@@ -38,10 +38,10 @@
     	android:layout_weight=".37"
     	android:layout_width="match_parent"
     	android:text="WORD"
-    	android:textColor="#80B765"
-        android:textSize="26dp"
+    	android:textColor="#ABEB99"
+        android:textSize="22dp"
         android:textStyle="bold"
-        android:layout_marginTop="5dp"
+         android:paddingTop="7dp"
     	android:layout_marginLeft="20dp" />
     
     <TextView
@@ -49,10 +49,10 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="PART OF SPEECH"
-        android:textSize="26dp"
-         android:layout_marginTop="5dp"
+        android:textSize="22dp"
+         android:paddingLeft="4dp"
         android:ellipsize="end"
-        android:textColor="#80B765"
+        android:textColor="#ABEB99"
         android:layout_weight=".35"
          android:textStyle="bold" 
         
@@ -66,11 +66,11 @@
         android:text="MEANING"
         android:textStyle="bold"
         android:ellipsize="end"
-        android:textSize="26dp"
-        android:layout_marginTop="5dp"
+        android:textSize="22dp"
+       
         android:layout_marginRight="10dp"
         android:layout_weight=".25"
-        android:textColor="#80B765"
+        android:textColor="#ABEB99"
         >
     </TextView>
     

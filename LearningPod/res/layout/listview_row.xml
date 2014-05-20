@@ -26,7 +26,8 @@
         android:id="@+id/SecondText"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:text="Second"       
+        android:text="Second"
+       
         android:textSize="24dp"
         android:paddingTop="4dp"
         android:textColor="#ffffff"  
@@ -39,6 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:text="Third"
+        android:paddingLeft="5dp"
         android:paddingTop="4dp"
         android:textColor="#ffffff"
         android:textSize="24dp"

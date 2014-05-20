@@ -53,7 +53,7 @@ public class MultiColumnActivity extends BaseActivity
         createWordList();
     }    
    // String []description1={"Tier1","Tier2","Tier3"};
-    String []ListHeading = {"TIER I NOUNS","TIER II VERBS","TIER III VOCABULARY"};
+    String []ListHeading = {"TIER II NOUNS","TIER II VERBS","TIER III VOCABULARY"};
     
 	private void modifyActionBar() {
 		// get the action bar
@@ -63,9 +63,12 @@ public class MultiColumnActivity extends BaseActivity
 		actionBar.setCustomView(R.layout.custm);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
+		goToMapButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
 		podTitle.setText("WORDLIST");
+		podTitle.setPadding(100, 5, 0, 0);
+	
 		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 
 		//	podTitle.setTypeface(headerFont);

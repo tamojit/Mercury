@@ -31,4 +31,79 @@
    <!-- <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>-->
 
+    <string-array name="nounwordlist">
+        
+        <item>Component</item>
+        <item>Noun</item>
+        <item>Section or part of something</item>
+      
+        <item>Dimension</item>
+        <item>Noun</item>
+        <item>Measure from beginning to end</item>
+        
+        <item>Frequency</item>
+        <item>Noun</item>
+        <item>How often something accurs</item>
+     
+        <item>Incentive</item>
+        <item>Noun</item>
+        <item>Reward for trying or finishing</item>
+        
+        <item>Initiative</item>
+        <item>Noun</item>
+        <item>First step towards a goal</item>
+        
+        <item>Intensity</item>
+        <item>Noun</item>
+        <item>Amount of force or strength</item>
+        
+        </string-array>
+      
+       <string-array name="verbwordlist">
+        <item>Combact</item>
+        <item>Verb</item>
+        <item>Struggle with or fight off</item>
+     
+        <item>Combact</item>
+        <item>Verb</item>
+        <item>sense difference or judge</item>
+        
+        <item>Distinguish</item>
+        <item>Verb</item>
+        <item>difference between</item>
+        
+        <item>Instal</item>
+        <item>Verb</item>
+        <item>put in place</item>
+        
+        <item>Overlap</item>
+        <item>Verb</item>
+        <item>put in place</item>
+        
+       </string-array>
+      
+        <string-array name="vocabularywordlist">
+            
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+     
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        
+      </string-array>
+      
 </resources>

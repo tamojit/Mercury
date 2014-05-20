@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/map1" >
     
-     <ImageButton 
+     <Button 
     		    android:id = "@+id/wordlist"
     		    android:layout_width="110dp"
     		    android:layout_height="27dp"

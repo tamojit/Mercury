@@ -8,7 +8,6 @@ import com.learningpod.android.BackgroundTasks;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
-
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 import com.learningpod.android.db.LearningpodDbHandler;
@@ -16,6 +15,7 @@ import com.learningpod.android.db.LearningpodDbHandler;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -65,6 +65,10 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
+		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
+		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
+		mapView3.findViewById(R.id.wordlist3).setOnClickListener(this);
+		
 		
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		
@@ -298,7 +302,15 @@ public class MapActivity extends BaseActivity implements OnClickListener{
             // Show the previous Screen
             mapFlipper.showPrevious();
 		}
-		 
+		else if (v.getId()==R.id.wordlist || v.getId()==R.id.wordlist2 || v.getId()==R.id.wordlist3){
+            
+	           // set the required Animation type to mapFlipper
+	           // The Next screen will come in form Left and current Screen will go OUT from Right 
+			Intent i = new Intent(this, MultiColumnActivity.class);
+			startActivity(i); 
+			}	
+		
+		
 	}
 
 
