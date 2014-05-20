@@ -8,13 +8,13 @@ import com.learningpod.android.BackgroundTasks;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
-
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 import com.learningpod.android.db.LearningpodDbHandler;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -39,10 +39,13 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 	int[] imgViewPlntArry={R.id.planet1ss,R.id.planet2ss,R.id.planet3ss,R.id.planet4ss,R.id.planet5ss,R.id.planet6ss,R.id.planet7ss,R.id.planet8ss,R.id.planet9ss,R.id.planet10ss,R.id.planet11ss,R.id.planet12ss,R.id.planet13ss,R.id.planet14ss,R.id.planet15ss};
 	int[] pbRedArry={R.id.planet1pbred,R.id.planet2pbred,R.id.planet3pbred,R.id.planet4pbred,R.id.planet5pbred,R.id.planet6pbred,R.id.planet7pbred,R.id.planet8pbred,R.id.planet9pbred,R.id.planet10pbred,R.id.planet11pbred,R.id.planet12pbred,R.id.planet13pbred,R.id.planet14pbred,R.id.planet15pbred};
 	int[] pbBlueArry={R.id.planet1pbblue,R.id.planet2pbblue,R.id.planet3pbblue,R.id.planet4pbblue,R.id.planet5pbblue,R.id.planet6pbblue,R.id.planet7pbblue,R.id.planet8pbblue,R.id.planet9pbblue,R.id.planet10pbblue,R.id.planet11pbblue,R.id.planet12pbblue,R.id.planet13pbblue,R.id.planet14pbblue,R.id.planet15pbblue};
+	private Typeface headerFont;
 	
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		headerFont = Typeface.createFromAsset(getAssets(),
+				"fonts/PaytoneOne.ttf");
 		// get user profile and pods from content cache
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache().getLoggedInUserProfile();		
 		//get list of pods. getting 
@@ -103,6 +106,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView1.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView1.findViewById(txtPlntArry[i]);
+			txtNamePlanet1.setTypeface(headerFont);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView1.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView1.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView1.findViewById(pbBlueArry[i]);
@@ -148,6 +152,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView2.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView2.findViewById(txtPlntArry[i]);
+			txtNamePlanet1.setTypeface(headerFont);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView2.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView2.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView2.findViewById(pbBlueArry[i]);
@@ -192,6 +197,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
 			ImageButton btnPlanet1 = (ImageButton)mapView3.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView3.findViewById(txtPlntArry[i]);
+			txtNamePlanet1.setTypeface(headerFont);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView3.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView3.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView3.findViewById(pbBlueArry[i]);

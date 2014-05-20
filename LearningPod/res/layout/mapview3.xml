@@ -16,7 +16,7 @@
     		    android:id = "@+id/planet11"
     		    android:layout_width="50dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="40dp"
+    		    android:layout_marginLeft="55dp"
     		    android:layout_marginTop="175dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane12"/>
@@ -25,7 +25,7 @@
     		    android:id="@+id/planet11name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="14sp"
+    		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Greek and Latin Roots"
@@ -36,7 +36,7 @@
     		<ImageView
     		    android:id = "@+id/planet11ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="45dp"
+    		    android:layout_marginLeft="60dp"
     		    android:layout_marginTop="100dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
@@ -80,7 +80,7 @@
     		    android:id="@+id/planet12name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="14sp"
+    		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Prefixes"
@@ -127,7 +127,7 @@
     		    android:layout_width="50dp"
     		    android:layout_height="50dp"
     		    android:layout_marginLeft="440dp"
-    		    android:layout_marginTop="135dp"
+    		    android:layout_marginTop="145dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane14"/>
     		
@@ -135,7 +135,7 @@
     		    android:id="@+id/planet13name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="14sp"
+    		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Suffixes"
@@ -147,7 +147,7 @@
     		    android:id = "@+id/planet13ss"
     		    android:visibility="invisible"
     		    android:layout_marginLeft="445dp"
-    		    android:layout_marginTop="60dp" 
+    		    android:layout_marginTop="70dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
@@ -156,7 +156,7 @@
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
     		    android:layout_height="5dp"
-    		    android:layout_marginTop="115dp" 
+    		    android:layout_marginTop="125dp" 
     		    android:orientation="horizontal"    		     
     		    android:layout_toRightOf="@+id/planet13ss"
     		    android:weightSum="1">
@@ -181,8 +181,8 @@
     		    android:id = "@+id/planet14"
     		    android:layout_width="65dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="550dp"
-    		    android:layout_marginTop="190dp"
+    		    android:layout_marginLeft="560dp"
+    		    android:layout_marginTop="220dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane15"/>
     		
@@ -190,19 +190,19 @@
     		    android:id="@+id/planet14name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="14sp"
+    		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Relationship and Transition Words"
     		    android:layout_toRightOf="@+id/planet14"
-    		    android:layout_marginTop="200dp"
+    		    android:layout_marginTop="210dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="565dp"
-    		    android:layout_marginTop="115dp" 
+    		    android:layout_marginLeft="575dp"
+    		    android:layout_marginTop="145dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="50dp"
     		    android:layout_height="80dp"
@@ -211,7 +211,7 @@
     		<LinearLayout 
     		    android:layout_width="50dp"    		    
     		    android:layout_height="5dp"
-    		    android:layout_marginTop="170dp" 
+    		    android:layout_marginTop="200dp" 
     		    android:orientation="horizontal"    		     
     		    android:layout_toRightOf="@+id/planet14ss"
     		    android:weightSum="1">
@@ -245,7 +245,7 @@
     		    android:id="@+id/planet15name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="14sp"
+    		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Vocabulary Acquisition and Use (Reference Materials)"

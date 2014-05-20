@@ -26,27 +26,20 @@
        <RelativeLayout
            android:layout_width="0dp"
            android:layout_height="wrap_content"
-           android:layout_margin="5dp"
-           android:layout_weight="0.5"
+           android:layout_marginTop="5dp"
+           android:layout_marginLeft="17dp"
+           android:layout_marginRight="0dp"
+           android:layout_weight="0.5"          
            android:orientation="vertical" >
 
-           <ImageView
-               android:id="@+id/quesimage"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginBottom="5dp"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:adjustViewBounds="true"
-               android:src="@drawable/refimg"
-               android:visibility="gone" />
+         
 
            <ImageView
                android:id="@+id/alienforquestion"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
+               android:layout_width="80dp"
+               android:layout_height="48dp"
+               android:layout_marginLeft="28dp"
+               android:layout_marginRight="10dp"
                android:adjustViewBounds="true"
                android:src="@drawable/alienleft" />
 
@@ -54,11 +47,11 @@
                android:id="@+id/alienforquestionlight"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:layout_marginTop="8dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="20dp"
                android:adjustViewBounds="true"
-               android:src="@drawable/alienlightwithspaceleft" />
+               android:src="@drawable/alienlightwithspaceleft1" />
 
            <TextView
                android:id="@+id/quesbodyhighlighted"
@@ -66,33 +59,36 @@
                android:layout_height="wrap_content"
                android:layout_below="@+id/alienforquestionlight"
                android:layout_marginBottom="5dp"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:background="#F4FA58"
-               android:padding="20dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="10dp"
+               android:background="#FFE96F"
+               android:padding="12dp"
                android:text="Read the sentence. Use context clues to help you figure out the meaning of the word jovial. Then, choose the correct meaning of the word jovial"
                android:textColor="#000000"
-               android:textSize="15sp" />
+               android:textSize="19.5sp" />
 
            <TextView
                android:id="@+id/quesbody"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_below="@+id/quesbodyhighlighted"
-               android:layout_margin="5dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_marginRight="10dp"
                android:text="Read the sentence. Use context clues to help you figure out the meaning of the word jovial. Then, choose the correct meaning of the word jovial"
                android:textColor="#ffffff"
-               android:textSize="15sp" />
+               android:textSize="17.5sp" />
 
            <ImageView
                android:id="@+id/alienforexplanation"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+               android:layout_width="80dp"
+               android:layout_height="48dp"
                android:layout_alignRight="@+id/quesbody"
                android:layout_below="@+id/quesbody"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:layout_marginTop="10dp"
+               android:layout_marginLeft="0dp"
+               android:layout_marginRight="2dp"
+               android:layout_marginTop="8dp"
                android:adjustViewBounds="true"
                android:src="@drawable/alienright" />
 
@@ -101,9 +97,9 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_below="@+id/quesbody"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:layout_marginTop="20dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="8dp"
                android:adjustViewBounds="true"
                android:src="@drawable/alienlightwithspaceright" />
 
@@ -113,11 +109,11 @@
                android:layout_height="fill_parent"
                android:layout_below="@+id/alienforexplanation"
                android:layout_marginBottom="0dp"
-               android:layout_marginLeft="5dp"
-               android:layout_marginRight="5dp"
-               android:layout_marginTop="15dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginTop="13dp"
                android:animateLayoutChanges="true"
-               android:background="#8896a3"
+               android:background="#8897a2"
                android:orientation="vertical" >
 
                <TextView
@@ -136,44 +132,51 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp"
-                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="12dp"
+                   android:layout_marginRight="12dp"
+                   android:layout_marginTop="5dp"
                    android:text="ExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanation Explanation"
                    android:textColor="#000000"
-                   android:textSize="15sp" />
+                   android:textSize="19sp" />
            </LinearLayout>
        </RelativeLayout>
 
        <LinearLayout
            android:layout_width="0dp"
            android:layout_height="wrap_content"
-           android:layout_margin="5dp"
-           android:layout_weight="0.5"
+           android:layout_marginTop="5dp"
+           android:layout_marginRight="5dp"
+           android:layout_marginBottom="5dp"
+           android:layout_marginLeft="30dp"
+           android:layout_weight="0.5"           
            android:orientation="vertical" >
 
            <LinearLayout
                android:id="@+id/questionprogressbarcontainer"
                android:layout_width="fill_parent"
-               android:layout_height="30dp"
+               android:layout_height="25dp"
                android:layout_gravity="right"               
-               android:layout_marginRight="30dp"              
+               android:layout_marginRight="35dp"              
                android:gravity="right"
                android:orientation="horizontal" >
            </LinearLayout>
 
            <LinearLayout
+               android:id = "@+id/choiceLabelContainer"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                android:layout_marginRight="30dp"
                android:layout_marginBottom="3dp"
+               android:layout_marginTop="8dp"
                android:gravity = "center_vertical">"
 
                <ImageView
                    android:id="@+id/choiceresulticon"
                    android:layout_width="25dp"
                    android:layout_height="19dp"                   
-                   android:layout_marginLeft="15dp"
+                   android:layout_marginLeft="3dp"
+                   android:layout_marginRight="10dp"
                    android:background="@drawable/tick"
                    android:visibility="visible"
                     />
@@ -182,51 +185,54 @@
                    android:id="@+id/choicelabel"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"                   
-                   android:layout_marginLeft="10dp"
+                   android:layout_marginLeft="0dp"
                    android:layout_marginTop="0dp"
                    android:text="CHOOSE THE CORRECT ANSWER"
                    android:textColor="#ffffff"
-                   android:textSize="20sp"
+                   android:textSize="15sp"
                    android:textStyle="bold" />
            </LinearLayout>
 
            <LinearLayout
                android:id="@+id/choicecontainer"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="wrap_content"                                         
                android:orientation="vertical"
+               android:layout_marginLeft="0dp"
                android:layout_marginRight="30dp" >
            </LinearLayout>
 
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="80dp"
+               android:layout_marginRight="35dp"
                android:layout_marginTop="10dp"
                android:orientation="horizontal" >
 
                <Button
                    android:id="@+id/btnPrevious"
-                   android:layout_width="150dp"
-                   android:layout_height="75dp"
-                   android:layout_gravity="right"
-                   android:layout_marginLeft="20dp"
+                   android:layout_width="120dp"
+                   android:layout_height="80dp"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="0dp"
                    android:background="@drawable/previous"
-                   android:text="BACK"
+                   android:text="  BACK"
+                   android:textColor="#ffffff"
+                   android:textSize="18sp"
+                   android:textStyle="bold" />
+                 <Button
+                   android:id="@+id/btnsubmitnext"
+                   android:layout_width="148dp"
+                   android:layout_height="40dp"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="0dp"
+                   android:background="@drawable/btnsubmit"                   
                    android:textColor="#ffffff"
                    android:textSize="18sp"
                    android:textStyle="bold" />
 
-               <Button
-                   android:id="@+id/btnsubmitnext"
-                   android:layout_width="180dp"
-                   android:layout_height="40dp"
-                   android:layout_gravity="center"
-                   android:layout_marginLeft="0dp"
-                   android:background="@drawable/custom_button_blue"
-                   android:text="SUBMIT"
-                   android:textColor="#ffffff"
-                   android:textSize="20sp"
-                   android:textStyle="bold" />
+              
+                
            </LinearLayout>
        </LinearLayout>
    </LinearLayout>

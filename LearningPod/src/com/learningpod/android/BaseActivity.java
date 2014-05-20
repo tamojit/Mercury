@@ -82,7 +82,7 @@ public class BaseActivity extends Activity implements
 		}
 		
 		if(this instanceof MapActivityBeforeLogin){
-			menu.findItem(R.id.login).setTitle("Login");
+			menu.findItem(R.id.login).setTitle("Log In");
 		}
 		return true;
 	}

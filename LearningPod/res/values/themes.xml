@@ -9,7 +9,8 @@
     <!-- ActionBar styles -->
     <style name="MyActionBar"
            parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">#0B243B</item>
+        <item name="android:background">#213242</item>
+        <item name="android:height">43dp</item>
     </style>
     
     <!-- Splash screen style -->

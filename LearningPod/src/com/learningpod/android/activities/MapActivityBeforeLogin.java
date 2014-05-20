@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -40,10 +41,12 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	private List<PodBean> pods = null;
 	private PopupWindow loginWindow;
 	private Account[] accounts = null;
+	private Typeface headerFont;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		headerFont = Typeface.createFromAsset(getAssets(),
+				"fonts/PaytoneOne.ttf");
 		// get user profile and pods from content cache
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache().getLoggedInUserProfile();		
 		//get list of pods. getting 
@@ -79,13 +82,32 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		((ImageButton)mapView3.findViewById(R.id.planet14)).setOnClickListener(this);
 		((ImageButton)mapView3.findViewById(R.id.planet15)).setOnClickListener(this);
 		
+		
+		((TextView)mapView1.findViewById(R.id.planet1name)).setTypeface(headerFont);
+		((TextView)mapView1.findViewById(R.id.planet2name)).setTypeface(headerFont);
+		((TextView)mapView1.findViewById(R.id.planet3name)).setTypeface(headerFont);
+		((TextView)mapView1.findViewById(R.id.planet4name)).setTypeface(headerFont);
+		((TextView)mapView1.findViewById(R.id.planet5name)).setTypeface(headerFont);
+		
+		((TextView)mapView2.findViewById(R.id.planet6name)).setTypeface(headerFont);
+		((TextView)mapView2.findViewById(R.id.planet7name)).setTypeface(headerFont);
+		((TextView)mapView2.findViewById(R.id.planet8name)).setTypeface(headerFont);
+		((TextView)mapView2.findViewById(R.id.planet9name)).setTypeface(headerFont);
+		((TextView)mapView2.findViewById(R.id.planet10name)).setTypeface(headerFont);
+		
+		((TextView)mapView3.findViewById(R.id.planet11name)).setTypeface(headerFont);
+		((TextView)mapView3.findViewById(R.id.planet12name)).setTypeface(headerFont);
+		((TextView)mapView3.findViewById(R.id.planet13name)).setTypeface(headerFont);
+		((TextView)mapView3.findViewById(R.id.planet14name)).setTypeface(headerFont);
+		((TextView)mapView3.findViewById(R.id.planet15name)).setTypeface(headerFont);
+		
 		// add listeners to next and previous buttons
 		mapView1.findViewById(R.id.btnmap1next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
 		
-		mapView1.setBackground(new BitmapDrawable(getResources(), getScaledBitmap()));
+		
 		
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		

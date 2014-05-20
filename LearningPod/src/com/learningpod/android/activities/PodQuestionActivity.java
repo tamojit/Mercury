@@ -29,6 +29,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -71,6 +72,7 @@ public class PodQuestionActivity extends BaseActivity {
 	private boolean isBackButtonPressed = false;
 	private Typeface font = null;
 	private Typeface headerFont = null;
+	 
 
 	private String putinmailaddress;
 	private String teacheremail;
@@ -79,14 +81,21 @@ public class PodQuestionActivity extends BaseActivity {
 	private String mail;
 	private String uid;
 	private int percentage;
+	private boolean isSmallerScreen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.podquestionrelativeview);
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		isSmallerScreen = false;
+		if(metrics.heightPixels<1200){
+			isSmallerScreen = true;
+		}
 		// create the font face to be used for all texts
 		font = Typeface.createFromAsset(getAssets(),
-				"fonts/PT_Sans-Web-Regular.ttf");
+				"fonts/NotoSans-Regular.ttf");
 		headerFont = Typeface.createFromAsset(getAssets(),
 				"fonts/PaytoneOne.ttf");
 		Bundle extras = getIntent().getExtras();
@@ -227,12 +236,19 @@ public class PodQuestionActivity extends BaseActivity {
 		TextView explanationContentView = (TextView) findViewById(R.id.explanationcontent);
 		TextView explanationHeaderView = (TextView) findViewById(R.id.explanationheader);
 		TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
+		TextView questionBodyView = (TextView) findViewById(R.id.quesbody);
 		explanationContentView.setTypeface(font);
 		explanationHeaderView.setTypeface(headerFont);
 		questionHighlightedView.setTypeface(font);
+		if(isSmallerScreen){
+			questionHighlightedView.setTextSize(17);
+			explanationContentView.setTextSize(17);
+			questionBodyView.setTextSize(15);
+		}
 		// get the previous (Back) question button. clicking on the back button
 		// will take the user to the previous question in the explanation screen
 		Button btnBack = (Button) findViewById(R.id.btnPrevious);
+		btnBack.setTypeface(headerFont);
 		btnBack.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -271,12 +287,8 @@ public class PodQuestionActivity extends BaseActivity {
 		});
 
 		if (isCurrentScreenForExplanation) {
-			if (currentQuestionIndex == questions.size() - 1) {
-				// we have reached the last question in the pod
-				btnSubmitNext.setText("Summary");
-			} else {
-				btnSubmitNext.setText("NEXT");
-			}
+			
+			btnSubmitNext.setTypeface(headerFont);
 			// enable the back button if this is not the first question
 			if (currentQuestionIndex != 0)
 				btnBack.setVisibility(View.VISIBLE);
@@ -284,15 +296,32 @@ public class PodQuestionActivity extends BaseActivity {
 				btnBack.setVisibility(View.INVISIBLE);
 			// change the background to the arrow image
 			btnSubmitNext.setBackgroundResource(R.drawable.next);
-			btnSubmitNext.getLayoutParams().height = (int) TypedValue
-					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 75,
-							getResources().getDisplayMetrics());
-			btnSubmitNext.getLayoutParams().width = (int) TypedValue
-					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 150,
-							getResources().getDisplayMetrics());
-			((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
-					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
-							getResources().getDisplayMetrics());
+			if (currentQuestionIndex == questions.size() - 1) {
+				// we have reached the last question in the pod
+				btnSubmitNext.setText("SUMMARY");
+				btnSubmitNext.getLayoutParams().height = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80,
+								getResources().getDisplayMetrics());
+				btnSubmitNext.getLayoutParams().width = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180,
+								getResources().getDisplayMetrics());
+				((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
+								getResources().getDisplayMetrics());
+			} else {
+				btnSubmitNext.setText("NEXT ");
+				btnSubmitNext.getLayoutParams().height = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80,
+								getResources().getDisplayMetrics());
+				btnSubmitNext.getLayoutParams().width = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
+								getResources().getDisplayMetrics());
+				((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180,
+								getResources().getDisplayMetrics());
+			}
+			
+			
 			btnSubmitNext.invalidate();
 			// disable the button till the animation is not over. don't disable
 			// if the pod is complete and there will be no animation
@@ -331,13 +360,18 @@ public class PodQuestionActivity extends BaseActivity {
 
 			// change the choice label if the selected choice is correct
 			// Also show the correct/wrong icon in front of the text
+			((LinearLayout.LayoutParams)((LinearLayout)findViewById(R.id.choiceLabelContainer)).getLayoutParams()).topMargin =  (int) TypedValue
+					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
+							getResources().getDisplayMetrics());
 			if (isCurrentSelectedChoiceCorrect) {
 				TextView choiceLabelText = (TextView) findViewById(R.id.choicelabel);
 				choiceLabelText.setText("Yay! The correct answer is "
 						+ choiceSeqArr[currentSelectedChoiceIndex]);
 				choiceLabelText.setTextColor(Color.parseColor("#9acc4e"));
 				choiceLabelText.setTextSize(18);
-				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
+				Typeface boldfont = Typeface.createFromAsset(getAssets(),
+						"fonts/NotoSans-Bold.ttf");
+				choiceLabelText.setTypeface(boldfont);
 				// show the correct/wrong icon
 				resultIcon.setVisibility(View.VISIBLE);
 				resultIcon.setBackgroundResource(R.drawable.tick);
@@ -356,7 +390,9 @@ public class PodQuestionActivity extends BaseActivity {
 								.valueOf(currentQuestionIndex))]);
 				choiceLabelText.setTextColor(Color.parseColor("#e6855b"));
 				choiceLabelText.setTextSize(18);
-				choiceLabelText.setTypeface(Typeface.DEFAULT_BOLD);
+				Typeface boldfont = Typeface.createFromAsset(getAssets(),
+						"fonts/NotoSans-Bold.ttf");
+				choiceLabelText.setTypeface(boldfont);
 				// show the correct/wrong icon
 				resultIcon.setVisibility(View.VISIBLE);
 				resultIcon.setBackgroundResource(R.drawable.cross);
@@ -380,13 +416,13 @@ public class PodQuestionActivity extends BaseActivity {
 			btnBack.setVisibility(View.INVISIBLE);
 			// Disabled unless one option is selected
 			btnSubmitNext.setEnabled(false);
-			btnSubmitNext.setText("SUBMIT");
-			btnSubmitNext.setBackgroundResource(R.drawable.custom_button_blue);
+			btnSubmitNext.setText("");
+			btnSubmitNext.setBackgroundResource(R.drawable.btnsubmit);
 			btnSubmitNext.getLayoutParams().height = (int) TypedValue
 					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40,
 							getResources().getDisplayMetrics());
 			btnSubmitNext.getLayoutParams().width = (int) TypedValue
-					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180,
+					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 148,
 							getResources().getDisplayMetrics());
 			((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = 0;
 			btnSubmitNext.invalidate();
@@ -399,11 +435,14 @@ public class PodQuestionActivity extends BaseActivity {
 			questionHighlightedView.setBackgroundColor(Color
 					.parseColor("#F4FA58"));
 			// set the choice label to its default state
+			((LinearLayout.LayoutParams)((LinearLayout)findViewById(R.id.choiceLabelContainer)).getLayoutParams()).topMargin =  (int) TypedValue
+					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8,
+							getResources().getDisplayMetrics());
 			TextView choiceLabelText = (TextView) findViewById(R.id.choicelabel);
 			choiceLabelText.setText("CHOOSE THE CORRECT ANSWER");
 			choiceLabelText.setTextColor(Color.parseColor("#ffffff"));
 			choiceLabelText.setTextSize(15);
-			choiceLabelText.setTypeface(Typeface.DEFAULT);
+			choiceLabelText.setTypeface(font);
 			ImageView resultIcon = (ImageView) findViewById(R.id.choiceresulticon);
 			resultIcon.setVisibility(View.GONE);
 		}
@@ -547,33 +586,15 @@ public class PodQuestionActivity extends BaseActivity {
 		questionBodyView.setTypeface(font);
 		// get the question highlighted part holder
 		TextView questionBodyHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
-		// get the image holder
-		ImageView questionImage = (ImageView) findViewById(R.id.quesimage);
-		if (nextQuestion.getChoiceQuestion().getQuestionBody()
-				.getQuestionImage() != null) {
-			// set the question image
-			AssetManager assetMgr = getAssets();
-			try {
-				InputStream is = assetMgr.open("pods/images/"
-						+ nextQuestion.getChoiceQuestion().getQuestionBody()
-								.getQuestionImage() + ".jpg");
-				questionImage.setImageBitmap(BitmapFactory.decodeStream(is));
+		// set the question highlighted part
+		questionBodyHighlightedView.setText(Html.fromHtml((nextQuestion
+				.getChoiceQuestion().getQuestionBody()
+				.getQuestionBodyHighlighted())));
+		 
+		questionBodyHighlightedView.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
 
-			} catch (IOException e) {
-				Log.e("question", "Image not found");
-			}
-			questionBodyHighlightedView.getLayoutParams().height = 0;
-			questionImage.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
-		} else {
-			// set the question highlighted part
-			questionBodyHighlightedView.setText(Html.fromHtml((nextQuestion
-					.getChoiceQuestion().getQuestionBody()
-					.getQuestionBodyHighlighted())));
-			questionImage.getLayoutParams().height = 0;
-			questionBodyHighlightedView.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
-
-			questionBodyHighlightedView.setTypeface(font);
-		}
+		questionBodyHighlightedView.setTypeface(font); 
+		 
 		// get the alien image for explanation
 		findViewById(R.id.alienforexplanation).setVisibility(View.INVISIBLE);
 		findViewById(R.id.alienforexplanationlight).setVisibility(
@@ -598,11 +619,17 @@ public class PodQuestionActivity extends BaseActivity {
 			View choiceView = inflater.inflate(R.layout.choice_view, null);
 			choiceView.setBackgroundColor(Color.parseColor("#0dffffff"));
 			// set the button image and choice text
-			((TextView) choiceView.findViewById(R.id.choicebody)).setText(Html
-					.fromHtml(choice.getChoiceBody()));
-			((TextView) choiceView.findViewById(R.id.choicesequence))
-					.setText(choiceSeqArr[idx]);
-
+			
+			TextView choiceBodView = ((TextView) choiceView.findViewById(R.id.choicebody));
+			choiceBodView.setText(Html.fromHtml(choice.getChoiceBody()));
+			choiceBodView.setTypeface(font);			
+			TextView choiceSeqView = ((TextView) choiceView.findViewById(R.id.choicesequence));
+			choiceSeqView.setText(choiceSeqArr[idx]);
+			choiceSeqView.setTypeface(headerFont);
+			if(isSmallerScreen){
+				choiceBodView.setTextSize(14);
+				choiceSeqView.setTextSize(20);
+			}
 			// set the on click listener
 			choiceView.setOnClickListener(new ChoiceSelectListner(this, false));
 			choiceView.setId(idx);
