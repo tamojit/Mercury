@@ -291,7 +291,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		// TODO Auto-generated method stub
 		if(v instanceof ImageButton){
 			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			if(!(selectedPlatentId==0 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
+			if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
 				return;
 			}
 			PodBean selectedPod = pods.get(selectedPlatentId);

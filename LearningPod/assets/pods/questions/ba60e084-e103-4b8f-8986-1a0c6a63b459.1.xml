@@ -1,8 +1,8 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Verbs" data-uuid="ba60e084-e103-4b8f-8986-1a0c6a63b459" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
     <questionBody><p>
-	Identify an antonym for <i>discriminate</i>.
-</p><p> </p></questionBody>
+	<b>Identify an antonym for <u>discriminate</u>.
+</b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>Outlaw</p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>Withdraw</p></simpleChoice>

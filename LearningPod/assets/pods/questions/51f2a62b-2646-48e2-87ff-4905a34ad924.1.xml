@@ -1,11 +1,8 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Verbs" data-uuid="51f2a62b-2646-48e2-87ff-4905a34ad924" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
     <questionBody><p>
-	Identify a synonym for <i>perceive</i>.
-</p><p>
-</p><p>
-	
-<br/></p><p> </p></questionBody>
+	<b>Identify a synonym for <u>perceive</u>.</b>
+ </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>Disregard</p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice2"><p>Realize</p></simpleChoice>

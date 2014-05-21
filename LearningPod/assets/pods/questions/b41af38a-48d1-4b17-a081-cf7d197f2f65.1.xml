@@ -1,8 +1,8 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="b41af38a-48d1-4b17-a081-cf7d197f2f65" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>
-	Choose the sentence in which <i>frequency</i> is used correctly.
-</p><p> </p></questionBody>
+    <questionBody><p><b>
+	Choose the sentence in which <u>frequency</u> is used correctly.
+</b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>
 	Frequency is responsible for a great deal of fires, so we must hold more drills in school.

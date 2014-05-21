@@ -1,0 +1,13 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In what resource would you find this entry? [IMAGE] In what resource would yo..." data-uuid="cd7722ed-3d88-439e-9a1c-cc861fa10c32" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><b><p><u>deity</u></p>
+		<p>Synonyms: divinity, god, almighty, supreme being</p></b>
+<p>In what resource would you find this entry?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>a book about gods and myths</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>a dictionary</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>a thesaurus</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>a glossary</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In which resource would you find this entry for the word tissue? [IMAGE] In w..." data-uuid="cee11fb7-558d-4b11-b034-3656519d1324" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+<b><u>tissue</u>: a group of plant or animal cells that are similar in form and function</b></p><p>In which resource would you find this entry for the word <i>tissue</i>?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>a magazine</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>a dictionary</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>a thesaurus</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>a glossary</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

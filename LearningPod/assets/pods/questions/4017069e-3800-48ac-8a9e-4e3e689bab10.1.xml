@@ -1,8 +1,8 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Verbs" data-uuid="4017069e-3800-48ac-8a9e-4e3e689bab10" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>
-	Identify an antonym  for <i>vary</i>.
-</p><p> </p></questionBody>
+    <questionBody><p><b>
+	Identify an antonym  for <u>vary</u>.
+</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="answerChoice1"><p>match</p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>change</p></simpleChoice>

@@ -1,0 +1,12 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] In what source would you find this text? [IMAGE] In what source would you fin..." data-uuid="fbe25ab0-aa4c-4462-a4b0-e81b084c24c9" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p>
+<b><u>kindle</u>: to start (a fire) burning</b></p><p>In what source would you find this text?</p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>a brochure about camping</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>a thesaurus</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>a glossary<i> </i></p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>a dictionary</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

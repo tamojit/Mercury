@@ -657,6 +657,8 @@ public class PodQuestionActivity extends BaseActivity {
 	}
 
 	private void showSummaryScreen() {
+		Typeface boldfont = Typeface.createFromAsset(getAssets(),
+				"fonts/NotoSans-Bold.ttf");
 		// update the action bar heading
 		((TextView) getActionBar().getCustomView().findViewById(R.id.podname))
 				.setText("Summary Of " + selectedPod.getTitle());
@@ -754,6 +756,8 @@ public class PodQuestionActivity extends BaseActivity {
 		 percentage = (int) ((correctAnswers * 100 / totalQuestions));
 		((TextView) findViewById(R.id.correctpercentage)).setText(percentage
 				+ "%");
+		((TextView) findViewById(R.id.correctpercentage)).setTypeface(boldfont);
+		((TextView) findViewById(R.id.summarycorrect)).setTypeface(boldfont);
 		if (percentage == 100) {
 			findViewById(R.id.star).setVisibility(View.VISIBLE);
 		}
@@ -767,7 +771,9 @@ public class PodQuestionActivity extends BaseActivity {
 				createEmailPopUp();
 			}
 		});
-
+		
+		// show the shooting star animation
+		animateShootingStar();
 	}
 
 	private void createEmailPopUp() {
@@ -908,6 +914,24 @@ public class PodQuestionActivity extends BaseActivity {
 		return "";			 
 	}
 
+	
+	private void animateShootingStar(){
+		
+		final ImageView shootingStar1 = (ImageView) findViewById(R.id.sstar1);
+		int[] origLocation = new int[2];
+		int[] destLocation = new int[2];
+		shootingStar1.getLocationOnScreen(origLocation);
+		destLocation[0] = origLocation[0] - shootingStar1.getLayoutParams().width;
+		destLocation[1] = origLocation[1] + shootingStar1.getLayoutParams().height;
+		shootingStar1.bringToFront();
+		TranslateAnimation animation = new TranslateAnimation(0,
+				destLocation[0] - origLocation[0], 0, destLocation[1]
+						- origLocation[1]);
+		animation.setDuration(2000);
+		animation.setFillAfter(false);
+		animation.setRepeatCount(Animation.INFINITE);
+		shootingStar1.startAnimation(animation);
+	}
 	private void animateAlienImageView() {
 		final ImageView alienForQues = (ImageView) findViewById(R.id.alienforquestion);
 		final ImageView alienForQuesLight = (ImageView) findViewById(R.id.alienforquestionlight);
