@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -69,6 +70,12 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
+		
+		((Button)mapView1.findViewById(R.id.btnmap1next)).setTypeface(headerFont);
+		((Button)mapView2.findViewById(R.id.btnmap2next)).setTypeface(headerFont);
+		((Button)mapView2.findViewById(R.id.btnmap2prev)).setTypeface(headerFont);
+		((Button)mapView3.findViewById(R.id.btnmap3prev)).setTypeface(headerFont);
+		
 		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
 		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
 		mapView3.findViewById(R.id.wordlist3).setOnClickListener(this);

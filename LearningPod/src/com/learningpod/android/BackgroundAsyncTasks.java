@@ -115,7 +115,7 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 			ArrayList<ArrayList<ExplanationBean>> explanations = new ArrayList<ArrayList<ExplanationBean>>();
 			for(PodQuestionBean ques :selectedPod.getPodElements()){
 				try {
-					InputStream is = assetMgr.open("pods/questions/"+ ques.getItemId() + ".xml");
+					InputStream is = assetMgr.open("pods/questions/"+ ques.getItemId() + "." + ques.getVersion()  + ".xml");
 					questions.add((QuestionBean)parseUtility(is, ParserType.QUESTION_PARSER));
 					
 					// get explanations for a question

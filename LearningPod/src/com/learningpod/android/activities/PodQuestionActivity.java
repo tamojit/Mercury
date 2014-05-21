@@ -90,7 +90,7 @@ public class PodQuestionActivity extends BaseActivity {
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		isSmallerScreen = false;
-		if(metrics.heightPixels<1200){
+		if(metrics.heightPixels<=800){
 			isSmallerScreen = true;
 		}
 		// create the font face to be used for all texts
@@ -299,19 +299,26 @@ public class PodQuestionActivity extends BaseActivity {
 			if (currentQuestionIndex == questions.size() - 1) {
 				// we have reached the last question in the pod
 				btnSubmitNext.setText("SUMMARY");
+				btnSubmitNext.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
+				btnSubmitNext.setPadding((int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10,
+								getResources().getDisplayMetrics()), 0, 0, 0);
+				
 				btnSubmitNext.getLayoutParams().height = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
 								getResources().getDisplayMetrics());
 				btnSubmitNext.getLayoutParams().width = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 140,
 								getResources().getDisplayMetrics());
 				((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 160,
 								getResources().getDisplayMetrics());
 			} else {
 				btnSubmitNext.setText("NEXT ");
+				btnSubmitNext.setGravity(Gravity.CENTER);
+				btnSubmitNext.setPadding(0, 0, 0, 0);
 				btnSubmitNext.getLayoutParams().height = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
 								getResources().getDisplayMetrics());
 				btnSubmitNext.getLayoutParams().width = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
@@ -674,6 +681,24 @@ public class PodQuestionActivity extends BaseActivity {
 		// selectedPod.getTitle());
 		((TextView)findViewById(R.id.summaryLabel)).setTypeface(font);
 		LayoutInflater inflater = getLayoutInflater();		
+		Button summaryBack = (Button)findViewById(R.id.btnSummaryBack);
+		summaryBack.setTypeface(headerFont);
+		
+		
+		Button summaryMap = (Button)findViewById(R.id.btnSummaryMap);
+		summaryMap.setTypeface(headerFont);
+		summaryMap.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(PodQuestionActivity.this,
+						MapActivity.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+				PodQuestionActivity.this.finish();				
+			}
+		});
+		 
 		for (int idx = 0; idx < userProgressCompleted.size(); idx++) {
 			UserProgressInfo progress = userProgressCompleted.get(idx);
 			View view = inflater.inflate(R.layout.summary_question_view, null);

@@ -27,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -106,6 +107,12 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		mapView2.findViewById(R.id.btnmap2next).setOnClickListener(this);
 		mapView2.findViewById(R.id.btnmap2prev).setOnClickListener(this);
 		mapView3.findViewById(R.id.btnmap3prev).setOnClickListener(this);
+		
+		
+		((Button)mapView1.findViewById(R.id.btnmap1next)).setTypeface(headerFont);
+		((Button)mapView2.findViewById(R.id.btnmap2next)).setTypeface(headerFont);
+		((Button)mapView2.findViewById(R.id.btnmap2prev)).setTypeface(headerFont);
+		((Button)mapView3.findViewById(R.id.btnmap3prev)).setTypeface(headerFont);
 
 		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
 		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
