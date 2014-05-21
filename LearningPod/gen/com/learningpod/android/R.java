@@ -372,18 +372,19 @@ containing a value of this type.
         public static final int runkeeper=0x7f02009b;
         public static final int salesforce=0x7f02009c;
         public static final int sendbuttonbg=0x7f02009d;
-        public static final int spaceship=0x7f02009e;
-        public static final int spaceshipwithflag=0x7f02009f;
-        public static final int spaceshipwithoutflag=0x7f0200a0;
-        public static final int star=0x7f0200a1;
-        public static final int summary_question=0x7f0200a2;
-        public static final int summarybg=0x7f0200a3;
-        public static final int summarymapbutton=0x7f0200a4;
-        public static final int tick=0x7f0200a5;
-        public static final int twitter=0x7f0200a6;
-        public static final int wordlist=0x7f0200a7;
-        public static final int yahoo=0x7f0200a8;
-        public static final int yammer=0x7f0200a9;
+        public static final int shootingstar=0x7f02009e;
+        public static final int spaceship=0x7f02009f;
+        public static final int spaceshipwithflag=0x7f0200a0;
+        public static final int spaceshipwithoutflag=0x7f0200a1;
+        public static final int star=0x7f0200a2;
+        public static final int summary_question=0x7f0200a3;
+        public static final int summarybg=0x7f0200a4;
+        public static final int summarymapbutton=0x7f0200a5;
+        public static final int tick=0x7f0200a6;
+        public static final int twitter=0x7f0200a7;
+        public static final int wordlist=0x7f0200a8;
+        public static final int yahoo=0x7f0200a9;
+        public static final int yammer=0x7f0200aa;
     }
     public static final class id {
         public static final int FirstText=0x7f060024;

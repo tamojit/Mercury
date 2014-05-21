@@ -26,7 +26,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MultiColumnActivity extends BaseActivity 
+public class MultiColumnActivity extends Activity 
 {
 	private ArrayList<HashMap<String,String>> list;
 	LinearLayout wordListContentView;
@@ -76,10 +76,9 @@ public class MultiColumnActivity extends BaseActivity
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MultiColumnActivity.this,MapActivityBeforeLogin.class);
-				//intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-				//MultiColumnActivity.this.finish();
+				//Intent intent = new Intent(MultiColumnActivity.this,MapActivityBeforeLogin.class);				
+				//startActivity(intent);
+				MultiColumnActivity.this.finish();
 			}
 		});
 

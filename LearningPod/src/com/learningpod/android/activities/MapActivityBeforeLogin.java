@@ -261,6 +261,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	           // The Next screen will come in form Left and current Screen will go OUT from Right 
 			Intent i = new Intent(this, MultiColumnActivity.class);
 			startActivity(i); 
+			
 			}
 		
 		
