@@ -4,16 +4,8 @@ import static com.learningpod.android.activities.Constant.FIRST_COLUMN;
 import static com.learningpod.android.activities.Constant.SECOND_COLUMN;
 import static com.learningpod.android.activities.Constant.THIRD_COLUMN;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import org.w3c.dom.Element;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.NodeList;
 
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.R;
@@ -22,10 +14,8 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.provider.DocumentsContract.Document;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -52,7 +42,8 @@ public class MultiColumnActivity extends BaseActivity
         setContentView(R.layout.main);
         headerFont = Typeface.createFromAsset(getAssets(),
     			"fonts/PaytoneOne.ttf");
-        
+        Font = Typeface.createFromAsset(getAssets(),
+    			"fonts/NotoSans-Bold.ttf");
         modifyActionBar();
         wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
         createWordList();
@@ -74,10 +65,10 @@ public class MultiColumnActivity extends BaseActivity
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
 		podTitle.setText("Word List");
-		podTitle.setPadding(160, 0, 0, 0);
+		podTitle.setPadding(170, 0, 0, 0);
 		podTitle.setTypeface(headerFont);
 		
-		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 
 		//	podTitle.setTypeface(headerFont);
 		goToMapButton.setOnClickListener(new OnClickListener() {
@@ -107,8 +98,12 @@ public class MultiColumnActivity extends BaseActivity
 		TextView ListHeadings=(TextView)wordListView.findViewById(R.id.wordListText);
 		ListHeadings.setTypeface(headerFont);
 		ListHeadings.setText(ListHeading[i]);
-		//TextView word=(TextView)wordListView.findViewById(R.id.FirstcolumnText);
-		
+		TextView word=(TextView)wordListView.findViewById(R.id.FirstcolumnText);
+		TextView partofspeech=(TextView)wordListView.findViewById(R.id.secondColumnText);
+		TextView meaning=(TextView)wordListView.findViewById(R.id.thirdColumnText);
+		word.setTypeface(Font);
+		partofspeech.setTypeface(Font);
+		meaning.setTypeface(Font);
 		populateList(i);
 		adapter =new ListviewAdapter(MultiColumnActivity.this, list);
 		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*58));

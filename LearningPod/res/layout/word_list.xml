@@ -7,19 +7,19 @@
     <TextView
     	android:id="@+id/wordListText"
     	android:layout_width="match_parent"  	
-    	android:textSize="19dp"
+    	android:textSize="18dp"
     	android:textColor="#FFFFFF"
     	android:layout_height="46dp"
-    	android:paddingLeft="38dp"
-    	android:paddingTop="8dp"
+    	android:paddingLeft="41dp"
+    	android:paddingTop="9dp"
     	android:text="Medium Text"
     	android:textAppearance="?android:attr/textAppearanceMedium" />
    
    <View android:layout_width="fill_parent"
-    android:layout_height="1.5dip"
+    android:layout_height="1.3dip"
     android:background="#FFFFFF" 
-    android:layout_marginLeft="35dp"
-    android:layout_marginRight="36dp"/>
+    android:layout_marginLeft="37dp"
+    android:layout_marginRight="38dp"/>
     
     <LinearLayout 
 	android:id="@+id/sectionBar" 
@@ -37,26 +37,26 @@
     	android:layout_height="45dp"
     	android:layout_weight=".37"
     	android:layout_width="match_parent"
-    	android:text="WORD"    
+    	android:text="WORD" 
+       
     	android:textStyle="bold"
-    	android:textColor="#ABEB99"
-        android:textSize="17dp"
-        android:paddingTop="8dp"
-    	android:layout_marginLeft="35dp" />
+    	android:textColor="#d2f495"
+        android:textSize="18dp"
+        android:paddingTop="9dp"
+    	android:layout_marginLeft="38dp" />
     
     <TextView
         android:id="@+id/secondColumnText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="PART OF SPEECH"
-        android:textSize="17dp"
+        android:textSize="18dp"
         android:textStyle="bold"
-        android:paddingLeft="8dp"
+        android:paddingLeft="11dp"
         android:ellipsize="end"
-        android:textColor="#ABEB99"
-        android:layout_weight=".38"
-       
-       >
+        android:textColor="#d2f495"
+        android:layout_weight=".377"
+    >
     </TextView>
     
     <TextView
@@ -65,11 +65,11 @@
         android:layout_height="45dp"
         android:text="MEANING"
         android:ellipsize="end"
-        android:textSize="17dp" 
+        android:textSize="18dp" 
         android:textStyle="bold"     
         android:layout_marginRight="10dp"
         android:layout_weight=".23"
-        android:textColor="#ABEB99"
+        android:textColor="#d2f495"
         >
     </TextView>
     
@@ -77,10 +77,10 @@
 	 
 	 <View 
 	       android:layout_width="fill_parent"
-           android:layout_height="1.5dip"
+           android:layout_height="1.3dip"
            android:background="#FFFFFF"
-           android:layout_marginRight="36dp"
-           android:layout_marginLeft="35dp" />
+           android:layout_marginRight="38dp"
+           android:layout_marginLeft="37dp" />
 	 
     <ListView
     	android:clickable="false"
@@ -93,7 +93,7 @@
     	android:longClickable="false"
     	android:scrollbarAlwaysDrawVerticalTrack="false"
     	android:scrollbars="none"
-    	android:paddingLeft="35dp"
+    	android:paddingLeft="37dp"
     	android:paddingRight="36dp"
      	 >
     	

@@ -10,9 +10,9 @@ import java.util.HashMap;
 import com.learningpod.android.R;
 
 import android.app.Activity;
-import android.graphics.Color;
+
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +25,9 @@ public class ListviewAdapter extends BaseAdapter
 {
 	public ArrayList<HashMap<String,String>> list;
 	Activity activity;
-    
+	private Typeface Font = null;
+	private Typeface meaningfont = null;
+	
 	public ListviewAdapter(Activity activity, ArrayList<HashMap<String,String>> list) {
 		super();
 		this.activity = activity;
@@ -66,11 +68,10 @@ public class ListviewAdapter extends BaseAdapter
 		// TODO Auto-generated method stub
 				ViewHolder holder;
 				LayoutInflater inflater =  activity.getLayoutInflater();
-
+                
 				if (convertView == null)
 				{   
-					
-					
+				
 					convertView = inflater.inflate(R.layout.listview_row, null);
 					holder = new ViewHolder();
 					holder.txtFirst = (TextView) convertView.findViewById(R.id.FirstText);
@@ -85,15 +86,25 @@ public class ListviewAdapter extends BaseAdapter
 				{
 					holder = (ViewHolder) convertView.getTag();
 				}
-
+                
+				Font = Typeface.createFromAsset(this.activity.getAssets(),
+		   			"fonts/NotoSans-Bold.ttf");
+				meaningfont = Typeface.createFromAsset(this.activity.getAssets(),
+			   			"fonts/NotoSans-Regular.ttf");
+			
 				HashMap<String, String> map = list.get(position);
+			    
+				holder.txtFirst.setTypeface(Font);
+				holder.txtThird.setTypeface(meaningfont);
 				holder.txtFirst.setText(map.get(FIRST_COLUMN));
 				holder.txtSecond.setText(map.get(SECOND_COLUMN));
 				holder.txtThird.setText(map.get(THIRD_COLUMN));
 			
+				
 				if(position%2!=0)	{
 	                //   holder.layout.setBackgroundColor(Color.GRAY);
-					convertView.setBackgroundResource(R.drawable.choice_not_selected);
+					
+					convertView.setBackgroundResource(R.drawable.wordlistbg1);
 	                                  }
 			
 			return convertView;
