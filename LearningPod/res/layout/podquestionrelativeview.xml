@@ -106,7 +106,7 @@
            <LinearLayout
                android:id="@+id/explanationcontainer"
                android:layout_width="match_parent"
-               android:layout_height="fill_parent"
+               android:layout_height="wrap_content"
                android:layout_below="@+id/alienforexplanation"
                android:layout_marginBottom="0dp"
                android:layout_marginLeft="20dp"
@@ -135,7 +135,7 @@
                    android:layout_marginLeft="12dp"
                    android:layout_marginRight="12dp"
                    android:layout_marginTop="5dp"
-                   android:text="ExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanation Explanation"
+                   android:text="ExplanationExplanationExplanationExplanation"
                    android:textColor="#000000"
                    android:textSize="19sp" />
            </LinearLayout>
@@ -168,7 +168,7 @@
                android:orientation="horizontal"
                android:layout_marginRight="30dp"
                android:layout_marginBottom="3dp"
-               android:layout_marginTop="8dp"
+               android:layout_marginTop="12dp"
                android:gravity = "center_vertical">"
 
                <ImageView
@@ -198,6 +198,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"                                         
                android:orientation="vertical"
+               android:layout_marginTop="2dp"
                android:layout_marginLeft="0dp"
                android:layout_marginRight="30dp" >
            </LinearLayout>

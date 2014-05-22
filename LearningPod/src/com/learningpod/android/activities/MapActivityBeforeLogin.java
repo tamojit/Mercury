@@ -273,8 +273,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		 
 			Account selectedAccount = accounts[v.getId()];
 			HashMap<String, Object> params = new HashMap<String, Object>();
-			if(isPlanetClicked)	params.put("selectedAccount", selectedAccount);
-			params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));
+			if(isPlanetClicked){ params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));}			
+			params.put("selectedAccount", selectedAccount);			
 			ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
 			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
 			

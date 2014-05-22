@@ -757,7 +757,7 @@ public class PodQuestionActivity extends BaseActivity {
 			summaryQuesContainer.addView(view);
 		}
 
-		 percentage = (int) ((correctAnswers * 100 / totalQuestions));
+		 percentage = 67;//(int) ((correctAnswers * 100 / totalQuestions));
 		((TextView) findViewById(R.id.correctpercentage)).setText(percentage
 				+ "%");
 		((TextView) findViewById(R.id.correctpercentage)).setTypeface(boldfont);
