@@ -24,7 +24,7 @@
                 
                 <ImageView
                     android:id="@+id/percentageiamge"
-                    android:layout_marginLeft="33dp"
+                    android:layout_marginLeft="38dp"
                     android:layout_marginTop="5dp"
                     android:layout_width="250dp"
                     android:layout_height="250dp"
@@ -48,11 +48,11 @@
                     android:layout_alignRight="@+id/percentageiamge"
                     android:layout_alignTop="@+id/percentageiamge"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginTop="35dp"
+                    android:layout_marginTop="30dp"
                     android:gravity="center"
                     android:text="67%"
                     android:textColor="#0098a3"
-                    android:textSize="60sp"
+                    android:textSize="62sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -63,27 +63,27 @@
                     android:layout_alignLeft="@+id/percentageiamge"
                     android:layout_alignRight="@+id/percentageiamge"
                     android:layout_alignTop="@+id/percentageiamge"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="145dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="138dp"
                     android:gravity="center"
                     android:text="CORRECT"
                     android:textColor="#0098a3"
-                    android:textSize="25sp"
+                    android:textSize="27sp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/sendMailBt"
-                    android:layout_width="317dp"
-                    android:layout_height="45dp"
+                    android:layout_width="310dp"
+                    android:layout_height="44dp"
                     android:layout_below="@+id/percentageiamge"
-                    android:layout_marginLeft="33dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="38dp"
                     android:background="@drawable/emailresults" />
                 
                 <RelativeLayout 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="290dp"
+                    android:layout_marginLeft="305dp"
                     android:layout_marginTop="10dp">
                     
                     <ImageView android:id="@+id/sstar1"
@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="83dp"
+                    android:layout_marginTop="81dp"
                     android:text="Click on the question number to review."
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
@@ -117,8 +117,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_below="@+id/summaryquestioncontainer"
-                    android:layout_marginLeft="268dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="257dp"
+                    android:layout_marginBottom="13dp"
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
@@ -128,9 +128,9 @@
                         android:layout_height="64dp"
                         android:layout_marginRight="20dp"
                         android:background="@drawable/mapbackbuttonbg"
-                        android:text="  BACK"
+                        android:text="     BACK"
                         android:textColor="#ffffff"
-                        android:textSize="19sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <Button
@@ -142,7 +142,7 @@
                         android:paddingLeft="19dp"
                         android:text="RETURN TO MAP"
                         android:textColor="#ffffff"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
                     
