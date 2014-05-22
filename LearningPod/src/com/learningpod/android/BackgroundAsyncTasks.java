@@ -181,9 +181,23 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 			 
 			Intent intent = null;
 			if(userProfile==null){
+				// go to map screen without user logged in
 				intent = new Intent(currentActivity,MapActivityBeforeLogin.class);
 			}else{
-				intent = new Intent(currentActivity,MapActivity.class);
+				if(params.get("selectedPlanet")==null){
+					//go to map activity after login. user has selected log in from menu
+					intent = new Intent(currentActivity,MapActivity.class);
+				}
+				else{
+					
+					// go to specific pod after login as user has clicked on planet to log in
+					int selectedPlanetId = ((Integer)params.get("selectedPlanet"));
+					PodBean selectedPodBeforeLogin = pods.get(selectedPlanetId);
+					HashMap<String,Object> paramsForLoadingPod = new HashMap<String,Object>();
+					paramsForLoadingPod.put("selectedPod",selectedPodBeforeLogin);			
+					new BackgroundAsyncTasks(currentActivity, paramsForLoadingPod).execute(BackgroundTasks.LOAD_POD_QUESTIONS);
+					return;
+				}
 			}
 			
 			// store the pods for later use in cache content
