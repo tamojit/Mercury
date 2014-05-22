@@ -43,6 +43,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	private PopupWindow loginWindow;
 	private Account[] accounts = null;
 	private Typeface headerFont;
+	private int selectedPlatentId;
+	private boolean isPlanetClicked=false;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -66,22 +68,37 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		View mapView3 = inflater.inflate(R.layout.mapview3, null);
 		
 		((ImageButton)mapView1.findViewById(R.id.planet1)).setOnClickListener(this);
+		((ImageButton)mapView1.findViewById(R.id.planet1)).setTag(new Integer(1).toString());
 		((ImageButton)mapView1.findViewById(R.id.planet2)).setOnClickListener(this);
+		((ImageButton)mapView1.findViewById(R.id.planet2)).setTag(new Integer(2).toString());
 		((ImageButton)mapView1.findViewById(R.id.planet3)).setOnClickListener(this);
+		((ImageButton)mapView1.findViewById(R.id.planet3)).setTag(new Integer(3).toString());
 		((ImageButton)mapView1.findViewById(R.id.planet4)).setOnClickListener(this);
+		((ImageButton)mapView1.findViewById(R.id.planet4)).setTag(new Integer(4).toString());
 		((ImageButton)mapView1.findViewById(R.id.planet5)).setOnClickListener(this);
+		((ImageButton)mapView1.findViewById(R.id.planet5)).setTag(new Integer(5).toString());
 		
 		((ImageButton)mapView2.findViewById(R.id.planet6)).setOnClickListener(this);
+		((ImageButton)mapView2.findViewById(R.id.planet6)).setTag(new Integer(6).toString());
 		((ImageButton)mapView2.findViewById(R.id.planet7)).setOnClickListener(this);
+		((ImageButton)mapView2.findViewById(R.id.planet7)).setTag(new Integer(7).toString());
 		((ImageButton)mapView2.findViewById(R.id.planet8)).setOnClickListener(this);
+		((ImageButton)mapView2.findViewById(R.id.planet8)).setTag(new Integer(8).toString());
 		((ImageButton)mapView2.findViewById(R.id.planet9)).setOnClickListener(this);
+		((ImageButton)mapView2.findViewById(R.id.planet9)).setTag(new Integer(9).toString());
 		((ImageButton)mapView2.findViewById(R.id.planet10)).setOnClickListener(this);
+		((ImageButton)mapView2.findViewById(R.id.planet10)).setTag(new Integer(10).toString());
 		
 		((ImageButton)mapView3.findViewById(R.id.planet11)).setOnClickListener(this);
+		((ImageButton)mapView3.findViewById(R.id.planet11)).setTag(new Integer(11).toString());		
 		((ImageButton)mapView3.findViewById(R.id.planet12)).setOnClickListener(this);
+		((ImageButton)mapView3.findViewById(R.id.planet12)).setTag(new Integer(12).toString());
 		((ImageButton)mapView3.findViewById(R.id.planet13)).setOnClickListener(this);
+		((ImageButton)mapView3.findViewById(R.id.planet13)).setTag(new Integer(13).toString());
 		((ImageButton)mapView3.findViewById(R.id.planet14)).setOnClickListener(this);
+		((ImageButton)mapView3.findViewById(R.id.planet14)).setTag(new Integer(14).toString());
 		((ImageButton)mapView3.findViewById(R.id.planet15)).setOnClickListener(this);
+		((ImageButton)mapView3.findViewById(R.id.planet15)).setTag(new Integer(15).toString());
 		
 		
 		((TextView)mapView1.findViewById(R.id.planet1name)).setTypeface(headerFont);
@@ -132,18 +149,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		
 	}
 	
-	private Bitmap getScaledBitmap(){
-		Bitmap currBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.map1);
-		// Calculate ActionBar height
-		TypedValue tv = new TypedValue();
-		int actionBarHeight=0;
-		if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
-		{
-		    actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
-		}
-		return Bitmap.createScaledBitmap(currBitmap, currBitmap.getWidth(), currBitmap.getHeight()-actionBarHeight, false);
-	}
+	
 	
 	private void initPopup(){
 		loginWindow = new PopupWindow( LayoutParams.WRAP_CONTENT,
@@ -236,6 +242,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		// TODO Auto-generated method stub
 		// go to login screen
 		if(v instanceof ImageButton){
+			selectedPlatentId = Integer.parseInt(v.getTag().toString());
+			isPlanetClicked = true;
 			showLoginWindow();
 		}
 		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
@@ -269,7 +277,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		 
 			Account selectedAccount = accounts[v.getId()];
 			HashMap<String, Object> params = new HashMap<String, Object>();
-			params.put("selectedAccount", selectedAccount);
+			if(isPlanetClicked)	params.put("selectedAccount", selectedAccount);
+			params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));
 			ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
 			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
 			

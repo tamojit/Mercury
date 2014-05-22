@@ -160,8 +160,7 @@ public class PodQuestionActivity extends BaseActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(PodQuestionActivity.this,
-						MapActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						MapActivity.class);				
 				startActivity(intent);
 				PodQuestionActivity.this.finish();
 			}

@@ -383,8 +383,9 @@ containing a value of this type.
         public static final int tick=0x7f0200a6;
         public static final int twitter=0x7f0200a7;
         public static final int wordlist=0x7f0200a8;
-        public static final int yahoo=0x7f0200a9;
-        public static final int yammer=0x7f0200aa;
+        public static final int wordlistbg1=0x7f0200a9;
+        public static final int yahoo=0x7f0200aa;
+        public static final int yammer=0x7f0200ab;
     }
     public static final class id {
         public static final int FirstText=0x7f060024;

@@ -114,31 +114,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_below="@+id/summaryquestioncontainer"
-                    android:layout_marginLeft="280dp"
+                    android:layout_marginLeft="285dp"
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
                     <Button
                         android:id="@+id/btnSummaryBack"
-                        android:layout_width="125dp"
-                        android:layout_height="70dp"
+                        android:layout_width="105dp"
+                        android:layout_height="60dp"
                         android:layout_marginRight="20dp"
                         android:background="@drawable/mapbackbuttonbg"
                         android:text="  BACK"
                         android:textColor="#ffffff"
-                        android:textSize="17sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btnSummaryMap"
-                        android:layout_width="190dp"
-                        android:layout_height="70dp"
+                        android:layout_width="211dp"
+                        android:layout_height="60dp"
                         android:background="@drawable/summarymapbutton"
                         android:gravity="left|center_vertical"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="18dp"
                         android:text="RETURN TO MAP"
                         android:textColor="#ffffff"
-                        android:textSize="17sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
                     
