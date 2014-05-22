@@ -9,7 +9,7 @@ public class LearningpodSqliteHelper extends SQLiteOpenHelper{
 	
 	  public static  String DATABASE_NAME = "lpProddb";
 	  public static final String USER_PROGRESS_TRACKER_TABLE = "UserProgressTracker";
-	  public static final String USER_TEACHER_TABLE="UserTeacherTable";
+	  public static final String USER_TEACHER_TABLE= "UserTeacherTable";
 	  private static final int DATABASE_VERSION = 1;
 
 	  // Table creation statements

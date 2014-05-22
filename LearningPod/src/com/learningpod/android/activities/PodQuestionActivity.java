@@ -73,7 +73,7 @@ public class PodQuestionActivity extends BaseActivity {
 	private Typeface font = null;
 	private Typeface headerFont = null;
 	 
-
+    private Button btnBack;
 	private String putinmailaddress;
 	private String teacheremail;
 	private String userId;
@@ -247,7 +247,7 @@ public class PodQuestionActivity extends BaseActivity {
 		}
 		// get the previous (Back) question button. clicking on the back button
 		// will take the user to the previous question in the explanation screen
-		Button btnBack = (Button) findViewById(R.id.btnPrevious);
+		btnBack = (Button) findViewById(R.id.btnPrevious);
 		btnBack.setTypeface(headerFont);
 		btnBack.setOnClickListener(new OnClickListener() {
 
@@ -791,7 +791,7 @@ public class PodQuestionActivity extends BaseActivity {
 		String userId = ContentCacheStore.getContentCache()
 				.getLoggedInUserProfile().getId();
 
-		if (dbHandler.getTeacherEmail(userId) != "") {
+		if (dbHandler.getTeacherEmail(userId) != " ") {
 			putinmailaddress = dbHandler.getTeacherEmail(userId);
 			recipient.setText(putinmailaddress);
 		}
@@ -956,6 +956,7 @@ public class PodQuestionActivity extends BaseActivity {
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				// TODO Auto-generated method stub
+				btnBack.setEnabled(true);
 				alienForQues.clearAnimation();
 				alienForQues.setVisibility(View.INVISIBLE);
 				alienForQuesLight.setVisibility(View.INVISIBLE);
@@ -982,6 +983,7 @@ public class PodQuestionActivity extends BaseActivity {
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
 				// switch off the alien space ship light
+				btnBack.setEnabled(false);
 				alienForQuesLight.setVisibility(View.INVISIBLE);
 				// change the colour of highlighted question
 				TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
