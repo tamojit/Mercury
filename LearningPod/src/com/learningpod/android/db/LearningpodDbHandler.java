@@ -97,9 +97,11 @@ public class LearningpodDbHandler {
 	
 	public String getTeacherEmail(String userID){
 		
-		Cursor cursor = database.rawQuery("select * from UserTeacherTable where UserId ='" +userID + "'" , null);
-		if(cursor.moveToFirst()){
-			return cursor.getString(1);
+		Cursor cursor = database.rawQuery("select TeacherEmail from UserTeacherTable where UserId ='" +userID + "'" , null);
+		
+		if(cursor.moveToFirst()==true){
+			
+			return cursor.getString(0);
 		}
 		else return "";
 	}

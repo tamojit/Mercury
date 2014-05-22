@@ -1,5 +1,5 @@
 package com.learningpod.android.activities;
-//bbb
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -320,7 +320,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
             
 	           // set the required Animation type to mapFlipper
 	           // The Next screen will come in form Left and current Screen will go OUT from Right 
-			Intent i = new Intent(this, MultiColumnActivity.class);
+			Intent i = new Intent(this, WordListActivity.class);
 			startActivity(i); 
 			}	
 		

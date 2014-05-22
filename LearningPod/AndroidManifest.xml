@@ -79,7 +79,7 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="com.learningpod.android.activities.MultiColumnActivity"
+            android:name="com.learningpod.android.activities.WordListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >

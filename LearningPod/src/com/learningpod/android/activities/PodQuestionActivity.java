@@ -6,7 +6,8 @@ import java.text.ChoiceFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
@@ -73,6 +74,10 @@ public class PodQuestionActivity extends BaseActivity {
 	private Typeface font = null;
 	private Typeface headerFont = null;
 	 
+	public static int TYPE_WIFI = 1;
+    public static int TYPE_MOBILE = 2;
+    public static int TYPE_NOT_CONNECTED = 0;
+	
     private Button btnBack;
 	private String putinmailaddress;
 	private String teacheremail;
@@ -790,7 +795,7 @@ public class PodQuestionActivity extends BaseActivity {
 		String userId = ContentCacheStore.getContentCache()
 				.getLoggedInUserProfile().getId();
 
-		if (dbHandler.getTeacherEmail(userId) != " ") {
+		if (!dbHandler.getTeacherEmail(userId).equals("")) {
 			putinmailaddress = dbHandler.getTeacherEmail(userId);
 			recipient.setText(putinmailaddress);
 		}
@@ -799,7 +804,18 @@ public class PodQuestionActivity extends BaseActivity {
 		Button sendBtn = (Button) popupmail.findViewById(R.id.sendEmail);
 		sendBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
-				// after sending the email, clear the fields
+				
+			//check internet connection	
+		if(getConnectivityStatus(PodQuestionActivity.this)==1 || getConnectivityStatus(PodQuestionActivity.this)==2)	
+	         
+		{
+			  //check whether an email is entered
+			    if(recipient.getText().length()==0){
+		    			    	
+			    	recipient.setFocusable(true);
+			    	Toast.makeText(PodQuestionActivity.this,"Please enter an email!!", Toast.LENGTH_LONG).show();
+			    }
+			    else{
 				LearningpodDbHandler dbHandler = new LearningpodDbHandler(
 						PodQuestionActivity.this);
 				dbHandler.open();
@@ -810,6 +826,14 @@ public class PodQuestionActivity extends BaseActivity {
 				dbHandler.close();
 				sendEmail(recipient.getText().toString());
 				popupmail.dismiss();
+			    }
+			    }
+		else
+		{
+			Toast.makeText(PodQuestionActivity.this,"No internet connection", Toast.LENGTH_LONG).show();
+			
+		}
+		
 			}
 		});
 		// set the focus on dummy button so that the keyboard is not open when the 
@@ -1032,5 +1056,23 @@ public class PodQuestionActivity extends BaseActivity {
 	public int getCurrentQuestionIndex() {
 		return currentQuestionIndex;
 	}
-
+//check connectivity
+	
+	public static int getConnectivityStatus(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+ 
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (null != activeNetwork) {
+            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI)
+                return TYPE_WIFI;
+             
+            if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE)
+                return TYPE_MOBILE;
+        }
+        return TYPE_NOT_CONNECTED;
+    }
+	
+	
+	
 }

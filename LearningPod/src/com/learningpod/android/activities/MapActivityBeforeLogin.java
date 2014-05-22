@@ -10,10 +10,12 @@ import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
+import com.learningpod.android.db.LearningpodDbHandler;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,15 +28,17 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 import android.widget.LinearLayout.LayoutParams;
-
+import android.content.Context;
 public class MapActivityBeforeLogin extends BaseActivity implements OnClickListener{
 
 	private float lastX;
@@ -45,7 +49,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	private Typeface headerFont;
 	private int selectedPlatentId;
 	private boolean isPlanetClicked=false;
-	
+	final Context context = this;
+	private Dialog loginpopup;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		headerFont = Typeface.createFromAsset(getAssets(),
@@ -134,64 +139,54 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
 		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
 		mapView3.findViewById(R.id.wordlist3).setOnClickListener(this);		
-
-		
- 
-		
-  
-		
+  	
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		
 		mapFlipper.addView(mapView2,1);
 		mapFlipper.addView(mapView3,2);
-		setContentView(mapFlipper);
-		initPopup();
-		
+		setContentView(mapFlipper);	
+	   }
+	
+	     private void LoginDialogPopUp() {
+
+		 loginpopup = new Dialog(context);
+		 loginpopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		 loginpopup.setContentView(R.layout.loginpopup);
+	     LinearLayout emailContainer = (LinearLayout)loginpopup.findViewById(R.id.loginmailcontainer);
+			// initialize Account Manager class to fetch all configured accounts on device
+			AccountManager accountManager = AccountManager.get(getApplicationContext());
+			accounts = accountManager.getAccountsByType("com.google");
+			int heightInPx = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+			LinearLayout.LayoutParams textViewParams = new LayoutParams(LayoutParams.MATCH_PARENT,heightInPx);
+			textViewParams.gravity = Gravity.CENTER;
+			textViewParams.setMargins(
+					(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics()),
+					(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()),
+					(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics()),
+					(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
+			
+			for(int idx=0;idx<accounts.length;idx++){
+				Account account  = accounts[idx];
+				TextView emailView = new TextView(this);
+				emailView.setId(idx);
+				emailView.setLayoutParams(textViewParams);
+				emailView.setTextSize(20);
+				emailView.setTextColor(Color.parseColor("#ffffff"));
+				emailView.setText(account.name);
+				emailView.setBackgroundResource(R.drawable.email_name);
+				emailView.setGravity(Gravity.CENTER);
+				emailView.setOnClickListener(this);
+				emailContainer.addView(emailView);
+	
+				loginpopup.show();
+      }	
 	}
 	
-	
-	
-	private void initPopup(){
-		loginWindow = new PopupWindow( LayoutParams.WRAP_CONTENT,
-				LayoutParams.WRAP_CONTENT);
-		View loginWindowView = getLayoutInflater().inflate(R.layout.loginpopup, null);
-		// get email container
-		LinearLayout emailContainer = (LinearLayout)loginWindowView.findViewById(R.id.loginmailcontainer);
-		// initialize Account Manager class to fetch all configured accounts on device
-		AccountManager accountManager = AccountManager.get(getApplicationContext());
-		accounts = accountManager.getAccountsByType("com.google");
-		int heightInPx = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
-		LinearLayout.LayoutParams textViewParams = new LayoutParams(LayoutParams.MATCH_PARENT,heightInPx);
-		textViewParams.gravity = Gravity.CENTER;
-		textViewParams.setMargins(
-				(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics()),
-				(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()),
-				(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics()),
-				(int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
-		
-		for(int idx=0;idx<accounts.length;idx++){
-			Account account  = accounts[idx];
-			TextView emailView = new TextView(this);
-			emailView.setId(idx);
-			emailView.setLayoutParams(textViewParams);
-			emailView.setTextSize(20);
-			emailView.setTextColor(Color.parseColor("#ffffff"));
-			emailView.setText(account.name);
-			emailView.setBackgroundResource(R.drawable.email_name);
-			emailView.setGravity(Gravity.CENTER);
-			emailView.setOnClickListener(this);
-			emailContainer.addView(emailView);
-		}
-		loginWindow.setContentView(loginWindowView);
-	}
 	
 	// Method to handle touch event like left to right swap and right to left swap
     public boolean onTouchEvent(MotionEvent touchevent) 
     {
-		if(loginWindow.isShowing()){
-			loginWindow.dismiss();
-			return true;
-		}
+
          switch (touchevent.getAction())
          {
                 // when user first touches the screen to swap
@@ -244,7 +239,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		if(v instanceof ImageButton){
 			selectedPlatentId = Integer.parseInt(v.getTag().toString());
 			isPlanetClicked = true;
-			showLoginWindow();
+			//showLoginWindow();
+			LoginDialogPopUp();
 		}
 		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
 			 // set the required Animation type to mapFlipper
@@ -267,7 +263,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
             
 	           // set the required Animation type to mapFlipper
 	           // The Next screen will come in form Left and current Screen will go OUT from Right 
-			Intent i = new Intent(this, MultiColumnActivity.class);
+			Intent i = new Intent(this, WordListActivity.class);
 			startActivity(i); 
 			
 			}

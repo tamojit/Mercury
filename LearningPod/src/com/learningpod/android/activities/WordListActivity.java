@@ -26,7 +26,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MultiColumnActivity extends Activity 
+public class WordListActivity extends Activity 
 {
 	private ArrayList<HashMap<String,String>> list;
 	LinearLayout wordListContentView;
@@ -69,8 +69,8 @@ public class MultiColumnActivity extends Activity
 		podTitle.setTypeface(headerFont);
 		
 		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-
 		//	podTitle.setTypeface(headerFont);
+	
 		goToMapButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -78,7 +78,7 @@ public class MultiColumnActivity extends Activity
 				// TODO Auto-generated method stub
 				//Intent intent = new Intent(MultiColumnActivity.this,MapActivityBeforeLogin.class);				
 				//startActivity(intent);
-				MultiColumnActivity.this.finish();
+				WordListActivity.this.finish();
 			}
 		});
 
@@ -104,7 +104,7 @@ public class MultiColumnActivity extends Activity
 		partofspeech.setTypeface(Font);
 		meaning.setTypeface(Font);
 		populateList(i);
-		adapter =new ListviewAdapter(MultiColumnActivity.this, list);
+		adapter =new ListviewAdapter(WordListActivity.this, list);
 		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*58));
 		wordList.setAdapter(adapter);
 		wordListContentView.addView(wordListView);

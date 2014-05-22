@@ -3,7 +3,7 @@
     android:layout_width="500dp"
     android:layout_height="400dp"
     android:orientation="vertical"
-    android:background="@drawable/loginbg"
+    android:background="@drawable/loginbgdialog"
      >
      
  <View android:layout_width="match_parent"
