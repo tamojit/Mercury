@@ -1,8 +1,6 @@
 package com.learningpod.android.activities;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.ChoiceFormat;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,15 +21,14 @@ import com.learningpod.androind.listeners.ChoiceSelectListner;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.BitmapFactory;
+
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
-import android.util.Log;
+
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -42,17 +39,17 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
-import android.view.inputmethod.InputMethodManager;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
+
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ActionBar;
 import android.app.Dialog;
-import android.app.Activity;
+
 
 public class PodQuestionActivity extends BaseActivity {
 
@@ -78,12 +75,14 @@ public class PodQuestionActivity extends BaseActivity {
     public static int TYPE_MOBILE = 2;
     public static int TYPE_NOT_CONNECTED = 0;
 	
+    private String email;
+    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private Button btnBack;
 	private String putinmailaddress;
 	private String teacheremail;
-	private String userId;
+	
 	final Context context = this;
-	private String mail;
+
 	private String uid;
 	private int percentage;
 	private boolean isSmallerScreen;
@@ -806,16 +805,28 @@ public class PodQuestionActivity extends BaseActivity {
 			public void onClick(View view) {
 				
 			//check internet connection	
-		if(getConnectivityStatus(PodQuestionActivity.this)==1 || getConnectivityStatus(PodQuestionActivity.this)==2)	
+		if(getConnectivityStatus(PodQuestionActivity.this)==1 || getConnectivityStatus(PodQuestionActivity.this)==1)
 	         
-		{
-			  //check whether an email is entered
-			    if(recipient.getText().length()==0){
-		    			    	
-			    	recipient.setFocusable(true);
-			    	Toast.makeText(PodQuestionActivity.this,"Please enter an email!!", Toast.LENGTH_LONG).show();
+	     	{   
+			
+			     email= recipient.getText().toString().trim();
+			     //check whether a valid email is entered
+			    if(recipient.getText().length()==0)
+			    {
+			    	recipient.setError("Please enter a valid Email");	
+			    	recipient.setFocusable(true);	
 			    }
+			 
+			    if (!email.matches(emailPattern))
+		    	{
+		        recipient.setError("Please enter a valid Email");	
+		    	recipient.setFocusable(true);
+		    	//Toast.makeText(getApplicationContext(),"invalid email address",Toast.LENGTH_LONG).show();
+		    	
+		    	}
+			   
 			    else{
+			  			    			   
 				LearningpodDbHandler dbHandler = new LearningpodDbHandler(
 						PodQuestionActivity.this);
 				dbHandler.open();
@@ -830,8 +841,7 @@ public class PodQuestionActivity extends BaseActivity {
 			    }
 		else
 		{
-			Toast.makeText(PodQuestionActivity.this,"No internet connection", Toast.LENGTH_LONG).show();
-			
+		Toast.makeText(PodQuestionActivity.this, "No network available", Toast.LENGTH_LONG).show();
 		}
 		
 			}
@@ -1056,23 +1066,22 @@ public class PodQuestionActivity extends BaseActivity {
 	public int getCurrentQuestionIndex() {
 		return currentQuestionIndex;
 	}
+	
 //check connectivity
 	
-	public static int getConnectivityStatus(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
- 
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if (null != activeNetwork) {
-            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI)
-                return TYPE_WIFI;
-             
-            if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE)
-                return TYPE_MOBILE;
-        }
-        return TYPE_NOT_CONNECTED;
-    }
-	
-	
+	 public static int getConnectivityStatus(Context context) {
+	        ConnectivityManager cm = (ConnectivityManager) context
+	                .getSystemService(Context.CONNECTIVITY_SERVICE);
+	 
+	        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+	        if (null != activeNetwork) {
+	            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI)
+	                return TYPE_WIFI;
+	             
+	            if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE)
+	                return TYPE_MOBILE;
+	        }
+	        return TYPE_NOT_CONNECTED;
+	    }
 	
 }

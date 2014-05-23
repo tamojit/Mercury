@@ -58,6 +58,7 @@ public class BaseActivity extends Activity implements
 		textinpopup.setText(detail);
 
 		// close the popup window
+		
 		Button Close = (Button) loginWindowView.findViewById(R.id.close);
 		Close.setOnClickListener(new OnClickListener() {
 
@@ -111,7 +112,7 @@ public class BaseActivity extends Activity implements
 		} else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
 				// perform login
-				((MapActivityBeforeLogin)this).showLoginWindow();
+				((MapActivityBeforeLogin)this).LoginDialogPopUp();
 			}
 			else {
 				// perform logout

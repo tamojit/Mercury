@@ -15,13 +15,17 @@ import com.learningpod.android.db.LearningpodDbHandler;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -44,13 +48,16 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	private float lastX;
 	private ViewFlipper mapFlipper;
 	private List<PodBean> pods = null;
-	private PopupWindow loginWindow;
+	
 	private Account[] accounts = null;
 	private Typeface headerFont;
 	private int selectedPlatentId;
 	private boolean isPlanetClicked=false;
 	final Context context = this;
 	private Dialog loginpopup;
+	public static int TYPE_WIFI = 1;
+    public static int TYPE_MOBILE = 2;
+    public static int TYPE_NOT_CONNECTED = 0;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		headerFont = Typeface.createFromAsset(getAssets(),
@@ -147,7 +154,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		setContentView(mapFlipper);	
 	   }
 	
-	     private void LoginDialogPopUp() {
+	     public void LoginDialogPopUp() {
 
 		 loginpopup = new Dialog(context);
 		 loginpopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -240,6 +247,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 			selectedPlatentId = Integer.parseInt(v.getTag().toString());
 			isPlanetClicked = true;
 			//showLoginWindow();
+			
 			LoginDialogPopUp();
 		}
 		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
@@ -271,18 +279,65 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		
 		else if(v instanceof TextView){
 		 
+			
+			if(getConnectivityStatus(MapActivityBeforeLogin.this)==1 || getConnectivityStatus(MapActivityBeforeLogin.this)==1)	
+			{
 			Account selectedAccount = accounts[v.getId()];
 			HashMap<String, Object> params = new HashMap<String, Object>();
 			if(isPlanetClicked){ params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));}			
 			params.put("selectedAccount", selectedAccount);			
 			ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
 			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
+			}
 			
+	    	else{
+				
+			loginpopup.dismiss();
+			showCustomDialog();
+			
+			}
 		}
 		
 	}
 	
-	public void showLoginWindow(){
-		loginWindow.showAtLocation(mapFlipper, Gravity.CENTER, 0, 0);
-	}
+	//checking for connectivity
+	
+	 public static int getConnectivityStatus(Context context) {
+	        ConnectivityManager cm = (ConnectivityManager) context
+	                .getSystemService(Context.CONNECTIVITY_SERVICE);
+	 
+	        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+	        if (null != activeNetwork) {
+	            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI)
+	                return TYPE_WIFI;
+	             
+	            if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE)
+	                return TYPE_MOBILE;
+	        }
+	        return TYPE_NOT_CONNECTED;
+	    }
+	 
+ //dialog to show in case of no internet connection	
+	
+	 public void showCustomDialog() {
+	        // TODO Auto-generated method stub
+	        final Dialog dialog = new Dialog(MapActivityBeforeLogin.this);
+	        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	        dialog.setContentView(R.layout.network_connectivity_alert);
+	        
+	        final EditText editText = (EditText)dialog.findViewById(R.id.editText1);
+	        
+	        Button button = (Button)dialog.findViewById(R.id.button1);    
+	        button.setOnClickListener(new View.OnClickListener() {
+	            
+	            @Override
+	            public void onClick(View v) {
+	                // TODO Auto-generated method stub
+	               
+	                dialog.dismiss();
+	            }
+	        });
+	                
+	        dialog.show();
+	    }
 }
