@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Choose the word that has the correct prefix added to the base word biography to make ... " data-uuid="ee76bc98-b8d9-4e61-9347-f31e8a0b723c" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Choose the word that has the correct prefix added to the base word <i>biography</i> to make a word that means &quot;<u>the story of someone's life, written by that person</u>&quot;.</b></p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="1"><p>debiography</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>autobiography</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>enbiography</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>misbiography</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

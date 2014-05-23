@@ -43,14 +43,13 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 
 	private float lastX;
 	private ViewFlipper mapFlipper;
-	private List<PodBean> pods = null;
-	private PopupWindow loginWindow;
+	private List<PodBean> pods = null;	
 	private Account[] accounts = null;
 	private Typeface headerFont;
 	private int selectedPlatentId;
 	private boolean isPlanetClicked=false;
 	final Context context = this;
-	private Dialog loginpopup;
+	private Dialog loginPopup;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		headerFont = Typeface.createFromAsset(getAssets(),
@@ -83,6 +82,17 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		((ImageButton)mapView1.findViewById(R.id.planet5)).setOnClickListener(this);
 		((ImageButton)mapView1.findViewById(R.id.planet5)).setTag(new Integer(5).toString());
 		
+		((TextView)mapView1.findViewById(R.id.planet1name)).setOnClickListener(this);
+		((TextView)mapView1.findViewById(R.id.planet1name)).setTag(new Integer(1).toString());
+		((TextView)mapView1.findViewById(R.id.planet2name)).setOnClickListener(this);
+		((TextView)mapView1.findViewById(R.id.planet2name)).setTag(new Integer(2).toString());
+		((TextView)mapView1.findViewById(R.id.planet3name)).setOnClickListener(this);
+		((TextView)mapView1.findViewById(R.id.planet3name)).setTag(new Integer(3).toString());
+		((TextView)mapView1.findViewById(R.id.planet4name)).setOnClickListener(this);
+		((TextView)mapView1.findViewById(R.id.planet4name)).setTag(new Integer(4).toString());
+		((TextView)mapView1.findViewById(R.id.planet5name)).setOnClickListener(this);
+		((TextView)mapView1.findViewById(R.id.planet5name)).setTag(new Integer(5).toString());
+		
 		((ImageButton)mapView2.findViewById(R.id.planet6)).setOnClickListener(this);
 		((ImageButton)mapView2.findViewById(R.id.planet6)).setTag(new Integer(6).toString());
 		((ImageButton)mapView2.findViewById(R.id.planet7)).setOnClickListener(this);
@@ -94,6 +104,17 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		((ImageButton)mapView2.findViewById(R.id.planet10)).setOnClickListener(this);
 		((ImageButton)mapView2.findViewById(R.id.planet10)).setTag(new Integer(10).toString());
 		
+		((TextView)mapView2.findViewById(R.id.planet6name)).setOnClickListener(this);
+		((TextView)mapView2.findViewById(R.id.planet6name)).setTag(new Integer(6).toString());
+		((TextView)mapView2.findViewById(R.id.planet7name)).setOnClickListener(this);
+		((TextView)mapView2.findViewById(R.id.planet7name)).setTag(new Integer(7).toString());
+		((TextView)mapView2.findViewById(R.id.planet8name)).setOnClickListener(this);
+		((TextView)mapView2.findViewById(R.id.planet8name)).setTag(new Integer(8).toString());
+		((TextView)mapView2.findViewById(R.id.planet9name)).setOnClickListener(this);
+		((TextView)mapView2.findViewById(R.id.planet9name)).setTag(new Integer(9).toString());
+		((TextView)mapView2.findViewById(R.id.planet10name)).setOnClickListener(this);
+		((TextView)mapView2.findViewById(R.id.planet10name)).setTag(new Integer(10).toString());
+		
 		((ImageButton)mapView3.findViewById(R.id.planet11)).setOnClickListener(this);
 		((ImageButton)mapView3.findViewById(R.id.planet11)).setTag(new Integer(11).toString());		
 		((ImageButton)mapView3.findViewById(R.id.planet12)).setOnClickListener(this);
@@ -104,6 +125,17 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		((ImageButton)mapView3.findViewById(R.id.planet14)).setTag(new Integer(14).toString());
 		((ImageButton)mapView3.findViewById(R.id.planet15)).setOnClickListener(this);
 		((ImageButton)mapView3.findViewById(R.id.planet15)).setTag(new Integer(15).toString());
+		
+		((TextView)mapView3.findViewById(R.id.planet11name)).setOnClickListener(this);
+		((TextView)mapView3.findViewById(R.id.planet11name)).setTag(new Integer(11).toString());		
+		((TextView)mapView3.findViewById(R.id.planet12name)).setOnClickListener(this);
+		((TextView)mapView3.findViewById(R.id.planet12name)).setTag(new Integer(12).toString());
+		((TextView)mapView3.findViewById(R.id.planet13name)).setOnClickListener(this);
+		((TextView)mapView3.findViewById(R.id.planet13name)).setTag(new Integer(13).toString());
+		((TextView)mapView3.findViewById(R.id.planet14name)).setOnClickListener(this);
+		((TextView)mapView3.findViewById(R.id.planet14name)).setTag(new Integer(14).toString());
+		((TextView)mapView3.findViewById(R.id.planet15name)).setOnClickListener(this);
+		((TextView)mapView3.findViewById(R.id.planet15name)).setTag(new Integer(15).toString());
 		
 		
 		((TextView)mapView1.findViewById(R.id.planet1name)).setTypeface(headerFont);
@@ -147,12 +179,12 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		setContentView(mapFlipper);	
 	   }
 	
-	     private void LoginDialogPopUp() {
+	     public void LoginDialogPopUp() {
 
-		 loginpopup = new Dialog(context);
-		 loginpopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		 loginpopup.setContentView(R.layout.loginpopup);
-	     LinearLayout emailContainer = (LinearLayout)loginpopup.findViewById(R.id.loginmailcontainer);
+		 loginPopup = new Dialog(context);
+		 loginPopup.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		 loginPopup.setContentView(R.layout.loginpopup);
+	     LinearLayout emailContainer = (LinearLayout)loginPopup.findViewById(R.id.loginmailcontainer);
 			// initialize Account Manager class to fetch all configured accounts on device
 			AccountManager accountManager = AccountManager.get(getApplicationContext());
 			accounts = accountManager.getAccountsByType("com.google");
@@ -168,6 +200,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 			for(int idx=0;idx<accounts.length;idx++){
 				Account account  = accounts[idx];
 				TextView emailView = new TextView(this);
+				emailView.setTag("email");
 				emailView.setId(idx);
 				emailView.setLayoutParams(textViewParams);
 				emailView.setTextSize(20);
@@ -178,7 +211,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 				emailView.setOnClickListener(this);
 				emailContainer.addView(emailView);
 	
-				loginpopup.show();
+				loginPopup.show();
       }	
 	}
 	
@@ -235,14 +268,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		// go to login screen
-		if(v instanceof ImageButton){
-			selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			isPlanetClicked = true;
-			//showLoginWindow();
-			LoginDialogPopUp();
-		}
-		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
+		
+		if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
 			 // set the required Animation type to mapFlipper
            // The Next screen will come in form Right and current Screen will go OUT from Left 
            mapFlipper.setInAnimation(this, R.anim.in_from_right);
@@ -268,21 +295,37 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 			
 			}
 		
-		
+		else if(v instanceof ImageButton){
+				// go to login screen
+				selectedPlatentId = Integer.parseInt(v.getTag().toString());
+				isPlanetClicked = true;
+				//showLoginWindow();
+				LoginDialogPopUp();
+			}
 		else if(v instanceof TextView){
-		 
-			Account selectedAccount = accounts[v.getId()];
-			HashMap<String, Object> params = new HashMap<String, Object>();
-			if(isPlanetClicked){ params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));}			
-			params.put("selectedAccount", selectedAccount);			
-			ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
-			new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
+			// if account text has been clicked
+			if(v.getTag().toString().equalsIgnoreCase("email")){
+				// account has been selected
+				Account selectedAccount = accounts[v.getId()];
+				HashMap<String, Object> params = new HashMap<String, Object>();
+				// store the clicked planet's id for directly going to the pod screen 
+				if(isPlanetClicked){ params.put("selectedPlanet",Integer.valueOf(selectedPlatentId-1));}			
+				params.put("selectedAccount", selectedAccount);			
+				ContentCacheStore.getContentCache().setCurrentUserEmailId(selectedAccount.name);
+				new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params).execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
+			}
+			// if planet text has been clicked
+			else{
+				selectedPlatentId = Integer.parseInt(v.getTag().toString());
+				isPlanetClicked = true;
+				//showLoginWindow();
+				LoginDialogPopUp();
+			}
+				
 			
 		}
 		
 	}
 	
-	public void showLoginWindow(){
-		loginWindow.showAtLocation(mapFlipper, Gravity.CENTER, 0, 0);
-	}
+	
 }

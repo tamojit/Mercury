@@ -1,0 +1,11 @@
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Relationship Words" data-uuid="66f90510-2c53-46f8-b9fd-e554693342cd" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+  <choiceQuestion>
+    <questionBody><p><b>Caitlin got an A in science and a B in social studies. __________, Roger earned an A- in science and finished with a B in social studies.</b></p></questionBody>
+    <choiceInteraction singleSelect="true" interactionId="1">
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>Regardless</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice2"><p>Similarly</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>Athough</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>Nevertheless</p></simpleChoice>
+    </choiceInteraction>
+  </choiceQuestion>
+</learningpod>

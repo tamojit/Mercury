@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier III Vocabulary" data-uuid="9ed50e84-5e22-4143-abec-7a85c750ea7e" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>As a result of the __________, the soil was dry and the crops were wilted.</p></questionBody>
+    <questionBody><p><b>As a result of the __________, the soil was dry and the crops were wilted.</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>component</p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>ratio</p></simpleChoice>

@@ -111,7 +111,7 @@ public class BaseActivity extends Activity implements
 		} else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
 				// perform login
-				((MapActivityBeforeLogin)this).showLoginWindow();
+				((MapActivityBeforeLogin)this).LoginDialogPopUp();
 			}
 			else {
 				// perform logout

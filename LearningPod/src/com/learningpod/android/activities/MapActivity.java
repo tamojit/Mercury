@@ -119,6 +119,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			ImageButton btnPlanet1 = (ImageButton)mapView1.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView1.findViewById(txtPlntArry[i]);
 			txtNamePlanet1.setTypeface(headerFont);
+			txtNamePlanet1.setOnClickListener(this);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView1.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView1.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView1.findViewById(pbBlueArry[i]);
@@ -126,6 +127,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
 			btnPlanet1.setTag(new Integer(i).toString());
+			txtNamePlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -165,6 +167,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			ImageButton btnPlanet1 = (ImageButton)mapView2.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView2.findViewById(txtPlntArry[i]);
 			txtNamePlanet1.setTypeface(headerFont);
+			txtNamePlanet1.setOnClickListener(this);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView2.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView2.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView2.findViewById(pbBlueArry[i]);
@@ -172,6 +175,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
 			btnPlanet1.setTag(new Integer(i).toString());
+			txtNamePlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -210,6 +214,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			ImageButton btnPlanet1 = (ImageButton)mapView3.findViewById(imgBtnArray[i]);
 			TextView txtNamePlanet1 = (TextView)mapView3.findViewById(txtPlntArry[i]);
 			txtNamePlanet1.setTypeface(headerFont);
+			txtNamePlanet1.setOnClickListener(this);
 			ImageView imgSpaceshipPlanet1 = (ImageView)mapView3.findViewById(imgViewPlntArry[i]);
 			View progressBarRedPlanet1 = mapView3.findViewById(pbRedArry[i]);
 			View progressBarBluePlanet1 = mapView3.findViewById(pbBlueArry[i]);
@@ -217,6 +222,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			// set the state 
 			btnPlanet1.setOnClickListener(this);
 			btnPlanet1.setTag(new Integer(i).toString());
+			txtNamePlanet1.setTag(new Integer(i).toString());
 			txtNamePlanet1.setText(pod1.getTitle());
 			if(numberOfQuestionsCompleted!=0){
 				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
@@ -289,17 +295,8 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		if(v instanceof ImageButton){
-			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
-				return;
-			}
-			PodBean selectedPod = pods.get(selectedPlatentId);
-			HashMap<String,Object> params = new HashMap<String,Object>();
-			params.put("selectedPod",selectedPod);			
-			new BackgroundAsyncTasks(MapActivity.this, params).execute(BackgroundTasks.LOAD_POD_QUESTIONS);
-		}
-		else if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
+		
+		 if (v.getId()==R.id.btnmap1next || v.getId()==R.id.btnmap2next){
 			 // set the required Animation type to mapFlipper
             // The Next screen will come in form Right and current Screen will go OUT from Left 
             mapFlipper.setInAnimation(this, R.anim.in_from_right);
@@ -324,7 +321,26 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 			startActivity(i); 
 			}	
 		
-		
+		else if(v instanceof ImageButton){
+			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
+			/*	if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
+				return;
+			}*/
+			PodBean selectedPod = pods.get(selectedPlatentId);
+			HashMap<String,Object> params = new HashMap<String,Object>();
+			params.put("selectedPod",selectedPod);			
+			new BackgroundAsyncTasks(MapActivity.this, params).execute(BackgroundTasks.LOAD_POD_QUESTIONS);
+		}
+		else if(v instanceof TextView){
+			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
+			if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
+				return;
+			}
+			PodBean selectedPod = pods.get(selectedPlatentId);
+			HashMap<String,Object> params = new HashMap<String,Object>();
+			params.put("selectedPod",selectedPod);			
+			new BackgroundAsyncTasks(MapActivity.this, params).execute(BackgroundTasks.LOAD_POD_QUESTIONS);
+		}
 	}
 
 

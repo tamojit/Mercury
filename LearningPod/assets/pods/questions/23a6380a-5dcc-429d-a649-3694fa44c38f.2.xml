@@ -1,8 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word critical has more than one meaning. Choose the sentence in which critical me... " data-uuid="23a6380a-5dcc-429d-a649-3694fa44c38f" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>
-</p><p>The word <i>critical</i> has more than one meaning. Choose the sentence in which <i>critical </i>means &quot;likely to find faults or problems.&quot;</p><p>
-</p></questionBody>
+    <questionBody><p><b>The word <u><i>critical</i></u> has more than one meaning.</b></p><p> Choose the sentence in which <i>critical </i>means &quot;likely to find faults or problems.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="1"><p>Students are being <u>critical</u> of the food in the school cafeteria when they say it's bad.</p></simpleChoice>
       <simpleChoice correct="false" choiceId="2"><p>To become good at horseback riding, it is <u>critical</u> that you respect the horse.</p></simpleChoice>

@@ -48,10 +48,13 @@ public class QuestionBodyConverter  implements Converter {
 			}
 			if(nodeName.equals("i") && !nodeValue.equalsIgnoreCase("")){
 				if(previousNodeName.equals("p")){ 
-					questionBody = questionBody + " <i>" + nodeValue + "</i>";
+					questionBody = questionBody + " <i>" + nodeValue + "</i> ";
 				}
 				if(previousNodeName.equals("b")){
-					questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i>";
+					questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i> ";
+				}
+				if(previousNodeName.equals("u")){
+					questionBodyHighlighted = questionBodyHighlighted + " <u><b><i>" + nodeValue + "</i></b></u> ";
 				}
 				
 			}

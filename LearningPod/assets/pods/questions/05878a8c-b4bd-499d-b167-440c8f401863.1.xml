@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier III Vocabulary" data-uuid="05878a8c-b4bd-499d-b167-440c8f401863" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>In science, students studied the __________ system by sniffing a variety of substances.</p></questionBody>
+    <questionBody><p><b>In science, students studied the __________ system by sniffing a variety of substances.</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>agricultural</p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice2"><p>olfactory</p></simpleChoice>

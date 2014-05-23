@@ -1,8 +1,8 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Vocabulary Acquisition and Use): Context Clues" data-uuid="3ae82a0a-9ed5-4154-8864-52581549786c" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
     <questionBody>
-<p><b>Alfred Hitchcock, the famous director, made <u>cameo</u> appearances in 37 of his movies.</b>
-</p><p>Based on its role in the sentence, what can you tell about the word <i>cameo</i>?</p></questionBody>
+<p><b>Alfred Hitchcock, the famous director, made <u><i>cameo</i></u> appearances in 37 of his movies.</b>
+</p><p>Based on its role in the sentence, what can you tell about the word <u><i>cameo</i></u>?</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="1"><p>The word <i>cameo</i> is an adjective. It describes a kind of appearance.</p></simpleChoice>
       <simpleChoice correct="false" choiceId="2"><p>The word <i>cameo</i> is a common noun. It names the thing that Hitchcock made.</p></simpleChoice>

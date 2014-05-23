@@ -1,8 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Common Core ELA: Vocabulary Acquisition and Use (Context Clues)" data-uuid="dd9cc592-6507-4156-8a72-2a63e8fdae85" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p>
-</p><p>The word <i>project</i> has more than one meaning. Choose the sentence in which <i>project</i> means &quot;to jut or stick outward.&quot;</p><p>
-</p></questionBody>
+    <questionBody><p><b>The word <u><i>project</i></u> has more than one meaning.</b></p> <p>Choose the sentence in which <i>project</i> means &quot;to jut or stick outward.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="1"><p>The eaves <u>project</u> from the sides of that house in a dramatic way.</p></simpleChoice>
       <simpleChoice correct="false" choiceId="2"><p>I <u>project</u> that this year Ellie will win the award for best actress.</p></simpleChoice>

@@ -689,7 +689,38 @@ public class PodQuestionActivity extends BaseActivity {
 		LayoutInflater inflater = getLayoutInflater();		
 		Button summaryBack = (Button)findViewById(R.id.btnSummaryBack);
 		summaryBack.setTypeface(headerFont);
-		
+		summaryBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				currentQuestionIndex = 4;
+				isCurrentSelectedChoiceCorrect = userProgressCompleted.get(
+						currentQuestionIndex).isChoiceCorrect();
+				List<QuestionChoiceBean> choices = questions
+						.get(currentQuestionIndex).getChoiceQuestion()
+						.getChoiceInteraction();
+				for (int idx = 0; idx < choices.size(); idx++) {
+
+					if (choices
+							.get(idx)
+							.getChoiceId()
+							.equalsIgnoreCase(
+									userProgressCompleted.get(
+											currentQuestionIndex)
+											.getChoiceId())) {
+						currentSelectedChoiceIndex = idx;
+						break;
+					}
+				}
+				isCurrentScreenForExplanation = true;
+				setContentView(R.layout.podquestionrelativeview);
+
+				createProgressBar(userProgressCompleted);
+				showNextQuestion();
+				enableScreenState();
+				
+			}
+		});
 		
 		Button summaryMap = (Button)findViewById(R.id.btnSummaryMap);
 		summaryMap.setTypeface(headerFont);
@@ -862,7 +893,7 @@ public class PodQuestionActivity extends BaseActivity {
 						|| info.activityInfo.name.toLowerCase().contains(
 								"gmail")) {
 					email.putExtra(android.content.Intent.EXTRA_TEXT,
-							createSummaryMailBody());
+							Html.fromHtml(createSummaryMailBody()));
 					email.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Result");
 					email.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{recipient});					
 					email.setPackage(info.activityInfo.packageName);
@@ -897,7 +928,8 @@ public class PodQuestionActivity extends BaseActivity {
 			summary.append("\n\n");
 		}
 		summary.append("Overall Percentage : " +  percentage + "%");
-		return summary.toString();
+		String test = "<html>	<head>		<style>			#container			{				width:400px;				height:450px;				background-color:#213043;				text-align:center;				font-family:Noto Sans Bold;				color:white;											}						table			{				text-align:center;				width:100%;				border:1px solid 435869;				border-collapse:collapse;				border-spacing: 0;				line-height: 3;			}						td			{				font-size: 8pt;				border: 1px solid 435869;				color:white;			}						tr			{				border: 1px solid 435869;			}						th			{				font-size: 8pt;				border: 1px solid 435869;				color:white;			}						#image			{    				position: relative;				width: 120px;				height: 120px;				margin-top: 10px;			}						#stImg			{				position: relative;				width: 15px;				height: 15px;			}						#text			{				z-index: 100;				position: absolute;				left: 170px;				vertical-align: middle;			}		</style>	<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"font-size:20;height:55px\">				<div style=\"padding-top: 14px;\">Summary for Jane Smith</div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div>	</body></html>";
+		return test;
 	}
 	
 	private String getChoiceSequence(String questionId, String choiceId){
