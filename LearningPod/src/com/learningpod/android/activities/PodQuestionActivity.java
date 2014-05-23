@@ -71,10 +71,6 @@ public class PodQuestionActivity extends BaseActivity {
 	private Typeface font = null;
 	private Typeface headerFont = null;
 	 
-	public static int TYPE_WIFI = 1;
-    public static int TYPE_MOBILE = 2;
-    public static int TYPE_NOT_CONNECTED = 0;
-	
     private String email;
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private Button btnBack;
@@ -836,12 +832,12 @@ public class PodQuestionActivity extends BaseActivity {
 			public void onClick(View view) {
 				
 			//check internet connection	
-		if(getConnectivityStatus(PodQuestionActivity.this)==1 || getConnectivityStatus(PodQuestionActivity.this)==1)
+		
 	         
-	     	{   
+	     	    {   
 			
 			     email= recipient.getText().toString().trim();
-			     //check whether a valid email is entered
+			    //check whether a valid email is entered
 			    if(recipient.getText().length()==0)
 			    {
 			    	recipient.setError("Please enter a valid Email");	
@@ -870,10 +866,7 @@ public class PodQuestionActivity extends BaseActivity {
 				popupmail.dismiss();
 			    }
 			    }
-		else
-		{
-		Toast.makeText(PodQuestionActivity.this, "No network available", Toast.LENGTH_LONG).show();
-		}
+		
 		
 			}
 		});
@@ -1099,21 +1092,7 @@ public class PodQuestionActivity extends BaseActivity {
 		return currentQuestionIndex;
 	}
 	
-//check connectivity
 	
-	 public static int getConnectivityStatus(Context context) {
-	        ConnectivityManager cm = (ConnectivityManager) context
-	                .getSystemService(Context.CONNECTIVITY_SERVICE);
-	 
-	        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-	        if (null != activeNetwork) {
-	            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI)
-	                return TYPE_WIFI;
-	             
-	            if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE)
-	                return TYPE_MOBILE;
-	        }
-	        return TYPE_NOT_CONNECTED;
-	    }
+	
 	
 }
