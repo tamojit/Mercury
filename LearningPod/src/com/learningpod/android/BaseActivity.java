@@ -58,6 +58,7 @@ public class BaseActivity extends Activity implements
 		textinpopup.setText(detail);
 
 		// close the popup window
+		
 		Button Close = (Button) loginWindowView.findViewById(R.id.close);
 		Close.setOnClickListener(new OnClickListener() {
 
