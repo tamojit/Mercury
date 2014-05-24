@@ -728,8 +728,7 @@ public class PodQuestionActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(PodQuestionActivity.this,
-						MapActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						MapActivity.class);				
 				startActivity(intent);
 				PodQuestionActivity.this.finish();				
 			}
@@ -787,7 +786,7 @@ public class PodQuestionActivity extends BaseActivity {
 			summaryQuesContainer.addView(view);
 		}
 
-		 percentage = 67;//(int) ((correctAnswers * 100 / totalQuestions));
+		 percentage = (int) ((correctAnswers * 100 / totalQuestions));
 		((TextView) findViewById(R.id.correctpercentage)).setText(percentage
 				+ "%");
 		((TextView) findViewById(R.id.correctpercentage)).setTypeface(boldfont);

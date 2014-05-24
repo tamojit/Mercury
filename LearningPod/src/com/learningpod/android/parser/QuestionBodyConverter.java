@@ -14,7 +14,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 public class QuestionBodyConverter  implements Converter {
 
-	
+	private boolean isForHighlightedpart = false;
 	@Override
 	public boolean canConvert(Class cl) {
 		return true;
@@ -41,50 +41,76 @@ public class QuestionBodyConverter  implements Converter {
 		while(flag){
 			String nodeName = reader.getNodeName();
 			String nodeValue = reader.getValue().trim().replace("\n", "");
-			
+			/*Parsing region for getting the question highlighted content*/
+			if(nodeName.equals("b") ){
+				if(!nodeValue.equalsIgnoreCase("")){
+					questionBodyHighlighted = questionBodyHighlighted + nodeValue;
+				}
+				isForHighlightedpart = true;
+			}
 			/*Parsing region for getting the question content */			
 			if(nodeName.equals("p") && !nodeValue.equalsIgnoreCase("")){
-				questionBody = questionBody + nodeValue;
+				if(isForHighlightedpart){
+					questionBodyHighlighted = questionBodyHighlighted + nodeValue;
+				}
+				else{
+					questionBody = questionBody + nodeValue;
+				}
 			}
 			if(nodeName.equals("i") && !nodeValue.equalsIgnoreCase("")){
-				if(previousNodeName.equals("p")){ 
-					questionBody = questionBody + " <i>" + nodeValue + "</i> ";
+				 
+				if(isForHighlightedpart){
+					if(previousNodeName.equals("u")){
+						questionBodyHighlighted = questionBodyHighlighted + " <u><b><i>" + nodeValue + "</i></b></u> ";
+					}else{
+						questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i> ";
+					}
 				}
-				if(previousNodeName.equals("b")){
-					questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i> ";
+				else{
+					if(previousNodeName.equals("u")){
+						questionBody = questionBody + " <u><<i>" + nodeValue + "</i></u> ";
+					}
+					else {
+						questionBody = questionBody + " <i>" + nodeValue + "</i> ";
+					}
 				}
-				if(previousNodeName.equals("u")){
-					questionBodyHighlighted = questionBodyHighlighted + " <u><b><i>" + nodeValue + "</i></b></u> ";
+				
+				
+			}
+			
+			
+			if(nodeName.equals("u") && !nodeValue.equalsIgnoreCase("")){
+				
+				if(isForHighlightedpart){
+					if(previousNodeName.equals("i")){
+						 questionBodyHighlighted = questionBodyHighlighted + " <i><u><b>" + nodeValue + "</b></u></i> ";
+					}
+					else{
+						questionBodyHighlighted = questionBodyHighlighted + " <u><b>" + nodeValue + "</b></u> ";
+					}
+				}	
+				else{
+					if(previousNodeName.equals("i")){
+						questionBody = questionBody + " <i><u>" + nodeValue + "</u></i> ";
+					}
+					else{
+						questionBody = questionBody + " <u><b>" + nodeValue + "</b></u> ";
+					}
 				}
 				
 			}
 			
-			/*Parsing region for getting the question highlighted content*/
-			if(nodeName.equals("b") && !nodeValue.equalsIgnoreCase("")){
-				questionBodyHighlighted = questionBodyHighlighted + nodeValue;
-			}
-			if(nodeName.equals("u") && !nodeValue.equalsIgnoreCase("")){
-				if(previousNodeName.equals("p")){ 
-					questionBody = questionBody + " <u><b>" + nodeValue + "</b></u> ";
-				}
-				if(previousNodeName.equals("b")){
-					questionBodyHighlighted = questionBodyHighlighted + " <u><b>" + nodeValue + "</b></u> ";
-				}	
-				if(previousNodeName.equals("i")){
-					questionBodyHighlighted = questionBodyHighlighted + " <i><u><b>" + nodeValue + "</b></u></i> ";
-				}
-			}
 			
 			
-			if(nodeName.equalsIgnoreCase("img")){
-				body.setQuestionImage(reader.getAttribute(0));
-			}
 			if(reader.hasMoreChildren()){
 				previousNodeName = reader.getNodeName();
 				reader.moveDown();
 			}else{
 				if(reader.getNodeName().equalsIgnoreCase(parentNodeName)){
 					break;
+				}
+				if(reader.getNodeName().equalsIgnoreCase("b")){
+					isForHighlightedpart = false;
 				}
 				reader.moveUp();
 			}

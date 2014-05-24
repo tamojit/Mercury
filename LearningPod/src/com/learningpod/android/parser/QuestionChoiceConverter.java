@@ -67,6 +67,10 @@ public class QuestionChoiceConverter implements Converter {
 				choiceBody = choiceBody + " <i>" + nodeValue + "</i> ";
 			}
 			
+			if(nodeName.equals("u") && !nodeValue.equalsIgnoreCase("")){
+				choiceBody = choiceBody + " <u>" + nodeValue + "</u> ";
+			}
+			
 			
 			if(reader.hasMoreChildren()){
 				reader.moveDown();
