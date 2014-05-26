@@ -4,14 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/map1" >
     
-     <Button 
-    		    android:id = "@+id/wordlist"
-    		    android:layout_width="110dp"
-    		    android:layout_height="27dp"
-    		    android:layout_marginLeft="820dp"
-    		    android:layout_marginTop="30dp"
-    		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/wordlist"/>
+     
     
     		<ImageButton 
     		    android:id = "@+id/planet1"
