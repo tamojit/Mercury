@@ -31,82 +31,102 @@
    <!-- <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>-->
 
-    <string-array name="nounwordlist">
+   <string-array name="nounwordlist">
         
-        <item>Component</item>
-        <item>Noun</item>
-        <item>Section or part of something</item>
+        <item>component</item>
+        <item>noun</item>
+        <item>section or part of something</item>
       
-        <item>Dimension</item>
+     <!--   <item>Dimension</item>
         <item>Noun</item>
-        <item>Measure from beginning to end</item>
+        <item>Measure from beginning to end</item>  -->
         
-        <item>Frequency</item>
-        <item>Noun</item>
-        <item>How often something accurs</item>
-     
-        <item>Incentive</item>
-        <item>Noun</item>
-        <item>Reward for trying or finishing</item>
+        <item>frequency</item>
+        <item>noun</item>
+        <item>how often something accurs</item>
+         
+        <item>initiative</item>
+        <item>noun</item>
+        <item>first step towards a goal</item>
         
-        <item>Initiative</item>
-        <item>Noun</item>
-        <item>First step towards a goal</item>
+        <item>priority</item>
+        <item>noun</item>
+        <item>item or issue having greater importance</item>
         
-        <item>Intensity</item>
-        <item>Noun</item>
-        <item>Amount of force or strength</item>
-        
-        <item>Resolution</item>
-        <item>Noun</item>
-        <item>Process of working through or determining</item>
+        <item>technique</item>
+        <item>noun</item>
+        <item>style or technical method</item>
         
         </string-array>
       
        <string-array name="verbwordlist">
-        <item>Combact</item>
-        <item>Verb</item>
-        <item>Struggle with or fight off</item>
+        <item>combact</item>
+        <item>verb</item>
+        <item>struggle with or fight off</item>
      
-        <item>Combact</item>
-        <item>Verb</item>
-        <item>Sense difference or judge</item>
+        <item>discriminate</item>
+        <item>verb</item>
+        <item>sense difference or judge</item>
         
-        <item>Distinguish</item>
-        <item>Verb</item>
-        <item>Difference between</item>
+        <item>perceive</item>
+        <item>verb</item>
+        <item>become aware of</item>
         
-        <item>Instal</item>
-        <item>Verb</item>
-        <item>Put in place</item>
+        <item>scan</item>
+        <item>verb</item>
+        <item>read or examine</item>
         
-        <item>Overlap</item>
-        <item>Verb</item>
-        <item>Put in place</item>
+        <item>vary</item>
+        <item>verb</item>
+        <item>show differences</item>
         
        </string-array>
       
         <string-array name="vocabularywordlist">
             
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
+        <item>agricultural</item>
+        <item>adjective</item>
+        <item>related to farming</item>
      
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
+        <item>drought</item>
+        <item>noun</item>
+        <item>period of extreme dryness</item>
         
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
+        <item>olfactory</item>
+        <item>adjective</item>
+        <item>relating to sense of smell</item>
         
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
+        <item>ratio</item>
+        <item>noun</item>
+        <item>relationship between quantities; quotient</item>
         
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
+        <item>stimuli</item>
+        <item>noun</item>
+        <item>something that leads to a reaction, especially in science</item>
+        
+      </string-array>
+
+      <string-array name="Relationshipwords">
+            
+        <item>although</item>
+        <item>conjunction</item>
+        <item>in spite of</item>
+     
+        <item>furthermore</item>
+        <item>adverb</item>
+        <item>moreover</item>
+        
+        <item>however</item>
+        <item>adverb</item>
+        <item>on the other hand</item>
+        
+        <item>regardless</item>
+        <item>adverb</item>
+        <item>in spite of</item>
+        
+        <item>similarly</item>
+        <item>adverb</item>
+        <item>in the same manner; likewise</item>
         
       </string-array>
       

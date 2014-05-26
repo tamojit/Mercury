@@ -36,6 +36,7 @@ public class WordListActivity extends Activity
 	int i=0;
 	int verb=0;
 	int vocabulary=0;
+	int relationalword=0;
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,7 @@ public class WordListActivity extends Activity
     }    
     
     // String []description1={"Tier1","Tier2","Tier3"};
-    String []ListHeading = {"TIER II NOUNS","TIER II VERBS","TIER III VOCABULARY"};
+    String []ListHeading = {"TIER II NOUNS","TIER II VERBS","TIER III VOCABULARY","RELATIONSHIP WORDS"};
     
 	private void modifyActionBar() {
 		// get the action bar
@@ -88,7 +89,7 @@ public class WordListActivity extends Activity
 	}
    
     private void createWordList() {
-    	for(int i=0;i<3;i++)
+    	for(int i=0;i<4;i++)
     	{
 		LayoutInflater inflater=getLayoutInflater();
 		View wordListView=inflater.inflate(R.layout.word_list, null);
@@ -163,6 +164,21 @@ public class WordListActivity extends Activity
     		}
     	          break;
     	
+        case 3:
+        	
+    		list = new ArrayList<HashMap<String,String>>();
+    		Resources res3 = getResources();
+			String []relationalwords = res3.getStringArray(R.array.Relationshipwords);
+    		int m= relationalwords.length;   
+    	    while(relationalword<m){
+		    HashMap<String,String> temp = new HashMap<String,String>();
+			temp.put(FIRST_COLUMN,relationalwords[relationalword]);
+			temp.put(SECOND_COLUMN,relationalwords[relationalword+1]);
+			temp.put(THIRD_COLUMN, relationalwords[relationalword+2]);
+			relationalword=relationalword+3;
+	      	list.add(temp);
+    		}
+    	          break;        
 		}
 	}
 }

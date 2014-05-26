@@ -35,7 +35,7 @@
     	android:ellipsize="end"
     	android:id="@+id/FirstcolumnText"
     	android:layout_height="45dp"
-    	android:layout_weight=".37"
+    	android:layout_weight=".388"
     	android:layout_width="match_parent"
     	android:text="WORD" 
        
@@ -55,7 +55,7 @@
         android:paddingLeft="11dp"
         android:ellipsize="end"
         android:textColor="#d2f495"
-        android:layout_weight=".377"
+        android:layout_weight=".39"
     >
     </TextView>
     

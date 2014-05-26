@@ -11,8 +11,8 @@
     <TextView
  
     	android:id="@+id/FirstText"
-    	android:layout_height="41dp"
-    	android:layout_weight=".37"
+    	android:layout_height="wrap_content"
+    	android:layout_weight=".388"
     	android:textSize="18dp"
     	android:layout_width="fill_parent"
     	android:text="First"
@@ -25,26 +25,27 @@
     <TextView
         android:id="@+id/SecondText"
         android:layout_width="fill_parent"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:text="Second"
         android:textSize="19dp"
         android:paddingTop="8dp"
         android:textColor="#ffffff"  
-        android:layout_weight=".38"
+        android:layout_weight=".396"
         >
     </TextView>
     
     <TextView
         android:id="@+id/ThirdText"
         android:layout_width="fill_parent"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:text="Third"
-        android:paddingLeft="10dp"
+        android:paddingLeft="11dp"
         android:paddingTop="8dp"
         android:textColor="#ffffff"
         android:textSize="19dp"
         android:layout_weight=".14"
-        >
+    >
+    
     </TextView>
     
     
