@@ -12,10 +12,12 @@ import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.pods.PodBean;
 import com.learningpod.android.db.LearningpodDbHandler;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -42,28 +44,36 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 	int[] pbRedArry={R.id.planet1pbred,R.id.planet2pbred,R.id.planet3pbred,R.id.planet4pbred,R.id.planet5pbred,R.id.planet6pbred,R.id.planet7pbred,R.id.planet8pbred,R.id.planet9pbred,R.id.planet10pbred,R.id.planet11pbred,R.id.planet12pbred,R.id.planet13pbred,R.id.planet14pbred,R.id.planet15pbred};
 	int[] pbBlueArry={R.id.planet1pbblue,R.id.planet2pbblue,R.id.planet3pbblue,R.id.planet4pbblue,R.id.planet5pbblue,R.id.planet6pbblue,R.id.planet7pbblue,R.id.planet8pbblue,R.id.planet9pbblue,R.id.planet10pbblue,R.id.planet11pbblue,R.id.planet12pbblue,R.id.planet13pbblue,R.id.planet14pbblue,R.id.planet15pbblue};
 	private Typeface headerFont;
+	private boolean isSmallerScreen;
 	
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		headerFont = Typeface.createFromAsset(getAssets(),
 				"fonts/PaytoneOne.ttf");
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		isSmallerScreen = false;
+		if(metrics.heightPixels<=800){
+			isSmallerScreen = true;
+		}
 		// get user profile and pods from content cache
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache().getLoggedInUserProfile();		
+		modifyActionBar(userProfileBean.getName());
 		//get list of pods. getting 
 		pods  = ContentCacheStore.getContentCache().getPods();		
-		setContentView(R.layout.home_screen);
+		setContentView(R.layout.maplayout);
 		// create the view flipper
-		mapFlipper = new ViewFlipper(this);
-		LayoutParams mapParams = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
-		mapFlipper.setLayoutParams(mapParams);
+		mapFlipper = (ViewFlipper)findViewById(R.id.mapFlipper1);
+		
 		
 		// get Inflater instance
 		LayoutInflater inflater = getLayoutInflater();
 		// inflate and create the Map Views
-		View mapView1 = createMap1View();
-		View mapView2 = createMap2View();
-		View mapView3 = createMap3View();
+		View mapView1 = createMapView(R.layout.mapview1,0);
+		View mapView2 = createMapView(R.layout.mapview2,5);
+		View mapView3 = createMapView(R.layout.mapview3,10);
 		
 		// add listeners to next and previous buttons
 		mapView1.findViewById(R.id.btnmap1next).setOnClickListener(this);
@@ -76,173 +86,78 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		((Button)mapView2.findViewById(R.id.btnmap2prev)).setTypeface(headerFont);
 		((Button)mapView3.findViewById(R.id.btnmap3prev)).setTypeface(headerFont);
 		
-		mapView1.findViewById(R.id.wordlist).setOnClickListener(this);
-		mapView2.findViewById(R.id.wordlist2).setOnClickListener(this);
-		mapView3.findViewById(R.id.wordlist3).setOnClickListener(this);
+		findViewById(R.id.wordlist).setOnClickListener(this);
 		
 		
 		// add views to the flipper
 		mapFlipper.addView(mapView1,0);		
 		mapFlipper.addView(mapView2,1);
 		mapFlipper.addView(mapView3,2);
-		setContentView(mapFlipper);
+		
 		
 	}
 	 
+
+	private void modifyActionBar(String strUserName){
+		ActionBar actionBar = getActionBar();
+		actionBar.setCustomView(R.layout.map_screen_custom_bar);
+		TextView userName = (TextView)actionBar.getCustomView().findViewById(R.id.mapscreenusername);
+		userName.setText("Hi, " + strUserName);
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
+				| ActionBar.DISPLAY_SHOW_HOME);
+	}
 	
 	
-	
-	private View createMap1View(){
-		// get the user id
-		
-		if(ContentCacheStore.getContentCache().getLoggedInUserProfile()!=null){
-			String userId = ContentCacheStore.getContentCache().getLoggedInUserProfile().getId();
-		}else{
-			String test = "user profile is null";
-			Toast.makeText(this, "user profile is null", 1000);
-		}
+	private View createMapView(int mapResourceId, int startIndex){	
 		
 		// get Inflater instance
 		LayoutInflater inflater = getLayoutInflater();
-		View mapView1 = inflater.inflate(R.layout.mapview1, null);
+		View mapView = inflater.inflate(mapResourceId, null);
 		int numberOfQuestionsCompleted = 0;
 		LearningpodDbHandler dbHandler = new LearningpodDbHandler(this);
 		dbHandler.open();		
 		
-		// planet 1
-		// get all views
 		
-		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
-		for(int i=0;i<5;i++){
-			PodBean pod1 = pods.get(i);
-			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
-			ImageButton btnPlanet1 = (ImageButton)mapView1.findViewById(imgBtnArray[i]);
-			TextView txtNamePlanet1 = (TextView)mapView1.findViewById(txtPlntArry[i]);
-			txtNamePlanet1.setTypeface(headerFont);
-			txtNamePlanet1.setOnClickListener(this);
-			ImageView imgSpaceshipPlanet1 = (ImageView)mapView1.findViewById(imgViewPlntArry[i]);
-			View progressBarRedPlanet1 = mapView1.findViewById(pbRedArry[i]);
-			View progressBarBluePlanet1 = mapView1.findViewById(pbBlueArry[i]);
+		// get all views		
+		for(int i=startIndex;i<(startIndex+5);i++){
+			PodBean pod = pods.get(i);
+			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod.getPodId());
+			ImageButton btnPlanet = (ImageButton)mapView.findViewById(imgBtnArray[i]);
+			TextView txtNamePlanet = (TextView)mapView.findViewById(txtPlntArry[i]);
+			txtNamePlanet.setTypeface(headerFont);
+			if(isSmallerScreen){
+				txtNamePlanet.setTextSize(14);
+			}
+			txtNamePlanet.setOnClickListener(this);
+			ImageView imgSpaceshipPlanet1 = (ImageView)mapView.findViewById(imgViewPlntArry[i]);
+			View progressBarRedPlanet1 = mapView.findViewById(pbRedArry[i]);
+			View progressBarBluePlanet1 = mapView.findViewById(pbBlueArry[i]);
 			
 			// set the state 
-			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setText(pod1.getTitle());
+			btnPlanet.setOnClickListener(this);
+			btnPlanet.setTag(new Integer(i).toString());
+			txtNamePlanet.setTag(new Integer(i).toString());
+			txtNamePlanet.setText(pod.getTitle());
 			if(numberOfQuestionsCompleted!=0){
-				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
+				if(numberOfQuestionsCompleted==pod.getPodElements().size()){
 					// change the image to the one with the flag
 					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
 					imgSpaceshipPlanet1.setBackgroundResource(R.drawable.spaceshipwithflag);
 				}else{
+					// show the spaceship with the progress bar
 					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
 					((LinearLayout.LayoutParams)progressBarRedPlanet1.getLayoutParams()).weight = (float)(0.2*numberOfQuestionsCompleted);
 					((LinearLayout.LayoutParams)progressBarBluePlanet1.getLayoutParams()).weight = (float)(1.0-(0.2*numberOfQuestionsCompleted));
 					progressBarRedPlanet1.setVisibility(View.VISIBLE);
 					progressBarBluePlanet1.setVisibility(View.VISIBLE);
-				}
-				
+				}				
 			}
 		}
 		
 		dbHandler.close();
-		return mapView1;
+		return mapView;
 	}
 	
-	private View createMap2View(){
-		LayoutInflater inflater = getLayoutInflater();
-		View mapView2 = inflater.inflate(R.layout.mapview2, null);
-		
-		int numberOfQuestionsCompleted = 0;
-		LearningpodDbHandler dbHandler = new LearningpodDbHandler(this);
-		dbHandler.open();		
-		
-		// planet 1
-		// get all views
-		
-		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
-		for(int i=5;i<10;i++){
-			PodBean pod1 = pods.get(i);
-			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
-			ImageButton btnPlanet1 = (ImageButton)mapView2.findViewById(imgBtnArray[i]);
-			TextView txtNamePlanet1 = (TextView)mapView2.findViewById(txtPlntArry[i]);
-			txtNamePlanet1.setTypeface(headerFont);
-			txtNamePlanet1.setOnClickListener(this);
-			ImageView imgSpaceshipPlanet1 = (ImageView)mapView2.findViewById(imgViewPlntArry[i]);
-			View progressBarRedPlanet1 = mapView2.findViewById(pbRedArry[i]);
-			View progressBarBluePlanet1 = mapView2.findViewById(pbBlueArry[i]);
-			
-			// set the state 
-			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setText(pod1.getTitle());
-			if(numberOfQuestionsCompleted!=0){
-				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
-					// change the image to the one with the flag
-					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
-					imgSpaceshipPlanet1.setBackgroundResource(R.drawable.spaceshipwithflag);
-				}else{
-					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
-					((LinearLayout.LayoutParams)progressBarRedPlanet1.getLayoutParams()).weight = (float)(0.2*numberOfQuestionsCompleted);
-					((LinearLayout.LayoutParams)progressBarBluePlanet1.getLayoutParams()).weight = (float)(1.0-(0.2*numberOfQuestionsCompleted));
-					progressBarRedPlanet1.setVisibility(View.VISIBLE);
-					progressBarBluePlanet1.setVisibility(View.VISIBLE);
-				}
-				
-			}
-		}
-		
-		dbHandler.close();
-		return mapView2;
-	}
-	
-	private View createMap3View(){
-		LayoutInflater inflater = getLayoutInflater();
-		View mapView3 = inflater.inflate(R.layout.mapview3, null);
-		int numberOfQuestionsCompleted = 0;
-		LearningpodDbHandler dbHandler = new LearningpodDbHandler(this);
-		dbHandler.open();		
-		
-		// planet 1
-		// get all views
-		
-		//Toast.makeText(getApplicationContext(), pods.size()+" checking size", Toast.LENGTH_LONG).show();
-		for(int i=10;i<15;i++){
-			PodBean pod1 = pods.get(i);
-			numberOfQuestionsCompleted =  dbHandler.getUserProgressStatus(ContentCacheStore.getContentCache().getLoggedInUserProfile().getId(), pod1.getPodId());
-			ImageButton btnPlanet1 = (ImageButton)mapView3.findViewById(imgBtnArray[i]);
-			TextView txtNamePlanet1 = (TextView)mapView3.findViewById(txtPlntArry[i]);
-			txtNamePlanet1.setTypeface(headerFont);
-			txtNamePlanet1.setOnClickListener(this);
-			ImageView imgSpaceshipPlanet1 = (ImageView)mapView3.findViewById(imgViewPlntArry[i]);
-			View progressBarRedPlanet1 = mapView3.findViewById(pbRedArry[i]);
-			View progressBarBluePlanet1 = mapView3.findViewById(pbBlueArry[i]);
-			
-			// set the state 
-			btnPlanet1.setOnClickListener(this);
-			btnPlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setTag(new Integer(i).toString());
-			txtNamePlanet1.setText(pod1.getTitle());
-			if(numberOfQuestionsCompleted!=0){
-				if(numberOfQuestionsCompleted==pod1.getPodElements().size()){
-					// change the image to the one with the flag
-					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
-					imgSpaceshipPlanet1.setBackgroundResource(R.drawable.spaceshipwithflag);
-				}else{
-					imgSpaceshipPlanet1.setVisibility(View.VISIBLE);
-					((LinearLayout.LayoutParams)progressBarRedPlanet1.getLayoutParams()).weight = (float)(0.2*numberOfQuestionsCompleted);
-					((LinearLayout.LayoutParams)progressBarBluePlanet1.getLayoutParams()).weight = (float)(1.0-(0.2*numberOfQuestionsCompleted));
-					progressBarRedPlanet1.setVisibility(View.VISIBLE);
-					progressBarBluePlanet1.setVisibility(View.VISIBLE);
-				}
-				
-			}
-		}
-		
-		dbHandler.close();
-		return mapView3;
-	}
 	
 	// Method to handle touch event like left to right swap and right to left swap
     public boolean onTouchEvent(MotionEvent touchevent) 
@@ -313,7 +228,7 @@ public class MapActivity extends BaseActivity implements OnClickListener{
             // Show the previous Screen
             mapFlipper.showPrevious();
 		}
-		else if (v.getId()==R.id.wordlist || v.getId()==R.id.wordlist2 || v.getId()==R.id.wordlist3){
+		else if (v.getId()==R.id.wordlist ){
             
 	           // set the required Animation type to mapFlipper
 	           // The Next screen will come in form Left and current Screen will go OUT from Right 
@@ -333,9 +248,9 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 		}
 		else if(v instanceof TextView){
 			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
+			/*if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId==2||selectedPlatentId==3 || selectedPlatentId==4 || selectedPlatentId==5 || selectedPlatentId==10 )){
 				return;
-			}
+			}*/
 			PodBean selectedPod = pods.get(selectedPlatentId);
 			HashMap<String,Object> params = new HashMap<String,Object>();
 			params.put("selectedPod",selectedPod);			

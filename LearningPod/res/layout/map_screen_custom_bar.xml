@@ -5,7 +5,7 @@
     android:orientation="vertical" >
  <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_vertical|fill_horizontal" >
     
   <TextView
@@ -13,24 +13,24 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textColor="#ffffff"
-	        android:textSize="19sp"
+	        android:textSize="17sp"
 	        android:textStyle="bold"
 	       	android:layout_gravity="center_vertical"
 	        android:layout_marginLeft="5dp"
-	        android:text = "MAP"
+	        android:text = "Learningpod"
 	         />  
     
      
 <TextView
-	        android:id = "@+id/podname"
+	        android:id = "@+id/mapscreenusername"
 	        android:layout_width="fill_parent"
-	        android:gravity= "center"
+	        android:gravity= "right"
+	        android:layout_marginRight="30dp"
 	        android:layout_height="wrap_content"
 	        android:textColor="#ffffff"
-	        android:textSize="24sp"	         
-	        android:layout_gravity="center_vertical"
-	       
-	        android:text = "Context Clues -  Level A"
+	        android:textSize="17sp"	         
+	        android:layout_gravity="center_vertical"	       
+	        android:text = "Hi User"
 	         />
 </FrameLayout>
 </LinearLayout>

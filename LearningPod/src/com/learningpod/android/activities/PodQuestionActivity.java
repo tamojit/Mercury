@@ -4,8 +4,10 @@ package com.learningpod.android.activities;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
 import com.learningpod.android.BaseActivity;
 import com.learningpod.android.ContentCacheStore;
 import com.learningpod.android.R;
@@ -21,30 +23,31 @@ import com.learningpod.androind.listeners.ChoiceSelectListner;
 
 import android.content.Context;
 import android.content.Intent;
-
 import android.graphics.Color;
 import android.graphics.Typeface;
-
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.util.DisplayMetrics;
-
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.Window;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ActionBar;
@@ -79,6 +82,7 @@ public class PodQuestionActivity extends BaseActivity {
 	
 	final Context context = this;
 
+	
 	private String uid;
 	private int percentage;
 	private boolean isSmallerScreen;
@@ -146,7 +150,7 @@ public class PodQuestionActivity extends BaseActivity {
 		ActionBar actionBar = getActionBar();
 		// getActionBar().setTitle(goToMapView.getText().toString());
 		getActionBar().setIcon(R.drawable.arrow);
-		actionBar.setCustomView(R.layout.custm);
+		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
@@ -719,13 +723,15 @@ public class PodQuestionActivity extends BaseActivity {
 		
 		Button summaryMap = (Button)findViewById(R.id.btnSummaryMap);
 		summaryMap.setTypeface(headerFont);
+		if(isSmallerScreen){
+			summaryMap.setTextSize(18);
+		}
 		summaryMap.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(PodQuestionActivity.this,
-						MapActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						MapActivity.class);				
 				startActivity(intent);
 				PodQuestionActivity.this.finish();				
 			}
@@ -783,11 +789,15 @@ public class PodQuestionActivity extends BaseActivity {
 			summaryQuesContainer.addView(view);
 		}
 
-		 percentage = 67;//(int) ((correctAnswers * 100 / totalQuestions));
+		 percentage = (int) ((correctAnswers * 100 / totalQuestions));
 		((TextView) findViewById(R.id.correctpercentage)).setText(percentage
 				+ "%");
 		((TextView) findViewById(R.id.correctpercentage)).setTypeface(boldfont);
 		((TextView) findViewById(R.id.summarycorrect)).setTypeface(boldfont);
+		if(isSmallerScreen){
+			((TextView) findViewById(R.id.correctpercentage)).setTextSize(58);
+			((TextView) findViewById(R.id.summarycorrect)).setTextSize(24);
+		}
 		if (percentage == 100) {
 			findViewById(R.id.star).setVisibility(View.VISIBLE);
 		}
@@ -931,7 +941,8 @@ public class PodQuestionActivity extends BaseActivity {
 			summary.append("\n\n");
 		}
 		summary.append("Overall Percentage : " +  percentage + "%");
-		String test = "<html>	<head>		<style>			#container			{				width:400px;				height:450px;				background-color:#213043;				text-align:center;				font-family:Noto Sans Bold;				color:white;											}						table			{				text-align:center;				width:100%;				border:1px solid 435869;				border-collapse:collapse;				border-spacing: 0;				line-height: 3;			}						td			{				font-size: 8pt;				border: 1px solid 435869;				color:white;			}						tr			{				border: 1px solid 435869;			}						th			{				font-size: 8pt;				border: 1px solid 435869;				color:white;			}						#image			{    				position: relative;				width: 120px;				height: 120px;				margin-top: 10px;			}						#stImg			{				position: relative;				width: 15px;				height: 15px;			}						#text			{				z-index: 100;				position: absolute;				left: 170px;				vertical-align: middle;			}		</style>	<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"font-size:20;height:55px\">				<div style=\"padding-top: 14px;\">Summary for Jane Smith</div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div>	</body></html>";
+		String test = "<html>	<head>		<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"font-size:20;height:55px\">				<div style=\"padding-top: 14px;\">Summary for Jane Smith</div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div> <div><table><thead><tr><th>Col1</th><th>Col2</th><th>Col3</th></tr></thead><tbody><tr><td>val1</td><td>val2</td><td>val3</td></tr><tr><td>val1</td><td>val2</td><td>val3</td></tr></tbody></div>	</body></html>";
+		
 		return test;
 	}
 	
@@ -975,20 +986,306 @@ public class PodQuestionActivity extends BaseActivity {
 	
 	private void animateShootingStar(){
 		
-		final ImageView shootingStar1 = (ImageView) findViewById(R.id.sstar1);
-		int[] origLocation = new int[2];
-		int[] destLocation = new int[2];
-		shootingStar1.getLocationOnScreen(origLocation);
-		destLocation[0] = origLocation[0] - shootingStar1.getLayoutParams().width;
-		destLocation[1] = origLocation[1] + shootingStar1.getLayoutParams().height;
-		shootingStar1.bringToFront();
-		TranslateAnimation animation = new TranslateAnimation(0,
-				destLocation[0] - origLocation[0], 0, destLocation[1]
-						- origLocation[1]);
-		animation.setDuration(2000);
-		animation.setFillAfter(false);
-		animation.setRepeatCount(Animation.INFINITE);
-		shootingStar1.startAnimation(animation);
+		final ImageView shootingStar1 = (ImageView) findViewById(R.id.sstar1);	
+		final ImageView shootingStar2 = (ImageView) findViewById(R.id.sstar2);	
+		final ImageView shootingStar3 = (ImageView) findViewById(R.id.sstar3);	
+		final ImageView shootingStar4 = (ImageView) findViewById(R.id.sstar4);	
+		final ImageView shootingStar5 = (ImageView) findViewById(R.id.sstar5);
+		final ImageView shootingStar0 = (ImageView) findViewById(R.id.sstar0);
+		final ImageView shootingStar2_5 = (ImageView) findViewById(R.id.sstar2_5);
+		final ImageView shootingStar3_5 = (ImageView) findViewById(R.id.sstar3_5);
+		
+		shootingStar1.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+			
+			@Override
+			public void onGlobalLayout() {
+				// remove the call back
+				shootingStar1.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+				
+				// for star0
+				int[] origLocation0 = new int[2];
+				int[] destLocation0 = new int[2];
+				shootingStar0.getLocationOnScreen(origLocation0);
+				destLocation0[0] = origLocation0[0] - (shootingStar1.getWidth()*2);
+				destLocation0[1] = origLocation0[1] + (shootingStar1.getHeight()*2);
+				//shootingStar1.bringToFront();;
+				TranslateAnimation animation0 = new TranslateAnimation(0,
+						destLocation0[0] - origLocation0[0], 0, destLocation0[1]
+								- origLocation0[1]);							
+				animation0.setFillAfter(false);
+				animation0.setRepeatCount(Animation.INFINITE);	
+				
+				// for star1
+				int[] origLocation1 = new int[2];
+				int[] destLocation1 = new int[2];
+				shootingStar1.getLocationOnScreen(origLocation1);
+				destLocation1[0] = origLocation1[0] - (shootingStar1.getWidth()*3);
+				destLocation1[1] = origLocation1[1] + (shootingStar1.getHeight()*3 +50);
+				//shootingStar1.bringToFront();;
+				TranslateAnimation animation1 = new TranslateAnimation(0,
+						destLocation1[0] - origLocation1[0], 0, destLocation1[1] 
+								- origLocation1[1]);						
+				animation1.setFillAfter(false);
+				animation1.setRepeatCount(Animation.INFINITE);				
+				
+				
+				// for star2
+				int[] origLocation2 = new int[2];
+				int[] destLocation2 = new int[2];
+				shootingStar2.getLocationOnScreen(origLocation2);
+				destLocation2[0] = origLocation2[0] - (shootingStar2.getWidth()*3);
+				destLocation2[1] = origLocation2[1] + (shootingStar2.getHeight()*3+50);
+				//shootingStar2.bringToFront();
+				TranslateAnimation animation2 = new TranslateAnimation(0,
+						destLocation2[0] - origLocation2[0], 0, destLocation2[1]
+								- origLocation2[1]);		
+				animation2.setFillAfter(false);
+				animation2.setRepeatCount(Animation.INFINITE);
+				
+				// for star2.5
+				int[] origLocation2_5 = new int[2];
+				int[] destLocation2_5 = new int[2];
+				shootingStar2_5.getLocationOnScreen(origLocation2_5);
+				destLocation2_5[0] = origLocation2_5[0] - (shootingStar2_5.getWidth()*3);
+				destLocation2_5[1] = origLocation2_5[1] + (shootingStar2_5.getHeight()*3+50);
+				//shootingStar2.bringToFront();
+				TranslateAnimation animation2_5 = new TranslateAnimation(0,
+						destLocation2_5[0] - origLocation2_5[0], 0, destLocation2_5[1]
+								- origLocation2_5[1]);	
+				animation2_5.setFillAfter(false);
+				animation2_5.setRepeatCount(Animation.INFINITE);
+				
+				
+				
+				// for star3
+				int[] origLocation3 = new int[3];
+				int[] destLocation3 = new int[3];
+				shootingStar3.getLocationOnScreen(origLocation3);
+				destLocation3[0] = origLocation3[0] - (shootingStar3.getWidth()*3);
+				destLocation3[1] = origLocation3[1] + (shootingStar3.getHeight()*3+50);
+				//shootingStar3.bringToFront();
+				TranslateAnimation animation3 = new TranslateAnimation(0,
+						destLocation3[0] - origLocation3[0], 0, destLocation3[1]
+								- origLocation3[1]);
+				animation3.setFillAfter(false);
+				animation3.setRepeatCount(Animation.INFINITE);	
+				
+				
+				// for star3.5
+				int[] origLocation3_5 = new int[3];
+				int[] destLocation3_5 = new int[3];
+				shootingStar3_5.getLocationOnScreen(origLocation3_5);
+				destLocation3_5[0] = origLocation3_5[0] - (shootingStar3_5.getWidth()*3);
+				destLocation3_5[1] = origLocation3_5[1] + (shootingStar3_5.getHeight()*3+50);
+				//shootingStar3.bringToFront();
+				TranslateAnimation animation3_5 = new TranslateAnimation(0,
+						destLocation3_5[0] - origLocation3_5[0], 0, destLocation3_5[1]
+								- origLocation3_5[1]);
+				animation3_5.setFillAfter(false);
+				animation3_5.setRepeatCount(Animation.INFINITE);	
+				
+				
+				
+				
+				// for star4
+				int[] origLocation4 = new int[4];
+				int[] destLocation4 = new int[4];
+				shootingStar4.getLocationOnScreen(origLocation4);
+				destLocation4[0] = origLocation4[0] - (shootingStar4.getWidth()*3);
+				destLocation4[1] = origLocation4[1] + (shootingStar4.getHeight()*3);
+				//shootingStar4.bringToFront();
+				TranslateAnimation animation4 = new TranslateAnimation(0,
+						destLocation4[0] - origLocation4[0], 0, destLocation4[1]
+								- origLocation4[1]);
+				animation4.setFillAfter(false);
+				animation4.setRepeatCount(Animation.INFINITE);	
+				
+				// for star5
+				int[] origLocation5 = new int[2];
+				int[] destLocation5 = new int[2];
+				shootingStar5.getLocationOnScreen(origLocation5);
+				destLocation5[0] = origLocation5[0] - (shootingStar5.getWidth()*2);
+				destLocation5[1] = origLocation5[1] + (shootingStar5.getHeight()*2);
+				//shootingStar5.bringToFront();
+				TranslateAnimation animation5 = new TranslateAnimation(0,
+						destLocation5[0] - origLocation5[0], 0, destLocation5[1]
+								- origLocation5[1]);
+				animation5.setFillAfter(false);
+				animation5.setRepeatCount(Animation.INFINITE);
+				
+				// set the offset to create the lag between stars
+				/*animation0.setStartOffset(0);
+				animation1.setStartOffset(300);
+				animation2.setStartOffset(200);
+				animation2_5.setStartOffset(0);
+				animation3.setStartOffset(100);
+				animation3_5.setStartOffset(0);
+				animation4.setStartOffset(0);
+				animation5.setStartOffset(100);*/
+				
+				// create a fade out animation. 10 mili seconds is added as calibration value to keep
+				// both animations at sync
+				Animation fadeOut0 = new AlphaAnimation(1, 0);
+				fadeOut0.setFillAfter(false);
+				fadeOut0.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut1 = new AlphaAnimation(1, 0);
+				fadeOut1.setFillAfter(false);
+				fadeOut1.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut2 = new AlphaAnimation(1, 0);
+				fadeOut2.setFillAfter(false);
+				fadeOut2.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut2_5 = new AlphaAnimation(1, 0);
+				fadeOut2_5.setFillAfter(false);
+				fadeOut2_5.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut3 = new AlphaAnimation(1, 0);
+				fadeOut3.setFillAfter(false);
+				fadeOut3.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut3_5 = new AlphaAnimation(1, 0);
+				fadeOut3_5.setFillAfter(false);
+				fadeOut3_5.setRepeatCount(Animation.INFINITE);
+				
+				
+				Animation fadeOut4 = new AlphaAnimation(1, 0);
+				fadeOut4.setFillAfter(false);
+				fadeOut4.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut5 = new AlphaAnimation(1, 0);
+				fadeOut5.setFillAfter(false);
+				fadeOut5.setRepeatCount(Animation.INFINITE);
+				
+				
+				// create Animation set for each shooting star
+				
+				final AnimationSet set0 = new AnimationSet(false);				
+				set0.addAnimation(fadeOut0);
+				set0.addAnimation(animation0);
+				set0.setDuration(2000);
+				
+				final AnimationSet set1 = new AnimationSet(false);
+				set1.addAnimation(fadeOut1);
+				set1.addAnimation(animation1);
+				set1.setDuration(2000);
+				
+				
+				final AnimationSet set2 = new AnimationSet(false);
+				set2.addAnimation(fadeOut2);
+				set2.addAnimation(animation2);
+				set2.setDuration(2000);
+				
+				final AnimationSet set2_5 = new AnimationSet(false);
+				set2_5.addAnimation(fadeOut2_5);
+				set2_5.addAnimation(animation2_5);
+				set2_5.setDuration(2000);
+				
+				
+				final AnimationSet set3 = new AnimationSet(false);
+				set3.addAnimation(fadeOut3);
+				set3.addAnimation(animation3);
+				set3.setDuration(2000);		
+				
+				final AnimationSet set3_5 = new AnimationSet(false);
+				set3_5.addAnimation(fadeOut3_5);
+				set3_5.addAnimation(animation3_5);
+				set3_5.setDuration(2000);
+				
+				final AnimationSet set4 = new AnimationSet(false);
+				set4.addAnimation(fadeOut4);
+				set4.addAnimation(animation4);
+				set4.setDuration(2000);
+				
+				final AnimationSet set5 = new AnimationSet(false);
+				set5.addAnimation(fadeOut5);
+				set5.addAnimation(animation5);
+				set5.setDuration(2000);
+				
+				// set the offset to create the lag between stars
+				/*set0.setStartOffset(0);
+				set1.setStartOffset(1000);
+				set2.setStartOffset(200);
+				set2_5.setStartOffset(800);
+				set3.setStartOffset(100);
+				set3_5.setStartOffset(1000);
+				set4.setStartOffset(0);
+				set5.setStartOffset(800);*/
+				
+				
+				
+				// start the animation set for each shooting star
+				
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar0.startAnimation(set0);
+						
+					}					
+				}, 0);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar1.startAnimation(set1);
+						
+					}					
+				}, 1000);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar2.startAnimation(set2);
+						
+					}					
+				}, 50);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar2_5.startAnimation(set2_5);
+						
+					}					
+				}, 800);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar3.startAnimation(set3);
+						
+					}					
+				}, 0);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar3_5.startAnimation(set3_5);
+						
+					}					
+				}, 1000);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar4.startAnimation(set4);
+						
+					}					
+				}, 0);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar5.startAnimation(set5);
+						
+					}					
+				}, 800);
+				
+			}
+		});
+		
+		
 	}
 	private void animateAlienImageView() {
 		final ImageView alienForQues = (ImageView) findViewById(R.id.alienforquestion);
@@ -1054,8 +1351,16 @@ public class PodQuestionActivity extends BaseActivity {
 			}
 
 		});
-		// alienForQues.bringToFront();
-		alienForQues.startAnimation(animation);
+		// create rotation animation
+		Animation rotateAnimation = new RotateAnimation(0f,60f);
+		rotateAnimation.setDuration(2000);
+		rotateAnimation.setFillAfter(false);
+		// create animation set for storing both animations
+		
+		AnimationSet set = new AnimationSet(false);
+		set.addAnimation(animation);
+		//set.addAnimation(rotateAnimation);
+		alienForQues.startAnimation(set);
 
 	}
 

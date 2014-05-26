@@ -58,7 +58,7 @@ public class WordListActivity extends Activity
 		ActionBar actionBar = getActionBar();
 		// getActionBar().setTitle(goToMapView.getText().toString());
 		getActionBar().setIcon(R.drawable.arrow);	 
-		actionBar.setCustomView(R.layout.custm);
+		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
 		goToMapButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19);
