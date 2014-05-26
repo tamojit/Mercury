@@ -75,7 +75,41 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		//get list of pods. getting 
 		pods  = ContentCacheStore.getContentCache().getPods();		
 		setContentView(R.layout.maplayout);
-	
+		/*************** Email Test Code***********************************/
+		findViewById(R.id.mailTest).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent email = new Intent(Intent.ACTION_SEND);
+				email.setType("text/html");
+				List<android.content.pm.ResolveInfo> resInfo = getPackageManager()
+						.queryIntentActivities(email, 0);
+				String mailBody = "<html>	<head>		<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"size:20;height:55px\">				<div style=\"padding-top: 14px;\"><font color = \"red\" size = \"50\"><big>Summary for Jane Smith</Big><\font></div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div> <div><table><thead><tr><th>Col1</th><th>Col2</th><th>Col3</th></tr></thead><tbody><tr><td>val1</td><td>val2</td><td>val3</td></tr><tr><td>val1</td><td>val2</td><td>val3</td></tr></tbody></div>	</body></html>";
+				if (!resInfo.isEmpty()) {
+					for (android.content.pm.ResolveInfo info : resInfo) {
+						if (info.activityInfo.packageName.toLowerCase().contains(
+								"gmail")
+								|| info.activityInfo.name.toLowerCase().contains(
+										"gmail")) {
+							email.putExtra(android.content.Intent.EXTRA_TEXT,
+									Html.fromHtml(mailBody));
+							email.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Result");
+							email.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"tamo@att.com"});					
+							email.setPackage(info.activityInfo.packageName);
+							startActivity(Intent.createChooser(email, ""));
+						}
+					}
+				}
+				else{
+					 email.setType("message/rfc822");
+					 startActivity(Intent.createChooser(email,
+					 "Choose an Email client :"));
+				}
+				
+			}
+		});
+		
+		/***************************************************/
 		// create the view flipper
 		mapFlipper = (ViewFlipper)findViewById(R.id.mapFlipper1);
 		

@@ -28,6 +28,7 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="30dp"
         android:adjustViewBounds="true"
-        android:text="Mail Test Button" />
+        android:text="Mail Test Button"
+        android:visibility="gone" />
 
 </RelativeLayout>

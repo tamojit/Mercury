@@ -391,10 +391,10 @@ containing a value of this type.
     }
     public static final class id {
         public static final int FirstText=0x7f060023;
-        public static final int FirstcolumnText=0x7f0600b1;
+        public static final int FirstcolumnText=0x7f0600b4;
         public static final int SecondText=0x7f060024;
         public static final int ThirdText=0x7f060025;
-        public static final int about=0x7f0600b6;
+        public static final int about=0x7f0600b9;
         public static final int alienforexplanation=0x7f06008a;
         public static final int alienforexplanationlight=0x7f06008b;
         public static final int alienforquestion=0x7f060086;
@@ -432,7 +432,7 @@ containing a value of this type.
         public static final int explanationheader=0x7f06008d;
         public static final int frame_container=0x7f060008;
         public static final int gotomap=0x7f060099;
-        public static final int help=0x7f0600b7;
+        public static final int help=0x7f0600ba;
         public static final int homelabel1=0x7f06001c;
         public static final int homelabel2=0x7f06001d;
         public static final int horizontalscroller=0x7f060021;
@@ -444,7 +444,7 @@ containing a value of this type.
         public static final int listContentView=0x7f060028;
         public static final int list_slidermenu=0x7f060009;
         public static final int llProfile=0x7f06000a;
-        public static final int login=0x7f0600b8;
+        public static final int login=0x7f0600bb;
         public static final int loginmailcontainer=0x7f060026;
         public static final int mailTest=0x7f06002c;
         public static final int mapFlipper1=0x7f06002a;
@@ -540,31 +540,34 @@ containing a value of this type.
         public static final int questionprogresscontainer=0x7f06009a;
         public static final int relativeLayout1=0x7f060022;
         public static final int satellite=0x7f060002;
-        public static final int secondColumnText=0x7f0600b2;
-        public static final int sectionBar=0x7f0600b0;
+        public static final int secondColumnText=0x7f0600b5;
+        public static final int sectionBar=0x7f0600b3;
         public static final int sendEmail=0x7f060019;
         public static final int sendEmailDummy=0x7f06001a;
         public static final int sendMailBt=0x7f0600a2;
         public static final int sign_in_button=0x7f06001f;
         public static final int sstar0=0x7f0600a7;
         public static final int sstar1=0x7f0600a8;
-        public static final int sstar2=0x7f0600a9;
-        public static final int sstar2_5=0x7f0600aa;
-        public static final int sstar3=0x7f0600ab;
-        public static final int sstar3_5=0x7f0600ac;
-        public static final int sstar4=0x7f0600ad;
-        public static final int sstar5=0x7f0600ae;
+        public static final int sstar1_1=0x7f0600a9;
+        public static final int sstar2=0x7f0600aa;
+        public static final int sstar2_1=0x7f0600ab;
+        public static final int sstar2_5=0x7f0600ac;
+        public static final int sstar3=0x7f0600ad;
+        public static final int sstar3_1=0x7f0600ae;
+        public static final int sstar3_5=0x7f0600af;
+        public static final int sstar4=0x7f0600b0;
+        public static final int sstar5=0x7f0600b1;
         public static final int star=0x7f06009f;
         public static final int summaryLabel=0x7f0600a3;
         public static final int summaryQuestionicon=0x7f06009d;
         public static final int summarycorrect=0x7f0600a1;
         public static final int summaryquestioncontainer=0x7f0600a4;
         public static final int summaryquestionsequence=0x7f06009c;
-        public static final int terms=0x7f0600b5;
+        public static final int terms=0x7f0600b8;
         public static final int terrain=0x7f060003;
         public static final int text=0x7f060096;
         public static final int textView1=0x7f060014;
-        public static final int thirdColumnText=0x7f0600b3;
+        public static final int thirdColumnText=0x7f0600b6;
         public static final int title=0x7f060016;
         public static final int title_text=0x7f060081;
         public static final int toaddress=0x7f060018;
@@ -572,8 +575,8 @@ containing a value of this type.
         public static final int txtName=0x7f06000c;
         public static final int username=0x7f06001b;
         public static final int username1=0x7f060020;
-        public static final int wordList=0x7f0600b4;
-        public static final int wordListText=0x7f0600af;
+        public static final int wordList=0x7f0600b7;
+        public static final int wordListText=0x7f0600b2;
         public static final int wordlist=0x7f06002b;
     }
     public static final class integer {
