@@ -152,12 +152,30 @@
                     android:layout_marginTop="-235dp"
                     android:background="@drawable/shootingstar"
                     android:visibility="visible" />
+              
+               <ImageView
+                    android:id="@+id/sstar1.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="400dp"
+                    android:layout_marginTop="-235dp"
+                    android:background="@drawable/shootingstar"
+                    android:visibility="visible" />
             
              <ImageView
                     android:id="@+id/sstar2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="460dp"
+                    android:layout_marginTop="-235dp"
+                    android:background="@drawable/shootingstar"
+                    android:visibility="visible" />
+             
+              <ImageView
+                    android:id="@+id/sstar2.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="520dp"
                     android:layout_marginTop="-235dp"
                     android:background="@drawable/shootingstar"
                     android:visibility="visible" />
@@ -176,6 +194,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="680dp"
+                    android:layout_marginTop="-235dp"
+                    android:background="@drawable/shootingstar"
+                    android:visibility="visible" />
+             
+              <ImageView
+                    android:id="@+id/sstar3.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="730dp"
                     android:layout_marginTop="-235dp"
                     android:background="@drawable/shootingstar"
                     android:visibility="visible" />

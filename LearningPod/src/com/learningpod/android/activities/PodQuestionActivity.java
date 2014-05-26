@@ -993,7 +993,10 @@ public class PodQuestionActivity extends BaseActivity {
 		final ImageView shootingStar5 = (ImageView) findViewById(R.id.sstar5);
 		final ImageView shootingStar0 = (ImageView) findViewById(R.id.sstar0);
 		final ImageView shootingStar2_5 = (ImageView) findViewById(R.id.sstar2_5);
-		final ImageView shootingStar3_5 = (ImageView) findViewById(R.id.sstar3_5);
+		final ImageView shootingStar3_5 = (ImageView) findViewById(R.id.sstar3_5);		
+		final ImageView shootingStar1_1 = (ImageView) findViewById(R.id.sstar1_1);
+		final ImageView shootingStar2_1 = (ImageView) findViewById(R.id.sstar2_1);
+		final ImageView shootingStar3_1 = (ImageView) findViewById(R.id.sstar3_1);
 		
 		shootingStar1.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 			
@@ -1026,7 +1029,20 @@ public class PodQuestionActivity extends BaseActivity {
 						destLocation1[0] - origLocation1[0], 0, destLocation1[1] 
 								- origLocation1[1]);						
 				animation1.setFillAfter(false);
-				animation1.setRepeatCount(Animation.INFINITE);				
+				animation1.setRepeatCount(Animation.INFINITE);	
+				
+				// for star1.1
+				int[] origLocation1_1 = new int[2];
+				int[] destLocation1_1 = new int[2];
+				shootingStar1_1.getLocationOnScreen(origLocation1_1);
+				destLocation1_1[0] = origLocation1_1[0] - (shootingStar1_1.getWidth()*3);
+				destLocation1_1[1] = origLocation1_1[1] + (shootingStar1_1.getHeight()*3 +50);
+				//shootingStar1.bringToFront();;
+				TranslateAnimation animation1_1 = new TranslateAnimation(0,
+						destLocation1_1[0] - origLocation1_1[0], 0, destLocation1_1[1] 
+								- origLocation1_1[1]);						
+				animation1.setFillAfter(false);
+				animation1.setRepeatCount(Animation.INFINITE);	
 				
 				
 				// for star2
@@ -1041,6 +1057,19 @@ public class PodQuestionActivity extends BaseActivity {
 								- origLocation2[1]);		
 				animation2.setFillAfter(false);
 				animation2.setRepeatCount(Animation.INFINITE);
+				
+				// for star2.1
+				int[] origLocation2_1 = new int[2];
+				int[] destLocation2_1 = new int[2];
+				shootingStar2_1.getLocationOnScreen(origLocation2_1);
+				destLocation2_1[0] = origLocation2_1[0] - (shootingStar2_1.getWidth()*3);
+				destLocation2_1[1] = origLocation2_1[1] + (shootingStar2_1.getHeight()*3+50);
+				//shootingStar2.bringToFront();
+				TranslateAnimation animation2_1 = new TranslateAnimation(0,
+						destLocation2_1[0] - origLocation2_1[0], 0, destLocation2_1[1]
+								- origLocation2_1[1]);		
+				animation2_1.setFillAfter(false);
+				animation2_1.setRepeatCount(Animation.INFINITE);
 				
 				// for star2.5
 				int[] origLocation2_5 = new int[2];
@@ -1069,6 +1098,20 @@ public class PodQuestionActivity extends BaseActivity {
 								- origLocation3[1]);
 				animation3.setFillAfter(false);
 				animation3.setRepeatCount(Animation.INFINITE);	
+				
+				
+				// for star3.1
+				int[] origLocation3_1 = new int[3];
+				int[] destLocation3_1 = new int[3];
+				shootingStar3_1.getLocationOnScreen(origLocation3_1);
+				destLocation3_1[0] = origLocation3_1[0] - (shootingStar3_1.getWidth()*3);
+				destLocation3_1[1] = origLocation3_1[1] + (shootingStar3_1.getHeight()*3+50);
+				//shootingStar3.bringToFront();
+				TranslateAnimation animation3_1 = new TranslateAnimation(0,
+						destLocation3_1[0] - origLocation3_1[0], 0, destLocation3_1[1]
+								- origLocation3_1[1]);
+				animation3_1.setFillAfter(false);
+				animation3_1.setRepeatCount(Animation.INFINITE);	
 				
 				
 				// for star3.5
@@ -1133,9 +1176,19 @@ public class PodQuestionActivity extends BaseActivity {
 				fadeOut1.setFillAfter(false);
 				fadeOut1.setRepeatCount(Animation.INFINITE);
 				
+				Animation fadeOut1_1 = new AlphaAnimation(1, 0);
+				fadeOut1_1.setFillAfter(false);
+				fadeOut1_1.setRepeatCount(Animation.INFINITE);
+				
 				Animation fadeOut2 = new AlphaAnimation(1, 0);
 				fadeOut2.setFillAfter(false);
 				fadeOut2.setRepeatCount(Animation.INFINITE);
+				
+
+				Animation fadeOut2_1 = new AlphaAnimation(1, 0);
+				fadeOut2_1.setFillAfter(false);
+				fadeOut2_1.setRepeatCount(Animation.INFINITE);
+				
 				
 				Animation fadeOut2_5 = new AlphaAnimation(1, 0);
 				fadeOut2_5.setFillAfter(false);
@@ -1144,6 +1197,10 @@ public class PodQuestionActivity extends BaseActivity {
 				Animation fadeOut3 = new AlphaAnimation(1, 0);
 				fadeOut3.setFillAfter(false);
 				fadeOut3.setRepeatCount(Animation.INFINITE);
+				
+				Animation fadeOut3_1 = new AlphaAnimation(1, 0);
+				fadeOut3_1.setFillAfter(false);
+				fadeOut3_1.setRepeatCount(Animation.INFINITE);
 				
 				Animation fadeOut3_5 = new AlphaAnimation(1, 0);
 				fadeOut3_5.setFillAfter(false);
@@ -1171,11 +1228,22 @@ public class PodQuestionActivity extends BaseActivity {
 				set1.addAnimation(animation1);
 				set1.setDuration(2000);
 				
+				final AnimationSet set1_1 = new AnimationSet(false);
+				set1_1.addAnimation(fadeOut1_1);
+				set1_1.addAnimation(animation1_1);
+				set1_1.setDuration(2000);
+				
 				
 				final AnimationSet set2 = new AnimationSet(false);
 				set2.addAnimation(fadeOut2);
 				set2.addAnimation(animation2);
 				set2.setDuration(2000);
+				
+
+				final AnimationSet set2_1 = new AnimationSet(false);
+				set2_1.addAnimation(fadeOut2_1);
+				set2_1.addAnimation(animation2_1);
+				set2_1.setDuration(2000);
 				
 				final AnimationSet set2_5 = new AnimationSet(false);
 				set2_5.addAnimation(fadeOut2_5);
@@ -1187,6 +1255,11 @@ public class PodQuestionActivity extends BaseActivity {
 				set3.addAnimation(fadeOut3);
 				set3.addAnimation(animation3);
 				set3.setDuration(2000);		
+				
+				final AnimationSet set3_1 = new AnimationSet(false);
+				set3_1.addAnimation(fadeOut3_1);
+				set3_1.addAnimation(animation3_1);
+				set3_1.setDuration(2000);
 				
 				final AnimationSet set3_5 = new AnimationSet(false);
 				set3_5.addAnimation(fadeOut3_5);
@@ -1232,7 +1305,15 @@ public class PodQuestionActivity extends BaseActivity {
 						shootingStar1.startAnimation(set1);
 						
 					}					
-				}, 1000);
+				}, 1200);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar1_1.startAnimation(set1_1);
+						
+					}					
+				}, 1600);
 				
 				new Handler().postDelayed(new Runnable(){
 					@Override
@@ -1240,7 +1321,15 @@ public class PodQuestionActivity extends BaseActivity {
 						shootingStar2.startAnimation(set2);
 						
 					}					
-				}, 50);
+				}, 100);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar2_1.startAnimation(set2_1);
+						
+					}					
+				}, 1900);
 				
 				new Handler().postDelayed(new Runnable(){
 					@Override
@@ -1261,10 +1350,18 @@ public class PodQuestionActivity extends BaseActivity {
 				new Handler().postDelayed(new Runnable(){
 					@Override
 					public void run() {
+						shootingStar3_1.startAnimation(set3_1);
+						
+					}					
+				}, 1700);
+				
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
 						shootingStar3_5.startAnimation(set3_5);
 						
 					}					
-				}, 1000);
+				}, 1100);
 				
 				new Handler().postDelayed(new Runnable(){
 					@Override
@@ -1272,7 +1369,7 @@ public class PodQuestionActivity extends BaseActivity {
 						shootingStar4.startAnimation(set4);
 						
 					}					
-				}, 0);
+				}, 200);
 				
 				new Handler().postDelayed(new Runnable(){
 					@Override
