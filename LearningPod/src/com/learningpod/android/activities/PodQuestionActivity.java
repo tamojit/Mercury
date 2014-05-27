@@ -191,7 +191,7 @@ public class PodQuestionActivity extends BaseActivity {
 				progressViewWidthInPx, progressViewWidthInPx);
 		// set the margins after necessary conversions from pixels to dp
 		progressLayoutParams.setMargins((int) TypedValue.applyDimension(
-				TypedValue.COMPLEX_UNIT_DIP, 10, getResources()
+				TypedValue.COMPLEX_UNIT_DIP, 7, getResources()
 						.getDisplayMetrics()), (int) TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, 0, getResources()
 						.getDisplayMetrics()), 0, 0);

@@ -160,6 +160,10 @@ public class BaseActivity extends Activity implements
 	@Override
 	public void onBackPressed() {
 	    // your code.
+		if(this instanceof WordListActivity){
+			this.finish();
+			return;
+		}
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    builder.setTitle("Exit");
 	    builder.setMessage("Do you wish to exit the application?");

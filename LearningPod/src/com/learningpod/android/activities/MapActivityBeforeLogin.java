@@ -415,10 +415,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 	           // Show the previous Screen
 	           mapFlipper.showPrevious();
 			}
-			else if (v.getId()==R.id.wordlist){
-	            
-		           // set the required Animation type to mapFlipper
-		           // The Next screen will come in form Left and current Screen will go OUT from Right 
+			else if (v.getId()==R.id.wordlist){	            
+		         
 				Intent i = new Intent(this, WordListActivity.class);
 				startActivity(i); 
 

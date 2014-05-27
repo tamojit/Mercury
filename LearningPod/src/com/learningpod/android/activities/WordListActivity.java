@@ -71,7 +71,7 @@ public class WordListActivity extends BaseActivity
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
 		podTitle.setText("Word List");
-		podTitle.setPadding(170, 0, 0, 0);
+		
 		podTitle.setTypeface(headerFont);
 		
 		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
