@@ -28,7 +28,7 @@
     		
     		<ImageView 
     		    android:id = "@+id/planet1ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="69dp"
     		    android:layout_marginTop="8dp" 
     		    android:adjustViewBounds="true"
@@ -41,7 +41,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="64dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="103dp"
+    		    android:layout_marginLeft="105dp"
     		    
     		    android:weightSum="1">
     		    
@@ -50,14 +50,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#FF0000"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet1pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
@@ -85,7 +85,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet2ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="212dp"
     		    android:layout_marginTop="122dp" 
     		    android:adjustViewBounds="true"
@@ -106,14 +106,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#FF0000"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet2pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
@@ -140,7 +140,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet3ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="379dp"
     		    android:layout_marginTop="200dp" 
     		    android:adjustViewBounds="true"
@@ -154,7 +154,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="254dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="416dp"
+    		    android:layout_marginLeft="415dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -162,13 +162,13 @@
     		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#FF0000"/>
     		    
     		    <View android:layout_width="100dp"
     		        android:id="@+id/planet3pbblue"
     		        android:layout_weight="0.8"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:layout_height="9dp"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -196,7 +196,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet4ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="550dp"
     		    android:layout_marginTop="132dp" 
     		    android:adjustViewBounds="true"
@@ -210,7 +210,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="187dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="587dp"
+    		    android:layout_marginLeft="586dp"
     		 
     		    android:weightSum="1">
     		    
@@ -219,7 +219,7 @@
     		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#FF0000"/>
     		    
     		    <View
@@ -227,7 +227,7 @@
     		        android:layout_width="100dp"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
@@ -254,7 +254,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet5ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="729dp"
     		    android:layout_marginTop="60dp" 
     		    android:adjustViewBounds="true"
@@ -268,7 +268,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="114dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="766dp"
+    		    android:layout_marginLeft="765dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -276,7 +276,7 @@
     		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#FF0000"/>
     		    
     		    <View
@@ -284,19 +284,20 @@
     		        android:layout_width="100dp"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     
    			<Button android:layout_width="120dp" 
-   			    android:layout_marginTop="290dp"
-   			    android:layout_marginLeft="800dp"   			    
+   			    android:layout_marginTop="316dp"
+   			    android:layout_marginLeft="781dp"   			    
                 android:id="@+id/btnmap1next"
                 android:layout_gravity="right"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:textSize="18sp"
                 android:text = "NEXT"
+                 android:paddingLeft="-33dp"
                 android:background="@drawable/next"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"	                
@@ -305,8 +306,8 @@
      <ImageView
     		    android:id = "@+id/planetnavigation2"
     		    
-    		    android:layout_marginLeft="695dp"
-    		    android:layout_marginTop="280dp" 
+    		    android:layout_marginLeft="680dp"
+    		    android:layout_marginTop="308dp" 
     		    android:layout_gravity="right"
     		    android:layout_width="83dp"
     		    android:layout_height="80dp"

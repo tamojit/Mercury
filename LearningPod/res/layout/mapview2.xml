@@ -18,44 +18,44 @@
     		    android:id="@+id/planet6name"
     		    android:layout_width="120dp"
     		    android:layout_height="wrap_content"
-    		    android:layout_marginLeft="5dp"
-    		    android:layout_marginTop="70dp"
+    		    android:layout_marginLeft="4dp"
+    		    android:layout_marginTop="77dp"
     		    android:layout_toRightOf="@+id/planet6"
     		    android:text="Context Clues (Level B)"
     		    android:textColor="#ffffff"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textStyle="bold" />
     		
     		<ImageView
     		    android:id = "@+id/planet6ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="73dp"
+    		    android:layout_marginLeft="66dp"
     		    android:layout_marginTop="5dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
     		    android:layout_marginTop="60dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet6ss"
+    		    android:layout_marginLeft="102dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet6pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet6pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -72,46 +72,46 @@
     		
     		<TextView
     		    android:id="@+id/planet7name" 
-    		    android:layout_width="120dp"
+    		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Multiple-Meaning Words (Level A)"
     		    android:layout_toRightOf="@+id/planet7"
-    		    android:layout_marginTop="140dp"
-    		    android:layout_marginLeft="10dp"/>
+    		    android:layout_marginTop="147dp"
+    		    android:layout_marginLeft="3dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet7ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="260dp"
-    		    android:layout_marginTop="70dp" 
+    		    android:layout_marginLeft="245dp"
+    		    android:layout_marginTop="77dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="125dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="131dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet7ss"
+    		    android:layout_marginLeft="281dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet7pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet7pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -121,7 +121,7 @@
     		    android:layout_width="50dp"
     		    android:layout_height="50dp"
     		    android:layout_marginLeft="400dp"
-    		    android:layout_marginTop="79dp"
+    		    android:layout_marginTop="81dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane9"/>
     		
@@ -129,13 +129,13 @@
     		    android:id="@+id/planet8name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Multiple-Meaning Words (Level B)"
     		    android:layout_toRightOf="@+id/planet8"
-    		    android:layout_marginTop="70dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="79dp"
+    		    android:layout_marginLeft="8dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet8ss"
@@ -143,30 +143,30 @@
     		    android:layout_marginLeft="410dp"
     		    android:layout_marginTop="10dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
     		    android:layout_marginTop="65dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet8ss"
+    		     android:layout_marginLeft="446dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet8pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet8pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -185,44 +185,44 @@
     		    android:id="@+id/planet9name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Multiple-Meaning Words (Level C)"
     		    android:layout_toRightOf="@+id/planet9"
-    		    android:layout_marginTop="225dp"
-    		    android:layout_marginLeft="0dp"/>
+    		    android:layout_marginTop="232dp"
+    		    android:layout_marginLeft="4dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet9ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="510dp"
-    		    android:layout_marginTop="145dp" 
+    		    android:layout_marginLeft="520dp"
+    		    android:layout_marginTop="160dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="200dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="215dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet9ss"
+    		     android:layout_marginLeft="556dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet9pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet9pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -240,44 +240,44 @@
     		    android:id="@+id/planet10name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Homographs and Homophones"
     		    android:layout_toRightOf="@+id/planet10"
-    		    android:layout_marginTop="200dp"
+    		    android:layout_marginTop="212dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet10ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="730dp"
-    		    android:layout_marginTop="122dp" 
+    		    android:layout_marginLeft="754dp"
+    		    android:layout_marginTop="140dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="185dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="195dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet10ss"
+    		     android:layout_marginLeft="790dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet10pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet10pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -316,7 +316,7 @@
 	                android:layout_height="75dp"
 	                android:textSize="18sp"
 	                android:text = "BACK"
-	                android:paddingLeft="30dp"
+	                android:paddingLeft="39dp"
 	                android:background="@drawable/mapbackbuttonbg"
 	                android:textColor="#ffffff"
 	                android:textStyle="bold"	                
@@ -330,7 +330,7 @@
 	                android:layout_gravity="right"
 	                android:layout_height="75dp"
 	                android:textSize="18sp"
-	                android:paddingLeft="20dp"
+	                android:paddingLeft="-34dp"
 	                android:text = "NEXT"
 	                android:background="@drawable/next"
 	                android:textColor="#ffffff"
