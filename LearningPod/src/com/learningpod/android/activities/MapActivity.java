@@ -100,11 +100,11 @@ public class MapActivity extends BaseActivity implements OnClickListener{
 
 	private void modifyActionBar(String strUserName){
 		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setCustomView(R.layout.map_screen_custom_bar);
 		TextView userName = (TextView)actionBar.getCustomView().findViewById(R.id.mapscreenusername);
 		userName.setText("Hi, " + strUserName);
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
-				| ActionBar.DISPLAY_SHOW_HOME);
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 	}
 	
 	

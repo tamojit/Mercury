@@ -26,7 +26,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class WordListActivity extends Activity 
+public class WordListActivity extends BaseActivity 
 {
 	private ArrayList<HashMap<String,String>> list;
 	LinearLayout wordListContentView;
@@ -58,6 +58,7 @@ public class WordListActivity extends Activity
 		ActionBar actionBar = getActionBar();
 		// getActionBar().setTitle(goToMapView.getText().toString());
 		getActionBar().setIcon(R.drawable.arrow);	 
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
