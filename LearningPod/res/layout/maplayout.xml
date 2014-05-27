@@ -16,9 +16,9 @@
     <Button
         android:id="@+id/wordlist"
         android:layout_width="110dp"
-        android:layout_height="27dp"
-        android:layout_marginLeft="820dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="800dp"
+        android:layout_marginTop="22dp"
         android:adjustViewBounds="true"
         android:background="@drawable/wordlist" />
     
@@ -35,7 +35,7 @@
      <ImageView
 	         android:layout_height="wrap_content"
 	         android:layout_width="wrap_content"
-	         android:layout_marginLeft="50dp"
+	         android:layout_marginLeft="52dp"
 	         android:layout_alignParentBottom="true"
 	         android:layout_marginBottom="10dp"
 	         android:background="@drawable/apptittleinmap" />

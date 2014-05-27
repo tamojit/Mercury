@@ -5,14 +5,12 @@
     android:background="@drawable/map1" >
     		
 	     
-	     
-    
     		<ImageButton 
     		    android:id = "@+id/planet1"
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="50dp"
-    		    android:layout_marginTop="82dp"
+    		    android:layout_width="53dp"
+    		    android:layout_height="53dp"
+    		    android:layout_marginLeft="58dp"
+    		    android:layout_marginTop="77dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/planet1"/>
     		
@@ -20,55 +18,56 @@
     		    android:id="@+id/planet1name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Context Clues – Nonsense Words"
     		    android:layout_toRightOf="@+id/planet1"
-    		    android:layout_marginTop="75dp"
+    		    android:layout_marginTop="81dp"
     		    android:layout_marginLeft="5dp"/>
     		
-    		<ImageView
+    		<ImageView 
     		    android:id = "@+id/planet1ss"
-    		    android:visibility="invisible"
-    		    android:layout_marginLeft="61dp"
-    		    android:layout_marginTop="10dp" 
+    		    android:visibility="visible"
+    		    android:layout_marginLeft="69dp"
+    		    android:layout_marginTop="8dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="65dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="64dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet1ss"
+    		    android:layout_marginLeft="103dp"
+    		    
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet1pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#FF0000"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet1pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="visible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
     		
     		<ImageButton 
     		    android:id = "@+id/planet2"
-    		    android:layout_width="70dp"
+    		    android:layout_width="73dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="185dp"
-    		    android:layout_marginTop="170dp"
+    		    android:layout_marginLeft="191dp"
+    		    android:layout_marginTop="190dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane3"/>
     		
@@ -76,217 +75,218 @@
     		    android:id="@+id/planet2name"  
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Tier II Nouns"
     		    android:layout_toRightOf="@+id/planet2"
-    		    android:layout_marginTop="185dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="193dp"
+    		    android:layout_marginLeft="7dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet2ss"
-    		    android:visibility="invisible"
-    		    android:layout_marginLeft="205dp"
-    		    android:layout_marginTop="95dp" 
+    		    android:visibility="visible"
+    		    android:layout_marginLeft="212dp"
+    		    android:layout_marginTop="122dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="145dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="176dp" 
     		    android:orientation="horizontal"
-    		    android:layout_toRightOf="@+id/planet2ss"
+    		    android:layout_marginLeft="248dp"
     		    android:weightSum="1">
-    		    
+    		   
     		    <View
     		        android:id="@+id/planet2pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#FF0000"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet2pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
     		<ImageButton 
     		    android:id = "@+id/planet3"    		    
-    		    android:layout_width="50dp"
+    		    android:layout_width="55dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="370dp"
-    		    android:layout_marginTop="260dp"
+    		    android:layout_marginLeft="368dp"
+    		    android:layout_marginTop="269dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane4"/>
     		
     		<TextView
     		    android:id="@+id/planet3name"  
-    		    android:layout_width="150dp"
+    		    android:layout_width="154dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Tier II Verbs"
     		    android:layout_toRightOf="@+id/planet3"
-    		    android:layout_marginTop="270dp"
+    		    android:layout_marginTop="274dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet3ss"
-    		    android:visibility="invisible"
+    		    android:visibility="visible"
     		    android:layout_marginLeft="379dp"
-    		    android:layout_marginTop="185dp" 
+    		    android:layout_marginTop="200dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"
+    		    android:layout_width="100dp"
     		     
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="240dp" 
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="254dp" 
     		    android:orientation="horizontal"
-    		    android:layout_toRightOf="@+id/planet3ss"
+    		    android:layout_marginLeft="416dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet3pbred" 
-    		        android:layout_width="0dp"
+    		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#FF0000"/>
     		    
-    		    <View android:layout_width="0dp"
+    		    <View android:layout_width="100dp"
     		        android:id="@+id/planet3pbblue"
     		        android:layout_weight="0.8"
-    		        android:visibility="invisible"
-    		        android:layout_height="5dp"
+    		        android:visibility="visible"
+    		        android:layout_height="9dp"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
     		<ImageButton 
     		    android:id = "@+id/planet4"    		    
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="550dp"
-    		    android:layout_marginTop="190dp"
+    		    android:layout_width="55dp"
+    		    android:layout_height="53dp"
+    		    android:layout_marginLeft="537dp"
+    		    android:layout_marginTop="201dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane5"/>
     		
     		<TextView
     		    android:id="@+id/planet4name"  
-    		    android:layout_width="100dp"
+    		    android:layout_width="124dp"
     		    android:layout_height = "wrap_content"
     		    android:textSize="15sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Tier III Vocabulary"
     		    android:layout_toRightOf="@+id/planet4"
-    		    android:layout_marginTop="205dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="201dp"
+    		    android:layout_marginLeft="6dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet4ss"
-    		    android:visibility="invisible"
-    		    android:layout_marginLeft="559dp"
-    		    android:layout_marginTop="115dp" 
+    		    android:visibility="visible"
+    		    android:layout_marginLeft="550dp"
+    		    android:layout_marginTop="132dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"
+    		    android:layout_width="100dp"
     		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="165dp" 
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="187dp" 
     		    android:orientation="horizontal"
-    		    android:layout_toRightOf="@+id/planet4ss"
+    		    android:layout_marginLeft="587dp"
+    		 
     		    android:weightSum="1">
     		    
     		    <View
  					android:id="@+id/planet4pbred"   		        
-    		        android:layout_width="0dp"
+    		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#FF0000"/>
     		    
     		    <View
     		        android:id="@+id/planet4pbblue" 
-    		        android:layout_width="0dp"
+    		        android:layout_width="100dp"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     		
     		<ImageButton 
     		    android:id = "@+id/planet5"
-    		    android:layout_width="50dp"
+    		    android:layout_width="55dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="800dp"
-    		    android:layout_marginTop="125dp"
+    		    android:layout_marginLeft="715dp"
+    		    android:layout_marginTop="130dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane6"/>
     		
     		<TextView
     		    android:id="@+id/planet5name"  
-    		    android:layout_width="150dp"
+    		    android:layout_width="140dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Context Clues (Level A)"
     		    android:layout_toRightOf="@+id/planet5"
-    		    android:layout_marginTop="135dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="128dp"
+    		    android:layout_marginLeft="6dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet5ss"
-    		    android:visibility="invisible"
-    		    android:layout_marginLeft="809dp"
-    		    android:layout_marginTop="50dp" 
+    		    android:visibility="visible"
+    		    android:layout_marginLeft="729dp"
+    		    android:layout_marginTop="60dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"
+    		    android:layout_width="100dp"
     		   
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="100dp" 
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="114dp" 
     		    android:orientation="horizontal"
-    		    android:layout_toRightOf="@+id/planet5ss"
+    		    android:layout_marginLeft="766dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet5pbred" 
-    		        android:layout_width="0dp"
+    		        android:layout_width="100dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#FF0000"/>
     		    
     		    <View
     		        android:id="@+id/planet5pbblue" 
-    		        android:layout_width="0dp"
+    		        android:layout_width="100dp"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"
-    		        android:visibility="invisible"
+    		        android:layout_height="9dp"
+    		        android:visibility="visible"
     		        android:background="#8896a3"/>
-    		</LinearLayout>"
+    		</LinearLayout>
     
     
    			<Button android:layout_width="120dp" 
