@@ -299,26 +299,28 @@ public class PodQuestionActivity extends BaseActivity {
 			else
 				btnBack.setVisibility(View.INVISIBLE);
 			// change the background to the arrow image
-			btnSubmitNext.setBackgroundResource(R.drawable.next);
+			
 			if (currentQuestionIndex == questions.size() - 1) {
 				// we have reached the last question in the pod
+				btnSubmitNext.setBackgroundResource(R.drawable.summarynext);
 				btnSubmitNext.setText("SUMMARY");
 				btnSubmitNext.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
 				btnSubmitNext.setPadding((int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15,
 								getResources().getDisplayMetrics()), 0, 0, 0);
 				
 				btnSubmitNext.getLayoutParams().height = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
 								getResources().getDisplayMetrics());
 				btnSubmitNext.getLayoutParams().width = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 140,
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 168,
 								getResources().getDisplayMetrics());
 				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_TOP,0);
 				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.CENTER_HORIZONTAL,0);
 			} else {
+				btnSubmitNext.setBackgroundResource(R.drawable.next);
 				btnSubmitNext.setText("NEXT ");
 				btnSubmitNext.setGravity(Gravity.CENTER);
 				btnSubmitNext.setPadding(0, 0, 0, 0);
@@ -1401,23 +1403,46 @@ public class PodQuestionActivity extends BaseActivity {
 		final ImageView alienForExpLight = (ImageView) findViewById(R.id.alienforexplanationlight);
 		int[] origLocation = new int[2];
 		int[] destLocation = new int[2];
-
+		
 		alienForQues.getLocationOnScreen(origLocation);
 		alienForQues.bringToFront();
 		alienForQues.requestLayout();
 		alienForQues.invalidate();
 		alienForExp.getLocationOnScreen(destLocation);
-		TranslateAnimation animation = new TranslateAnimation(0,
+		TranslateAnimation translateAnimation = new TranslateAnimation(0,
 				destLocation[0] - origLocation[0], 0, destLocation[1]
 						- origLocation[1]);
-		animation.setDuration(2000);
-		animation.setFillAfter(false);
-		// animation.setZAdjustment(Animation.ZORDER_TOP);
-		animation.setAnimationListener(new AnimationListener() {
+		translateAnimation.setDuration(2000);
+		translateAnimation.setFillAfter(true);
+		// create rotation animation
+		Animation rotateAnimation = new RotateAnimation(0f,60f,Animation.RELATIVE_TO_SELF,alienForExp.getPivotX(),Animation.RELATIVE_TO_SELF,alienForExp.getPivotY());
+		rotateAnimation.setDuration(2000);
+		rotateAnimation.setFillAfter(false);
+		rotateAnimation.setStartOffset(2000);
+		rotateAnimation.setAnimationListener(new AnimationListener() {
+			
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				
+				
+			}
+		});
+		translateAnimation.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				// TODO Auto-generated method stub
 				btnBack.setEnabled(true);
 				alienForQues.clearAnimation();
 				alienForQues.setVisibility(View.INVISIBLE);
@@ -1458,14 +1483,11 @@ public class PodQuestionActivity extends BaseActivity {
 			}
 
 		});
-		// create rotation animation
-		Animation rotateAnimation = new RotateAnimation(0f,60f);
-		rotateAnimation.setDuration(2000);
-		rotateAnimation.setFillAfter(false);
+		
 		// create animation set for storing both animations
 		
 		AnimationSet set = new AnimationSet(false);
-		set.addAnimation(animation);
+		set.addAnimation(translateAnimation);
 		//set.addAnimation(rotateAnimation);
 		alienForQues.startAnimation(set);
 
