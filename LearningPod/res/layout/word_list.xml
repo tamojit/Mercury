@@ -37,8 +37,7 @@
     	android:layout_height="45dp"
     	android:layout_weight=".388"
     	android:layout_width="match_parent"
-    	android:text="WORD" 
-       
+    	android:text="WORD"       
     	android:textStyle="bold"
     	android:textColor="#d2f495"
         android:textSize="18dp"

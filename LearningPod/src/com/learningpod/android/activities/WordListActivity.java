@@ -21,6 +21,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
@@ -37,6 +38,8 @@ public class WordListActivity extends BaseActivity
 	int verb=0;
 	int vocabulary=0;
 	int relationalword=0;
+	private Button closewordlist;
+	
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,7 @@ public class WordListActivity extends BaseActivity
     			"fonts/NotoSans-Bold.ttf");
         modifyActionBar();
         wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
+        closewordlist=(Button)findViewById(R.id.btnwordlistclose);
         createWordList();
         
     }    
@@ -72,7 +76,7 @@ public class WordListActivity extends BaseActivity
 		
 		podTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
 		//	podTitle.setTypeface(headerFont);
-	
+	 
 		goToMapButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -107,11 +111,20 @@ public class WordListActivity extends BaseActivity
 		meaning.setTypeface(Font);
 		populateList(i);
 		adapter =new ListviewAdapter(WordListActivity.this, list);
-		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*58));
+		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*85));
 		wordList.setAdapter(adapter);
 		wordListContentView.addView(wordListView);
+		
     	}
-	}
+  
+    	closewordlist.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click   
+          	WordListActivity.this.finish();   
+              }
+           });
+ 	
+	  }
 
 	private void populateList(int k) {
     	
@@ -181,5 +194,6 @@ public class WordListActivity extends BaseActivity
     		}
     	          break;        
 		}
+	
 	}
 }

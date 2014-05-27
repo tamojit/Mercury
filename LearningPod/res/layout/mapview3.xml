@@ -7,10 +7,10 @@
     
 	<ImageButton 
     		    android:id = "@+id/planet11"
-    		    android:layout_width="50dp"
+    		    android:layout_width="53dp"
     		    android:layout_height="50dp"
     		    android:layout_marginLeft="55dp"
-    		    android:layout_marginTop="175dp"
+    		    android:layout_marginTop="168dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane12"/>
     		
@@ -18,54 +18,54 @@
     		    android:id="@+id/planet11name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Greek and Latin Roots"
     		    android:layout_toRightOf="@+id/planet11"
-    		    android:layout_marginTop="180dp"
+    		    android:layout_marginTop="173dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet11ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="65dp"
-    		    android:layout_marginTop="105dp" 
+    		    android:layout_marginLeft="67dp"
+    		    android:layout_marginTop="98dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="150dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="152dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet11ss"
+    		    android:layout_marginLeft="105dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet11pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet11pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     <ImageButton 
     		    android:id = "@+id/planet12"
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="220dp"
-    		    android:layout_marginTop="75dp"
+    		    android:layout_width="53dp"
+    		    android:layout_height="52dp"
+    		    android:layout_marginLeft="226dp"
+    		    android:layout_marginTop="74dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane13"/>
     		
@@ -73,7 +73,7 @@
     		    android:id="@+id/planet12name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Prefixes"
@@ -84,43 +84,43 @@
     		<ImageView
     		    android:id = "@+id/planet12ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="230dp"
-    		    android:layout_marginTop="5dp" 
+    		    android:layout_marginLeft="238dp"
+    		    android:layout_marginTop="4dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="55dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="58dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet12ss"
+    		   android:layout_marginLeft="276dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet12pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet12pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     <ImageButton 
     		    android:id = "@+id/planet13"
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="400dp"
-    		    android:layout_marginTop="105dp"
+    		    android:layout_width="55dp"
+    		    android:layout_height="52dp"
+    		    android:layout_marginLeft="386dp"
+    		    android:layout_marginTop="108dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane14"/>
     		
@@ -128,7 +128,7 @@
     		    android:id="@+id/planet13name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Suffixes"
@@ -139,43 +139,43 @@
     		<ImageView
     		    android:id = "@+id/planet13ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="410dp"
-    		    android:layout_marginTop="35dp" 
+    		    android:layout_marginLeft="400dp"
+    		    android:layout_marginTop="38dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="85dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="92dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet13ss"
+    		    android:layout_marginLeft="438dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet13pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet13pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     <ImageButton 
     		    android:id = "@+id/planet14"
-    		    android:layout_width="75dp"
+    		    android:layout_width="76dp"
     		    android:layout_height="50dp"
-    		    android:layout_marginLeft="520dp"
-    		    android:layout_marginTop="220dp"
+    		    android:layout_marginLeft="517dp"
+    		    android:layout_marginTop="231dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane15"/>
     		
@@ -183,54 +183,54 @@
     		    android:id="@+id/planet14name" 
     		    android:layout_width="150dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Relationship and Transition Words"
     		    android:layout_toRightOf="@+id/planet14"
-    		    android:layout_marginTop="220dp"
+    		    android:layout_marginTop="229dp"
     		    android:layout_marginLeft="8dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="545dp"
-    		    android:layout_marginTop="150dp" 
+    		    android:layout_marginLeft="544dp"
+    		    android:layout_marginTop="161dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="205dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="215dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet14ss"
+    		    android:layout_marginLeft="583dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet14pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet14pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     <ImageButton 
     		    android:id = "@+id/planet15"
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="755dp"
-    		    android:layout_marginTop="170dp"
+    		    android:layout_width="56dp"
+    		    android:layout_height="53dp"
+    		    android:layout_marginLeft="757dp"
+    		    android:layout_marginTop="150dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/plane16"/>
     		
@@ -238,44 +238,44 @@
     		    android:id="@+id/planet15name" 
     		    android:layout_width="110dp"
     		    android:layout_height = "wrap_content"
-    		    android:textSize="15sp"
+    		    android:textSize="16sp"
     		    android:textColor="#ffffff"
     		    android:textStyle="bold"
     		    android:text = "Reference Materials"
     		    android:layout_toRightOf="@+id/planet15"
-    		    android:layout_marginTop="165dp"
+    		    android:layout_marginTop="155dp"
     		    android:layout_marginLeft="5dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet15ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="765dp"
-    		    android:layout_marginTop="100dp" 
+    		    android:layout_marginLeft="770dp"
+    		    android:layout_marginTop="82dp" 
     		    android:adjustViewBounds="true"
-    		    android:layout_width="40dp"
+    		    android:layout_width="62dp"
     		    android:layout_height="80dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
-    		    android:layout_width="50dp"    		    
-    		    android:layout_height="5dp"
-    		    android:layout_marginTop="150dp" 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="137dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_toRightOf="@+id/planet15ss"
+    		    android:layout_marginLeft="808dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet15pbred"
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
-    		        android:layout_height="5dp"
+    		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#FF0000"/>
+    		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet15pbblue"
     		        android:layout_weight="0.8"
-    		        android:layout_height="5dp"    		        
+    		        android:layout_height="9dp"    		        
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
@@ -286,8 +286,8 @@
             <ImageView
     		    android:id = "@+id/planetnavigation3"
     		    
-    		    android:layout_marginLeft="190dp"
-    		    android:layout_marginTop="270dp" 
+    		    android:layout_marginLeft="198dp"
+    		    android:layout_marginTop="305dp"
     		    android:layout_gravity="left"
     		    android:layout_width="83dp"
     		    android:layout_height="80dp"
@@ -296,11 +296,12 @@
              
     
     			<Button android:layout_width="120dp" 
-    			    android:layout_marginTop="290dp"
-    			    android:layout_marginLeft="50dp"   			    
+    			    android:layout_marginTop="316dp"
+    			    android:layout_marginLeft="55dp"		    
 	                android:id="@+id/btnmap3prev"	                 
-	                android:layout_height="70dp"
+	                android:layout_height="75dp"
 	                android:textSize="18sp"
+	                android:paddingLeft="39dp"
 	                android:text = "BACK"
 	                android:background="@drawable/mapbackbuttonbg"
 	                android:textColor="#ffffff"
