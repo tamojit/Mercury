@@ -20,23 +20,24 @@
 				        android:textColor="#ffffff"
 				        android:textSize="22sp"  
 				        android:layout_marginLeft="15dp"
-				        android:layout_marginTop="16dp"
-				        android:layout_marginBottom="16dp"	
+						android:paddingTop="16dp"
+						android:paddingBottom="16dp"				        
 				        android:textStyle="bold"			        
 				        android:text = "A."
+				        android:layout_gravity="center_vertical"
 		         	/>
                     
                     <TextView
 				        android:id = "@+id/choicebody"
-				        android:layout_width="match_parent"
+				        android:layout_width="fill_parent"
 				        android:layout_height="wrap_content"
 				        android:textColor="#ffffff"
 				        android:textSize="17sp"  
 				        android:layout_marginLeft="16dp"
 				        android:layout_marginTop="16dp"
-				        android:layout_marginBottom="15dp"				        
+				        android:layout_marginBottom="16dp"				        
 				        android:text = "Thoughtful and Serious"
-				        
+				        android:layout_gravity="center_vertical"
 		         	/>
                     
                 </LinearLayout>

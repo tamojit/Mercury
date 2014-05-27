@@ -16,8 +16,11 @@
 	        android:textSize="19sp"
 	        android:textStyle="bold"
 	       	android:layout_gravity="center_vertical"
-	        android:layout_marginLeft="5dp"
-	        android:text = "MAP"
+	        android:layout_marginLeft="0dp"
+	        android:text = "  MAP  "
+	        android:paddingTop="2dp"
+	        android:paddingBottom="2dp"
+	        android:background="@drawable/map_button_bg"
 	         />  
     
      

@@ -1,7 +1,10 @@
 package com.learningpod.android;
 
 import com.learningpod.android.activities.AccountSelectorActivity;
+import com.learningpod.android.activities.MapActivity;
 import com.learningpod.android.activities.MapActivityBeforeLogin;
+import com.learningpod.android.activities.PodQuestionActivity;
+import com.learningpod.android.activities.WordListActivity;
 
 import android.accounts.Account;
 import android.app.Activity;
@@ -91,25 +94,25 @@ public class BaseActivity extends Activity implements
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		// TODO Auto-generated method stub
-		if (item.getItemId() == R.id.help) {
-
-			
+		if (item.getItemId() == R.id.help) {			
 			menupopup("HELP");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
 		}
 
-		else if (item.getItemId() == R.id.about) {
-		
+		else if (item.getItemId() == R.id.about) {		
 			menupopup("ABOUT");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
-		} else if (item.getItemId() == R.id.terms) {
+		} 
+		
+		else if (item.getItemId() == R.id.terms) {
 			
 			menupopup("TERMS");
 			menuitempopup.showAtLocation(findViewById(android.R.id.content)
 					.getRootView(), Gravity.CENTER, 0, 0);
-		} else if(item.getItemId()==R.id.login){
+		} 
+		else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
 				// perform login
 				((MapActivityBeforeLogin)this).LoginDialogPopUp();
@@ -122,7 +125,16 @@ public class BaseActivity extends Activity implements
 				this.finish();
 			}
 		}
-		
+		else if(item.getItemId()==android.R.id.home){
+			if(this instanceof WordListActivity){				
+				this.finish();
+			}else{
+				Intent intent = new Intent(this,
+						MapActivity.class);				
+				startActivity(intent);
+				this.finish();
+			}
+		}
 		return true;
 	}
 

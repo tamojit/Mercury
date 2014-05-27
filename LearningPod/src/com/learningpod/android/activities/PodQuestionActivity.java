@@ -150,6 +150,7 @@ public class PodQuestionActivity extends BaseActivity {
 		ActionBar actionBar = getActionBar();
 		// getActionBar().setTitle(goToMapView.getText().toString());
 		getActionBar().setIcon(R.drawable.arrow);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
 		TextView goToMapButton = (TextView) actionBar.getCustomView()
 				.findViewById(R.id.title);
@@ -313,9 +314,10 @@ public class PodQuestionActivity extends BaseActivity {
 				btnSubmitNext.getLayoutParams().width = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 140,
 								getResources().getDisplayMetrics());
-				((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 160,
-								getResources().getDisplayMetrics());
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_TOP,0);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.CENTER_HORIZONTAL,0);
 			} else {
 				btnSubmitNext.setText("NEXT ");
 				btnSubmitNext.setGravity(Gravity.CENTER);
@@ -326,9 +328,10 @@ public class PodQuestionActivity extends BaseActivity {
 				btnSubmitNext.getLayoutParams().width = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120,
 								getResources().getDisplayMetrics());
-				((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = (int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 180,
-								getResources().getDisplayMetrics());
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_TOP,0);
+				((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.CENTER_HORIZONTAL,0);
 			}
 			
 			
@@ -424,17 +427,21 @@ public class PodQuestionActivity extends BaseActivity {
 			// hide the back button
 			// enable the back button
 			btnBack.setVisibility(View.INVISIBLE);
-			// Disabled unless one option is selected
-			btnSubmitNext.setEnabled(false);
-			btnSubmitNext.setText("");
-			btnSubmitNext.setBackgroundResource(R.drawable.btnsubmit);
+			// Disabled unless one option is selected and change the image
+			btnSubmitNext.setEnabled(false);			
+			btnSubmitNext.setText("");			
+			btnSubmitNext.setBackgroundResource(R.drawable.btnsubmitgreyed);
 			btnSubmitNext.getLayoutParams().height = (int) TypedValue
 					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40,
 							getResources().getDisplayMetrics());
 			btnSubmitNext.getLayoutParams().width = (int) TypedValue
 					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 148,
 							getResources().getDisplayMetrics());
-			((LinearLayout.LayoutParams) btnSubmitNext.getLayoutParams()).leftMargin = 0;
+
+			((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM,0);
+			((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_RIGHT,0);
+			((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_TOP);
+			((RelativeLayout.LayoutParams) btnSubmitNext.getLayoutParams()).addRule(RelativeLayout.CENTER_HORIZONTAL);
 			btnSubmitNext.invalidate();
 			explanationContainer.setVisibility(View.GONE);
 			// show the alien for question
@@ -688,6 +695,9 @@ public class PodQuestionActivity extends BaseActivity {
 		LayoutInflater inflater = getLayoutInflater();		
 		Button summaryBack = (Button)findViewById(R.id.btnSummaryBack);
 		summaryBack.setTypeface(headerFont);
+		if(isSmallerScreen){
+			summaryBack.setTextSize(18);
+		}
 		summaryBack.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -798,12 +808,9 @@ public class PodQuestionActivity extends BaseActivity {
 			((TextView) findViewById(R.id.correctpercentage)).setTextSize(58);
 			((TextView) findViewById(R.id.summarycorrect)).setTextSize(24);
 		}
-		if (percentage == 100) {
-			findViewById(R.id.star).setVisibility(View.VISIBLE);
-		}
+		
 		// send mail functionality
 		Button sendMail = (Button) findViewById(R.id.sendMailBt);
-
 		sendMail.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -811,9 +818,12 @@ public class PodQuestionActivity extends BaseActivity {
 				createEmailPopUp();
 			}
 		});
+		if (percentage == 100) {
+			findViewById(R.id.star).setVisibility(View.VISIBLE);
+			// show the shooting star animation
+			animateShootingStar();
+		}
 		
-		// show the shooting star animation
-		animateShootingStar();
 	}
 
 	private void createEmailPopUp() {

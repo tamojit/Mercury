@@ -25,8 +25,9 @@ public class ChoiceSelectListner implements OnClickListener{
 		if(activity.isCurrentScreenForExplanation()){
 			return;
 		} 
-		// enable the submit button
+		// enable the submit button and change the image
 		((Button)activity.findViewById(R.id.btnsubmitnext)).setEnabled(true);
+		((Button)activity.findViewById(R.id.btnsubmitnext)).setBackgroundResource(R.drawable.btnsubmit);
 		
 		if(!isButtonClicked){ // listener has been invoked by clicking on the full view
 			List<View> choiceViewList = activity.getChoiceViews();

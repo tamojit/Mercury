@@ -72,6 +72,9 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 		if(metrics.heightPixels<=800){
 			isSmallerScreen = true;
 		}
+		// disable the app icon and title
+		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowTitleEnabled(false);
 		//get list of pods. getting 
 		pods  = ContentCacheStore.getContentCache().getPods();		
 		setContentView(R.layout.maplayout);
