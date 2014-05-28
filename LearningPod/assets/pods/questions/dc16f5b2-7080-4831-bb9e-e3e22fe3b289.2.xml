@@ -4,10 +4,10 @@
 <b>Which sentence uses the compound word <i>earthenware</i> correctly?</b>
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>The ground shook during the earthenware.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="2"><p>We ate a simple meal served on earthenware plates.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>The astronaut took an earthenware photo through the ship's window.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>His computer could not run the school's new earthenware program.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>The ground shook during the <i>earthenware.</i></p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>We ate a simple meal served on <i>earthenware</i> plates.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The astronaut took an <i>earthenware</i> photo through the ship's window.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>His computer could not run the school's new <i>earthenware</i> program.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

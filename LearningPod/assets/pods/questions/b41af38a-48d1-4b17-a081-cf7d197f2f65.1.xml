@@ -5,16 +5,16 @@
 </b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	Frequency is responsible for a great deal of fires, so we must hold more drills in school.
+	<i>Frequency</i> is responsible for a great deal of fires, so we must hold more drills in school.
 </p><p> </p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice2"><p>
-	In order to raise safety awareness, the schools increased the frequency of fire drills.
+	In order to raise safety awareness, the schools increased the <i>frequency</i> of fire drills.
 </p><p> </p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	Before they put fire drills in place, the teachers made sure they understood frequency.
+	Before they put fire drills in place, the teachers made sure they understood <i>frequency</i>.
 </p><p> </p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice4"><p>
-	Every time the school held a class, it was interrupted by a frequency of fire drills.
+	Every time the school held a class, it was interrupted by a <i>frequency</i> of fire drills.
 </p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>

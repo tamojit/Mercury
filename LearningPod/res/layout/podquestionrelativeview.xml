@@ -80,6 +80,19 @@
                android:textColor="#ffffff"
                android:textSize="17sp" />
 
+            <ImageView
+               android:id="@+id/alienforexplanationintermediate"
+               android:layout_width="80dp"
+               android:layout_height="48dp"
+               android:layout_alignRight="@+id/quesbody"
+               android:layout_below="@+id/quesbody"
+               android:layout_marginLeft="0dp"
+               android:layout_marginRight="5dp"
+               android:layout_marginTop="10dp"
+               android:adjustViewBounds="true"
+               android:src="@drawable/alienleft"
+               android:visibility="invisible" />
+           
            <ImageView
                android:id="@+id/alienforexplanation"
                android:layout_width="80dp"
@@ -87,7 +100,7 @@
                android:layout_alignRight="@+id/quesbody"
                android:layout_below="@+id/quesbody"
                android:layout_marginLeft="0dp"
-               android:layout_marginRight="2dp"
+               android:layout_marginRight="5dp"
                android:layout_marginTop="10dp"
                android:adjustViewBounds="true"
                android:src="@drawable/alienright" />

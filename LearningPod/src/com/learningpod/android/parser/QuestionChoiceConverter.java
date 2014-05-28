@@ -53,8 +53,11 @@ public class QuestionChoiceConverter implements Converter {
 		choiceBean.setCorrect(reader.getAttribute("correct"));
 		choiceBean.setChoiceId(reader.getAttribute("choiceId"));
 		
-		String parentNodeName = reader.getNodeName();
+		String parentNodeName = reader.getNodeName();		
 		String choiceBody = "";
+		if(!reader.getValue().equalsIgnoreCase("")){
+			choiceBody = reader.getValue();
+		}
 		boolean flag  = true;
 		while(flag){
 			String nodeName = reader.getNodeName();
@@ -71,16 +74,24 @@ public class QuestionChoiceConverter implements Converter {
 				choiceBody = choiceBody + " <u>" + nodeValue + "</u> ";
 			}
 			
+			if(nodeName.equals("b") && !nodeValue.equalsIgnoreCase("")){
+				choiceBody = choiceBody + " <b>" + nodeValue + "</b> ";
+			}
 			
 			if(reader.hasMoreChildren()){
 				reader.moveDown();
 			}else{
 				if(reader.getNodeName().equalsIgnoreCase(parentNodeName)){
+					choiceBody= choiceBody + nodeValue;
 					break;
 				}
 				reader.moveUp();
 			}
 		}
+		
+		choiceBody=choiceBody.replace(" .", ".");
+		choiceBody=choiceBody.replace(" ,", ",");
+		choiceBody=choiceBody.replace(" ?", "?");
 		choiceBean.setChoiceBody(choiceBody);
 		return choiceBean;
 	}

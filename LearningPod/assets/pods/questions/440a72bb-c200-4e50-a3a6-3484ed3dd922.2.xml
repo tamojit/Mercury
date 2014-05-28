@@ -1,10 +1,10 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word mine has more than one meaning. Choose the sentence in which mine means &quot;bel... " data-uuid="440a72bb-c200-4e50-a3a6-3484ed3dd922" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The word <u><i>mine</i></u> has more than one meaning.</b></p><p> Choose the sentence in which <i>mine</i> means &quot;belonging to the person who is speaking.&quot;</p></questionBody>
+    <questionBody><p><b>The word <u>mine</u> has more than one meaning.</b></p><p> Choose the sentence in which <i>mine</i> means &quot;belonging to the person who is speaking.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>There were still shovels and other digging tools in the woods around the old abandoned copper <u>mine</u>.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="2"><p>&quot;The librarian is a <u>mine</u> of good ideas for books to read,&quot; Mrs. Smith said.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="3"><p>When Sabine saw the shirt her sister was wearing, she said, &quot;Hey, that's <u>mine</u>!&quot;</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>There were still shovels and other digging tools in the woods around the old abandoned copper <i>mine</i>.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>&quot;The librarian is a <i>mine</i> of good ideas for books to read,&quot; Mrs. Smith said.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>When Sabine saw the shirt her sister was wearing, she said, &quot;Hey, that's <i>mine</i>!&quot;</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

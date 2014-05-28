@@ -128,7 +128,7 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 					
 					
 				} catch (IOException e) {
-					Log.e("LearningPod","pod xmls not found");
+					Log.e("LearningPod","pod xmls not found " + ques.getItemId()+ "." + ques.getVersion());
 				}catch(LearningpodException e){
 					 Log.e("LearningPod","Error in parsing Pod xml");
 				}

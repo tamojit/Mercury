@@ -1,11 +1,11 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Common Core ELA: Vocabulary Acquisition and Use (Context Clues)" data-uuid="dd9cc592-6507-4156-8a72-2a63e8fdae85" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The word <u><i>project</i></u> has more than one meaning.</b></p> <p>Choose the sentence in which <i>project</i> means &quot;to jut or stick outward.&quot;</p></questionBody>
+    <questionBody><p><b>The word <u>project</u> has more than one meaning.</b></p> <p>Choose the sentence in which <i>project</i> means &quot;to jut or stick outward.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="true" choiceId="1"><p>The eaves <u>project</u> from the sides of that house in a dramatic way.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="2"><p>I <u>project</u> that this year Ellie will win the award for best actress.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>The city tore down the rundown housing <u>project</u> to make way for a new one.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>I have a big <u>project</u> due at the end of the week, so I have no time to relax.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="1"><p>The eaves <i>project</i> from the sides of that house in a dramatic way.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>I <i>project</i> that this year Ellie will win the award for best actress.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The city tore down the rundown housing <i>project</i> to make way for a new one.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>I have a big <i>project</i> due at the end of the week, so I have no time to relax.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

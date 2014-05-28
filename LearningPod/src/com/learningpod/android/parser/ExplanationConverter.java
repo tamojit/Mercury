@@ -39,6 +39,10 @@ public class ExplanationConverter implements Converter {
 				explanationBody = explanationBody + " <i>" + nodeValue + "</i> ";
 			}
 			
+			if(nodeName.equals("b") && !nodeValue.equalsIgnoreCase("")){
+				explanationBody = explanationBody + " <b>" + nodeValue + "</b> ";
+			}
+			
 			
 			if(reader.hasMoreChildren()){
 				reader.moveDown();
@@ -49,6 +53,10 @@ public class ExplanationConverter implements Converter {
 				reader.moveUp();
 			}
 		}
+		// check for spaces before punctuation
+		explanationBody=explanationBody.replace(" .", ".");
+		explanationBody=explanationBody.replace(" ,", ",");
+		explanationBody=explanationBody.replace(" ?", "?");
 		return explanationBody;
 	}
 

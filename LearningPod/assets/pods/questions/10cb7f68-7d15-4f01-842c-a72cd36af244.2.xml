@@ -1,11 +1,11 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word season has more than one meaning. Choose the answer in which season means &quot;t... " data-uuid="10cb7f68-7d15-4f01-842c-a72cd36af244" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The word <u><i>season</i></u> has more than one meaning.</b></p> <p>Choose the answer in which <i>season</i> means &quot;to add more flavor to something.&quot;</p></questionBody>
+    <questionBody><p><b>The word <u>season</u> has more than one meaning.</b></p> <p>Choose the answer in which <i>season</i> means &quot;to add more flavor to something.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>He doesn't know how to play chess now, but I will <u>season</u> my brother by teaching him tricks and strategies. Soon he will be an expert like me.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="2"><p>My favorite <u>season</u> is winter. Dad says he doesn't like it, because he hates to shovel snow and he doesn't like to be cold.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>I wanted to buy blueberries at the grocery store, but Dad said they were too expensive. We have to wait until next summer when they are in <u>season</u>.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="4"><p>My little brother hates broccoli. But if we <u>season</u> the vegetables with herbs and spices, he will eat them if my mom asks him to.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>He doesn't know how to play chess now, but I will <i>season</i> my brother by teaching him tricks and strategies. Soon he will be an expert like me.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>My favorite <i>season</i> is winter. Dad says he doesn't like it, because he hates to shovel snow and he doesn't like to be cold.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>I wanted to buy blueberries at the grocery store, but Dad said they were too expensive. We have to wait until next summer when they are in <i>season</i>.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>My little brother hates broccoli. But if we <i>season</i> the vegetables with herbs and spices, he will eat them if my mom asks him to.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

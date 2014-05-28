@@ -1,11 +1,11 @@
-<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Choose the suffix that can be added to the base word timid to make a word meaning &quot;th... " data-uuid="22390f31-f743-4eb0-a727-0a5c2f4e20be" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
+<learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Choose the suffix that can be added to the noun vigor to make an adjective meaning &quot;s... " data-uuid="59b6cc2e-0916-4882-9a05-9ecdde4f7f6e" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>Choose the suffix that can be added to the base word <u><i>timid </i></u>to make a word meaning &quot;the condition of being timid.&quot;</b></p></questionBody>
+    <questionBody><p><b>Choose the suffix that can be added to the noun <u>vigor</u> to make an adjective meaning &quot;strong and energetic.&quot;</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>-ical</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="2"><p>-ity</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>-ment</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>-ous</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>-ic</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>-ity</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>-ous</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>-ment</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

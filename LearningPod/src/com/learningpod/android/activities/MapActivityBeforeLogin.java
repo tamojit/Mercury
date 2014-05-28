@@ -87,7 +87,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements OnClickListe
 				email.setType("text/html");
 				List<android.content.pm.ResolveInfo> resInfo = getPackageManager()
 						.queryIntentActivities(email, 0);
-				String mailBody = "<html>	<head>		<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"size:20;height:55px\">				<div style=\"padding-top: 14px;\"><font color = \"red\" size = \"50\"><big>Summary for Jane Smith</Big><\font></div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div> <div><table><thead><tr><th>Col1</th><th>Col2</th><th>Col3</th></tr></thead><tbody><tr><td>val1</td><td>val2</td><td>val3</td></tr><tr><td>val1</td><td>val2</td><td>val3</td></tr></tbody></div>	</body></html>";
+				//String mailBody = "<html>	<head>		<head>	<body>		<div id=\"container\" class=\"font\">			<div style=\"size:20;height:55px\">				<div style=\"padding-top: 14px;\"><font color = \"red\" size = \"50\"><big>Summary for Jane Smith</Big><\font></div>			</div>			<div style=\"font-size:15;height:35px;background-color:#435869;\">				<div style=\"padding-top: 6px;\">Context Clues - Level A</div>			</div>					</div> <div><table><thead><tr><th>Col1</th><th>Col2</th><th>Col3</th></tr></thead><tbody><tr><td>val1</td><td>val2</td><td>val3</td></tr><tr><td>val1</td><td>val2</td><td>val3</td></tr></tbody></div>	</body></html>";
+				String mailBody = "<html><body><div><p>name of the user</p></div></br></br><div><p>summary of the pod name</p></div><div><p>&nbsp;&nbsp;&nbsp;&nbsp;col1&nbsp;col2&nbsp;col3&nbsp;col4&nbsp;</p><hr><p>&nbsp;&nbsp;&nbsp;&nbsp;val1&nbsp;val2&nbsp;val3&nbsp;val44&nbsp;</p></div>                 </body></html>";
 				if (!resInfo.isEmpty()) {
 					for (android.content.pm.ResolveInfo info : resInfo) {
 						if (info.activityInfo.packageName.toLowerCase().contains(

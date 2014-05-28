@@ -4,10 +4,10 @@
 	Identify a synonym of <u>scan</u>.
 </b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>Enable</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice2"><p>Inform</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice3"><p>View</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice4"><p>Tell</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>enable</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>inform</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice3"><p>view</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>tell</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

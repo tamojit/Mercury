@@ -5,15 +5,15 @@
 </b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	Speed skaters add technique to their blades in order to glide faster.
+	Speed skaters add <i>technique</i> to their blades in order to glide faster.
 </p><p> </p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>
-	Skating a certain number of hours is another way to start a technique.
+	Skating a certain number of hours is another way to start a <i>technique</i>.
 </p><p> </p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	The skater decided to practice more in order to become eligible for the technique.</p><p> </p></simpleChoice>
+	The skater decided to practice more in order to become eligible for the <i>technique</i>.</p><p> </p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice4"><p>
-	Spending hours at the rink was a good way for the skater to improve  his technique.
+	Spending hours at the rink was a good way for the skater to improve  his <i>technique</i>.
 </p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>

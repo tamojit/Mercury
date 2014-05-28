@@ -1,11 +1,11 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Common Core ELA: Vocabulary Acquisition and Use (Context Clues)" data-uuid="6ac5c269-4fe7-4583-bad3-8303b79b3c2d" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The word <u><i>compound</i></u> has more than one meaning</b>.</p> <p>Choose the sentence in which <i>compound</i> means &quot;to add to or increase something.&quot;</p></questionBody>
+    <questionBody><p><b>The word <u>compound</u> has more than one meaning</b>.</p> <p>Choose the sentence in which <i>compound</i> means &quot;to add to or increase something.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>Water is an unusual <u>compound</u> because it expands when it changes from liquid to solid.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="2"><p>Spending more money will just <u>compound</u> the debt you already have.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>The military <u>compound</u> had heavy security gates and was guarded by soldiers.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p><u>Compound</u> sentences are joined with a conjunction.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>Water is an unusual <i>compound</i> because it expands when it changes from liquid to solid.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>Spending more money will just <i>compound</i> the debt you already have.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>The military <i>compound</i> had heavy security gates and was guarded by soldiers.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p><i>Compound</i> sentences are joined with a conjunction.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>
