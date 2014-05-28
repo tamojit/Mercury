@@ -110,8 +110,9 @@ public class WordListActivity extends BaseActivity
 		partofspeech.setTypeface(Font);
 		meaning.setTypeface(Font);
 		populateList(i);
+		//populatehardcodedlist(i);
 		adapter =new ListviewAdapter(WordListActivity.this, list);
-		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*85));
+		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*78));
 		wordList.setAdapter(adapter);
 		wordListContentView.addView(wordListView);
 		
@@ -196,4 +197,100 @@ public class WordListActivity extends BaseActivity
 		}
 	
 	}
+	
+	
+//Retrieve Hardcoded value	
+	
+private void populatehardcodedlist(int k) {
+    	
+		switch(k){
+		
+		case 0:
+			String s[]={"component","frequency","initiative","priority","technique"};
+	    	String p[]={"noun","noun","noun","noun","noun"};
+	    	String b[]={"section or part of something","how often something occurs; rate","first step toward a goal","item or issue having greater importance","style or technical method"};
+		
+         	list = new ArrayList<HashMap<String,String>>();
+    
+    	
+    	for(int i=0;i<5;i++)
+    	{
+		HashMap<String,String> temp = new HashMap<String,String>();
+			temp.put(FIRST_COLUMN,s[i]);
+			temp.put(SECOND_COLUMN, p[i]);
+			temp.put(THIRD_COLUMN, b[i]);
+			
+		list.add(temp);
+		
+    	}break;
+    	
+    	case 1:
+    	
+    		String q[]={"combat","discriminate","perceive","scan","vary"};
+	    	String w[]={"verb","verb","verb","verb","verb"};
+	    	String e[]={"struggle with or fight off","sense difference or judge","become aware of","read or examine","show differences"};
+		
+         	list = new ArrayList<HashMap<String,String>>();
+    
+    		
+    	for(int i=0;i<5;i++)
+    	{
+		HashMap<String,String> temp = new HashMap<String,String>();
+			temp.put(FIRST_COLUMN,q[i]);
+			temp.put(SECOND_COLUMN, w[i]);
+			temp.put(THIRD_COLUMN, e[i]);
+			
+		list.add(temp);
+		
+    	}break;
+    	
+    	case 2:
+        	
+    		String r[]={"agricultural","drought","olfactory","ratio","stimuli"};
+	    	String t[]={"adjective","noun","adjective","noun","noun"};
+	    	String y[]={"related to farming","period of extreme dryness","relating to sense of smell","relationship between quantities; quotient","something that leads to a reaction, especially in science"};
+		
+	    	
+         	list = new ArrayList<HashMap<String,String>>();
+    
+    		
+    	for(int i=0;i<5;i++)
+    	{
+		HashMap<String,String> temp = new HashMap<String,String>();
+			temp.put(FIRST_COLUMN,r[i]);
+			temp.put(SECOND_COLUMN, t[i]);
+			temp.put(THIRD_COLUMN, y[i]);
+			
+		list.add(temp);
+		
+    	}break;
+    	
+    	
+    	case 3:
+        	
+    		String ar[]={"although","furthermore","however","regardless","similarly"};
+	    	String at[]={"conjunction","adverb","adverb","adverb","adverb"};
+	    	String ay[]={"in spite of","moreover","on the other hand","in spite of","in the same manner; likewise"};
+		
+	    	
+         	list = new ArrayList<HashMap<String,String>>();
+    
+    		
+    	for(int i=0;i<5;i++)
+    	{
+		HashMap<String,String> temp = new HashMap<String,String>();
+			temp.put(FIRST_COLUMN,ar[i]);
+			temp.put(SECOND_COLUMN,at[i]);
+			temp.put(THIRD_COLUMN, ay[i]);
+			
+		list.add(temp);
+		
+    	}break;	
+    	
+		}
+	}
+	
+
+
+
 }
