@@ -7,12 +7,12 @@
 	     
     		<ImageButton 
     		    android:id = "@+id/planet1"
-    		    android:layout_width="53dp"
-    		    android:layout_height="53dp"
-    		    android:layout_marginLeft="58dp"
-    		    android:layout_marginTop="77dp"
+    		    android:layout_width="83dp"
+    		    android:layout_height="80dp"
+    		    android:layout_marginLeft="44dp"
+    		    android:layout_marginTop="64dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/planet1"/>
+    		    android:background="@drawable/custom_planet1_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet1name" 
@@ -23,13 +23,13 @@
     		    android:textStyle="bold"
     		    android:text = "Context Clues – Nonsense Words"
     		    android:layout_toRightOf="@+id/planet1"
-    		    android:layout_marginTop="81dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="84dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView 
     		    android:id = "@+id/planet1ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="69dp"
+    		    android:layout_marginLeft="71dp"
     		    android:layout_marginTop="8dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -41,7 +41,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="64dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="105dp"
+    		    android:layout_marginLeft="106dp"
     		    
     		    android:weightSum="1">
     		    
@@ -64,12 +64,12 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet2"
-    		    android:layout_width="73dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="191dp"
-    		    android:layout_marginTop="190dp"
+    		    android:layout_width="100dp"
+    		    android:layout_height="82dp"
+    		    android:layout_marginLeft="178dp"
+    		    android:layout_marginTop="176dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane3"/>
+    		    android:background="@drawable/custom_planet2_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet2name"  
@@ -81,12 +81,12 @@
     		    android:text = "Tier II Nouns"
     		    android:layout_toRightOf="@+id/planet2"
     		    android:layout_marginTop="193dp"
-    		    android:layout_marginLeft="7dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet2ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="212dp"
+    		    android:layout_marginLeft="214dp"
     		    android:layout_marginTop="122dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -98,7 +98,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="176dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="248dp"
+    		    android:layout_marginLeft="249dp"
     		    android:weightSum="1">
     		   
     		    <View
@@ -121,10 +121,10 @@
     		    android:id = "@+id/planet3"    		    
     		    android:layout_width="80dp"
     		    android:layout_height="79dp"
-    		    android:layout_marginLeft="368dp"
-    		    android:layout_marginTop="260dp"
+    		    android:layout_marginLeft="356dp"
+    		    android:layout_marginTop="256dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/custom_planet4_bg"/>
+    		    android:background="@drawable/custom_planet3_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet3name"  
@@ -135,13 +135,13 @@
     		    android:textStyle="bold"
     		    android:text = "Tier II Verbs"
     		    android:layout_toRightOf="@+id/planet3"
-    		    android:layout_marginTop="274dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="276dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet3ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="394dp"
+    		    android:layout_marginLeft="383dp"
     		    android:layout_marginTop="200dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -154,18 +154,18 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="254dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="430dp"
+    		    android:layout_marginLeft="418dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet3pbred" 
-    		        android:layout_width="100dp"
+    		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
-    		    <View android:layout_width="100dp"
+    		    <View android:layout_width="0dp"
     		        android:id="@+id/planet3pbblue"
     		        android:layout_weight="0.8"
     		        android:visibility="invisible"
@@ -175,12 +175,12 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet4"    		    
-    		    android:layout_width="55dp"
-    		    android:layout_height="53dp"
-    		    android:layout_marginLeft="537dp"
-    		    android:layout_marginTop="201dp"
+    		    android:layout_width="88dp"
+    		    android:layout_height="86dp"
+    		    android:layout_marginLeft="521dp"
+    		    android:layout_marginTop="186dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane5"/>
+    		    android:background="@drawable/custom_planet4_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet4name"  
@@ -192,12 +192,12 @@
     		    android:text = "Tier III Vocabulary"
     		    android:layout_toRightOf="@+id/planet4"
     		    android:layout_marginTop="201dp"
-    		    android:layout_marginLeft="6dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet4ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="550dp"
+    		    android:layout_marginLeft="551dp"
     		    android:layout_marginTop="132dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -216,7 +216,7 @@
     		    
     		    <View
  					android:id="@+id/planet4pbred"   		        
-    		        android:layout_width="100dp"
+    		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
@@ -224,7 +224,7 @@
     		    
     		    <View
     		        android:id="@+id/planet4pbblue" 
-    		        android:layout_width="100dp"
+    		        android:layout_width="0dp"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
@@ -233,12 +233,12 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet5"
-    		    android:layout_width="52dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="715dp"
-    		    android:layout_marginTop="130dp"
+    		    android:layout_width="81dp"
+    		    android:layout_height="84dp"
+    		    android:layout_marginLeft="700dp"
+    		    android:layout_marginTop="115dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane6"/>
+    		    android:background="@drawable/custom_planet5_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet5name"  
@@ -250,12 +250,12 @@
     		    android:text = "Context Clues (Level A)"
     		    android:layout_toRightOf="@+id/planet5"
     		    android:layout_marginTop="128dp"
-    		    android:layout_marginLeft="6dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet5ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="729dp"
+    		    android:layout_marginLeft="727dp"
     		    android:layout_marginTop="60dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -266,14 +266,14 @@
     		    android:layout_width="100dp"
     		   
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="114dp" 
+    		    android:layout_marginTop="115dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="765dp"
+    		    android:layout_marginLeft="762dp"
     		    android:weightSum="1">
     		    
     		    <View
     		        android:id="@+id/planet5pbred" 
-    		        android:layout_width="100dp"
+    		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
@@ -281,7 +281,7 @@
     		    
     		    <View
     		        android:id="@+id/planet5pbblue" 
-    		        android:layout_width="100dp"
+    		        android:layout_width="0dp"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"

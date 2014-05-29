@@ -4,10 +4,10 @@
 
     <item 
         android:state_pressed="true" 
-        android:drawable="@drawable/plane15glow">       
+        android:drawable="@drawable/planet1glow">       
     </item>
     <item      
-        android:drawable="@drawable/plane15">          
+        android:drawable="@drawable/planet1">          
         
     </item>
     
