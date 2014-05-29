@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Homographs and Homophones" data-uuid="9e5f5119-8ce9-4d08-9abf-a6ff39102562" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The music teacher showed his skill at recognizing different <u><i>tones</i></u>.</b></p><p><b>Mia <u><i>tones</i></u> her muscles every morning at the gym.</b></p></questionBody>
+    <questionBody><p><b>The music teacher showed his skill at recognizing different <u>tones</u>.</b></p><p><b>Mia <u>tones</u> her muscles every morning at the gym.</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="answerChoice1"><p>Homograph</p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>Homophone</p></simpleChoice>

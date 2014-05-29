@@ -5,10 +5,10 @@
 <p>Based on its role in the sentence, what can you tell about the word <i>vexed</i> ?</p>
 </questionBody>
     <choiceInteraction interactionId="1" singleSelect="true">
-      <simpleChoice choiceId="1" correct="true"><p>The word <i>vexed</i> is a verb. It tells what the sore throat did to Lucas.</p></simpleChoice>
-      <simpleChoice choiceId="2" correct="false"><p>The word <i>vexed</i> is an adjective. It describes Lucas.</p></simpleChoice>
-      <simpleChoice choiceId="3" correct="false"><p>The word <i>vexed</i> is an adverb. It describes how Lucas felt.</p></simpleChoice>
-      <simpleChoice choiceId="4" correct="false"><p>The word <i>vexed</i> is a noun. It names an illness.</p></simpleChoice>
+      <simpleChoice choiceId="1" correct="true">The word <i>vexed</i> is a verb. It tells what the sore throat did to Lucas.</simpleChoice>
+      <simpleChoice choiceId="2" correct="false">The word <i>vexed</i> is an adjective. It describes Lucas.</simpleChoice>
+      <simpleChoice choiceId="3" correct="false">The word <i>vexed</i> is an adverb. It describes how Lucas felt.</simpleChoice>
+      <simpleChoice choiceId="4" correct="false">The word <i>vexed</i> is a noun. It names an illness.</simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

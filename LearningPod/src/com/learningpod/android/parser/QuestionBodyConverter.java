@@ -116,6 +116,15 @@ public class QuestionBodyConverter  implements Converter {
 			}
 			
 		}
+		// check for spaces before punctuation
+		questionBody=questionBody.replace(" .", ".");
+		questionBody=questionBody.replace(" ,", ",");
+		questionBody=questionBody.replace(" ?", "?");
+		questionBodyHighlighted=questionBodyHighlighted.replace(" .", ".");
+		questionBodyHighlighted=questionBodyHighlighted.replace(" ,", ",");
+		questionBodyHighlighted=questionBodyHighlighted.replace(" ?", "?");
+		
+		
 		body.setQuestionBodyStr(questionBody);
 		body.setQuestionBodyHighlighted(questionBodyHighlighted);
 		Log.v("question","exiting question converter");

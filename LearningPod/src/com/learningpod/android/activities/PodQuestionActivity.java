@@ -918,8 +918,8 @@ public class PodQuestionActivity extends BaseActivity {
 						|| info.activityInfo.name.toLowerCase().contains(
 								"gmail")) {
 					email.putExtra(android.content.Intent.EXTRA_TEXT,
-							Html.fromHtml(createSummaryMailBody()));
-					email.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Result");
+							Html.fromHtml(createMailBody()));
+					email.putExtra(android.content.Intent.EXTRA_SUBJECT,"Summary Of "+ ContentCacheStore.getContentCache().getLoggedInUserProfile().getName()+ ": " + selectedPod.getTitle());
 					email.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{recipient});					
 					email.setPackage(info.activityInfo.packageName);
 					startActivity(Intent.createChooser(email, ""));
@@ -932,6 +932,24 @@ public class PodQuestionActivity extends BaseActivity {
 			 "Choose an Email client :"));
 		}
 	}
+	
+	private String createMailBody(){
+		StringBuffer summary = new StringBuffer();
+		// create the initial html
+		summary.append("<html><body><br><br><br><div><p><font color=\"#445766\"><strong>&nbsp;&nbsp;Summary Of "+ContentCacheStore.getContentCache().getLoggedInUserProfile().getGiven_name()+ " for " + selectedPod.getTitle() +"</strong></font></p></div></br></br><div><p><font color=\"#445766\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big>Percentage Score: " + percentage + "%</big></font></p></div><div><p><font color=\"blue\"><strong> &nbsp;&nbsp;&nbsp;&nbsp;  Question #  &nbsp;  Result  &nbsp;  Correct Answer  &nbsp;  Student Answer  &nbsp;</strong></font><br>");
+		summary.append("&nbsp;________________________________________________________</p>");
+		for(int idx=0;idx<userProgressCompleted.size();idx++){
+			UserProgressInfo userProgress = userProgressCompleted.get(idx);			
+			
+			summary.append("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+ (idx+1)+".  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color = \"" + (userProgress.isChoiceCorrect()?"green":"red")+ "\">" +(userProgress.isChoiceCorrect()?"Correct&nbsp;&nbsp;&nbsp;":"Incorrect")+"</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  "+getCorrectChoiceSequence(userProgress.getQuestionId()).substring(0, 1)+"  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  "+getChoiceSequence(userProgress.getQuestionId(), userProgress.getChoiceId()).substring(0,1)+"  &nbsp;<br>");
+			summary.append("&nbsp;________________________________________________________</p>");
+		}
+		
+		return summary.toString();
+	}
+
+	
+	
 	
 	private String createSummaryMailBody(){
 		StringBuffer summary = new StringBuffer();
@@ -1401,6 +1419,7 @@ public class PodQuestionActivity extends BaseActivity {
 		final ImageView alienForQuesLight = (ImageView) findViewById(R.id.alienforquestionlight);
 		final ImageView alienForExp = (ImageView) findViewById(R.id.alienforexplanation);
 		final ImageView alienForExpLight = (ImageView) findViewById(R.id.alienforexplanationlight);
+		final ImageView alienForExpIntermediate = (ImageView) findViewById(R.id.alienforexplanationintermediate);
 		int[] origLocation = new int[2];
 		int[] destLocation = new int[2];
 		
@@ -1408,17 +1427,17 @@ public class PodQuestionActivity extends BaseActivity {
 		alienForQues.bringToFront();
 		alienForQues.requestLayout();
 		alienForQues.invalidate();
-		alienForExp.getLocationOnScreen(destLocation);
+		alienForExpIntermediate.getLocationOnScreen(destLocation);
 		TranslateAnimation translateAnimation = new TranslateAnimation(0,
 				destLocation[0] - origLocation[0], 0, destLocation[1]
 						- origLocation[1]);
-		translateAnimation.setDuration(2000);
-		translateAnimation.setFillAfter(true);
+		translateAnimation.setDuration(1300);
+		translateAnimation.setFillAfter(false);
 		// create rotation animation
-		Animation rotateAnimation = new RotateAnimation(0f,60f,Animation.RELATIVE_TO_SELF,alienForExp.getPivotX(),Animation.RELATIVE_TO_SELF,alienForExp.getPivotY());
-		rotateAnimation.setDuration(2000);
+		final Animation rotateAnimation = new RotateAnimation(0f,30f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+		rotateAnimation.setDuration(700);
 		rotateAnimation.setFillAfter(false);
-		rotateAnimation.setStartOffset(2000);
+		
 		rotateAnimation.setAnimationListener(new AnimationListener() {
 			
 			@Override
@@ -1435,18 +1454,8 @@ public class PodQuestionActivity extends BaseActivity {
 			
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				
-				
-			}
-		});
-		translateAnimation.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				btnBack.setEnabled(true);
-				alienForQues.clearAnimation();
-				alienForQues.setVisibility(View.INVISIBLE);
-				alienForQuesLight.setVisibility(View.INVISIBLE);
+				alienForExpIntermediate.clearAnimation();
+				alienForExpIntermediate.setVisibility(View.INVISIBLE);
 				alienForExp.setVisibility(View.VISIBLE);
 				alienForExpLight.setVisibility(View.VISIBLE);
 				// show the explanation container and the alien image
@@ -1458,6 +1467,20 @@ public class PodQuestionActivity extends BaseActivity {
 
 				// enable the next/summary button
 				((Button) findViewById(R.id.btnsubmitnext)).setEnabled(true);
+				btnBack.setEnabled(true);
+				
+			}
+		});
+		translateAnimation.setAnimationListener(new AnimationListener() {
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				
+				alienForQues.clearAnimation();
+				alienForQues.setVisibility(View.INVISIBLE);
+				alienForQuesLight.setVisibility(View.INVISIBLE);
+				alienForExpIntermediate.setVisibility(View.VISIBLE);
+				alienForExpIntermediate.startAnimation(rotateAnimation);
 			}
 
 			@Override

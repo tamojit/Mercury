@@ -4,10 +4,10 @@
 	<b>Identify an antonym for <u>discriminate</u>.
 </b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>Outlaw</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice2"><p>Withdraw</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice3"><p>Identify</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice4"><p>Confuse</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>outlaw</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>withdraw</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>identify</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice4"><p>confuse</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

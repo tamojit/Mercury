@@ -10,8 +10,11 @@ import android.accounts.Account;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -120,6 +123,11 @@ public class BaseActivity extends Activity implements
 			else {
 				// perform logout
 				ContentCacheStore.getContentCache().setLoggedInUserProfile(null);
+				// clear the shared preference
+				SharedPreferences loginPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);				
+				Editor editor = loginPreferences.edit();
+				editor.remove("loggeduser");
+				editor.commit();
 				Intent intent = new Intent(this,MapActivityBeforeLogin.class);				
 				startActivity(intent);
 				this.finish();

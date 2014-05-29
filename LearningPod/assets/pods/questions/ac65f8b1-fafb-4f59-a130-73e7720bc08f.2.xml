@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Which word has the correct prefix added to the base word fog to make a word that mean... " data-uuid="ac65f8b1-fafb-4f59-a130-73e7720bc08f" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>Which word has the correct prefix added to the base word <i>fog</i> to make a word that means &quot;<u>to remove fog or moisture</u>&quot;?</b></p></questionBody>
+    <questionBody><p><b>Which word has the correct prefix added to the base word <i>fog</i> to make a word that means &quot;<u>to remove fog or moisture</u>?&quot;</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="1"><p>defog</p></simpleChoice>
       <simpleChoice correct="false" choiceId="2"><p>refog</p></simpleChoice>

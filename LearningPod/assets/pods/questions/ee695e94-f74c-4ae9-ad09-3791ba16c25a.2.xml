@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Choose the word that has the correct prefix added to make a word that means &quot;happenin... " data-uuid="ee695e94-f74c-4ae9-ad09-3791ba16c25a" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>Choose the word that has the correct prefix added to make a word that means &quot;<u>happening by itself</u>&quot;.</b></p></questionBody>
+    <questionBody><p><b>Choose the word that has the correct prefix added to make a word that means &quot;<u>happening by itself.</u>&quot;</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="1"><p>antimatic</p></simpleChoice>
       <simpleChoice correct="true" choiceId="2"><p>automatic</p></simpleChoice>

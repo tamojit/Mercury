@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.learningpod.android.activities.MapActivity;
-import com.learningpod.android.activities.HomeScreenActivityWithSlidingMenu;
+
 import com.learningpod.android.activities.MapActivityBeforeLogin;
 import com.learningpod.android.activities.PodQuestionActivity;
 import com.learningpod.android.beans.UserProfileBean;
@@ -30,7 +30,9 @@ import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -70,17 +72,27 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 				.getServiceHandler();
 		if(task==BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION){
 			// for testing when there is no Internet connection.
-			boolean testFlag = false;
-			if(testFlag){
-				UserProfileBean userBean = new UserProfileBean();
-				userBean.setName("No Internet Test");
-				return userBean;
-			}
+			 
 			// get the selected account 
 			Account selectedAccount = (Account)params.get("selectedAccount");
 			// if this is called before login
 			if(selectedAccount==null){
-				return null;
+				// check if the user has not logged out and he has an entry in shared preference
+				SharedPreferences loginPreferences =  currentActivity.getSharedPreferences("Login", Context.MODE_PRIVATE);
+				String loggedInEmail = loginPreferences.getString("loggeduser", "");
+				if(!loggedInEmail.equalsIgnoreCase("")){
+					// we have a logged in user
+					AccountManager accountManager = AccountManager
+							.get(currentActivity.getApplicationContext());
+					Account[] accounts = accountManager.getAccountsByType("com.google");
+					for(Account acc:accounts){
+						if(acc.name.equalsIgnoreCase(loggedInEmail)){
+							selectedAccount =acc;
+						}
+					}
+				}else{
+					return null;
+				}
 			}
 			// get the auth token for the selected account
 			String authToken = updateToken(selectedAccount, true);
@@ -128,7 +140,7 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 					
 					
 				} catch (IOException e) {
-					Log.e("LearningPod","pod xmls not found");
+					Log.e("LearningPod","pod xmls not found " + ques.getItemId()+ "." + ques.getVersion());
 				}catch(LearningpodException e){
 					 Log.e("LearningPod","Error in parsing Pod xml");
 				}

@@ -14,7 +14,7 @@
     </style>
     
     <!-- Splash screen style -->
-    <style name="MySplashTheme" parent="android:style/Theme">
+    <style name="MySplashTheme" parent="android:style/Theme.Holo.Light.DarkActionBar">
 	    <item name="android:windowNoTitle">true</item>
 	    <item name="android:windowContentOverlay">@null</item>
 	    <item name="android:windowBackground">@drawable/app_title</item>

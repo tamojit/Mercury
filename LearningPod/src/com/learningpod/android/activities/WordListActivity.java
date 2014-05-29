@@ -1,8 +1,8 @@
 package com.learningpod.android.activities;
 
-import static com.learningpod.android.activities.Constant.FIRST_COLUMN;
-import static com.learningpod.android.activities.Constant.SECOND_COLUMN;
-import static com.learningpod.android.activities.Constant.THIRD_COLUMN;
+import static com.learningpod.android.utility.AppConstants.FIRST_COLUMN;
+import static com.learningpod.android.utility.AppConstants.SECOND_COLUMN;
+import static com.learningpod.android.utility.AppConstants.THIRD_COLUMN;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -109,8 +109,8 @@ public class WordListActivity extends BaseActivity
 		word.setTypeface(Font);
 		partofspeech.setTypeface(Font);
 		meaning.setTypeface(Font);
-		populateList(i);
-		//populatehardcodedlist(i);
+		//populateList(i);
+		populatehardcodedlist(i);
 		adapter =new ListviewAdapter(WordListActivity.this, list);
 		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*78));
 		wordList.setAdapter(adapter);
