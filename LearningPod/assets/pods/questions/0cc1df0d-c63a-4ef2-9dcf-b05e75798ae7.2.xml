@@ -2,10 +2,10 @@
   <choiceQuestion>
     <questionBody><p><b>The word <u>part</u> has more than one meaning.</b></p><p> Choose the sentence in which <i>part </i>means &quot;a person's specific duty or role.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>Because I cannot manage my wild hair by myself, every morning my mother uses a large comb to <i>part</i> it.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="2"><p>After a week of tryouts, Andrea found out that she had received the leading <i>part</i> in the play.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>Jacob and Cassie went to the movies and walked in the park for an hour before they had to <i>part</i> ways.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>My cousin went to the junkyard to get a used <i>part</i> to fix his car.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>Every morning I use a large comb to <i>part</i> my hair.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="2"><p>Andrea received the leading <i>part</i> in the play.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>Jacob and Cassie sadly had to <i>part</i> ways.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>My cousin got a used <i>part</i> to fix his car.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

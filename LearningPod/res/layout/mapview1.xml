@@ -289,29 +289,8 @@
     		</LinearLayout>
     
     
-   			<Button android:layout_width="120dp" 
-   			    android:layout_marginTop="316dp"
-   			    android:layout_marginLeft="781dp"   			    
-                android:id="@+id/btnmap1next"
-                android:layout_gravity="right"
-                android:layout_height="75dp"
-                android:textSize="18sp"
-                android:text = "NEXT"
-                 android:paddingLeft="-33dp"
-                android:background="@drawable/next"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"	                
-                
-                />
-     <ImageView
-    		    android:id = "@+id/planetnavigation2"
-    		    
-    		    android:layout_marginLeft="680dp"
-    		    android:layout_marginTop="308dp" 
-    		    android:layout_gravity="right"
-    		    android:layout_width="83dp"
-    		    android:layout_height="80dp"
-    		    android:src="@drawable/planetnavigation"/>
+   			
+      
      
     
 </RelativeLayout>

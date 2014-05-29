@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Homographs and Homophones" data-uuid="c68e906d-8072-4b66-be18-e1cc4e9c87e6" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>Juan needs to <u><i>study</i></u> history before tomorrow's test. Juan left his glasses in the <u><i>study</i></u>.</b></p></questionBody>
+    <questionBody><p><b>Juan needs to <u>study</u> history before tomorrow's test. Juan left his glasses in the <u>study</u>.</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="true" choiceId="answerChoice1"><p>Homograph</p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>Homophone</p></simpleChoice>

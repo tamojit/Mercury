@@ -283,31 +283,11 @@
         
 
          
-            <ImageView
-    		    android:id = "@+id/planetnavigation3"
-    		    
-    		    android:layout_marginLeft="198dp"
-    		    android:layout_marginTop="305dp"
-    		    android:layout_gravity="left"
-    		    android:layout_width="83dp"
-    		    android:layout_height="80dp"
-    		    android:src="@drawable/planetnavigation"/>
+             
              
              
     
-    			<Button android:layout_width="120dp" 
-    			    android:layout_marginTop="316dp"
-    			    android:layout_marginLeft="55dp"		    
-	                android:id="@+id/btnmap3prev"	                 
-	                android:layout_height="75dp"
-	                android:textSize="18sp"
-	                android:paddingLeft="39dp"
-	                android:text = "BACK"
-	                android:background="@drawable/mapbackbuttonbg"
-	                android:textColor="#ffffff"
-	                android:textStyle="bold"	                
-	                
-	                />
+    			
     			
     			
     

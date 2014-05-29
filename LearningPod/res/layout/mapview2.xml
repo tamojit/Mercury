@@ -285,15 +285,7 @@
     
     
     
-          <ImageView
-    		    android:id = "@+id/planetnavigation3"
-    		    
-    		    android:layout_marginLeft="198dp"
-    		    android:layout_marginTop="305dp" 
-    		    android:layout_gravity="left"
-    		    android:layout_width="83dp"
-    		    android:layout_height="80dp"
-    		    android:src="@drawable/planetnavigation"/>
+          
     			
     			 <ImageView
     		    android:id = "@+id/planetnavigation2"
@@ -309,34 +301,9 @@
     
     
     
-    			<Button android:layout_width="120dp" 
-    			    android:layout_marginTop="316dp"
-    			    android:layout_marginLeft="55dp"   			    
-	                android:id="@+id/btnmap2prev"	                 
-	                android:layout_height="75dp"
-	                android:textSize="18sp"
-	                android:text = "BACK"
-	                android:paddingLeft="39dp"
-	                android:background="@drawable/mapbackbuttonbg"
-	                android:textColor="#ffffff"
-	                android:textStyle="bold"	                
-	                
-	                />
     			
-    			<Button android:layout_width="120dp" 
-    			    android:layout_marginTop="316dp"
-    			    android:layout_marginLeft="781dp"   			    
-	                android:id="@+id/btnmap2next"
-	                android:layout_gravity="right"
-	                android:layout_height="75dp"
-	                android:textSize="18sp"
-	                android:paddingLeft="-34dp"
-	                android:text = "NEXT"
-	                android:background="@drawable/next"
-	                android:textColor="#ffffff"
-	                android:textStyle="bold"	                
-	                
-	                />
+    			
+    			
     
 
 </RelativeLayout>

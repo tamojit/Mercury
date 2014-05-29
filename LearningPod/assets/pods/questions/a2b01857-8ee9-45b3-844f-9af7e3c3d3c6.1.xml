@@ -13,7 +13,7 @@
       <simpleChoice correct="false" choiceId="answerChoice3"><p>
 	The skater decided to practice more in order to become eligible for the <i>technique</i>.</p><p> </p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice4"><p>
-	Spending hours at the rink was a good way for the skater to improve  his <i>technique</i>.
+	Spending hours at the rink was a good way for the skater to improve his <i>technique</i>.
 </p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>

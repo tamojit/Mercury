@@ -15,6 +15,8 @@ public class LearningpodSqliteHelper extends SQLiteOpenHelper{
 	  // Table creation statements
 	  public static final String USER_PROGRESS_TRACKER_QUERY = "create table UserProgressTracker ( UserId Text Not Null, PodId Text Not Null, QuestionId Text, ChoiceId Text, ChoiceStatus INTEGER);";
 	  public static final String USER_TEACHER_TABLE_QUERY = "create table UserTeacherTable( UserId text Not Null, TeacherEmail text);";
+	  
+	  
 	  public LearningpodSqliteHelper(Context context) {
 	    super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	  }
