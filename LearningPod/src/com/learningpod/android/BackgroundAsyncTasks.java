@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.learningpod.android.activities.MapActivity;
-
 import com.learningpod.android.activities.MapActivityBeforeLogin;
 import com.learningpod.android.activities.PodQuestionActivity;
+import com.learningpod.android.activities.SplashActivity;
 import com.learningpod.android.beans.UserProfileBean;
 import com.learningpod.android.beans.explanations.ExplanationBean;
 import com.learningpod.android.beans.pods.PodBean;
@@ -57,7 +57,9 @@ public class BackgroundAsyncTasks extends AsyncTask<BackgroundTasks, Integer, Ob
 		// TODO Auto-generated method stub
 		super.onPreExecute();
 		currentActivity.getProgressDialog().setMessage("Loading...");
-		currentActivity.getProgressDialog().show();
+		if(!(currentActivity instanceof SplashActivity)){
+			currentActivity.getProgressDialog().show();
+		}
 	}
 
 	@Override

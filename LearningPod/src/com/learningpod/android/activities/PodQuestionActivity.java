@@ -1409,6 +1409,26 @@ public class PodQuestionActivity extends BaseActivity {
 					}					
 				}, 800);
 				
+				
+				// stop all the animations after 5 seconds
+				new Handler().postDelayed(new Runnable(){
+					@Override
+					public void run() {
+						shootingStar0.clearAnimation();
+						shootingStar1.clearAnimation();
+						shootingStar1_1.clearAnimation();
+						shootingStar2.clearAnimation();
+						shootingStar2_1.clearAnimation();
+						shootingStar2_5.clearAnimation();
+						shootingStar3.clearAnimation();
+						shootingStar3_1.clearAnimation();
+						shootingStar3_5.clearAnimation();
+						shootingStar4.clearAnimation();
+						shootingStar5.clearAnimation();			
+						
+					}					
+				}, 6000);
+				
 			}
 		});
 		

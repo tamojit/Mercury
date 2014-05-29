@@ -122,7 +122,7 @@
     		    android:layout_marginLeft="386dp"
     		    android:layout_marginTop="108dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane14"/>
+    		    android:background="@drawable/plane141"/>
     		
     		<TextView
     		    android:id="@+id/planet13name" 
@@ -172,12 +172,12 @@
     
     <ImageButton 
     		    android:id = "@+id/planet14"
-    		    android:layout_width="76dp"
-    		    android:layout_height="50dp"
+    		    android:layout_width="93dp"
+    		    android:layout_height="70dp"
     		    android:layout_marginLeft="517dp"
-    		    android:layout_marginTop="231dp"
+    		    android:layout_marginTop="220dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane15"/>
+    		    android:background="@drawable/custom_planet14_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet14name" 
@@ -194,7 +194,7 @@
     		<ImageView
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="544dp"
+    		    android:layout_marginLeft="548dp"
     		    android:layout_marginTop="161dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -206,7 +206,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="215dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="583dp"
+    		    android:layout_marginLeft="587dp"
     		    android:weightSum="1">
     		    
     		    <View
