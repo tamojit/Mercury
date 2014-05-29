@@ -606,9 +606,9 @@ public class PodQuestionActivity extends BaseActivity {
 		// get the question highlighted part holder
 		TextView questionBodyHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
 		// set the question highlighted part
-		questionBodyHighlightedView.setText(Html.fromHtml((nextQuestion
+		questionBodyHighlightedView.setText(Html.fromHtml(nextQuestion
 				.getChoiceQuestion().getQuestionBody()
-				.getQuestionBodyHighlighted())));
+				.getQuestionBodyHighlighted())) ;
 		 
 		questionBodyHighlightedView.getLayoutParams().height = LayoutParams.WRAP_CONTENT;
 
