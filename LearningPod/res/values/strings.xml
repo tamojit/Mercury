@@ -60,7 +60,7 @@
         </string-array>
       
        <string-array name="verbwordlist">
-        <item>combact</item>
+        <item>combat</item>
         <item>verb</item>
         <item>struggle with or fight off</item>
      
@@ -129,5 +129,7 @@
         <item>in the same manner; likewise</item>
         
       </string-array>
+      
+    
       
 </resources>
