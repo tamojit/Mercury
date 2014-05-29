@@ -23,7 +23,7 @@ import android.widget.LinearLayout.LayoutParams;
 public class SplashActivity extends BaseActivity {
 
 	//Splash screen timer
-	private static int SPLASH_TIME_OUT = 500;
+	private static int SPLASH_TIME_OUT = 200;
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);

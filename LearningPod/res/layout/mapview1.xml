@@ -12,7 +12,7 @@
     		    android:layout_marginLeft="58dp"
     		    android:layout_marginTop="77dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/planet1"/>
+    		    android:background="@drawable/custom_planet1_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet1name" 
@@ -233,7 +233,7 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet5"
-    		    android:layout_width="55dp"
+    		    android:layout_width="52dp"
     		    android:layout_height="50dp"
     		    android:layout_marginLeft="715dp"
     		    android:layout_marginTop="130dp"
