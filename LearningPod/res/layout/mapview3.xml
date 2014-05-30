@@ -28,7 +28,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet11ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="69dp"
     		    android:layout_marginTop="99dp" 
     		    android:adjustViewBounds="true"
@@ -49,14 +49,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet11pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
@@ -83,7 +83,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet12ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="238dp"
     		    android:layout_marginTop="4dp" 
     		    android:adjustViewBounds="true"
@@ -104,14 +104,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet12pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
@@ -138,7 +138,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet13ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="401dp"
     		    android:layout_marginTop="39dp" 
     		    android:adjustViewBounds="true"
@@ -159,23 +159,23 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet13pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
     <ImageButton 
     		    android:id = "@+id/planet14" 
-    		    android:layout_width="119dp"
-    		    android:layout_height="90dp"
-    		    android:layout_marginLeft="517dp"
-    		    android:layout_marginTop="220dp" 
+    		    android:layout_width="110dp"
+    		    android:layout_height="79dp"
+    		    android:layout_marginLeft="503dp"
+    		    android:layout_marginTop="215dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet14_bg"/>
     		
@@ -193,12 +193,10 @@
     		
     		<ImageView
     		    android:id = "@+id/planet14ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
  
-    		   
- 
-    		    android:layout_marginLeft="562dp"
-    		    android:layout_marginTop="165dp" 
+    		    android:layout_marginLeft="548dp"
+    		    android:layout_marginTop="160dp" 
  
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
@@ -209,11 +207,9 @@
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
  
-    		    android:layout_marginTop="218dp" 
+    		    android:layout_marginTop="216dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="600dp"
-    		    
- 
+    		    android:layout_marginLeft="584dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -221,14 +217,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet14pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
@@ -255,7 +251,7 @@
     		
     		<ImageView
     		    android:id = "@+id/planet15ss"
-    		    android:visibility="visible"
+    		    android:visibility="invisible"
     		    android:layout_marginLeft="772dp"
     		    android:layout_marginTop="82dp" 
     		    android:adjustViewBounds="true"
@@ -276,14 +272,14 @@
     		        android:layout_width="0dp"
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#d2483f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet15pbblue"
     		        android:layout_weight="0.8"
     		        android:layout_height="9dp"    		        
-    		        android:visibility="visible"
+    		        android:visibility="invisible"
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
