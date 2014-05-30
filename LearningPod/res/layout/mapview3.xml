@@ -7,12 +7,12 @@
     
 	<ImageButton 
     		    android:id = "@+id/planet11"
-    		    android:layout_width="53dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="55dp"
-    		    android:layout_marginTop="168dp"
+    		    android:layout_width="82dp"
+    		    android:layout_height="83dp"
+    		    android:layout_marginLeft="43dp"
+    		    android:layout_marginTop="155dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane12"/>
+    		    android:background="@drawable/custom_planet11_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet11name" 
@@ -24,13 +24,13 @@
     		    android:text = "Greek and Latin Roots"
     		    android:layout_toRightOf="@+id/planet11"
     		    android:layout_marginTop="173dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet11ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="67dp"
-    		    android:layout_marginTop="98dp" 
+    		    android:layout_marginLeft="69dp"
+    		    android:layout_marginTop="99dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -62,12 +62,12 @@
     
     <ImageButton 
     		    android:id = "@+id/planet12"
-    		    android:layout_width="53dp"
-    		    android:layout_height="52dp"
-    		    android:layout_marginLeft="226dp"
-    		    android:layout_marginTop="74dp"
+    		    android:layout_width="83dp"
+    		    android:layout_height="83dp"
+    		    android:layout_marginLeft="210dp"
+    		    android:layout_marginTop="60dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane13"/>
+    		    android:background="@drawable/custom_planet12_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet12name" 
@@ -79,7 +79,7 @@
     		    android:text = "Prefixes"
     		    android:layout_toRightOf="@+id/planet12"
     		    android:layout_marginTop="85dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet12ss"
@@ -96,7 +96,7 @@
     		    android:layout_height="9dp"
     		    android:layout_marginTop="58dp" 
     		    android:orientation="horizontal"    		     
-    		   android:layout_marginLeft="276dp"
+    		   android:layout_marginLeft="275dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -117,12 +117,12 @@
     
     <ImageButton 
     		    android:id = "@+id/planet13"
-    		    android:layout_width="55dp"
-    		    android:layout_height="52dp"
-    		    android:layout_marginLeft="386dp"
-    		    android:layout_marginTop="108dp"
+    		    android:layout_width="80dp"
+    		    android:layout_height="78dp"
+    		    android:layout_marginLeft="375dp"
+    		    android:layout_marginTop="96dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane141"/>
+    		    android:background="@drawable/custom_planet13_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet13name" 
@@ -134,13 +134,13 @@
     		    android:text = "Suffixes"
     		    android:layout_toRightOf="@+id/planet13"
     		    android:layout_marginTop="120dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet13ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="400dp"
-    		    android:layout_marginTop="38dp" 
+    		    android:layout_marginLeft="401dp"
+    		    android:layout_marginTop="39dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -171,11 +171,11 @@
     		</LinearLayout>
     
     <ImageButton 
-    		    android:id = "@+id/planet14"
-    		    android:layout_width="119dp"
-    		    android:layout_height="90dp"
-    		    android:layout_marginLeft="517dp"
-    		    android:layout_marginTop="220dp"
+    		    android:id = "@+id/planet14" 
+    		    android:layout_width="110dp"
+    		    android:layout_height="79dp"
+    		    android:layout_marginLeft="503dp"
+    		    android:layout_marginTop="215dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet14_bg"/>
     		
@@ -188,14 +188,16 @@
     		    android:textStyle="bold"
     		    android:text = "Relationship and Transition Words"
     		    android:layout_toRightOf="@+id/planet14"
-    		    android:layout_marginTop="229dp"
-    		    android:layout_marginLeft="8dp"/>
+    		    android:layout_marginTop="231dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="562dp"
-    		    android:layout_marginTop="165dp" 
+ 
+    		    android:layout_marginLeft="548dp"
+    		    android:layout_marginTop="160dp" 
+ 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -204,9 +206,10 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="218dp" 
+ 
+    		    android:layout_marginTop="216dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="600dp"
+    		    android:layout_marginLeft="584dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -227,12 +230,12 @@
     
     <ImageButton 
     		    android:id = "@+id/planet15"
-    		    android:layout_width="56dp"
-    		    android:layout_height="53dp"
-    		    android:layout_marginLeft="757dp"
-    		    android:layout_marginTop="150dp"
+    		    android:layout_width="86dp"
+    		    android:layout_height="82dp"
+    		    android:layout_marginLeft="744dp"
+    		    android:layout_marginTop="135dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane16"/>
+    		    android:background="@drawable/custom_planet15_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet15name" 
@@ -244,12 +247,12 @@
     		    android:text = "Reference Materials"
     		    android:layout_toRightOf="@+id/planet15"
     		    android:layout_marginTop="155dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet15ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="770dp"
+    		    android:layout_marginLeft="772dp"
     		    android:layout_marginTop="82dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"

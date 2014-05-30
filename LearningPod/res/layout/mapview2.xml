@@ -7,19 +7,19 @@
        
         		<ImageButton 
     		    android:id = "@+id/planet6"
-    		    android:layout_width="60dp"
-    		    android:layout_height="62dp"
-    		    android:layout_marginLeft="50dp"
-    		    android:layout_marginTop="68dp"
+    		    android:layout_width="87dp"
+    		    android:layout_height="89dp"
+    		    android:layout_marginLeft="37dp"
+    		    android:layout_marginTop="56dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane7"/>
+    		    android:background="@drawable/custom_planet6_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet6name"
     		    android:layout_width="120dp"
     		    android:layout_height="wrap_content"
-    		    android:layout_marginLeft="4dp"
-    		    android:layout_marginTop="77dp"
+    		    android:layout_marginLeft="-10dp"
+    		    android:layout_marginTop="78dp"
     		    android:layout_toRightOf="@+id/planet6"
     		    android:text="Context Clues (Level B)"
     		    android:textColor="#ffffff"
@@ -30,7 +30,7 @@
     		    android:id = "@+id/planet6ss"
     		    android:visibility="invisible"
     		    android:layout_marginLeft="66dp"
-    		    android:layout_marginTop="5dp" 
+    		    android:layout_marginTop="8dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -39,7 +39,7 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="60dp" 
+    		    android:layout_marginTop="61dp" 
     		    android:orientation="horizontal"    		     
     		    android:layout_marginLeft="102dp"
     		    android:weightSum="1">
@@ -63,12 +63,12 @@
     
     	<ImageButton 
     		    android:id = "@+id/planet7"
-    		    android:layout_width="53dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="233dp"
-    		    android:layout_marginTop="147dp"
+    		    android:layout_width="80dp"
+    		    android:layout_height="80dp"
+    		    android:layout_marginLeft="219dp"
+    		    android:layout_marginTop="133dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane8"/>
+    		    android:background="@drawable/custom_planet7_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet7name" 
@@ -79,8 +79,8 @@
     		    android:textStyle="bold"
     		    android:text = "Multiple-Meaning Words (Level A)"
     		    android:layout_toRightOf="@+id/planet7"
-    		    android:layout_marginTop="147dp"
-    		    android:layout_marginLeft="3dp"/>
+    		    android:layout_marginTop="148dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet7ss"
@@ -118,12 +118,12 @@
     
     		<ImageButton 
     		    android:id = "@+id/planet8"
-    		    android:layout_width="50dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="400dp"
-    		    android:layout_marginTop="81dp"
+    		    android:layout_width="77dp"
+    		    android:layout_height="77dp"
+    		    android:layout_marginLeft="391dp"
+    		    android:layout_marginTop="68dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane9"/>
+    		    android:background="@drawable/custom_planet8_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet8name" 
@@ -134,14 +134,14 @@
     		    android:textStyle="bold"
     		    android:text = "Multiple-Meaning Words (Level B)"
     		    android:layout_toRightOf="@+id/planet8"
-    		    android:layout_marginTop="79dp"
-    		    android:layout_marginLeft="8dp"/>
+    		    android:layout_marginTop="80dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet8ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="410dp"
-    		    android:layout_marginTop="10dp" 
+    		    android:layout_marginLeft="414dp"
+    		    android:layout_marginTop="14dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -150,9 +150,9 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="65dp" 
+    		    android:layout_marginTop="69dp" 
     		    android:orientation="horizontal"    		     
-    		     android:layout_marginLeft="446dp"
+    		     android:layout_marginLeft="452dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -174,12 +174,12 @@
     
     		<ImageButton 
     		    android:id = "@+id/planet9"
-    		    android:layout_width="51dp"
-    		    android:layout_height="50dp"
-    		    android:layout_marginLeft="509dp"
-    		    android:layout_marginTop="228dp"
+    		    android:layout_width="80dp"
+    		    android:layout_height="80dp"
+    		    android:layout_marginLeft="495dp"
+    		    android:layout_marginTop="215dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane10"/>
+    		    android:background="@drawable/custom_planet9_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet9name" 
@@ -191,13 +191,13 @@
     		    android:text = "Multiple-Meaning Words (Level C)"
     		    android:layout_toRightOf="@+id/planet9"
     		    android:layout_marginTop="232dp"
-    		    android:layout_marginLeft="4dp"/>
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet9ss"
     		    android:visibility="invisible"
     		    android:layout_marginLeft="520dp"
-    		    android:layout_marginTop="160dp" 
+    		    android:layout_marginTop="165dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -206,7 +206,7 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="215dp" 
+    		    android:layout_marginTop="218dp" 
     		    android:orientation="horizontal"    		     
     		     android:layout_marginLeft="556dp"
     		    android:weightSum="1">
@@ -229,12 +229,12 @@
     
     <ImageButton 
     		    android:id = "@+id/planet10"
-    		    android:layout_width="54dp"
-    		    android:layout_height="51dp"
-    		    android:layout_marginLeft="743dp"
-    		    android:layout_marginTop="210dp"
+    		    android:layout_width="78dp"
+    		    android:layout_height="78dp"
+    		    android:layout_marginLeft="731dp"
+    		    android:layout_marginTop="198dp"
     		    android:adjustViewBounds="true" 
-    		    android:background="@drawable/plane11"/>
+    		    android:background="@drawable/custom_planet10_bg"/>
     		
     		<TextView
     		    android:id="@+id/planet10name" 
@@ -245,14 +245,14 @@
     		    android:textStyle="bold"
     		    android:text = "Homographs and Homophones"
     		    android:layout_toRightOf="@+id/planet10"
-    		    android:layout_marginTop="212dp"
-    		    android:layout_marginLeft="5dp"/>
+    		    android:layout_marginTop="217dp"
+    		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet10ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="754dp"
-    		    android:layout_marginTop="140dp" 
+    		    android:layout_marginLeft="756dp"
+    		    android:layout_marginTop="143dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -261,9 +261,9 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="195dp" 
+    		    android:layout_marginTop="196dp" 
     		    android:orientation="horizontal"    		     
-    		     android:layout_marginLeft="790dp"
+    		     android:layout_marginLeft="791dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -282,11 +282,7 @@
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
-    
-    
-    
-          
-    			
+    	
     			 <ImageView
     		    android:id = "@+id/planetnavigation2"
     		    android:visibility="gone"
