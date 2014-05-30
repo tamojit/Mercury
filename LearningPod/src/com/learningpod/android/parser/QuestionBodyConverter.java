@@ -61,14 +61,14 @@ public class QuestionBodyConverter  implements Converter {
 				 
 				if(isForHighlightedpart){
 					if(previousNodeName.equals("u")){
-						questionBodyHighlighted = questionBodyHighlighted + " <u><b><i>" + nodeValue + "</i></b></u> ";
+						questionBodyHighlighted = questionBodyHighlighted + " <u><i>" + nodeValue + "</i></u> ";
 					}else{
 						questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i> ";
 					}
 				}
 				else{
 					if(previousNodeName.equals("u")){
-						questionBody = questionBody + " <u><<i>" + nodeValue + "</i></u> ";
+						questionBody = questionBody + " <u><i>" + nodeValue + "</i></u> ";
 					}
 					else {
 						questionBody = questionBody + " <i>" + nodeValue + "</i> ";
@@ -83,10 +83,10 @@ public class QuestionBodyConverter  implements Converter {
 				
 				if(isForHighlightedpart){
 					if(previousNodeName.equals("i")){
-						 questionBodyHighlighted = questionBodyHighlighted + " <i><u><b>" + nodeValue + "</b></u></i> ";
+						 questionBodyHighlighted = questionBodyHighlighted + " <i><u>" + nodeValue + "</u></i> ";
 					}
 					else{
-						questionBodyHighlighted = questionBodyHighlighted + " <u><b>" + nodeValue + "</b></u> ";
+						questionBodyHighlighted = questionBodyHighlighted + " <u>" + nodeValue + "</u> ";
 					}
 				}	
 				else{
@@ -94,13 +94,21 @@ public class QuestionBodyConverter  implements Converter {
 						questionBody = questionBody + " <i><u>" + nodeValue + "</u></i> ";
 					}
 					else{
-						questionBody = questionBody + " <u><b>" + nodeValue + "</b></u> ";
+						questionBody = questionBody + " <u>" + nodeValue + "</u> ";
 					}
 				}
 				
 			}
 			
-			
+			if(nodeName.equals("br")){
+				if(isForHighlightedpart){
+					questionBodyHighlighted = questionBodyHighlighted +"<br/>";
+				}
+				else{
+					//questionBody = questionBody + System.getProperty("line.separator");
+							
+				}
+			}
 			
 			if(reader.hasMoreChildren()){
 				previousNodeName = reader.getNodeName();

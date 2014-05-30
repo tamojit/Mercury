@@ -59,6 +59,10 @@ public class QuestionChoiceConverter implements Converter {
 			choiceBody = reader.getValue();
 		}
 		boolean flag  = true;
+		// handle the case when there is only text in the choice to avoid going through the loop
+		if(!reader.hasMoreChildren()){
+			flag=false;
+		}
 		while(flag){
 			String nodeName = reader.getNodeName();
 			String nodeValue = reader.getValue().trim().replace("\n", "");

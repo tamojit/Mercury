@@ -63,6 +63,7 @@
                android:layout_marginRight="10dp"
                android:background="#FFE96F"
                android:padding="12dp"
+               android:singleLine="false"
                android:text="Read the sentence. Use context clues to help you figure out the meaning of the word jovial. Then, choose the correct meaning of the word jovial"
                android:textColor="#000000"
                android:textSize="20sp" />
