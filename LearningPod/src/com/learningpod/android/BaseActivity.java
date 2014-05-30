@@ -37,6 +37,8 @@ import android.widget.TextView;
 public class BaseActivity extends Activity implements
 		DialogInterface.OnClickListener {
 
+	
+
 	private ProgressDialog progressDialog;
 	private AlertDialog alertDialog;
 	private PopupWindow menuitempopup;
@@ -58,37 +60,15 @@ public class BaseActivity extends Activity implements
 	}
 
 	private void menupopup(String detail) {
+
 		DisplayMetrics metrics = BaseActivity.this.getResources().getDisplayMetrics();
 		int width = metrics.widthPixels;
 		int height = metrics.heightPixels;
 		menuitempopup = new PopupWindow(width/2,height);
 		
-		
-		
-		if(detail=="ABOUT")
-		{
-			
-			loginWindowView = getLayoutInflater().inflate(
-					R.layout.popup_menuitemabout, null);
-			menuitempopup.setContentView(loginWindowView);
-			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
-			Button Close = (Button) loginWindowView.findViewById(R.id.close);
-			Close.setOnClickListener(new OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					{
-						menuitempopup.dismiss();
-					}
-
-				}
-			});	
-			
-			
-		} 
 		if(detail=="HELP")
 		{
+			
 			loginWindowView = getLayoutInflater().inflate(
 					R.layout.popup_menuitem, null);
 			menuitempopup.setContentView(loginWindowView);
@@ -105,7 +85,28 @@ public class BaseActivity extends Activity implements
 
 				}
 			});
-	//	textinpopup.setText(Html.fromHtml("&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>Stellar Vocabulary Grade 5<b><p><b>Log In:</b><br>Log In to the app by selecting a Google Account (email address) that is configured in your device. Once you log in and start practicing questions, your practice history will be stored against your login account.<br><br><b>Map Screen:</b><br>The Map screen displays 15 “planets,” each of which corresponds to a distinct category for fifth grade vocabulary. Each planet contains five questions. Click on a planet to get started and answer questions.<br>A little building on the planet along with a progress bar indicates that you are practicing within that planet. Once you answer all five questions, you will see a ‘flag’ atop the building that signifies completion.<br><br><b>Word List:</b><br>Click on Word List to access a list of grade-appropriate words.<br><br><b>Question/Answer Page</b><br>The question-and-answer page contains a multiple choice question and a set of answer choices for that question. Read the question carefully, select an answer choice, and click Submit to get a visual indication of whether you answered the question correctly or not. You will also see a brief explanation of the answer. Click Next to proceed to the next question. Click Back to go to the previous question you practiced.<br>The progress indicator on the top right corner helps you keep track of your activity within a planet. It will give you an overview of the number of questions you answered correctly or incorrectly thus far.<br>Click on Map to go back to the Map Screen.<br><br><b>Summary Page:</b><br>Once you complete all the questions in a specific planet, you will see a  summary page that indicates the percentage of correct answers. This summary page also allows you to send your results to the email address of your choice.<br>Click on the question numbers on the summary page to review a planet you have already practiced. Alternatively, click on the Back button on the summary page to see the last question of a particular planet; use the Back and Next buttons to review questions.<br><br><b style='margin-left:40px;'>Overflow Menu:</b><br>Log In: Log In to the app<br>Log Out: Log Out of the app<br>About: About Page<br>Help: Help Page"));
+			
+		}
+		
+		if(detail=="ABOUT")
+		{
+			loginWindowView = getLayoutInflater().inflate(
+					R.layout.popup_menuitemabout, null);
+			menuitempopup.setContentView(loginWindowView);
+			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
+			Button Close = (Button) loginWindowView.findViewById(R.id.close);
+			Close.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					{
+						menuitempopup.dismiss();
+					}
+
+				}
+			});
+	
 		}
 		if(detail=="TERMS")
 		{
@@ -242,6 +243,17 @@ public class BaseActivity extends Activity implements
 	    });
 	    AlertDialog alert = builder.create();
 	    alert.show();
+	}
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		
+		if(progressDialog!=null)progressDialog.dismiss();
+		if(alertDialog!=null) alertDialog.dismiss();
+		if(menuitempopup!=null) menuitempopup.dismiss();
+		super.onDestroy();
+		
 	}
 
 }

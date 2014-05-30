@@ -1,13 +1,14 @@
+
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word wound has more than one meaning. It is also pronounced differently depending... " data-uuid="1cadbd4e-34fc-43f6-bd6a-f59714b79b31" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
     <questionBody><p><b>The word <u>wound</u> has more than one meaning. It is also pronounced differently depending on the meaning.</b>
 <p> Choose the sentence in which <i>wound</i> means &quot;wrapped around something&quot;.</p>
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>Tallie could see from the swelling that her cat had a <i>wound</i> on its back paw.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="2"><p>After a lot of discussion, we <i>wound</i> up going to a movie we had all seen before.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="3"><p>Before Grandma began to knit, she <i>wound</i> her yarn around a piece of cardboard.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>The knife was sharp enough to <i>wound</i> a person who touched it.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>Tallie's cat had a <i>wound</i> on its back paw.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>We <i>wound</i> up going to the new movie.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="3"><p>Grandma <i>wound</i> her yarn around a piece of cardboard.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>The knife was sharp enough to <i>wound</i> a person.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>
