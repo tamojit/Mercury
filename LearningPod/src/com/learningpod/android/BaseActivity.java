@@ -62,6 +62,8 @@ public class BaseActivity extends Activity implements
 				R.layout.popup_menuitem, null);
 		menuitempopup.setContentView(loginWindowView);
 		//
+		
+		
 		TextView textinpopup = (TextView) loginWindowView
 				.findViewById(R.id.text);
 		
