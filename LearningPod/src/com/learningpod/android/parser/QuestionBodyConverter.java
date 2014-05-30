@@ -40,7 +40,7 @@ public class QuestionBodyConverter  implements Converter {
 		boolean flag  = true;
 		while(flag){
 			String nodeName = reader.getNodeName();
-			String nodeValue = reader.getValue().trim().replace("\n", "");
+			String nodeValue = reader.getValue().replace("\n", "");;
 			/*Parsing region for getting the question highlighted content*/
 			if(nodeName.equals("b") ){
 				if(!nodeValue.equalsIgnoreCase("")){
@@ -61,17 +61,17 @@ public class QuestionBodyConverter  implements Converter {
 				 
 				if(isForHighlightedpart){
 					if(previousNodeName.equals("u")){
-						questionBodyHighlighted = questionBodyHighlighted + " <u><i>" + nodeValue + "</i></u> ";
+						questionBodyHighlighted = questionBodyHighlighted + "<u><i>" + nodeValue + "</i></u>";
 					}else{
-						questionBodyHighlighted = questionBodyHighlighted + " <i>" + nodeValue + "</i> ";
+						questionBodyHighlighted = questionBodyHighlighted + "<i>" + nodeValue + "</i>";
 					}
 				}
 				else{
 					if(previousNodeName.equals("u")){
-						questionBody = questionBody + " <u><i>" + nodeValue + "</i></u> ";
+						questionBody = questionBody + "<u><i>" + nodeValue + "</i></u>";
 					}
 					else {
-						questionBody = questionBody + " <i>" + nodeValue + "</i> ";
+						questionBody = questionBody + "<i>" + nodeValue + "</i>";
 					}
 				}
 				
@@ -83,18 +83,18 @@ public class QuestionBodyConverter  implements Converter {
 				
 				if(isForHighlightedpart){
 					if(previousNodeName.equals("i")){
-						 questionBodyHighlighted = questionBodyHighlighted + " <i><u>" + nodeValue + "</u></i> ";
+						 questionBodyHighlighted = questionBodyHighlighted + "<i><u>" + nodeValue + "</u></i>";
 					}
 					else{
-						questionBodyHighlighted = questionBodyHighlighted + " <u>" + nodeValue + "</u> ";
+						questionBodyHighlighted = questionBodyHighlighted + "<u>" + nodeValue + "</u>";
 					}
 				}	
 				else{
 					if(previousNodeName.equals("i")){
-						questionBody = questionBody + " <i><u>" + nodeValue + "</u></i> ";
+						questionBody = questionBody + "<i><u>" + nodeValue + "</u></i>";
 					}
 					else{
-						questionBody = questionBody + " <u>" + nodeValue + "</u> ";
+						questionBody = questionBody + "<u>" + nodeValue + "</u>";
 					}
 				}
 				
@@ -125,12 +125,12 @@ public class QuestionBodyConverter  implements Converter {
 			
 		}
 		// check for spaces before punctuation
-		questionBody=questionBody.replace(" .", ".");
+		/*questionBody=questionBody.replace(" .", ".");
 		questionBody=questionBody.replace(" ,", ",");
 		questionBody=questionBody.replace(" ?", "?");
 		questionBodyHighlighted=questionBodyHighlighted.replace(" .", ".");
 		questionBodyHighlighted=questionBodyHighlighted.replace(" ,", ",");
-		questionBodyHighlighted=questionBodyHighlighted.replace(" ?", "?");
+		questionBodyHighlighted=questionBodyHighlighted.replace(" ?", "?");*/
 		
 		
 		body.setQuestionBodyStr(questionBody);

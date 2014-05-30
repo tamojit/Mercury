@@ -65,21 +65,21 @@ public class QuestionChoiceConverter implements Converter {
 		}
 		while(flag){
 			String nodeName = reader.getNodeName();
-			String nodeValue = reader.getValue().trim().replace("\n", "");
+			String nodeValue = reader.getValue().replace("\n", "");
 			if(nodeName.equals("p") && !nodeValue.equalsIgnoreCase("")){
 				choiceBody = choiceBody + nodeValue;
 			}
 			
 			if(nodeName.equals("i") && !nodeValue.equalsIgnoreCase("")){
-				choiceBody = choiceBody + " <i>" + nodeValue + "</i> ";
+				choiceBody = choiceBody + "<i>" + nodeValue + "</i>";
 			}
 			
 			if(nodeName.equals("u") && !nodeValue.equalsIgnoreCase("")){
-				choiceBody = choiceBody + " <u>" + nodeValue + "</u> ";
+				choiceBody = choiceBody + "<u>" + nodeValue + "</u>";
 			}
 			
 			if(nodeName.equals("b") && !nodeValue.equalsIgnoreCase("")){
-				choiceBody = choiceBody + " <b>" + nodeValue + "</b> ";
+				choiceBody = choiceBody + "<b>" + nodeValue + "</b>";
 			}
 			
 			if(reader.hasMoreChildren()){
@@ -93,9 +93,9 @@ public class QuestionChoiceConverter implements Converter {
 			}
 		}
 		
-		choiceBody=choiceBody.replace(" .", ".");
+		/*choiceBody=choiceBody.replace(" .", ".");
 		choiceBody=choiceBody.replace(" ,", ",");
-		choiceBody=choiceBody.replace(" ?", "?");
+		choiceBody=choiceBody.replace(" ?", "?");*/
 		choiceBean.setChoiceBody(choiceBody);
 		return choiceBean;
 	}

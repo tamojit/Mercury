@@ -1,21 +1,12 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Relationship Words" data-uuid="b649fec2-c143-4a41-a9a1-aed9998bda5c" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>
-	Which sentence shows the best usage of the word <u>furthermore</u>?</b>
+    <questionBody><p><b>Which sentence shows the best usage of the word <u>furthermore</u>?</b>
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	The waiter forgot to bring bread <i>furthermore</i>. He brought the wrong dessert.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice2"><p>
-	The waiter forgot to bring bread. <i>Furthermore</i>, he brought the wrong dessert.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	The waiter <i>furthermore </i>forgot to bring bread. He brought the wrong dessert.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice4"><p>
-	The waiter forgot to bring bread. He brought <i>furthermore</i> the wrong dessert.
-</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>The waiter forgot to bring bread <i>furthermore</i>. He brought the wrong dessert.</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice2"><p>The waiter forgot to bring bread. <i>Furthermore</i>, he brought the wrong dessert.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>The waiter <i>furthermore </i>forgot to bring bread. He brought the wrong dessert.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>The waiter forgot to bring bread. He brought <i>furthermore</i> the wrong dessert.</p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

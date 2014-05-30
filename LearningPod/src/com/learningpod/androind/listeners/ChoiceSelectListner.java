@@ -35,7 +35,7 @@ public class ChoiceSelectListner implements OnClickListener{
 				
 				View choiceView = choiceViewList.get(idx);
 				if(v.getId()==idx){					
-					choiceView.setBackgroundResource(R.drawable.choice_selected);
+					choiceView.findViewById(R.id.mainlayout).setBackgroundResource(R.drawable.choice_selected);
 					activity.setCurrentSelectedChoiceIndex(idx);
 					if(choiceView.getTag()==Integer.valueOf(1)){
 						activity.setCurrentSelectedChoiceCorrect(true);
@@ -45,7 +45,7 @@ public class ChoiceSelectListner implements OnClickListener{
 						activity.setCurrentSelectedChoiceCorrect(false);
 					}
 				}else{
-					choiceView.setBackgroundResource(R.drawable.choice_not_selected);
+					choiceView.findViewById(R.id.mainlayout).setBackgroundResource(R.drawable.choice_not_selected);
 					if(choiceView.getTag()==Integer.valueOf(1)){
 						// put this in the map
 						//activity.getQuesToCorrectChoiceMap().put(activity.getCurrentQuestionIndex(), idx);

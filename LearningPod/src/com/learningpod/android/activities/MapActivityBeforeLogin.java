@@ -79,7 +79,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		}
 		// disable the app icon and title
 		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setDisplayShowTitleEnabled(false);
+		//getActionBar().setDisplayShowTitleEnabled(false);
+		
 		// get list of pods. getting
 		pods = ContentCacheStore.getContentCache().getPods();
 		setContentView(R.layout.maplayout);
@@ -298,9 +299,15 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		// view
 		if (CURRENT_MAP_INDEX == 0) {
 			findViewById(R.id.btnmapprev).setVisibility(View.INVISIBLE);
+			getActionBar().setTitle("Your Journey Begins");
 		}
-		if (CURRENT_MAP_INDEX == 2) {
+		
+		else if(CURRENT_MAP_INDEX==1){
+			getActionBar().setTitle("The Midway Planets");
+		}
+		else if (CURRENT_MAP_INDEX == 2) {
 			findViewById(R.id.btnmapnext).setVisibility(View.INVISIBLE);
+			getActionBar().setTitle("Galaxy's End");
 		}
 
 		findViewById(R.id.wordlist).setOnClickListener(this);
@@ -387,9 +394,15 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				if (CURRENT_MAP_INDEX == 0) {
 					findViewById(R.id.btnmapprev).setVisibility(View.GONE);
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					getActionBar().setTitle("Your Journey Begins");
 				} else {
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					if(CURRENT_MAP_INDEX==1){
+						getActionBar().setTitle("The Midway Planets");
+					}else{
+						getActionBar().setTitle("Galaxy's End");
+					}
 				}
 				// Show the previous Screen
 				mapFlipper.showPrevious();
@@ -408,9 +421,15 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				if (CURRENT_MAP_INDEX == 2) {
 					findViewById(R.id.btnmapnext).setVisibility(View.GONE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					getActionBar().setTitle("Galaxy's End");
 				} else {
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					if(CURRENT_MAP_INDEX==1){
+						getActionBar().setTitle("The Midway Planets");
+					}else{
+						getActionBar().setTitle("Your Journey Begins");
+					}
 				}
 				// Show The next Screen
 				mapFlipper.showNext();

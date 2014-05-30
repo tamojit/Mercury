@@ -50,7 +50,7 @@
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#d2483f"/>
+    		        android:background="#94327f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet6pbblue"
@@ -106,7 +106,7 @@
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#d2483f"/>
+    		        android:background="#94327f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet7pbblue"
@@ -161,7 +161,7 @@
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#d2483f"/>
+    		        android:background="#94327f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet8pbblue"
@@ -217,7 +217,7 @@
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#d2483f"/>
+    		        android:background="#94327f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet9pbblue"
@@ -272,7 +272,7 @@
     		        android:layout_weight="0.2"
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
-    		        android:background="#d2483f"/>
+    		        android:background="#94327f"/>
     		    
     		    <View android:layout_width="0dp"
     		        android:id="@+id/planet10pbblue"

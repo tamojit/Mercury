@@ -1,20 +1,12 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Tier II Nouns" data-uuid="a2b01857-8ee9-45b3-844f-9af7e3c3d3c6" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>
-	Choose the sentence in which <u>technique</u> is used correctly.
+    <questionBody><p><b>Choose the sentence in which <u>technique</u> is used correctly.
 </b> </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	Speed skaters add <i>technique</i> to their blades in order to glide faster.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice2"><p>
-	Skating a certain number of hours is another way to start a <i>technique</i>.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	The skater decided to practice more in order to become eligible for the <i>technique</i>.</p><p> </p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice4"><p>
-	Spending hours at the rink was a good way for the skater to improve his <i>technique</i>.
-</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>Speed skaters add <i>technique</i> to their blades in order to glide faster.</p><p></p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>Skating a certain number of hours is another way to start a <i>technique</i>.</p><p></p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>The skater decided to practice more in order to become eligible for the <i>technique</i>.</p><p></p>          
+      </simpleChoice> <simpleChoice correct="true" choiceId="answerChoice4"><p>Spending hours at the rink was a good way for the skater to improve his <i>technique</i>.</p><p></p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

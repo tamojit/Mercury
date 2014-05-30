@@ -1,21 +1,12 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Relationship Words" data-uuid="d348ee99-6bbf-4ca7-92cc-757454bfe94d" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>
-	Which sentence shows the best usage of the word <u>although</u>?</b>
+    <questionBody><p><b>Which sentence shows the best usage of the word <u>although</u>?</b>
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	Allison, <i>although</i>, had studied, but she still felt unprepared for the math quiz.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice2"><p>
-	Allison had <i>although</i> studied, she still felt unprepared for the math quiz.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	Allison had studied; she still felt unprepared for the math quiz <i>although</i>.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice4"><p>
-	<i>Although</i> Allison had studied, she still felt unprepared for the math quiz.
-</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>Allison, <i>although</i>, had studied, but she still felt unprepared for the math quiz.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice2"><p>Allison had <i>although</i> studied, she still felt unprepared for the math quiz.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>Allison had studied; she still felt unprepared for the math quiz <i>although</i>.</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice4"><p><i>Although</i> Allison had studied, she still felt unprepared for the math quiz.</p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

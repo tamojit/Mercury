@@ -1,21 +1,12 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Relationship Words" data-uuid="76df5fc3-3262-4098-b9f4-36616ff4c0cf" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>
-	Which sentence shows the best usage of the word <u>regardless</u>?</b>
+    <questionBody><p><b>Which sentence shows the best usage of the word <u>regardless</u>?</b>
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="answerChoice1"><p>
-	Thomas went out <i>regardless</i> in the boat. He had a fear of the water.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice2"><p>
-	<i>Regardless</i> of his fear of the water, Thomas went out in the boat.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice3"><p>
-	Thomas <i>regardless</i> of the water went out in the boat with his fear.
-</p><p> </p></simpleChoice>
-      <simpleChoice correct="false" choiceId="answerChoice4"><p>
-	Thomas had a fear of the water <i>regardless</i>. He went out in the boat.
-</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice1"><p>Thomas went out <i>regardless</i> in the boat. He had a fear of the water.</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice2"><p><i>Regardless</i> of his fear of the water, Thomas went out in the boat.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice3"><p>Thomas <i>regardless</i> of the water went out in the boat with his fear.</p><p> </p></simpleChoice>
+      <simpleChoice correct="false" choiceId="answerChoice4"><p>Thomas had a fear of the water <i>regardless</i>. He went out in the boat.</p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

@@ -51,6 +51,7 @@ public class WordListActivity extends BaseActivity
         modifyActionBar();
         wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
         closewordlist=(Button)findViewById(R.id.btnwordlistclose);
+        closewordlist.setTypeface(headerFont);
         createWordList();
         
     }    

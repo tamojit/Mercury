@@ -1,6 +1,6 @@
 package com.learningpod.android;
 
-import com.learningpod.android.activities.AccountSelectorActivity;
+
 import com.learningpod.android.activities.MapActivity;
 import com.learningpod.android.activities.MapActivityBeforeLogin;
 import com.learningpod.android.activities.PodQuestionActivity;
@@ -112,9 +112,7 @@ public class BaseActivity extends Activity implements
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is
 		// presentpublic Men.
-		if (!(this instanceof AccountSelectorActivity)) {
-			getMenuInflater().inflate(R.menu.common_menu, menu);
-		}
+		getMenuInflater().inflate(R.menu.common_menu, menu);
 		
 		if(this instanceof MapActivityBeforeLogin){
 			menu.findItem(R.id.login).setTitle("Log In");

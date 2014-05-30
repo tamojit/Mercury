@@ -5,7 +5,7 @@
       <simpleChoice correct="false" choiceId="1"><p>&quot;Right this way,&quot; the host said. &quot;I will <i>lead</i> you to your table.&quot;</p></simpleChoice>
       <simpleChoice correct="true" choiceId="2"><p>Hazel sharpened her <i>lead</i> pencil before she began writing her story.</p></simpleChoice>
       <simpleChoice correct="false" choiceId="3"><p>Alice was the <i>lead</i> scorer in her soccer game.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="4"><p>After they found <i>lead</i> in the water at the school, no one was allowed to use the fountains.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="4"><p>With a home run in the ninth inning, the Tigers took the <i>lead.</i></p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

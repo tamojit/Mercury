@@ -34,6 +34,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.Window;
@@ -90,7 +91,7 @@ public class PodQuestionActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.podquestionrelativeview);
+		
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		isSmallerScreen = false;
@@ -124,8 +125,7 @@ public class PodQuestionActivity extends BaseActivity {
 		currentQuestionIndex = userProgressTemp.size();
 		dbHandler.close();
 
-		// create the question progress bar
-		createProgressBar(userProgressTemp);
+		
 
 		if (currentQuestionIndex == questions.size()) {
 			// pod has been completed. go summary page
@@ -137,7 +137,9 @@ public class PodQuestionActivity extends BaseActivity {
 			showSummaryScreen();
 			return;
 		}
-
+		setContentView(R.layout.podquestionrelativeview);
+		// create the question progress bar
+		createProgressBar(userProgressTemp);
 		// show next question based on current question index
 		showNextQuestion();
 		// enable disable content based on screen state
@@ -391,8 +393,9 @@ public class PodQuestionActivity extends BaseActivity {
 				resultIcon.setVisibility(View.VISIBLE);
 				resultIcon.setBackgroundResource(R.drawable.tick);
 				// set the border image for the choice selected
-				choiceViewList.get(currentSelectedChoiceIndex)
-						.setBackgroundResource(
+				choiceViewList.get(currentSelectedChoiceIndex).findViewById(R.id.mainlayout)
+								.findViewById(R.id.mainlayout)
+								.setBackgroundResource(
 								R.drawable.choice_selected_correct);
 				// change the progress icon for this question
 				progressDotList.get(currentQuestionIndex)
@@ -414,12 +417,14 @@ public class PodQuestionActivity extends BaseActivity {
 				// set the border image for the choice selected
 				choiceViewList
 						.get(currentSelectedChoiceIndex)
+						.findViewById(R.id.mainlayout)
 						.setBackgroundResource(R.drawable.choice_selected_wrong);
 				// set the border image for the correct choice
 				choiceViewList.get(
 						quesToCorrectAnswerMap.get(Integer
 								.valueOf(currentQuestionIndex)))
-						.setBackgroundResource(
+								.findViewById(R.id.mainlayout)
+								.setBackgroundResource(
 								R.drawable.choice_not_selected_correct);
 				// change the progress icon for this question
 				progressDotList.get(currentQuestionIndex)
@@ -458,7 +463,7 @@ public class PodQuestionActivity extends BaseActivity {
 					.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8,
 							getResources().getDisplayMetrics());
 			TextView choiceLabelText = (TextView) findViewById(R.id.choicelabel);
-			choiceLabelText.setText("CHOOSE THE CORRECT ANSWER");
+			choiceLabelText.setText("CHOOSE THE CORRECT ANSWER.");
 			choiceLabelText.setTextColor(Color.parseColor("#ffffff"));
 			choiceLabelText.setTextSize(15);
 			choiceLabelText.setTypeface(font);
@@ -635,8 +640,7 @@ public class PodQuestionActivity extends BaseActivity {
 			// get the choice bean object
 			QuestionChoiceBean choice = choicesForThisQuestion.get(idx);
 			// inflate the choice view layout
-			View choiceView = inflater.inflate(R.layout.choice_view, null);
-			choiceView.setBackgroundColor(Color.parseColor("#0dffffff"));
+			View choiceView = inflater.inflate(R.layout.choice_view, null);			
 			// set the button image and choice text
 			
 			TextView choiceBodView = ((TextView) choiceView.findViewById(R.id.choicebody));
@@ -936,13 +940,13 @@ public class PodQuestionActivity extends BaseActivity {
 	private String createMailBody(){
 		StringBuffer summary = new StringBuffer();
 		// create the initial html
-		summary.append("<html><body><br><br><br><div><p><font color=\"#445766\"><strong>&nbsp;&nbsp;Summary Of "+ContentCacheStore.getContentCache().getLoggedInUserProfile().getGiven_name()+ " for " + selectedPod.getTitle() +"</strong></font></p></div></br></br><div><p><font color=\"#445766\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<big>Percentage Score: " + percentage + "%</big></font></p></div><div><p><font color=\"blue\"><strong> &nbsp;&nbsp;&nbsp;&nbsp;  Question #  &nbsp;  Result  &nbsp;  Correct Answer  &nbsp;  Student Answer  &nbsp;</strong></font><br>");
-		summary.append("&nbsp;________________________________________________________</p>");
+		summary.append("<html><body><br><br><br><div><p><font color=\"#445766\"><strong>&nbsp;&nbsp;Summary Of "+ContentCacheStore.getContentCache().getLoggedInUserProfile().getGiven_name()+ " for " + selectedPod.getTitle() +"</strong></font></p></div></br></br><div><p><font color=\"#445766\">&nbsp;&nbsp;<big>Percentage Score: " + percentage + "%</big></font></p></div><div><p><font color=\"blue\"><strong> &nbsp;&nbsp;&nbsp;&nbsp;  Question #  &nbsp;  Result  &nbsp;   Student Answer  &nbsp;</strong></font><br>");
+		summary.append("&nbsp;_______________________________________</p>");
 		for(int idx=0;idx<userProgressCompleted.size();idx++){
 			UserProgressInfo userProgress = userProgressCompleted.get(idx);			
 			
-			summary.append("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+ (idx+1)+".  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color = \"" + (userProgress.isChoiceCorrect()?"green":"red")+ "\">" +(userProgress.isChoiceCorrect()?"Correct&nbsp;&nbsp;&nbsp;":"Incorrect")+"</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  "+getCorrectChoiceSequence(userProgress.getQuestionId()).substring(0, 1)+"  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  "+getChoiceSequence(userProgress.getQuestionId(), userProgress.getChoiceId()).substring(0,1)+"  &nbsp;<br>");
-			summary.append("&nbsp;________________________________________________________</p>");
+			summary.append("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=\"blue\" >"+ (idx+1)+".</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color = \"" + (userProgress.isChoiceCorrect()?"#9acc4e":"#e6855b")+ "\">" +(userProgress.isChoiceCorrect()?"Correct&nbsp;&nbsp;&nbsp;":"Incorrect")+"</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color=\"blue\">"+getChoiceSequence(userProgress.getQuestionId(), userProgress.getChoiceId()).substring(0,1)+"</font>  &nbsp;<br>");
+			summary.append("&nbsp;_______________________________________</p>");
 		}
 		
 		return summary.toString();

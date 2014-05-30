@@ -30,17 +30,17 @@ public class ExplanationConverter implements Converter {
 		boolean flag  = true;
 		while(flag){
 			String nodeName = reader.getNodeName();
-			String nodeValue = reader.getValue().trim().replace("\n", "");
+			String nodeValue = reader.getValue().replace("\n", "");
 			if(nodeName.equals("p") && !nodeValue.equalsIgnoreCase("")){
 				explanationBody = explanationBody + nodeValue;
 			}
 			
 			if(nodeName.equals("i") && !nodeValue.equalsIgnoreCase("")){
-				explanationBody = explanationBody + " <i>" + nodeValue + "</i> ";
+				explanationBody = explanationBody + "<i>" + nodeValue + "</i>";
 			}
 			
 			if(nodeName.equals("b") && !nodeValue.equalsIgnoreCase("")){
-				explanationBody = explanationBody + " <b>" + nodeValue + "</b> ";
+				explanationBody = explanationBody + "<b>" + nodeValue + "</b>";
 			}
 			
 			
@@ -54,9 +54,9 @@ public class ExplanationConverter implements Converter {
 			}
 		}
 		// check for spaces before punctuation
-		explanationBody=explanationBody.replace(" .", ".");
+		/*explanationBody=explanationBody.replace(" .", ".");
 		explanationBody=explanationBody.replace(" ,", ",");
-		explanationBody=explanationBody.replace(" ?", "?");
+		explanationBody=explanationBody.replace(" ?", "?");*/
 		return explanationBody;
 	}
 

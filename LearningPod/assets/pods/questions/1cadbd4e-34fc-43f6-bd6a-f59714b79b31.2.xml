@@ -1,8 +1,8 @@
 
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): The word wound has more than one meaning. It is also pronounced differently depending... " data-uuid="1cadbd4e-34fc-43f6-bd6a-f59714b79b31" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The word <u>wound</u> has more than one meaning. It is also pronounced differently depending on the meaning.</b>
-<p> Choose the sentence in which <i>wound</i> means &quot;wrapped around something&quot;.</p>
+    <questionBody><p><b>The word <u>wound</u> has more than one meaning. It is also pronounced differently depending on the meaning.</b></p>
+<p> Choose the sentence in which <i>wound</i> means &quot;wrapped around something.&quot;
 </p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="1"><p>Tallie's cat had a <i>wound</i> on its back paw.</p></simpleChoice>

@@ -123,10 +123,15 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 	private void modifyActionBar(String strUserName) {
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowHomeEnabled(false);
+		
 		actionBar.setCustomView(R.layout.map_screen_custom_bar);
 		TextView userName = (TextView) actionBar.getCustomView().findViewById(
 				R.id.mapscreenusername);
 		userName.setText("Hi, " + strUserName);
+		if(CURRENT_MAP_INDEX==0) ((TextView) actionBar.getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
+		if(CURRENT_MAP_INDEX==1) ((TextView) actionBar.getCustomView().findViewById(R.id.title)).setText("The Midway Planets");
+		if(CURRENT_MAP_INDEX==2) ((TextView) actionBar.getCustomView().findViewById(R.id.title)).setText("Galaxy's End");
+		actionBar.setTitle("title");
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 	}
 
@@ -215,9 +220,15 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 				if (CURRENT_MAP_INDEX == 0) {
 					findViewById(R.id.btnmapprev).setVisibility(View.GONE);
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
 				} else {
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					if(CURRENT_MAP_INDEX==1){
+						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("The Midway Planets");
+					}else{
+						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Galaxy's End");
+					}
 				}
 				// Show the previous Screen
 				mapFlipper.showPrevious();
@@ -236,9 +247,15 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 				if (CURRENT_MAP_INDEX == 2) {
 					findViewById(R.id.btnmapnext).setVisibility(View.GONE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Galaxy's End");
 				} else {
 					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					if(CURRENT_MAP_INDEX==0){
+						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
+					}else{
+						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("The Midway Planets");
+					}
 				}
 				// Show The next Screen
 				mapFlipper.showNext();
