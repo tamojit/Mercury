@@ -1,58 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="600dp"
-    android:layout_height="450dp"
-    android:background="@drawable/popupmenu"
-    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/popupheader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="5dp"
-        android:text="Heading"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:textColor="#ffffff" />
-    
-    <View android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#ffffff"
-        android:layout_marginTop="38dp"/>
-
-
-    <ScrollView
-        android:id="@+id/ScrollView01"
-        android:layout_width="fill_parent"
-        android:layout_height="572px"
-        android:layout_marginBottom="70dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="42dp" >
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text=""
-            android:textColor="@android:color/white"
-            android:textSize="22dip" />
-    </ScrollView>
-
-    <Button
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:background="#526576"
+     >  
+     
+     <TextView
+       android:id="@+id/texthelp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" 
+       android:layout_marginTop="5dp"            
+       android:text="HELP"
+       android:layout_marginLeft="39dp"
+       android:textColor="@android:color/white"
+       android:textSize="20dip"
+       android:textStyle="bold" />
+     
+     <Button
         android:id="@+id/close"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/sendbuttonbg"
-        android:text="CLOSE"
-        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/texthelp" 
+        android:layout_marginLeft="340dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+      
         android:textSize="18sp"
-        android:textStyle="bold" />
-
+        android:layout_marginTop="8dp"
+        android:textColor="#ffffff"   
+        android:textStyle="bold"
+        android:background="@drawable/popupclosebutton"
+        />
+        
+     <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_below="@+id/texthelp"
+    android:layout_marginLeft="39dp"
+    
+    android:layout_marginRight="24dp"/>
+     
+ <ScrollView   
+      android:id="@+id/ScrollView01" 
+      android:layout_marginTop="50dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginBottom="36dp"
+      android:layout_marginRight="10dp" 
+      android:layout_height="wrap_content"   
+      android:layout_width="wrap_content">  
+    
+     <RelativeLayout
+            android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical" >
+            
+            <ImageButton 
+    		    android:id = "@+id/help1"
+    		    android:layout_width="35dp"
+    		    android:layout_height="30dp"
+    		    android:layout_marginLeft="20dp"  
+    		    android:paddingTop="15dp"  		     
+    		    android:background="@drawable/popuphelp5"/>
+      
+        <TextView
+       android:id="@+id/texttitle"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Log In"
+       android:paddingLeft="5dp"
+       android:paddingTop="2dp"
+       android:textStyle="bold"
+       android:layout_toRightOf="@+id/help1"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help1"         
+       android:text="Log In to the app by selecting a Google Account (email address) that is configured in your device. Once you log in and start practicing questions, your practice history will be stored against your login account."
+       android:layout_marginLeft="25dp"
+    
+       android:textColor="@android:color/white"
+       android:textSize="13dip" />
+         
+       <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_below="@+id/textdetail"
+    android:layout_marginLeft="28dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="12dp"/>  
+         
+         
+       <ImageButton 
+       android:id = "@+id/help2"
+       android:layout_width="33dp"
+       android:layout_height="30dp"
+       android:layout_marginLeft="25dp"  
+       android:paddingTop="15dp"  
+       android:layout_marginTop="100dp"		     
+       android:background="@drawable/popuphelp3"/>
+      
+        <TextView
+       android:id="@+id/texttitle2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Map Screen"
+       android:textStyle="bold"
+       android:paddingLeft="3dp"
+       android:layout_marginTop="105dp"
+       android:layout_toRightOf="@+id/help2"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help2"         
+       android:text="The Map screen displays 15 “planets,” each of which corresponds to a distinct category for fifth grade vocabulary. Each planet contains five questions. Click on a planet to get started and answer questions.\n\nA little building on the planet along with a progress bar indicates that you are practicing within that planet. Once you answer all five questions, you will see a ‘flag’ atop the building that signifies completion."
+       android:layout_marginLeft="25dp"
+       android:textColor="@android:color/white"
+       android:textSize="13dip" 
+       />
+        
+         <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_below="@+id/textdetail2"
+    android:layout_marginLeft="28dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="12dp"/>
+         
+         
+        <ImageButton 
+       android:id = "@+id/help3"
+       android:layout_width="35dp"
+       android:layout_height="30dp"
+       android:layout_marginLeft="25dp"  
+       android:paddingTop="15dp"  
+       android:layout_marginTop="260dp"		     
+       android:background="@drawable/popuphelp4"/>
+      
+        <TextView
+       android:id="@+id/texttitle3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Word List"
+       android:textStyle="bold"
+       android:layout_marginTop="264dp"
+       android:paddingLeft="4dp"
+       android:layout_toRightOf="@+id/help3"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help3"         
+       android:text="Click on Word List to access a list of grade-appropriate words."
+       android:layout_marginLeft="25dp"
+       android:textColor="@android:color/white"
+       android:textSize="13dip" />
+         
+      <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/textdetail3"
+    android:layout_marginLeft="28dp"
+    android:layout_marginRight="12dp"/>     
+         
+         <ImageButton 
+       android:id = "@+id/help4"
+       android:layout_width="35dp"
+       android:layout_height="30dp"
+       android:layout_marginLeft="25dp"  
+       android:paddingTop="15dp"  
+       android:layout_marginTop="330dp"		     
+       android:background="@drawable/popuphelp2"/>
+      
+        <TextView
+       android:id="@+id/texttitle4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Question/Answer Page"
+       android:layout_marginTop="337dp"
+       android:layout_marginLeft="4dp"
+       android:textStyle="bold"
+       android:layout_toRightOf="@+id/help4"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help4"         
+       android:text="The question-and-answer page contains a multiple choice question and a set of answer choices for that question. Read the question carefully, select an answer choice, and click Submit to get a visual indication of whether you answered the question correctly or not. You will also see a brief explanation of the answer. Click Next to proceed to the next question. Click Back to go to the previous question you practiced.\n\nThe progress indicator on the top right corner helps you keep track of your activity within a planet. It will give you an overview of the number of questions you answered correctly or incorrectly thus far.\n\nClick on Map to go back to the Map Screen."
+       android:layout_marginLeft="25dp"
+       android:textColor="@android:color/white"
+       android:textSize="13dip" />
+         
+         <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_below="@+id/textdetail4"
+    android:layout_marginLeft="28dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="12dp"/> 
+     
+         <ImageButton 
+       android:id = "@+id/help5"
+       android:layout_width="35dp"
+       android:layout_height="30dp"
+       android:layout_marginLeft="25dp"  
+       android:paddingTop="15dp"  
+       android:layout_marginTop="563dp"		     
+       android:background="@drawable/popuphelp1"/>
+      
+        <TextView
+       android:id="@+id/texttitle5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Summary Page"
+       android:textStyle="bold"
+       android:layout_marginTop="568dp"
+       android:paddingLeft="2dp"
+       android:layout_toRightOf="@+id/help5"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help5"         
+       android:text="Once you complete all the questions in a specific planet, you will see a  summary page that indicates the percentage of correct answers. This summary page also allows you to send your results to the email address of your choice.\n\nClick on the question numbers on the summary page to review a planet you have already practiced. Alternatively, click on the Back button on the summary page to see the last question of a particular planet; use the Back and Next buttons to review questions."
+       android:layout_marginLeft="25dp"
+       android:textColor="@android:color/white"
+       android:textSize="13dip" />
+        
+         <View android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#FFFFFF" 
+    android:layout_below="@+id/textdetail5"
+    android:layout_marginLeft="28dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="12dp"/>  
+         
+          <ImageButton 
+       android:id = "@+id/help6"
+       android:layout_width="wrap_content"
+       android:layout_height="28dp"
+       android:layout_marginLeft="40dp"  
+       android:paddingTop="15dp"  
+       android:layout_marginTop="755dp"		     
+       android:background="@drawable/popuphelp0"/>
+      
+        <TextView
+       android:id="@+id/texttitle6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="Overflow Menu"
+       android:textStyle="bold"
+       android:paddingLeft="15dp"
+       android:layout_marginTop="755dp"
+       android:layout_toRightOf="@+id/help6"       
+       android:textColor="@android:color/white"
+       android:textSize="16dip" />
+       
+         <TextView
+       android:id="@+id/textdetail6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_below="@+id/help6"         
+       android:text="Log In: Log In to the app\nLog Out: Log Out of the app\nAbout: About Page\nHelp: Help Page"
+       android:layout_marginLeft="25dp"
+       android:textColor="@android:color/white"
+       android:textSize="13dip" />
+         
+      </RelativeLayout>
+     
+      
+    </ScrollView>  
+      
+   
 </RelativeLayout>
+
