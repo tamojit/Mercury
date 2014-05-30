@@ -117,7 +117,7 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		mapFlipper.addView(mapView2, 1);
 		mapFlipper.addView(mapView3, 2);
 		mapFlipper.setDisplayedChild(CURRENT_MAP_INDEX);
-
+		//throw new RuntimeException("This is a crash");
 	}
 
 	private void modifyActionBar(String strUserName) {

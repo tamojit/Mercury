@@ -23,7 +23,9 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/CustomActionBarTheme"
+        android:debuggable="true" 
+        android:largeHeap="true">
         <activity
             android:name="com.learningpod.android.activities.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -88,6 +90,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
+    
+
+    <meta-data android:name="com.crashlytics.ApiKey" android:value="abdd2f7d6c396f4d2ba632da3bbc4856626b626a"/>
 
         
     </application>

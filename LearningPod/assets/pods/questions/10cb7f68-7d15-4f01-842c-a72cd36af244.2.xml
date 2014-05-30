@@ -2,10 +2,10 @@
   <choiceQuestion>
     <questionBody><p><b>The word <u>season</u> has more than one meaning.</b></p> <p>Choose the answer in which <i>season</i> means &quot;to add more flavor to something.&quot;</p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
-      <simpleChoice correct="false" choiceId="1"><p>While he doesn't know how to play chess, I will <i>season</i> my brother by teaching him strategies.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="2"><p>My favorite <i>season</i> is winter. Dad says he doesn't like it, because he hates to shovel snow.</p></simpleChoice>
-      <simpleChoice correct="false" choiceId="3"><p>I wanted to buy blueberries, but we have to wait until next summer when they are in <i>season</i>.</p></simpleChoice>
-      <simpleChoice correct="true" choiceId="4"><p>My little brother hates broccoli. But if mom <i>seasons</i> the vegetables with herbs and spices, he will eat them.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="1"><p>So he can play better chess, I will <i>season</i> my brother by teaching him strategies.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="2"><p>Dad says his least favorite <i>season</i> is winter because he hates to shovel snow.</p></simpleChoice>
+      <simpleChoice correct="false" choiceId="3"><p>Blueberries will taste better this summer when they are in <i>season</i>.</p></simpleChoice>
+      <simpleChoice correct="true" choiceId="4"><p>If mom <i>seasons</i> the vegetables with herbs and spices, my brother will eat them.</p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>

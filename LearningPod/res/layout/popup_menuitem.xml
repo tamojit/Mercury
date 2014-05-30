@@ -1,41 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="600dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp"
     android:layout_height="450dp"
-    android:orientation="vertical"
-   android:background="@drawable/popupmenu"
-     >  
- <ScrollView   
-        android:id="@+id/ScrollView01" 
-        android:layout_marginTop="25dp"
-       android:layout_marginLeft="15dp"
-       android:layout_marginRight="15dp" 
-      android:layout_height="572px"   
-      android:layout_width="fill_parent">  
-    
-      <TextView
-       android:id="@+id/text"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       
-       android:text=""
-       android:textColor="@android:color/white"
-       android:textSize="22dip" />
-      
-    </ScrollView>  
-       <Button
-        android:id="@+id/close"
+    android:background="@drawable/popupmenu"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/popupheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Heading"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#ffffff" />
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        android:layout_marginTop="38dp"/>
+
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="572px"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="42dp" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="22dip" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/close"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:text="CLOSE" 
-        android:textSize="18sp"
-        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
-        android:textStyle="bold"
         android:background="@drawable/sendbuttonbg"
-        />
-   
+        android:text="CLOSE"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

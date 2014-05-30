@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): Which word has the correct prefix added to the base word power to make a word that me... " data-uuid="94fb6997-de09-4130-ad44-d21c65ac6a38" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>Which word has the correct prefix added to the base word <i>power </i>to make a word that means &quot;<u>to provide with strength or authority</u>&quot;?
+    <questionBody><p><b>Which word has the correct prefix added to the base word <i>power </i>to make a word that means &quot;<u>to provide with strength or authority</u>?&quot;
 </b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="1"><p>depower</p></simpleChoice>

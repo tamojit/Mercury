@@ -440,7 +440,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 
 	// dialog to show in case of no internet connection
 
-	public void showCustomDialog() {
+	public void showCustomDialogForNoInternet() {
 		// TODO Auto-generated method stub
 		final Dialog dialog = new Dialog(MapActivityBeforeLogin.this);
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -516,9 +516,11 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			LoginDialogPopUp();
 		} else if (v instanceof TextView) {
 			// if account text has been clicked
+			// dismiss the login dialog
+			loginPopup.dismiss();
 			if (v.getTag().toString().equalsIgnoreCase("email")) {
 				if (getConnectivityStatus(this) == TYPE_NOT_CONNECTED) {
-					showCustomDialog();
+					showCustomDialogForNoInternet();
 					return;
 				}
 				// account has been selected

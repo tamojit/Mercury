@@ -395,18 +395,19 @@ containing a value of this type.
     }
     public static final class id {
         public static final int FirstText=0x7f060012;
-        public static final int FirstcolumnText=0x7f06009b;
+        public static final int FirstcolumnText=0x7f06009d;
+        public static final int ScrollView01=0x7f060081;
         public static final int SecondText=0x7f060013;
         public static final int ThirdText=0x7f060014;
-        public static final int about=0x7f0600a0;
+        public static final int about=0x7f0600a2;
         public static final int alienforexplanation=0x7f060074;
         public static final int alienforexplanationintermediate=0x7f060073;
         public static final int alienforexplanationlight=0x7f060075;
         public static final int alienforquestion=0x7f06006f;
         public static final int alienforquestionlight=0x7f060070;
         public static final int btnPrevious=0x7f06007e;
-        public static final int btnSummaryBack=0x7f06008c;
-        public static final int btnSummaryMap=0x7f06008d;
+        public static final int btnSummaryBack=0x7f06008e;
+        public static final int btnSummaryMap=0x7f06008f;
         public static final int btnlogin=0x7f060006;
         public static final int btnmapnext=0x7f06001f;
         public static final int btnmapprev=0x7f06001e;
@@ -419,29 +420,29 @@ containing a value of this type.
         public static final int choicelabel=0x7f06007c;
         public static final int choiceresulticon=0x7f06007b;
         public static final int choicesequence=0x7f060007;
-        public static final int close=0x7f060081;
+        public static final int close=0x7f060083;
         public static final int connection_status=0x7f06006c;
-        public static final int correctpercentage=0x7f060087;
+        public static final int correctpercentage=0x7f060089;
         public static final int counter=0x7f06000d;
         public static final int editText1=0x7f06006e;
         public static final int emailContainer=0x7f060005;
         public static final int explanationcontainer=0x7f060076;
         public static final int explanationcontent=0x7f060078;
         public static final int explanationheader=0x7f060077;
-        public static final int help=0x7f0600a1;
+        public static final int help=0x7f0600a3;
         public static final int hybrid=0x7f060004;
         public static final int icon=0x7f06000b;
         public static final int imageView1=0x7f060009;
         public static final int linearLayout1=0x7f060016;
         public static final int listContentView=0x7f060017;
-        public static final int login=0x7f0600a2;
+        public static final int login=0x7f0600a4;
         public static final int loginmailcontainer=0x7f060015;
         public static final int mailTest=0x7f06001c;
         public static final int mapFlipper1=0x7f06001a;
         public static final int mapscreenusername=0x7f060019;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int percentageiamge=0x7f060085;
+        public static final int percentageiamge=0x7f060087;
         public static final int planet1=0x7f060020;
         public static final int planet10=0x7f06004d;
         public static final int planet10name=0x7f06004e;
@@ -519,43 +520,44 @@ containing a value of this type.
         public static final int planet9ss=0x7f06004a;
         public static final int planetnavigation2=0x7f060052;
         public static final int planetnavigation3=0x7f06001d;
-        public static final int podname=0x7f060082;
+        public static final int podname=0x7f060084;
+        public static final int popupheader=0x7f060080;
         public static final int quesbody=0x7f060072;
         public static final int quesbodyhighlighted=0x7f060071;
         public static final int questionprogressbarcontainer=0x7f060079;
         public static final int relativeLayout1=0x7f060011;
         public static final int satellite=0x7f060002;
-        public static final int secondColumnText=0x7f06009c;
-        public static final int sectionBar=0x7f06009a;
+        public static final int secondColumnText=0x7f06009e;
+        public static final int sectionBar=0x7f06009c;
         public static final int sendEmail=0x7f06000f;
         public static final int sendEmailDummy=0x7f060010;
-        public static final int sendMailBt=0x7f060089;
-        public static final int sstar0=0x7f06008e;
-        public static final int sstar1=0x7f06008f;
-        public static final int sstar1_1=0x7f060090;
-        public static final int sstar2=0x7f060091;
-        public static final int sstar2_1=0x7f060092;
-        public static final int sstar2_5=0x7f060093;
-        public static final int sstar3=0x7f060094;
-        public static final int sstar3_1=0x7f060095;
-        public static final int sstar3_5=0x7f060096;
-        public static final int sstar4=0x7f060097;
-        public static final int sstar5=0x7f060098;
-        public static final int star=0x7f060086;
-        public static final int summaryLabel=0x7f06008a;
-        public static final int summaryQuestionicon=0x7f060084;
-        public static final int summarycorrect=0x7f060088;
-        public static final int summaryquestioncontainer=0x7f06008b;
-        public static final int summaryquestionsequence=0x7f060083;
-        public static final int terms=0x7f06009f;
+        public static final int sendMailBt=0x7f06008b;
+        public static final int sstar0=0x7f060090;
+        public static final int sstar1=0x7f060091;
+        public static final int sstar1_1=0x7f060092;
+        public static final int sstar2=0x7f060093;
+        public static final int sstar2_1=0x7f060094;
+        public static final int sstar2_5=0x7f060095;
+        public static final int sstar3=0x7f060096;
+        public static final int sstar3_1=0x7f060097;
+        public static final int sstar3_5=0x7f060098;
+        public static final int sstar4=0x7f060099;
+        public static final int sstar5=0x7f06009a;
+        public static final int star=0x7f060088;
+        public static final int summaryLabel=0x7f06008c;
+        public static final int summaryQuestionicon=0x7f060086;
+        public static final int summarycorrect=0x7f06008a;
+        public static final int summaryquestioncontainer=0x7f06008d;
+        public static final int summaryquestionsequence=0x7f060085;
+        public static final int terms=0x7f0600a1;
         public static final int terrain=0x7f060003;
-        public static final int text=0x7f060080;
+        public static final int text=0x7f060082;
         public static final int textView1=0x7f06000a;
-        public static final int thirdColumnText=0x7f06009d;
+        public static final int thirdColumnText=0x7f06009f;
         public static final int title=0x7f06000c;
         public static final int toaddress=0x7f06000e;
-        public static final int wordList=0x7f06009e;
-        public static final int wordListText=0x7f060099;
+        public static final int wordList=0x7f0600a0;
+        public static final int wordListText=0x7f06009b;
         public static final int wordlist=0x7f06001b;
     }
     public static final class integer {
@@ -589,9 +591,9 @@ containing a value of this type.
         public static final int common_menu=0x7f0c0000;
     }
     public static final class string {
-        public static final int Account_Selector=0x7f07001e;
-        public static final int action_settings=0x7f07001c;
-        public static final int app_name=0x7f07001b;
+        public static final int Account_Selector=0x7f07001f;
+        public static final int action_settings=0x7f07001d;
+        public static final int app_name=0x7f07001c;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -615,8 +617,16 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f070014;
-        public static final int btn_logout_from_google=0x7f07001f;
-        public static final int btn_revoke_access=0x7f070020;
+        public static final int btn_logout_from_google=0x7f070020;
+        public static final int btn_revoke_access=0x7f070021;
+        /** 
+  This file is automatically generated by Crashlytics to uniquely 
+  identify individual builds of your Android application.
+
+  Do NOT modify, delete, or commit to source control!
+
+         */
+        public static final int com_crashlytics_android_build_id=0x7f07001b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -690,14 +700,14 @@ containing a value of this type.
         public static final int common_signin_button_text_long=0x7f070013;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f070023;
-        public static final int drawer_close=0x7f070022;
-        public static final int drawer_open=0x7f070021;
-        public static final int hello_world=0x7f07001d;
+        public static final int desc_list_item_icon=0x7f070024;
+        public static final int drawer_close=0x7f070023;
+        public static final int drawer_open=0x7f070022;
+        public static final int hello_world=0x7f07001e;
         /**  Location client code resources (prefix with location_client) 
          */
         public static final int location_client_powered_by_google=0x7f07001a;
-        public static final int title_activity_word_list=0x7f070024;
+        public static final int title_activity_word_list=0x7f070025;
     }
     public static final class style {
         /** 

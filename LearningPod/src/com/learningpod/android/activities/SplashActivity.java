@@ -1,5 +1,6 @@
 package com.learningpod.android.activities;
 
+import com.crashlytics.android.Crashlytics;
 import java.util.HashMap;
 
 import com.learningpod.android.BackgroundAsyncTasks;
@@ -28,7 +29,8 @@ public class SplashActivity extends BaseActivity {
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	         
-	        new Handler().postDelayed(new Runnable() {
+	        Crashlytics.start(this);
+			new Handler().postDelayed(new Runnable() {
 	        	 
 	            /*
 	             * Showing splash screen with a timer. This will be useful when you

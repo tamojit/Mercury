@@ -1,10 +1,9 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Kaplan Kids (Reading): [IMAGE] What resource is this reference from? [IMAGE] What resource is this reference..." data-uuid="d2479227-26c3-4d53-91c8-2c94fc64ab34" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><b><p>
-<u>abacus</u> <i>(n)</i><br></br></p>
-<p>Pronunciation: AB uh kuhss<br></br></p>
-<p>History: 14th century<br></br></p>
-<p>an instrument made from beads and wires that is used to perform arithmetic</p></b>
+    <questionBody><p><b><u>abacus</u> <i>(n)</i>  Pronunciation: AB uh kuhss  History: 14th century
+<br></br>
+an instrument made from beads and wires that is used to perform arithmetic
+</b></p>
 <p>What resource is this reference from?</p>
 </questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
@@ -15,3 +14,5 @@
     </choiceInteraction>
   </choiceQuestion>
 </learningpod>
+
+
