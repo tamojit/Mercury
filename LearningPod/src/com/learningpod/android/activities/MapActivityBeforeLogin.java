@@ -560,6 +560,12 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				params.put("selectedAccount", selectedAccount);
 				ContentCacheStore.getContentCache().setCurrentUserEmailId(
 						selectedAccount.name);
+				// clear the non shown maps from the flipper to release the memory
+				View currentMapView = mapFlipper.getCurrentView();
+				mapFlipper.setInAnimation(null);
+				mapFlipper.setOutAnimation(null);
+				mapFlipper.removeAllViews();
+				mapFlipper.addView(currentMapView);
 				new BackgroundAsyncTasks(MapActivityBeforeLogin.this, params)
 						.execute(BackgroundTasks.SELECTED_ACCOUNT_AUTHENTICATION);
 			}

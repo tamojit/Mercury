@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map3" >
+    
+    
+	<ImageButton 
+    		    android:id = "@+id/planet11"
+    		    android:layout_width="82dp"
+    		    android:layout_height="83dp"
+    		    android:layout_marginLeft="43dp"
+    		    android:layout_marginTop="155dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/custom_planet11_bg"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet11name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="16sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Greek and Latin Roots"
+    		    android:layout_toRightOf="@+id/planet11"
+    		    android:layout_marginTop="173dp"
+    		    android:layout_marginLeft="-10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet11ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="69dp"
+    		    android:layout_marginTop="99dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="62dp"
+    		    android:layout_height="80dp"
+    		    android:background="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="152dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_marginLeft="105dp"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet11pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="9dp"
+    		        android:visibility="invisible"
+    		        android:background="#94327f"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet11pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    <ImageButton 
+    		    android:id = "@+id/planet12"
+    		    android:layout_width="83dp"
+    		    android:layout_height="83dp"
+    		    android:layout_marginLeft="210dp"
+    		    android:layout_marginTop="60dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/custom_planet12_bg"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet12name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="16sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Prefixes"
+    		    android:layout_toRightOf="@+id/planet12"
+    		    android:layout_marginTop="85dp"
+    		    android:layout_marginLeft="-10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet12ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="238dp"
+    		    android:layout_marginTop="4dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="62dp"
+    		    android:layout_height="80dp"
+    		    android:background="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="58dp" 
+    		    android:orientation="horizontal"    		     
+    		   android:layout_marginLeft="275dp"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet12pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="9dp"
+    		        android:visibility="invisible"
+    		        android:background="#94327f"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet12pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    <ImageButton 
+    		    android:id = "@+id/planet13"
+    		    android:layout_width="80dp"
+    		    android:layout_height="78dp"
+    		    android:layout_marginLeft="375dp"
+    		    android:layout_marginTop="96dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/custom_planet13_bg"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet13name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="16sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Suffixes"
+    		    android:layout_toRightOf="@+id/planet13"
+    		    android:layout_marginTop="120dp"
+    		    android:layout_marginLeft="-10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet13ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="401dp"
+    		    android:layout_marginTop="39dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="62dp"
+    		    android:layout_height="80dp"
+    		    android:background="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="92dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_marginLeft="438dp"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet13pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="9dp"
+    		        android:visibility="invisible"
+    		        android:background="#94327f"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet13pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    <ImageButton 
+    		    android:id = "@+id/planet14" 
+    		    android:layout_width="110dp"
+    		    android:layout_height="79dp"
+    		    android:layout_marginLeft="503dp"
+    		    android:layout_marginTop="215dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/custom_planet14_bg"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet14name" 
+    		    android:layout_width="150dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="16sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Relationship and Transition Words"
+    		    android:layout_toRightOf="@+id/planet14"
+    		    android:layout_marginTop="231dp"
+    		    android:layout_marginLeft="-10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet14ss"
+    		    android:visibility="invisible"
+ 
+    		    android:layout_marginLeft="548dp"
+    		    android:layout_marginTop="160dp" 
+ 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="62dp"
+    		    android:layout_height="80dp"
+    		    android:background="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+ 
+    		    android:layout_marginTop="216dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_marginLeft="584dp"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet14pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="9dp"
+    		        android:visibility="invisible"
+    		        android:background="#94327f"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet14pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+    <ImageButton 
+    		    android:id = "@+id/planet15"
+    		    android:layout_width="86dp"
+    		    android:layout_height="82dp"
+    		    android:layout_marginLeft="744dp"
+    		    android:layout_marginTop="135dp"
+    		    android:adjustViewBounds="true" 
+    		    android:background="@drawable/custom_planet15_bg"/>
+    		
+    		<TextView
+    		    android:id="@+id/planet15name" 
+    		    android:layout_width="110dp"
+    		    android:layout_height = "wrap_content"
+    		    android:textSize="16sp"
+    		    android:textColor="#ffffff"
+    		    android:textStyle="bold"
+    		    android:text = "Reference Materials"
+    		    android:layout_toRightOf="@+id/planet15"
+    		    android:layout_marginTop="155dp"
+    		    android:layout_marginLeft="-10dp"/>
+    		
+    		<ImageView
+    		    android:id = "@+id/planet15ss"
+    		    android:visibility="invisible"
+    		    android:layout_marginLeft="772dp"
+    		    android:layout_marginTop="82dp" 
+    		    android:adjustViewBounds="true"
+    		    android:layout_width="62dp"
+    		    android:layout_height="80dp"
+    		    android:background="@drawable/spaceshipwithoutflag"/>
+    		
+    		<LinearLayout 
+    		    android:layout_width="100dp"    		    
+    		    android:layout_height="9dp"
+    		    android:layout_marginTop="137dp" 
+    		    android:orientation="horizontal"    		     
+    		    android:layout_marginLeft="808dp"
+    		    android:weightSum="1">
+    		    
+    		    <View
+    		        android:id="@+id/planet15pbred"
+    		        android:layout_width="0dp"
+    		        android:layout_weight="0.2"
+    		        android:layout_height="9dp"
+    		        android:visibility="invisible"
+    		        android:background="#94327f"/>
+    		    
+    		    <View android:layout_width="0dp"
+    		        android:id="@+id/planet15pbblue"
+    		        android:layout_weight="0.8"
+    		        android:layout_height="9dp"    		        
+    		        android:visibility="invisible"
+    		        android:background="#8896a3"/>
+    		</LinearLayout>
+    
+        	    
+   			
+      <Button
+        android:id="@+id/wordlist"
+        android:layout_width="121dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="780dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/wordlist" />
+    
+     <Button
+        android:id="@+id/mailTest"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:text="Mail Test Button"
+        android:visibility="gone" />
+     
+     <ImageView
+	         android:layout_height="wrap_content"
+	         android:layout_width="700dp"
+	         android:layout_marginLeft="53dp"
+	         android:layout_alignParentBottom="true"
+	         android:layout_marginBottom="10dp"
+	         android:background="@drawable/apptittleinmap" />
+     
+    
+     <ImageView
+    		    android:id = "@+id/planetnavigation3"    		    
+    		    android:layout_marginLeft="198dp"
+    		    android:layout_marginTop="305dp" 
+    		    android:layout_gravity="left"
+    		    android:layout_width="83dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/planetnavigation"/>
+     
+     <Button android:layout_width="120dp" 
+    			    android:layout_marginTop="316dp"
+    			    android:layout_marginLeft="55dp"		    
+	                android:id="@+id/btnmapprev"	                 
+	                android:layout_height="75dp"
+	                android:textSize="18sp"
+	                android:paddingLeft="39dp"
+	                android:text = "BACK"
+	                android:background="@drawable/mapbackbuttonbg"
+	                android:textColor="#ffffff"
+	                android:textStyle="bold"	                
+	                
+	                />
+     
+     
+    		
+
+         
+             
+             
+             
+    
+    			
+    			
+    			
+    
+
+</RelativeLayout>

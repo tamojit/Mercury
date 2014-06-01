@@ -91,7 +91,7 @@ public class PodQuestionActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		System.gc();
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		isSmallerScreen = false;
@@ -137,6 +137,7 @@ public class PodQuestionActivity extends BaseActivity {
 			showSummaryScreen();
 			return;
 		}
+		
 		setContentView(R.layout.podquestionrelativeview);
 		// create the question progress bar
 		createProgressBar(userProgressTemp);
@@ -150,12 +151,10 @@ public class PodQuestionActivity extends BaseActivity {
 	private void modifyActionBar() {
 		// get the action bar
 		ActionBar actionBar = getActionBar();
-		// getActionBar().setTitle(goToMapView.getText().toString());
-		getActionBar().setIcon(R.drawable.arrow);
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(false);
 		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
-		TextView goToMapButton = (TextView) actionBar.getCustomView()
-				.findViewById(R.id.title);
+		LinearLayout goToMapButton = (LinearLayout) actionBar.getCustomView()
+				.findViewById(R.id.navbarmap);
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
 		podTitle.setText(selectedPod.getTitle());
@@ -174,7 +173,7 @@ public class PodQuestionActivity extends BaseActivity {
 		});
 
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
-				| ActionBar.DISPLAY_SHOW_HOME);
+				);
 
 	}
 
@@ -248,8 +247,9 @@ public class PodQuestionActivity extends BaseActivity {
 		questionHighlightedView.setTypeface(font);
 		if(isSmallerScreen){
 			questionHighlightedView.setTextSize(17);
-			explanationContentView.setTextSize(17);
 			questionBodyView.setTextSize(15);
+			explanationHeaderView.setTextSize(17);
+			explanationContentView.setTextSize(16);
 		}
 		// get the previous (Back) question button. clicking on the back button
 		// will take the user to the previous question in the explanation screen
@@ -729,7 +729,8 @@ public class PodQuestionActivity extends BaseActivity {
 				}
 				isCurrentScreenForExplanation = true;
 				setContentView(R.layout.podquestionrelativeview);
-
+				((TextView) getActionBar().getCustomView().findViewById(R.id.podname))
+				.setText(selectedPod.getTitle());
 				createProgressBar(userProgressCompleted);
 				showNextQuestion();
 				enableScreenState();
@@ -795,7 +796,8 @@ public class PodQuestionActivity extends BaseActivity {
 					}
 					isCurrentScreenForExplanation = true;
 					setContentView(R.layout.podquestionrelativeview);
-
+					((TextView) getActionBar().getCustomView().findViewById(R.id.podname))
+					.setText(selectedPod.getTitle());
 					createProgressBar(userProgressCompleted);
 					showNextQuestion();
 					enableScreenState();
@@ -1418,7 +1420,7 @@ public class PodQuestionActivity extends BaseActivity {
 				new Handler().postDelayed(new Runnable(){
 					@Override
 					public void run() {
-						shootingStar0.clearAnimation();
+						shootingStar0.clearAnimation();						
 						shootingStar1.clearAnimation();
 						shootingStar1_1.clearAnimation();
 						shootingStar2.clearAnimation();
@@ -1428,7 +1430,20 @@ public class PodQuestionActivity extends BaseActivity {
 						shootingStar3_1.clearAnimation();
 						shootingStar3_5.clearAnimation();
 						shootingStar4.clearAnimation();
-						shootingStar5.clearAnimation();			
+						shootingStar5.clearAnimation();	
+						
+						shootingStar0.setBackground(null);
+						shootingStar1.setBackground(null);
+						shootingStar1_1.setBackground(null);
+						shootingStar2.setBackground(null);
+						shootingStar2_1.setBackground(null);
+						shootingStar2_5.setBackground(null);
+						shootingStar3.setBackground(null);
+						shootingStar3_1.setBackground(null);
+						shootingStar3_5.setBackground(null);
+						shootingStar3_5.setBackground(null);
+						shootingStar4.setBackground(null);
+						shootingStar5.setBackground(null);
 						
 					}					
 				}, 6000);
@@ -1455,11 +1470,11 @@ public class PodQuestionActivity extends BaseActivity {
 		TranslateAnimation translateAnimation = new TranslateAnimation(0,
 				destLocation[0] - origLocation[0], 0, destLocation[1]
 						- origLocation[1]);
-		translateAnimation.setDuration(1300);
+		translateAnimation.setDuration(1000);
 		translateAnimation.setFillAfter(false);
 		// create rotation animation
 		final Animation rotateAnimation = new RotateAnimation(0f,30f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-		rotateAnimation.setDuration(700);
+		rotateAnimation.setDuration(400);
 		rotateAnimation.setFillAfter(false);
 		
 		rotateAnimation.setAnimationListener(new AnimationListener() {

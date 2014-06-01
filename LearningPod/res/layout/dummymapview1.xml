@@ -290,7 +290,60 @@
     
     
    			
-      
+      <Button
+        android:id="@+id/wordlist"
+        android:layout_width="121dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="780dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/wordlist" />
+    
+     <Button
+        android:id="@+id/mailTest"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:text="Mail Test Button"
+        android:visibility="gone" />
+     
+     <ImageView
+	         android:layout_height="wrap_content"
+	         android:layout_width="700dp"
+	         android:layout_marginLeft="53dp"
+	         android:layout_alignParentBottom="true"
+	         android:layout_marginBottom="10dp"
+	         android:background="@drawable/apptittleinmap" />
+     
+    
+     <ImageView
+    		    android:id = "@+id/planetnavigation3"    		    
+    		    android:layout_marginLeft="198dp"
+    		    android:layout_marginTop="305dp" 
+    		    android:layout_gravity="left"
+    		    android:layout_width="83dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/planetnavigation"/>
+     
+     
+     
+     <Button android:layout_width="120dp" 
+   			    android:layout_marginTop="316dp"
+   			    android:layout_marginLeft="781dp"   			    
+                android:id="@+id/btnmapnext"
+                android:layout_gravity="right"
+                android:layout_height="75dp"
+                android:textSize="18sp"
+                android:text = "NEXT"
+                 android:paddingLeft="-33dp"
+                android:background="@drawable/next"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"	                
+                
+                />
+    		
      
     
 </RelativeLayout>

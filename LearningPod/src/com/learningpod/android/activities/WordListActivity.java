@@ -15,6 +15,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -49,10 +50,12 @@ public class WordListActivity extends BaseActivity
         Font = Typeface.createFromAsset(getAssets(),
     			"fonts/NotoSans-Bold.ttf");
         modifyActionBar();
-        wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
+        ((Button)findViewById(R.id.btnwordlistclose)).setVisibility(View.INVISIBLE);
+        new LoadWordListTask().execute("");
+       /* wordListContentView=(LinearLayout)findViewById(R.id.listContentView);
         closewordlist=(Button)findViewById(R.id.btnwordlistclose);
         closewordlist.setTypeface(headerFont);
-        createWordList();
+        createWordList();*/
         
     }    
     
@@ -61,14 +64,11 @@ public class WordListActivity extends BaseActivity
     
 	private void modifyActionBar() {
 		// get the action bar
-		ActionBar actionBar = getActionBar();
-		// getActionBar().setTitle(goToMapView.getText().toString());
-		getActionBar().setIcon(R.drawable.arrow);	 
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		ActionBar actionBar = getActionBar();			 
+		actionBar.setDisplayHomeAsUpEnabled(false);
 		actionBar.setCustomView(R.layout.ques_screen_custom_bar);
-		TextView goToMapButton = (TextView) actionBar.getCustomView()
-				.findViewById(R.id.title);
-		goToMapButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19);
+		LinearLayout goToMapButton = (LinearLayout) actionBar.getCustomView()
+				.findViewById(R.id.navbarmap);		
 		TextView podTitle = (TextView) actionBar.getCustomView().findViewById(
 				R.id.podname);
 		podTitle.setText("Word List");
@@ -81,16 +81,12 @@ public class WordListActivity extends BaseActivity
 		goToMapButton.setOnClickListener(new OnClickListener() {
 
 			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				//Intent intent = new Intent(MultiColumnActivity.this,MapActivityBeforeLogin.class);				
-				//startActivity(intent);
+			public void onClick(View v) {			
 				WordListActivity.this.finish();
 			}
 		});
 
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
-				| ActionBar.DISPLAY_SHOW_HOME);
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
 	}
    
@@ -291,7 +287,39 @@ private void populatehardcodedlist(int k) {
 		}
 	}
 	
+ class LoadWordListTask extends AsyncTask<Object, Integer, Object>{
 
+	 @Override
+	protected void onPreExecute() {
+		 getProgressDialog().setMessage("Loading Word List...");
+		 getProgressDialog().show();
+	}
+	@Override
+	protected Object doInBackground(Object... params) {
+		// TODO Auto-generated method stub
+			LayoutInflater inflator = getLayoutInflater();
+			View root = inflator.inflate(R.layout.main, null);
+			wordListContentView=(LinearLayout)root.findViewById(R.id.listContentView);
+	        closewordlist=(Button)root.findViewById(R.id.btnwordlistclose);
+	        
+	        closewordlist.setTypeface(headerFont);
+	        createWordList();
+	        try {
+				Thread.sleep(300);
+			} catch (InterruptedException e) {				
+				e.printStackTrace();
+			}
+		return root;
+	}
+	
+	@Override
+	protected void onPostExecute(Object result) {
+		View root = (View)result;
+		setContentView(root);
+		getProgressDialog().hide();
+	}
+	 
+ }
 
 
 }

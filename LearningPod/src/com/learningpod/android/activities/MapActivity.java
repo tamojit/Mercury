@@ -1,5 +1,6 @@
 package com.learningpod.android.activities;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -68,7 +70,28 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		UserProfileBean userProfileBean = ContentCacheStore.getContentCache()
+				.getLoggedInUserProfile();
+		modifyActionBar(userProfileBean.getName());
+		/*if(CURRENT_MAP_INDEX==0) setContentView(R.layout.dummymapview1);		
+		if(CURRENT_MAP_INDEX==1) setContentView(R.layout.dummymapview2);		
+		if(CURRENT_MAP_INDEX==2) setContentView(R.layout.dummymapview3);		
+		new LoadMapTask().execute("");*/
+		createMapScreen();	
+	}
+	
+	private void createMapScreen(){
+		setContentView(R.layout.maplayout);
+		mapFlipper = (ViewFlipper)findViewById(R.id.mapFlipper1);
+		// get user profile and pods from content cache
+		
+		// add listeners to next and previous buttons
+		// add listeners to next and previous buttons
+		findViewById(R.id.btnmapnext).setOnClickListener(MapActivity.this);
+		findViewById(R.id.btnmapprev).setOnClickListener(MapActivity.this);
+		((Button) findViewById(R.id.btnmapnext)).setTypeface(headerFont);
+		((Button) findViewById(R.id.btnmapprev)).setTypeface(headerFont);
+		findViewById(R.id.wordlist).setOnClickListener(MapActivity.this);
 		headerFont = Typeface.createFromAsset(getAssets(),
 				"fonts/PaytoneOne.ttf");
 		DisplayMetrics metrics = new DisplayMetrics();
@@ -77,49 +100,28 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		if (metrics.heightPixels <= 800) {
 			isSmallerScreen = true;
 		}
-		// get user profile and pods from content cache
-		UserProfileBean userProfileBean = ContentCacheStore.getContentCache()
-				.getLoggedInUserProfile();
-		modifyActionBar(userProfileBean.getName());
+		
 		// get list of pods. getting
 		pods = ContentCacheStore.getContentCache().getPods();
-		setContentView(R.layout.maplayout);
-		// create the view flipper
-		mapFlipper = (ViewFlipper) findViewById(R.id.mapFlipper1);
-
-		// get Inflater instance
+				// get Inflater instance
 		LayoutInflater inflater = getLayoutInflater();
 		// inflate and create the Map Views
 		View mapView1 = createMapView(R.layout.mapview1, 0);
 		View mapView2 = createMapView(R.layout.mapview2, 5);
-		View mapView3 = createMapView(R.layout.mapview3, 10);
+		View mapView3 = createMapView(R.layout.mapview3, 10);			
 
-		// add listeners to next and previous buttons
-		// add listeners to next and previous buttons
-		findViewById(R.id.btnmapnext).setOnClickListener(this);
-		findViewById(R.id.btnmapprev).setOnClickListener(this);
-		((Button) findViewById(R.id.btnmapnext)).setTypeface(headerFont);
-		((Button) findViewById(R.id.btnmapprev)).setTypeface(headerFont);
-
-		// dont show the next and prev button if this is the first or the last
-		// view
+		// add views to the flipper
+		mapFlipper.addView(mapView1, 0);
+		mapFlipper.addView(mapView2, 1);
+		mapFlipper.addView(mapView3, 2);	
+		mapFlipper.setDisplayedChild(CURRENT_MAP_INDEX);
 		if (CURRENT_MAP_INDEX == 0) {
 			findViewById(R.id.btnmapprev).setVisibility(View.INVISIBLE);
 		}
 		if (CURRENT_MAP_INDEX == 2) {
 			findViewById(R.id.btnmapnext).setVisibility(View.INVISIBLE);
 		}
-
-		findViewById(R.id.wordlist).setOnClickListener(this);
-
-		// add views to the flipper
-		mapFlipper.addView(mapView1, 0);
-		mapFlipper.addView(mapView2, 1);
-		mapFlipper.addView(mapView3, 2);
-		mapFlipper.setDisplayedChild(CURRENT_MAP_INDEX);
-		//throw new RuntimeException("This is a crash");
 	}
-
 	private void modifyActionBar(String strUserName) {
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowHomeEnabled(false);
@@ -315,29 +317,104 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		}
 
 		else if (v instanceof ImageButton) {
-			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			/*
-			 * if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId
-			 * ==2||selectedPlatentId==3 || selectedPlatentId==4 ||
-			 * selectedPlatentId==5 || selectedPlatentId==10 )){ return; }
-			 */
+			int selectedPlatentId = Integer.parseInt(v.getTag().toString());			
 			PodBean selectedPod = pods.get(selectedPlatentId);
 			HashMap<String, Object> params = new HashMap<String, Object>();
 			params.put("selectedPod", selectedPod);
+			
+			// clear the non shown maps from the flipper to release the memory
+			View currentMapView = mapFlipper.getCurrentView();
+			mapFlipper.setInAnimation(null);
+			mapFlipper.setOutAnimation(null);
+			mapFlipper.removeAllViews();
+			mapFlipper.addView(currentMapView);
+			
 			new BackgroundAsyncTasks(MapActivity.this, params)
 					.execute(BackgroundTasks.LOAD_POD_QUESTIONS);
 		} else if (v instanceof TextView) {
-			int selectedPlatentId = Integer.parseInt(v.getTag().toString());
-			/*
-			 * if(!(selectedPlatentId==0||selectedPlatentId==1||selectedPlatentId
-			 * ==2||selectedPlatentId==3 || selectedPlatentId==4 ||
-			 * selectedPlatentId==5 || selectedPlatentId==10 )){ return; }
-			 */
+			int selectedPlatentId = Integer.parseInt(v.getTag().toString());			
 			PodBean selectedPod = pods.get(selectedPlatentId);
 			HashMap<String, Object> params = new HashMap<String, Object>();
-			params.put("selectedPod", selectedPod);
+			params.put("selectedPod", selectedPod);			
+			// clear the non shown maps from the flipper to release the memory
+			View currentMapView = mapFlipper.getCurrentView();
+			mapFlipper.setInAnimation(null);
+			mapFlipper.setOutAnimation(null);
+			mapFlipper.removeAllViews();
+			mapFlipper.addView(currentMapView);
 			new BackgroundAsyncTasks(MapActivity.this, params)
 					.execute(BackgroundTasks.LOAD_POD_QUESTIONS);
+		}
+	}
+	
+	class LoadMapTask extends AsyncTask<Object, Integer, Object>{
+
+		 private View rootView;
+
+		@Override
+		protected void onPreExecute() {
+			 LayoutInflater inflator = getLayoutInflater();
+			 rootView = inflator.inflate(R.layout.maplayout, null);
+			 getProgressDialog().setMessage("Loading...");
+			 getProgressDialog().show();
+		}
+		@Override
+		protected Object doInBackground(Object... params) {
+			// create the view flipper
+			
+			mapFlipper = (ViewFlipper) rootView.findViewById(R.id.mapFlipper1);
+			// get user profile and pods from content cache
+			
+			// add listeners to next and previous buttons
+			// add listeners to next and previous buttons
+			rootView.findViewById(R.id.btnmapnext).setOnClickListener(MapActivity.this);
+			rootView.findViewById(R.id.btnmapprev).setOnClickListener(MapActivity.this);
+			((Button) rootView.findViewById(R.id.btnmapnext)).setTypeface(headerFont);
+			((Button) rootView.findViewById(R.id.btnmapprev)).setTypeface(headerFont);
+			rootView.findViewById(R.id.wordlist).setOnClickListener(MapActivity.this);
+			headerFont = Typeface.createFromAsset(getAssets(),
+					"fonts/PaytoneOne.ttf");
+			DisplayMetrics metrics = new DisplayMetrics();
+			getWindowManager().getDefaultDisplay().getMetrics(metrics);
+			isSmallerScreen = false;
+			if (metrics.heightPixels <= 800) {
+				isSmallerScreen = true;
+			}
+			
+			// get list of pods. getting
+			pods = ContentCacheStore.getContentCache().getPods();
+					// get Inflater instance
+			LayoutInflater inflater = getLayoutInflater();
+			// inflate and create the Map Views
+			View mapView1 = createMapView(R.layout.mapview1, 0);
+			View mapView2 = createMapView(R.layout.mapview2, 5);
+			View mapView3 = createMapView(R.layout.mapview3, 10);			
+
+			// add views to the flipper
+			mapFlipper.addView(mapView1, 0);
+			mapFlipper.addView(mapView2, 1);
+			mapFlipper.addView(mapView3, 2);	
+			mapFlipper.setDisplayedChild(CURRENT_MAP_INDEX);
+			if (CURRENT_MAP_INDEX == 0) {
+				rootView.findViewById(R.id.btnmapprev).setVisibility(View.INVISIBLE);
+			}
+			if (CURRENT_MAP_INDEX == 2) {
+				rootView.findViewById(R.id.btnmapnext).setVisibility(View.INVISIBLE);
+			}
+			return rootView;
+		}
+		
+		@Override
+		protected void onPostExecute(Object result) {
+			// dont show the next and prev button if this is the first or the last
+			// view			
+			View rootView =(View)result;
+			try {
+				Thread.sleep(400);
+			} catch (InterruptedException e) {				
+			}
+			setContentView(rootView);			
+			getProgressDialog().hide();
 		}
 	}
 
