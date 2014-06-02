@@ -1,28 +1,28 @@
  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="500dp"
-    android:layout_height="300dp"
+   android:layout_width="420dp"
+    android:layout_height="250dp"
     android:orientation="vertical"
     android:background="@drawable/emailpanelpop"
   >  
 	
 	   <EditText
 	       android:id="@+id/toaddress"
-           android:layout_width="420dp"
+           android:layout_width="350dp"
 	       android:layout_height="wrap_content"
 	       android:ems="10"
 	       android:textSize="25dp"
 	       android:textColor="#EADB66"
-	       android:layout_marginTop="140dp"
-	       android:layout_marginLeft="60dp"
+	       android:layout_marginTop="110dp"
+	       android:layout_marginLeft="52dp"
 	       android:inputType="textEmailAddress"
 	      />
 	 
 	   <Button
 	       android:id="@+id/sendEmail"
-	       android:layout_width="wrap_content"
-	       android:layout_height="wrap_content"
-	       android:layout_marginTop="230dp"
-	       android:layout_marginLeft="288dp"
+	       android:layout_width="128dp"
+	       android:layout_height="45dp"
+	       android:layout_marginTop="182dp"
+	       android:layout_marginLeft="280dp"
 	       android:gravity="right"
 	       android:background="@drawable/mailsendbutton"
 	       android:text="" 

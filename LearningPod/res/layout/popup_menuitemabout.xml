@@ -15,6 +15,29 @@
        android:textSize="20dip"
        android:textStyle="bold"/>
      
+     
+     <LinearLayout 
+         android:id="@+id/closebutton"
+         android:layout_height="28dp"
+         android:layout_width="28dp"
+         android:layout_toRightOf="@+id/textterms" 
+         android:layout_marginLeft="340dp"
+         android:layout_marginTop="7dp"
+         android:orientation="horizontal"
+         android:background="@drawable/popup_close_button"
+        
+        >
+         
+             <ImageView android:id = "@+id/maparrow"
+             android:layout_width="20dp"
+	       	 android:layout_height="20dp"
+	       	 android:layout_marginLeft="4dp"
+             android:layout_marginTop="4dp"
+	       	 android:background="@drawable/popupclosebutton"
+	       	 />
+     </LinearLayout>
+     
+    <!--  
       <Button
         android:id="@+id/close"
         android:layout_toRightOf="@+id/textterms" 
@@ -27,6 +50,7 @@
         android:textStyle="bold"
         android:background="@drawable/popupclosebutton"
         />
+        -->
       
        <View android:layout_width="fill_parent"
           android:layout_height="1.3dip"
@@ -60,7 +84,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"          
        android:text="Learningpod makes great practice free! Choose from over 48,000 high-quality questions on subjects like Math, English, Science, History and more.\n\nIf you're an educator, Learningpod offers easy-to-use tools for assignments, as well as content tagged with Common Core State Standards."
-       android:layout_marginLeft="10dp"      
+       android:layout_marginLeft="20dp"      
        android:textColor="@android:color/white"
        android:layout_marginTop="5dp"
        android:textSize="14dip" /> 
@@ -70,7 +94,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"          
        android:text="Check us out at"
-       android:layout_marginLeft="10dp"      
+       android:layout_marginLeft="20dp"      
        android:textColor="@android:color/white"
        android:layout_marginTop="130dp"
        android:textSize="14dip" /> 

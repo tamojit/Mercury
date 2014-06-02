@@ -479,8 +479,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		dialog.setContentView(R.layout.network_connectivity_alert);
 
-		final EditText editText = (EditText) dialog
-				.findViewById(R.id.editText1);
+	//	final EditText editText = (EditText) dialog
+	//			.findViewById(R.id.editText1);
 
 		Button button = (Button) dialog.findViewById(R.id.button1);
 		button.setOnClickListener(new View.OnClickListener() {
