@@ -130,6 +130,7 @@
         
       </string-array>
       
+     <string name="Learningpodlink"><a href="http://www.learningpod.com">www.learningpod.com</a></string>  
+     <string name="Learningpodemail">Please email<a href="support@learningpod.com">support@learningpod.com</a> if you have feedback or questions.</string>
     
-      
 </resources>
