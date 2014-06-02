@@ -213,3 +213,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+LearningPod/assets/crashlytics-build.properties
+LearningPod/res/values/com_crashlytics_export_strings.xml
