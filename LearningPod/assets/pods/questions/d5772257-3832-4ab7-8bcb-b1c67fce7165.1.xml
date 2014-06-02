@@ -6,7 +6,7 @@
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>Supporters brought an <i>initiative</i> with them to the hearing.</p><p></p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice2"><p>The senator wrote an <i>initiative</i> and brought it to Congress.</p><p></p></simpleChoice>
-      <simpleChoice correct="true" choiceId="answerChoice3"><p>The government <i>initiative</i>should result in cleaner air.</p><p> </p></simpleChoice>
+      <simpleChoice correct="true" choiceId="answerChoice3"><p>The government <i>initiative</i> should result in cleaner air.</p><p> </p></simpleChoice>
       <simpleChoice correct="false" choiceId="answerChoice4"><p>A clean <i>initiative</i> resulted in improved air near the factory.</p><p> </p></simpleChoice>
     </choiceInteraction>
   </choiceQuestion>
