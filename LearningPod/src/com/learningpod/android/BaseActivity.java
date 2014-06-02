@@ -73,6 +73,12 @@ public class BaseActivity extends Activity implements
 					R.layout.popup_menuitem, null);
 			menuitempopup.setContentView(loginWindowView);
 			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
+			TextView wordlist=(TextView)loginWindowView.findViewById(R.id.textdetail3);
+			wordlist.setText(Html.fromHtml("[word list meteorite + label] You can access the<b> Word List </b> from the map. You’ll find a list of words for four planets: Tier II Nouns, Tier II Verbs, Tier III Vocabulary, and Relationship and Transition Words."));
+			TextView practicingquestions=(TextView)loginWindowView.findViewById(R.id.textdetail4);
+			practicingquestions.setText(Html.fromHtml("Select an answer choice and tap <b>Submit</b>. A green check mark [green check] means you got the answer right and a red x mark [red x mark] means you didn’t. You’ll also get a short explanation.<br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
+			TextView completequestions=(TextView)loginWindowView.findViewById(R.id.textdetail5);
+			completequestions.setText(Html.fromHtml("Once you complete all the questions in a planet, you’ll see a summary screen that shows how well you did. From this screen, you can email your results to your teacher or parent.<br />You can review the questions by tapping on a question number or using <b>Back</b>."));
 			Button Close = (Button) loginWindowView.findViewById(R.id.close);
 			Close.setOnClickListener(new OnClickListener() {
 

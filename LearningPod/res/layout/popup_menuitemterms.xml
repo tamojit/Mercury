@@ -53,7 +53,7 @@
        android:id="@+id/textdetailtop"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"          
-       android:text="Stellar Vocabulary for 5th (“the App”) is owned by Learningpod, Inc. (“we or us”).By using the App you agree to be bound by these Terms of Use and Private Policy(“the Agreement”). "
+       android:text="Stellar Vocabulary for 5th(“the App”)is owned by Learningpod, Inc. (“we or us”).By using the App you agree to be bound by these Terms of Use and Private Policy(“the Agreement”). "
        android:layout_marginLeft="10dp"      
        android:textColor="@android:color/white"
        android:layout_marginTop="5dp"

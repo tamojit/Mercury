@@ -64,7 +64,7 @@
        android:id="@+id/texttitle"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Log In"
+       android:text="Getting Started"
        android:paddingLeft="5dp"
        android:paddingTop="2dp"
        android:textStyle="bold"
@@ -77,7 +77,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help1"         
-       android:text="Log In to the app by selecting a Google Account (email address) that is configured in your device. Once you log in and start practicing questions, your practice history will be stored against your login account."
+       android:text="Log in with your Google account to start answering questions. We’ll store your practice on your device so you can always resume where you left off."
        android:layout_marginLeft="25dp"
     
        android:textColor="@android:color/white"
@@ -98,17 +98,17 @@
        android:layout_height="30dp"
        android:layout_marginLeft="25dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="100dp"		     
+       android:layout_marginTop="94dp"		     
        android:background="@drawable/popuphelp3"/>
       
         <TextView
        android:id="@+id/texttitle2"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Map Screen"
+       android:text="Navigating the Map"
        android:textStyle="bold"
        android:paddingLeft="3dp"
-       android:layout_marginTop="105dp"
+       android:layout_marginTop="99dp"
        android:layout_toRightOf="@+id/help2"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
@@ -118,7 +118,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help2"         
-       android:text="The Map screen displays 15 “planets,” each of which corresponds to a distinct category for fifth grade vocabulary. Each planet contains five questions. Click on a planet to get started and answer questions.\n\nA little building on the planet along with a progress bar indicates that you are practicing within that planet. Once you answer all five questions, you will see a ‘flag’ atop the building that signifies completion."
+       android:text="You can choose any planet on the map at any time.\n[planet] Each planet is a question set on a specific topic, like “Context Clues - Nonsense Words.”\n[planet with building + progress bar] If you’re practicing a set, a little building will appear on top of the planet, along with a progress bar.\n[planet with building + flag] Once you’ve completed a planet, a flag will appear on top of the building. "
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
        android:textSize="13dip" 
@@ -146,7 +146,7 @@
        android:id="@+id/texttitle3"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Word List"
+       android:text="Using the Word List"
        android:textStyle="bold"
        android:layout_marginTop="264dp"
        android:paddingLeft="4dp"
@@ -159,7 +159,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help3"         
-       android:text="Click on Word List to access a list of grade-appropriate words."
+       android:text=""
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
        android:textSize="13dip" />
@@ -178,15 +178,15 @@
        android:layout_height="30dp"
        android:layout_marginLeft="25dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="330dp"		     
+       android:layout_marginTop="362dp"		     
        android:background="@drawable/popuphelp2"/>
       
         <TextView
        android:id="@+id/texttitle4"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Question/Answer Page"
-       android:layout_marginTop="337dp"
+       android:text="Practicing Questions"
+       android:layout_marginTop="367dp"
        android:layout_marginLeft="4dp"
        android:textStyle="bold"
        android:layout_toRightOf="@+id/help4"       
@@ -198,7 +198,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help4"         
-       android:text="The question-and-answer page contains a multiple choice question and a set of answer choices for that question. Read the question carefully, select an answer choice, and click Submit to get a visual indication of whether you answered the question correctly or not. You will also see a brief explanation of the answer. Click Next to proceed to the next question. Click Back to go to the previous question you practiced.\n\nThe progress indicator on the top right corner helps you keep track of your activity within a planet. It will give you an overview of the number of questions you answered correctly or incorrectly thus far.\n\nClick on Map to go back to the Map Screen."
+       android:text="Select an answer choice and tap Submit. A green check mark [green check] means you got the answer right and a red x mark [red x mark] means you didn’t. You’ll also get a short explanation.\nTap Next to go to a new question and Back to go to the question you just practiced."
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
        android:textSize="13dip" />
@@ -217,16 +217,16 @@
        android:layout_height="30dp"
        android:layout_marginLeft="25dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="563dp"		     
+       android:layout_marginTop="495dp"		     
        android:background="@drawable/popuphelp1"/>
       
         <TextView
        android:id="@+id/texttitle5"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Summary Page"
+       android:text="Completing a Planet"
        android:textStyle="bold"
-       android:layout_marginTop="568dp"
+       android:layout_marginTop="500dp"
        android:paddingLeft="2dp"
        android:layout_toRightOf="@+id/help5"       
        android:textColor="@android:color/white"
@@ -237,7 +237,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help5"         
-       android:text="Once you complete all the questions in a specific planet, you will see a  summary page that indicates the percentage of correct answers. This summary page also allows you to send your results to the email address of your choice.\n\nClick on the question numbers on the summary page to review a planet you have already practiced. Alternatively, click on the Back button on the summary page to see the last question of a particular planet; use the Back and Next buttons to review questions."
+       android:text=""
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
        android:textSize="13dip" />
@@ -253,20 +253,20 @@
           <ImageButton 
        android:id = "@+id/help6"
        android:layout_width="wrap_content"
-       android:layout_height="28dp"
+       android:layout_height="25dp"
        android:layout_marginLeft="40dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="755dp"		     
+       android:layout_marginTop="629dp"		     
        android:background="@drawable/popuphelp0"/>
       
         <TextView
        android:id="@+id/texttitle6"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
-       android:text="Overflow Menu"
+       android:text="Contact Us"
        android:textStyle="bold"
        android:paddingLeft="15dp"
-       android:layout_marginTop="755dp"
+       android:layout_marginTop="629dp"
        android:layout_toRightOf="@+id/help6"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
@@ -275,8 +275,9 @@
        android:id="@+id/textdetail6"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"    
-       android:layout_below="@+id/help6"         
-       android:text="Log In: Log In to the app\nLog Out: Log Out of the app\nAbout: About Page\nHelp: Help Page"
+       android:layout_below="@+id/help6"  
+       android:autoLink="email"       
+       android:text="@string/Learningpodemail"
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
        android:textSize="13dip" />
