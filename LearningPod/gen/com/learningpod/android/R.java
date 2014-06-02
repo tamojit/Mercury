@@ -15,194 +15,27 @@ public final class R {
         public static final int out_to_right=0x7f040003;
     }
     public static final class array {
-        public static final int Relationshipwords=0x7f0a0004;
+        public static final int Relationshipwords=0x7f080004;
         /**  Nav Drawer List Item Icons 
  Keep them in order as the titles are in 
          */
-        public static final int nav_drawer_icons=0x7f0a0000;
+        public static final int nav_drawer_icons=0x7f080000;
         /**  <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
          */
-        public static final int nounwordlist=0x7f0a0001;
-        public static final int verbwordlist=0x7f0a0002;
-        public static final int vocabularywordlist=0x7f0a0003;
+        public static final int nounwordlist=0x7f080001;
+        public static final int verbwordlist=0x7f080002;
+        public static final int vocabularywordlist=0x7f080003;
     }
     public static final class attr {
-        /** 
-    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
-    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
-    &lt;width&gt;x&lt;height&gt;.
-    
-         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int adSize=0x7f010000;
-        /** 
-    A comma-separated list of the supported ad sizes. The sizes must be one of
-    BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
-    WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
-    
-         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int adSizes=0x7f010001;
-        /**  The ad unit ID. 
-         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int adUnitId=0x7f010002;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cameraBearing=0x7f010004;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cameraTargetLat=0x7f010005;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cameraTargetLng=0x7f010006;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cameraTilt=0x7f010007;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cameraZoom=0x7f010008;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>normal</code></td><td>1</td><td></td></tr>
-<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
-<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
-<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
-</table>
-         */
-        public static final int mapType=0x7f010003;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiCompass=0x7f010009;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiRotateGestures=0x7f01000a;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiScrollGestures=0x7f01000b;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiTiltGestures=0x7f01000c;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiZoomControls=0x7f01000d;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int uiZoomGestures=0x7f01000e;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int useViewLifecycle=0x7f01000f;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int zOrderOnTop=0x7f010010;
     }
     public static final class color {
-        public static final int common_action_bar_splitter=0x7f050009;
-        /**  Sign-in Button Colors 
-         */
-        public static final int common_signin_btn_dark_text_default=0x7f050000;
-        public static final int common_signin_btn_dark_text_disabled=0x7f050002;
-        public static final int common_signin_btn_dark_text_focused=0x7f050003;
-        public static final int common_signin_btn_dark_text_pressed=0x7f050001;
-        public static final int common_signin_btn_default_background=0x7f050008;
-        public static final int common_signin_btn_light_text_default=0x7f050004;
-        public static final int common_signin_btn_light_text_disabled=0x7f050006;
-        public static final int common_signin_btn_light_text_focused=0x7f050007;
-        public static final int common_signin_btn_light_text_pressed=0x7f050005;
-        public static final int common_signin_btn_text_dark=0x7f050010;
-        public static final int common_signin_btn_text_light=0x7f050011;
-        public static final int counter_text_bg=0x7f05000e;
-        public static final int counter_text_color=0x7f05000f;
-        public static final int list_background=0x7f05000b;
-        public static final int list_background_pressed=0x7f05000c;
-        public static final int list_divider=0x7f05000d;
-        public static final int list_item_title=0x7f05000a;
+        public static final int counter_text_bg=0x7f050004;
+        public static final int counter_text_color=0x7f050005;
+        public static final int list_background=0x7f050001;
+        public static final int list_background_pressed=0x7f050002;
+        public static final int list_divider=0x7f050003;
+        public static final int list_item_title=0x7f050000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -211,8 +44,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f090000;
-        public static final int activity_vertical_margin=0x7f090001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int aliencorrectpercentage=0x7f020000;
@@ -237,326 +70,290 @@ containing a value of this type.
         public static final int choice_selected=0x7f020013;
         public static final int choice_selected_correct=0x7f020014;
         public static final int choice_selected_wrong=0x7f020015;
-        public static final int common_signin_btn_icon_dark=0x7f020016;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f020017;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020018;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020019;
-        public static final int common_signin_btn_icon_disabled_light=0x7f02001a;
-        public static final int common_signin_btn_icon_focus_dark=0x7f02001b;
-        public static final int common_signin_btn_icon_focus_light=0x7f02001c;
-        public static final int common_signin_btn_icon_light=0x7f02001d;
-        public static final int common_signin_btn_icon_normal_dark=0x7f02001e;
-        public static final int common_signin_btn_icon_normal_light=0x7f02001f;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f020020;
-        public static final int common_signin_btn_icon_pressed_light=0x7f020021;
-        public static final int common_signin_btn_text_dark=0x7f020022;
-        public static final int common_signin_btn_text_disabled_dark=0x7f020023;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020024;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f020025;
-        public static final int common_signin_btn_text_disabled_light=0x7f020026;
-        public static final int common_signin_btn_text_focus_dark=0x7f020027;
-        public static final int common_signin_btn_text_focus_light=0x7f020028;
-        public static final int common_signin_btn_text_light=0x7f020029;
-        public static final int common_signin_btn_text_normal_dark=0x7f02002a;
-        public static final int common_signin_btn_text_normal_light=0x7f02002b;
-        public static final int common_signin_btn_text_pressed_dark=0x7f02002c;
-        public static final int common_signin_btn_text_pressed_light=0x7f02002d;
-        public static final int cross=0x7f02002e;
-        public static final int custom_button=0x7f02002f;
-        public static final int custom_planet10_bg=0x7f020030;
-        public static final int custom_planet11_bg=0x7f020031;
-        public static final int custom_planet12_bg=0x7f020032;
-        public static final int custom_planet13_bg=0x7f020033;
-        public static final int custom_planet14_bg=0x7f020034;
-        public static final int custom_planet15_bg=0x7f020035;
-        public static final int custom_planet1_bg=0x7f020036;
-        public static final int custom_planet2_bg=0x7f020037;
-        public static final int custom_planet3_bg=0x7f020038;
-        public static final int custom_planet4_bg=0x7f020039;
-        public static final int custom_planet5_bg=0x7f02003a;
-        public static final int custom_planet6_bg=0x7f02003b;
-        public static final int custom_planet7_bg=0x7f02003c;
-        public static final int custom_planet8_bg=0x7f02003d;
-        public static final int custom_planet9_bg=0x7f02003e;
-        public static final int dotblue=0x7f02003f;
-        public static final int dotbluecorrect=0x7f020040;
-        public static final int dotblueold=0x7f020041;
-        public static final int dotbluewrong=0x7f020042;
-        public static final int dotwhite=0x7f020043;
-        public static final int dotwhiteold=0x7f020044;
-        public static final int email_name=0x7f020045;
-        public static final int emailpanelpop=0x7f020046;
-        public static final int emailresults=0x7f020047;
-        public static final int ic_drawer=0x7f020048;
-        public static final int ic_launcher=0x7f020049;
-        public static final int ic_plusone_medium_off_client=0x7f02004a;
-        public static final int ic_plusone_small_off_client=0x7f02004b;
-        public static final int ic_plusone_standard_off_client=0x7f02004c;
-        public static final int ic_plusone_tall_off_client=0x7f02004d;
-        public static final int loginbg=0x7f02004e;
-        public static final int loginbgdialog=0x7f02004f;
-        public static final int lpicon_small=0x7f020050;
-        public static final int mailsendbutton=0x7f020051;
-        public static final int map1=0x7f020052;
-        public static final int map2=0x7f020053;
-        public static final int map3=0x7f020054;
-        public static final int map_button_bg=0x7f020055;
-        public static final int mapbackbuttonbg=0x7f020056;
-        public static final int next=0x7f020057;
-        public static final int nextbutton=0x7f020058;
-        public static final int plane04=0x7f020059;
-        public static final int plane10=0x7f02005a;
-        public static final int plane10glow=0x7f02005b;
-        public static final int plane11=0x7f02005c;
-        public static final int plane11glow=0x7f02005d;
-        public static final int plane12=0x7f02005e;
-        public static final int plane12glow=0x7f02005f;
-        public static final int plane13=0x7f020060;
-        public static final int plane13glow=0x7f020061;
-        public static final int plane14=0x7f020062;
-        public static final int plane14glow=0x7f020063;
-        public static final int plane15=0x7f020064;
-        public static final int plane15glow=0x7f020065;
-        public static final int plane16=0x7f020066;
-        public static final int plane16glow=0x7f020067;
-        public static final int plane3=0x7f020068;
-        public static final int plane3glow=0x7f020069;
-        public static final int plane4=0x7f02006a;
-        public static final int plane4glow=0x7f02006b;
-        public static final int plane5=0x7f02006c;
-        public static final int plane5glow=0x7f02006d;
-        public static final int plane6=0x7f02006e;
-        public static final int plane6glow=0x7f02006f;
-        public static final int plane7=0x7f020070;
-        public static final int plane7glow=0x7f020071;
-        public static final int plane8=0x7f020072;
-        public static final int plane8glow=0x7f020073;
-        public static final int plane9=0x7f020074;
-        public static final int plane9glow=0x7f020075;
-        public static final int planet=0x7f020076;
-        public static final int planet1=0x7f020077;
-        public static final int planet1glow=0x7f020078;
-        public static final int planetbig=0x7f020079;
-        public static final int planetnavigation=0x7f02007a;
-        public static final int popupclosebutton=0x7f02007b;
-        public static final int popuphelp0=0x7f02007c;
-        public static final int popuphelp1=0x7f02007d;
-        public static final int popuphelp2=0x7f02007e;
-        public static final int popuphelp3=0x7f02007f;
-        public static final int popuphelp4=0x7f020080;
-        public static final int popuphelp5=0x7f020081;
-        public static final int popupmenu=0x7f020082;
-        public static final int previous=0x7f020083;
-        public static final int questionbg1=0x7f020084;
-        public static final int sendbuttonbg=0x7f020085;
-        public static final int shootingstar=0x7f020086;
-        public static final int shootingstar1=0x7f020087;
-        public static final int spaceship=0x7f020088;
-        public static final int spaceshipwithflag=0x7f020089;
-        public static final int spaceshipwithoutflag=0x7f02008a;
-        public static final int star=0x7f02008b;
-        public static final int summary_question=0x7f02008c;
-        public static final int summarybg=0x7f02008d;
-        public static final int summarymapbutton=0x7f02008e;
-        public static final int summarynext=0x7f02008f;
-        public static final int tick=0x7f020090;
-        public static final int wordlist=0x7f020091;
-        public static final int wordlistbg1=0x7f020092;
+        public static final int cross=0x7f020016;
+        public static final int custom_button=0x7f020017;
+        public static final int custom_planet10_bg=0x7f020018;
+        public static final int custom_planet11_bg=0x7f020019;
+        public static final int custom_planet12_bg=0x7f02001a;
+        public static final int custom_planet13_bg=0x7f02001b;
+        public static final int custom_planet14_bg=0x7f02001c;
+        public static final int custom_planet15_bg=0x7f02001d;
+        public static final int custom_planet1_bg=0x7f02001e;
+        public static final int custom_planet2_bg=0x7f02001f;
+        public static final int custom_planet3_bg=0x7f020020;
+        public static final int custom_planet4_bg=0x7f020021;
+        public static final int custom_planet5_bg=0x7f020022;
+        public static final int custom_planet6_bg=0x7f020023;
+        public static final int custom_planet7_bg=0x7f020024;
+        public static final int custom_planet8_bg=0x7f020025;
+        public static final int custom_planet9_bg=0x7f020026;
+        public static final int dotblue=0x7f020027;
+        public static final int dotbluecorrect=0x7f020028;
+        public static final int dotblueold=0x7f020029;
+        public static final int dotbluewrong=0x7f02002a;
+        public static final int dotwhite=0x7f02002b;
+        public static final int dotwhiteold=0x7f02002c;
+        public static final int email_name=0x7f02002d;
+        public static final int emailpanelpop=0x7f02002e;
+        public static final int emailresults=0x7f02002f;
+        public static final int ic_drawer=0x7f020030;
+        public static final int ic_launcher=0x7f020031;
+        public static final int loginbg=0x7f020032;
+        public static final int loginbgdialog=0x7f020033;
+        public static final int lpicon_small=0x7f020034;
+        public static final int mailsendbutton=0x7f020035;
+        public static final int map1=0x7f020036;
+        public static final int map2=0x7f020037;
+        public static final int map3=0x7f020038;
+        public static final int map_button_bg=0x7f020039;
+        public static final int mapbackbuttonbg=0x7f02003a;
+        public static final int next=0x7f02003b;
+        public static final int nextbutton=0x7f02003c;
+        public static final int plane04=0x7f02003d;
+        public static final int plane10=0x7f02003e;
+        public static final int plane10glow=0x7f02003f;
+        public static final int plane11=0x7f020040;
+        public static final int plane11glow=0x7f020041;
+        public static final int plane12=0x7f020042;
+        public static final int plane12glow=0x7f020043;
+        public static final int plane13=0x7f020044;
+        public static final int plane13glow=0x7f020045;
+        public static final int plane14=0x7f020046;
+        public static final int plane14glow=0x7f020047;
+        public static final int plane15=0x7f020048;
+        public static final int plane15glow=0x7f020049;
+        public static final int plane16=0x7f02004a;
+        public static final int plane16glow=0x7f02004b;
+        public static final int plane3=0x7f02004c;
+        public static final int plane3glow=0x7f02004d;
+        public static final int plane4=0x7f02004e;
+        public static final int plane4glow=0x7f02004f;
+        public static final int plane5=0x7f020050;
+        public static final int plane5glow=0x7f020051;
+        public static final int plane6=0x7f020052;
+        public static final int plane6glow=0x7f020053;
+        public static final int plane7=0x7f020054;
+        public static final int plane7glow=0x7f020055;
+        public static final int plane8=0x7f020056;
+        public static final int plane8glow=0x7f020057;
+        public static final int plane9=0x7f020058;
+        public static final int plane9glow=0x7f020059;
+        public static final int planet=0x7f02005a;
+        public static final int planet1=0x7f02005b;
+        public static final int planet1glow=0x7f02005c;
+        public static final int planetbig=0x7f02005d;
+        public static final int planetnavigation=0x7f02005e;
+        public static final int popupclosebutton=0x7f02005f;
+        public static final int popuphelp0=0x7f020060;
+        public static final int popuphelp1=0x7f020061;
+        public static final int popuphelp2=0x7f020062;
+        public static final int popuphelp3=0x7f020063;
+        public static final int popuphelp4=0x7f020064;
+        public static final int popuphelp5=0x7f020065;
+        public static final int popupmenu=0x7f020066;
+        public static final int previous=0x7f020067;
+        public static final int questionbg1=0x7f020068;
+        public static final int sendbuttonbg=0x7f020069;
+        public static final int shootingstar=0x7f02006a;
+        public static final int shootingstar1=0x7f02006b;
+        public static final int spaceship=0x7f02006c;
+        public static final int spaceshipwithflag=0x7f02006d;
+        public static final int spaceshipwithoutflag=0x7f02006e;
+        public static final int star=0x7f02006f;
+        public static final int summary_question=0x7f020070;
+        public static final int summarybg=0x7f020071;
+        public static final int summarymapbutton=0x7f020072;
+        public static final int summarynext=0x7f020073;
+        public static final int tick=0x7f020074;
+        public static final int wordlist=0x7f020075;
+        public static final int wordlistbg1=0x7f020076;
     }
     public static final class id {
-        public static final int FirstText=0x7f06005e;
-        public static final int FirstcolumnText=0x7f0600b6;
-        public static final int ScrollView01=0x7f06007f;
-        public static final int SecondText=0x7f06005f;
-        public static final int ThirdText=0x7f060060;
-        public static final int about=0x7f0600bb;
-        public static final int alienforexplanation=0x7f060071;
-        public static final int alienforexplanationintermediate=0x7f060070;
-        public static final int alienforexplanationlight=0x7f060072;
-        public static final int alienforquestion=0x7f06006c;
-        public static final int alienforquestionlight=0x7f06006d;
-        public static final int btnPrevious=0x7f06007b;
-        public static final int btnSummaryBack=0x7f0600a6;
-        public static final int btnSummaryMap=0x7f0600a7;
-        public static final int btnmapnext=0x7f060026;
-        public static final int btnmapprev=0x7f060040;
-        public static final int btnsubmitnext=0x7f06007c;
-        public static final int btnwordlistclose=0x7f060064;
-        public static final int button1=0x7f06006a;
-        public static final int choiceLabelContainer=0x7f060077;
-        public static final int choicebody=0x7f060006;
-        public static final int choicecontainer=0x7f06007a;
-        public static final int choicelabel=0x7f060079;
-        public static final int choiceresulticon=0x7f060078;
-        public static final int choicesequence=0x7f060005;
-        public static final int close=0x7f06007e;
-        public static final int connection_status=0x7f060069;
-        public static final int correctpercentage=0x7f0600a1;
-        public static final int editText1=0x7f06006b;
-        public static final int explanationcontainer=0x7f060073;
-        public static final int explanationcontent=0x7f060075;
-        public static final int explanationheader=0x7f060074;
-        public static final int help=0x7f0600bc;
-        public static final int help1=0x7f060080;
-        public static final int help2=0x7f060083;
-        public static final int help3=0x7f060086;
-        public static final int help4=0x7f060089;
-        public static final int help5=0x7f06008c;
-        public static final int help6=0x7f06008f;
-        public static final int hybrid=0x7f060004;
-        public static final int imageView1=0x7f060008;
-        public static final int linearLayout1=0x7f060062;
-        public static final int listContentView=0x7f060063;
-        public static final int login=0x7f0600bd;
-        public static final int loginmailcontainer=0x7f060061;
-        public static final int mailTest=0x7f060024;
-        public static final int mainlayout=0x7f060007;
-        public static final int mapFlipper1=0x7f060067;
-        public static final int maparrow=0x7f06009b;
-        public static final int mapscreenusername=0x7f060066;
-        public static final int navbarmap=0x7f06009a;
-        public static final int none=0x7f060000;
-        public static final int normal=0x7f060001;
-        public static final int percentageiamge=0x7f06009f;
-        public static final int planet1=0x7f06000a;
-        public static final int planet10=0x7f06003b;
-        public static final int planet10name=0x7f06003c;
-        public static final int planet10pbblue=0x7f06003f;
-        public static final int planet10pbred=0x7f06003e;
-        public static final int planet10ss=0x7f06003d;
-        public static final int planet11=0x7f060041;
-        public static final int planet11name=0x7f060042;
-        public static final int planet11pbblue=0x7f060045;
-        public static final int planet11pbred=0x7f060044;
-        public static final int planet11ss=0x7f060043;
-        public static final int planet12=0x7f060046;
-        public static final int planet12name=0x7f060047;
-        public static final int planet12pbblue=0x7f06004a;
-        public static final int planet12pbred=0x7f060049;
-        public static final int planet12ss=0x7f060048;
-        public static final int planet13=0x7f06004b;
-        public static final int planet13name=0x7f06004c;
-        public static final int planet13pbblue=0x7f06004f;
-        public static final int planet13pbred=0x7f06004e;
-        public static final int planet13ss=0x7f06004d;
-        public static final int planet14=0x7f060050;
-        public static final int planet14name=0x7f060051;
-        public static final int planet14pbblue=0x7f060054;
-        public static final int planet14pbred=0x7f060053;
-        public static final int planet14ss=0x7f060052;
-        public static final int planet15=0x7f060055;
-        public static final int planet15name=0x7f060056;
-        public static final int planet15pbblue=0x7f060059;
-        public static final int planet15pbred=0x7f060058;
-        public static final int planet15ss=0x7f060057;
-        public static final int planet1name=0x7f06000b;
-        public static final int planet1pbblue=0x7f06000e;
-        public static final int planet1pbred=0x7f06000d;
-        public static final int planet1ss=0x7f06000c;
-        public static final int planet2=0x7f06000f;
-        public static final int planet2name=0x7f060010;
-        public static final int planet2pbblue=0x7f060013;
-        public static final int planet2pbred=0x7f060012;
-        public static final int planet2ss=0x7f060011;
-        public static final int planet3=0x7f060014;
-        public static final int planet3name=0x7f060015;
-        public static final int planet3pbblue=0x7f060018;
-        public static final int planet3pbred=0x7f060017;
-        public static final int planet3ss=0x7f060016;
-        public static final int planet4=0x7f060019;
-        public static final int planet4name=0x7f06001a;
-        public static final int planet4pbblue=0x7f06001d;
-        public static final int planet4pbred=0x7f06001c;
-        public static final int planet4ss=0x7f06001b;
-        public static final int planet5=0x7f06001e;
-        public static final int planet5name=0x7f06001f;
-        public static final int planet5pbblue=0x7f060022;
-        public static final int planet5pbred=0x7f060021;
-        public static final int planet5ss=0x7f060020;
-        public static final int planet6=0x7f060027;
-        public static final int planet6name=0x7f060028;
-        public static final int planet6pbblue=0x7f06002b;
-        public static final int planet6pbred=0x7f06002a;
-        public static final int planet6ss=0x7f060029;
-        public static final int planet7=0x7f06002c;
-        public static final int planet7name=0x7f06002d;
-        public static final int planet7pbblue=0x7f060030;
-        public static final int planet7pbred=0x7f06002f;
-        public static final int planet7ss=0x7f06002e;
-        public static final int planet8=0x7f060031;
-        public static final int planet8name=0x7f060032;
-        public static final int planet8pbblue=0x7f060035;
-        public static final int planet8pbred=0x7f060034;
-        public static final int planet8ss=0x7f060033;
-        public static final int planet9=0x7f060036;
-        public static final int planet9name=0x7f060037;
-        public static final int planet9pbblue=0x7f06003a;
-        public static final int planet9pbred=0x7f060039;
-        public static final int planet9ss=0x7f060038;
-        public static final int planetnavigation2=0x7f060068;
-        public static final int planetnavigation3=0x7f060025;
-        public static final int podname=0x7f06009c;
-        public static final int quesbody=0x7f06006f;
-        public static final int quesbodyhighlighted=0x7f06006e;
-        public static final int questionprogressbarcontainer=0x7f060076;
-        public static final int relativeLayout1=0x7f06005d;
-        public static final int satellite=0x7f060002;
-        public static final int secondColumnText=0x7f0600b7;
-        public static final int sectionBar=0x7f0600b5;
-        public static final int sendEmail=0x7f06005b;
-        public static final int sendEmailDummy=0x7f06005c;
-        public static final int sendMailBt=0x7f0600a3;
-        public static final int sstar0=0x7f0600a8;
-        public static final int sstar1=0x7f0600a9;
-        public static final int sstar1_1=0x7f0600aa;
-        public static final int sstar2=0x7f0600ab;
-        public static final int sstar2_1=0x7f0600ac;
-        public static final int sstar2_5=0x7f0600ad;
-        public static final int sstar3=0x7f0600ae;
-        public static final int sstar3_1=0x7f0600af;
-        public static final int sstar3_5=0x7f0600b0;
-        public static final int sstar4=0x7f0600b1;
-        public static final int sstar5=0x7f0600b2;
-        public static final int star=0x7f0600a0;
-        public static final int summaryLabel=0x7f0600a4;
-        public static final int summaryQuestionicon=0x7f06009e;
-        public static final int summarycorrect=0x7f0600a2;
-        public static final int summaryquestioncontainer=0x7f0600a5;
-        public static final int summaryquestionsequence=0x7f06009d;
-        public static final int terms=0x7f0600ba;
-        public static final int terrain=0x7f060003;
-        public static final int text=0x7f0600b3;
-        public static final int textView1=0x7f060009;
-        public static final int textdetail=0x7f060082;
-        public static final int textdetail1=0x7f060095;
-        public static final int textdetail2=0x7f060085;
-        public static final int textdetail3=0x7f060088;
-        public static final int textdetail4=0x7f06008b;
-        public static final int textdetail5=0x7f06008e;
-        public static final int textdetail6=0x7f060091;
-        public static final int textdetail7=0x7f060097;
-        public static final int textdetail8=0x7f060099;
-        public static final int textdetailtop=0x7f060093;
-        public static final int texthelp=0x7f06007d;
-        public static final int textterms=0x7f060092;
-        public static final int texttitle=0x7f060081;
-        public static final int texttitle1=0x7f060094;
-        public static final int texttitle2=0x7f060084;
-        public static final int texttitle3=0x7f060087;
-        public static final int texttitle4=0x7f06008a;
-        public static final int texttitle5=0x7f06008d;
-        public static final int texttitle6=0x7f060090;
-        public static final int texttitle7=0x7f060096;
-        public static final int texttitle8=0x7f060098;
-        public static final int thirdColumnText=0x7f0600b8;
-        public static final int title=0x7f060065;
-        public static final int toaddress=0x7f06005a;
-        public static final int wordList=0x7f0600b9;
-        public static final int wordListText=0x7f0600b4;
-        public static final int wordlist=0x7f060023;
-    }
-    public static final class integer {
-        public static final int google_play_services_version=0x7f080000;
+        public static final int FirstText=0x7f0b0059;
+        public static final int FirstcolumnText=0x7f0b00b1;
+        public static final int ScrollView01=0x7f0b007a;
+        public static final int SecondText=0x7f0b005a;
+        public static final int ThirdText=0x7f0b005b;
+        public static final int about=0x7f0b00b6;
+        public static final int alienforexplanation=0x7f0b006c;
+        public static final int alienforexplanationintermediate=0x7f0b006b;
+        public static final int alienforexplanationlight=0x7f0b006d;
+        public static final int alienforquestion=0x7f0b0067;
+        public static final int alienforquestionlight=0x7f0b0068;
+        public static final int btnPrevious=0x7f0b0076;
+        public static final int btnSummaryBack=0x7f0b00a1;
+        public static final int btnSummaryMap=0x7f0b00a2;
+        public static final int btnmapnext=0x7f0b0021;
+        public static final int btnmapprev=0x7f0b003b;
+        public static final int btnsubmitnext=0x7f0b0077;
+        public static final int btnwordlistclose=0x7f0b005f;
+        public static final int button1=0x7f0b0065;
+        public static final int choiceLabelContainer=0x7f0b0072;
+        public static final int choicebody=0x7f0b0001;
+        public static final int choicecontainer=0x7f0b0075;
+        public static final int choicelabel=0x7f0b0074;
+        public static final int choiceresulticon=0x7f0b0073;
+        public static final int choicesequence=0x7f0b0000;
+        public static final int close=0x7f0b0079;
+        public static final int connection_status=0x7f0b0064;
+        public static final int correctpercentage=0x7f0b009c;
+        public static final int editText1=0x7f0b0066;
+        public static final int explanationcontainer=0x7f0b006e;
+        public static final int explanationcontent=0x7f0b0070;
+        public static final int explanationheader=0x7f0b006f;
+        public static final int help=0x7f0b00b7;
+        public static final int help1=0x7f0b007b;
+        public static final int help2=0x7f0b007e;
+        public static final int help3=0x7f0b0081;
+        public static final int help4=0x7f0b0084;
+        public static final int help5=0x7f0b0087;
+        public static final int help6=0x7f0b008a;
+        public static final int imageView1=0x7f0b0003;
+        public static final int linearLayout1=0x7f0b005d;
+        public static final int listContentView=0x7f0b005e;
+        public static final int login=0x7f0b00b8;
+        public static final int loginmailcontainer=0x7f0b005c;
+        public static final int mailTest=0x7f0b001f;
+        public static final int mainlayout=0x7f0b0002;
+        public static final int mapFlipper1=0x7f0b0062;
+        public static final int maparrow=0x7f0b0096;
+        public static final int mapscreenusername=0x7f0b0061;
+        public static final int navbarmap=0x7f0b0095;
+        public static final int percentageiamge=0x7f0b009a;
+        public static final int planet1=0x7f0b0005;
+        public static final int planet10=0x7f0b0036;
+        public static final int planet10name=0x7f0b0037;
+        public static final int planet10pbblue=0x7f0b003a;
+        public static final int planet10pbred=0x7f0b0039;
+        public static final int planet10ss=0x7f0b0038;
+        public static final int planet11=0x7f0b003c;
+        public static final int planet11name=0x7f0b003d;
+        public static final int planet11pbblue=0x7f0b0040;
+        public static final int planet11pbred=0x7f0b003f;
+        public static final int planet11ss=0x7f0b003e;
+        public static final int planet12=0x7f0b0041;
+        public static final int planet12name=0x7f0b0042;
+        public static final int planet12pbblue=0x7f0b0045;
+        public static final int planet12pbred=0x7f0b0044;
+        public static final int planet12ss=0x7f0b0043;
+        public static final int planet13=0x7f0b0046;
+        public static final int planet13name=0x7f0b0047;
+        public static final int planet13pbblue=0x7f0b004a;
+        public static final int planet13pbred=0x7f0b0049;
+        public static final int planet13ss=0x7f0b0048;
+        public static final int planet14=0x7f0b004b;
+        public static final int planet14name=0x7f0b004c;
+        public static final int planet14pbblue=0x7f0b004f;
+        public static final int planet14pbred=0x7f0b004e;
+        public static final int planet14ss=0x7f0b004d;
+        public static final int planet15=0x7f0b0050;
+        public static final int planet15name=0x7f0b0051;
+        public static final int planet15pbblue=0x7f0b0054;
+        public static final int planet15pbred=0x7f0b0053;
+        public static final int planet15ss=0x7f0b0052;
+        public static final int planet1name=0x7f0b0006;
+        public static final int planet1pbblue=0x7f0b0009;
+        public static final int planet1pbred=0x7f0b0008;
+        public static final int planet1ss=0x7f0b0007;
+        public static final int planet2=0x7f0b000a;
+        public static final int planet2name=0x7f0b000b;
+        public static final int planet2pbblue=0x7f0b000e;
+        public static final int planet2pbred=0x7f0b000d;
+        public static final int planet2ss=0x7f0b000c;
+        public static final int planet3=0x7f0b000f;
+        public static final int planet3name=0x7f0b0010;
+        public static final int planet3pbblue=0x7f0b0013;
+        public static final int planet3pbred=0x7f0b0012;
+        public static final int planet3ss=0x7f0b0011;
+        public static final int planet4=0x7f0b0014;
+        public static final int planet4name=0x7f0b0015;
+        public static final int planet4pbblue=0x7f0b0018;
+        public static final int planet4pbred=0x7f0b0017;
+        public static final int planet4ss=0x7f0b0016;
+        public static final int planet5=0x7f0b0019;
+        public static final int planet5name=0x7f0b001a;
+        public static final int planet5pbblue=0x7f0b001d;
+        public static final int planet5pbred=0x7f0b001c;
+        public static final int planet5ss=0x7f0b001b;
+        public static final int planet6=0x7f0b0022;
+        public static final int planet6name=0x7f0b0023;
+        public static final int planet6pbblue=0x7f0b0026;
+        public static final int planet6pbred=0x7f0b0025;
+        public static final int planet6ss=0x7f0b0024;
+        public static final int planet7=0x7f0b0027;
+        public static final int planet7name=0x7f0b0028;
+        public static final int planet7pbblue=0x7f0b002b;
+        public static final int planet7pbred=0x7f0b002a;
+        public static final int planet7ss=0x7f0b0029;
+        public static final int planet8=0x7f0b002c;
+        public static final int planet8name=0x7f0b002d;
+        public static final int planet8pbblue=0x7f0b0030;
+        public static final int planet8pbred=0x7f0b002f;
+        public static final int planet8ss=0x7f0b002e;
+        public static final int planet9=0x7f0b0031;
+        public static final int planet9name=0x7f0b0032;
+        public static final int planet9pbblue=0x7f0b0035;
+        public static final int planet9pbred=0x7f0b0034;
+        public static final int planet9ss=0x7f0b0033;
+        public static final int planetnavigation2=0x7f0b0063;
+        public static final int planetnavigation3=0x7f0b0020;
+        public static final int podname=0x7f0b0097;
+        public static final int quesbody=0x7f0b006a;
+        public static final int quesbodyhighlighted=0x7f0b0069;
+        public static final int questionprogressbarcontainer=0x7f0b0071;
+        public static final int relativeLayout1=0x7f0b0058;
+        public static final int secondColumnText=0x7f0b00b2;
+        public static final int sectionBar=0x7f0b00b0;
+        public static final int sendEmail=0x7f0b0056;
+        public static final int sendEmailDummy=0x7f0b0057;
+        public static final int sendMailBt=0x7f0b009e;
+        public static final int sstar0=0x7f0b00a3;
+        public static final int sstar1=0x7f0b00a4;
+        public static final int sstar1_1=0x7f0b00a5;
+        public static final int sstar2=0x7f0b00a6;
+        public static final int sstar2_1=0x7f0b00a7;
+        public static final int sstar2_5=0x7f0b00a8;
+        public static final int sstar3=0x7f0b00a9;
+        public static final int sstar3_1=0x7f0b00aa;
+        public static final int sstar3_5=0x7f0b00ab;
+        public static final int sstar4=0x7f0b00ac;
+        public static final int sstar5=0x7f0b00ad;
+        public static final int star=0x7f0b009b;
+        public static final int summaryLabel=0x7f0b009f;
+        public static final int summaryQuestionicon=0x7f0b0099;
+        public static final int summarycorrect=0x7f0b009d;
+        public static final int summaryquestioncontainer=0x7f0b00a0;
+        public static final int summaryquestionsequence=0x7f0b0098;
+        public static final int terms=0x7f0b00b5;
+        public static final int text=0x7f0b00ae;
+        public static final int textView1=0x7f0b0004;
+        public static final int textdetail=0x7f0b007d;
+        public static final int textdetail1=0x7f0b0090;
+        public static final int textdetail2=0x7f0b0080;
+        public static final int textdetail3=0x7f0b0083;
+        public static final int textdetail4=0x7f0b0086;
+        public static final int textdetail5=0x7f0b0089;
+        public static final int textdetail6=0x7f0b008c;
+        public static final int textdetail7=0x7f0b0092;
+        public static final int textdetail8=0x7f0b0094;
+        public static final int textdetailtop=0x7f0b008e;
+        public static final int texthelp=0x7f0b0078;
+        public static final int textterms=0x7f0b008d;
+        public static final int texttitle=0x7f0b007c;
+        public static final int texttitle1=0x7f0b008f;
+        public static final int texttitle2=0x7f0b007f;
+        public static final int texttitle3=0x7f0b0082;
+        public static final int texttitle4=0x7f0b0085;
+        public static final int texttitle5=0x7f0b0088;
+        public static final int texttitle6=0x7f0b008b;
+        public static final int texttitle7=0x7f0b0091;
+        public static final int texttitle8=0x7f0b0093;
+        public static final int thirdColumnText=0x7f0b00b3;
+        public static final int title=0x7f0b0060;
+        public static final int toaddress=0x7f0b0055;
+        public static final int wordList=0x7f0b00b4;
+        public static final int wordListText=0x7f0b00af;
+        public static final int wordlist=0x7f0b001e;
     }
     public static final class layout {
         public static final int activity_word_list=0x7f030000;
@@ -586,126 +383,29 @@ containing a value of this type.
         public static final int word_list=0x7f030018;
     }
     public static final class menu {
-        public static final int common_menu=0x7f0c0000;
+        public static final int common_menu=0x7f0a0000;
     }
     public static final class string {
-        public static final int Account_Selector=0x7f07001f;
-        public static final int action_settings=0x7f07001d;
-        public static final int app_name=0x7f07001c;
-        /**   Title for notification shown when GooglePlayServices needs to be
-        enabled for a application to work. [CHAR LIMIT=70] 
-         */
-        public static final int auth_client_needs_enabling_title=0x7f070015;
-        /**   Title for notification shown when GooglePlayServices needs to be
-        installed for a application to work. [CHAR LIMIT=70] 
-         */
-        public static final int auth_client_needs_installation_title=0x7f070016;
-        /**   Title for notification shown when GooglePlayServices needs to be
-        udpated for a application to work. [CHAR LIMIT=70] 
-         */
-        public static final int auth_client_needs_update_title=0x7f070017;
-        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
-         */
-        public static final int auth_client_play_services_err_notification_msg=0x7f070018;
-        /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
-         */
-        public static final int auth_client_requested_by_msg=0x7f070019;
-        /**   Title for notification shown when a bad version of GooglePlayServices
-        has been installed and needs correction for an application to work.
-        [CHAR LIMIT=70] 
-         */
-        public static final int auth_client_using_bad_version_title=0x7f070014;
-        public static final int btn_logout_from_google=0x7f070020;
-        public static final int btn_revoke_access=0x7f070021;
+        public static final int Account_Selector=0x7f060004;
+        public static final int action_settings=0x7f060002;
+        public static final int app_name=0x7f060001;
+        public static final int btn_logout_from_google=0x7f060005;
+        public static final int btn_revoke_access=0x7f060006;
         /** 
   This file is automatically generated by Crashlytics to uniquely 
   identify individual builds of your Android application.
 
-  Do NOT modify, delete, or commit to source control!
+  Do NOT modify, delete, or commit to source control! 
 
          */
-        public static final int com_crashlytics_android_build_id=0x7f07001b;
-        /**  Button in confirmation dialog to enable Google Play services.  Clicking it
-        will direct user to application settings of Google Play services where they
-        can enable it [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_enable_button=0x7f070006;
-        /**  Message in confirmation dialog informing user they need to enable
-        Google Play services in application settings [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_enable_text=0x7f070005;
-        /**  Title of confirmation dialog informing user they need to enable
-        Google Play services in application settings [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_enable_title=0x7f070004;
-        /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_install_button=0x7f070003;
-        /**  (For phones) Message in confirmation dialog informing user that
-        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_install_text_phone=0x7f070001;
-        /**  (For tablets) Message in confirmation dialog informing user that
-        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_install_text_tablet=0x7f070002;
-        /**  Title of confirmation dialog informing user that they need to install
-        Google Play services (from Play Store) [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_install_title=0x7f070000;
-        /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_invalid_account_text=0x7f07000c;
-        /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_invalid_account_title=0x7f07000b;
-        /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_network_error_text=0x7f07000a;
-        /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_network_error_title=0x7f070009;
-        /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
-        services [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_unknown_issue=0x7f07000d;
-        /**  Message in confirmation dialog informing user that date on the device is not correct,
-    causing certificate checks to fail. [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_unsupported_date_text=0x7f070010;
-        /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_unsupported_text=0x7f07000f;
-        /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_unsupported_title=0x7f07000e;
-        /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_update_button=0x7f070011;
-        /**  Message in confirmation dialog informing user that they need to update
-        Google Play services (from Play Store) [CHAR LIMIT=NONE] 
-         */
-        public static final int common_google_play_services_update_text=0x7f070008;
-        /**  Title of confirmation dialog informing user that they need to update
-        Google Play services (from Play Store) [CHAR LIMIT=40] 
-         */
-        public static final int common_google_play_services_update_title=0x7f070007;
-        /**  Sign-in button text [CHAR LIMIT=15] 
-         */
-        public static final int common_signin_button_text=0x7f070012;
-        /**  Long form sign-in button text [CHAR LIMIT=30] 
-         */
-        public static final int common_signin_button_text_long=0x7f070013;
+        public static final int com_crashlytics_android_build_id=0x7f060000;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f070024;
-        public static final int drawer_close=0x7f070023;
-        public static final int drawer_open=0x7f070022;
-        public static final int hello_world=0x7f07001e;
-        /**  Location client code resources (prefix with location_client) 
-         */
-        public static final int location_client_powered_by_google=0x7f07001a;
-        public static final int title_activity_word_list=0x7f070025;
+        public static final int desc_list_item_icon=0x7f060009;
+        public static final int drawer_close=0x7f060008;
+        public static final int drawer_open=0x7f060007;
+        public static final int hello_world=0x7f060003;
+        public static final int title_activity_word_list=0x7f06000a;
     }
     public static final class style {
         /** 
@@ -729,342 +429,21 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f0b0000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f0b0001;
-        public static final int ButtonBar=0x7f0b0002;
-        public static final int ButtonBarButton=0x7f0b0003;
+        public static final int AppTheme=0x7f090001;
+        public static final int ButtonBar=0x7f090002;
+        public static final int ButtonBarButton=0x7f090003;
         /**  the theme applied to the application or activity 
          */
-        public static final int CustomActionBarTheme=0x7f0b0004;
+        public static final int CustomActionBarTheme=0x7f090004;
         /**  ActionBar styles 
          */
-        public static final int MyActionBar=0x7f0b0005;
+        public static final int MyActionBar=0x7f090005;
         /**  Splash screen style 
          */
-        public static final int MySplashTheme=0x7f0b0006;
+        public static final int MySplashTheme=0x7f090006;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a AdsAttrs.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.learningpod.android:adSize}</code></td><td>
-    The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.learningpod.android:adSizes}</code></td><td>
-    A comma-separated list of the supported ad sizes.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.learningpod.android:adUnitId}</code></td><td> The ad unit ID.</td></tr>
-           </table>
-           @see #AdsAttrs_adSize
-           @see #AdsAttrs_adSizes
-           @see #AdsAttrs_adUnitId
-         */
-        public static final int[] AdsAttrs = {
-            0x7f010000, 0x7f010001, 0x7f010002
-        };
-        /**
-          <p>
-          @attr description
-          
-    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
-    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
-    &lt;width&gt;x&lt;height&gt;.
-    
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.learningpod.android:adSize
-        */
-        public static final int AdsAttrs_adSize = 0;
-        /**
-          <p>
-          @attr description
-          
-    A comma-separated list of the supported ad sizes. The sizes must be one of
-    BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
-    WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
-    
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.learningpod.android:adSizes
-        */
-        public static final int AdsAttrs_adSizes = 1;
-        /**
-          <p>
-          @attr description
-           The ad unit ID. 
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.learningpod.android:adUnitId
-        */
-        public static final int AdsAttrs_adUnitId = 2;
-        /** Attributes that can be used with a MapAttrs.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.learningpod.android:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.learningpod.android:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.learningpod.android:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.learningpod.android:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.learningpod.android:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.learningpod.android:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.learningpod.android:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.learningpod.android:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.learningpod.android:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.learningpod.android:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.learningpod.android:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.learningpod.android:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.learningpod.android:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.learningpod.android:zOrderOnTop}</code></td><td></td></tr>
-           </table>
-           @see #MapAttrs_cameraBearing
-           @see #MapAttrs_cameraTargetLat
-           @see #MapAttrs_cameraTargetLng
-           @see #MapAttrs_cameraTilt
-           @see #MapAttrs_cameraZoom
-           @see #MapAttrs_mapType
-           @see #MapAttrs_uiCompass
-           @see #MapAttrs_uiRotateGestures
-           @see #MapAttrs_uiScrollGestures
-           @see #MapAttrs_uiTiltGestures
-           @see #MapAttrs_uiZoomControls
-           @see #MapAttrs_uiZoomGestures
-           @see #MapAttrs_useViewLifecycle
-           @see #MapAttrs_zOrderOnTop
-         */
-        public static final int[] MapAttrs = {
-            0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006,
-            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
-            0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e,
-            0x7f01000f, 0x7f010010
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#cameraBearing}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:cameraBearing
-        */
-        public static final int MapAttrs_cameraBearing = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#cameraTargetLat}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:cameraTargetLat
-        */
-        public static final int MapAttrs_cameraTargetLat = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#cameraTargetLng}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:cameraTargetLng
-        */
-        public static final int MapAttrs_cameraTargetLng = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#cameraTilt}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:cameraTilt
-        */
-        public static final int MapAttrs_cameraTilt = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#cameraZoom}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:cameraZoom
-        */
-        public static final int MapAttrs_cameraZoom = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#mapType}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>normal</code></td><td>1</td><td></td></tr>
-<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
-<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
-<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
-</table>
-          @attr name com.learningpod.android:mapType
-        */
-        public static final int MapAttrs_mapType = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiCompass}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiCompass
-        */
-        public static final int MapAttrs_uiCompass = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiRotateGestures}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiRotateGestures
-        */
-        public static final int MapAttrs_uiRotateGestures = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiScrollGestures}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiScrollGestures
-        */
-        public static final int MapAttrs_uiScrollGestures = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiTiltGestures}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiTiltGestures
-        */
-        public static final int MapAttrs_uiTiltGestures = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiZoomControls}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiZoomControls
-        */
-        public static final int MapAttrs_uiZoomControls = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#uiZoomGestures}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:uiZoomGestures
-        */
-        public static final int MapAttrs_uiZoomGestures = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#useViewLifecycle}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:useViewLifecycle
-        */
-        public static final int MapAttrs_useViewLifecycle = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.learningpod.android.R.attr#zOrderOnTop}
-          attribute's value can be found in the {@link #MapAttrs} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.learningpod.android:zOrderOnTop
-        */
-        public static final int MapAttrs_zOrderOnTop = 13;
-    };
 }

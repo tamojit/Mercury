@@ -25,6 +25,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.Animation.AnimationListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.Button;
@@ -222,12 +226,16 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 				mapFlipper.setOutAnimation(this, R.anim.out_to_right);
 				CURRENT_MAP_INDEX--;
 				if (CURRENT_MAP_INDEX == 0) {
-					findViewById(R.id.btnmapprev).setVisibility(View.GONE);
-					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapprev).setVisibility(View.GONE);
+					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					fadeOutAnimation(findViewById(R.id.btnmapprev), 500);					
+					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
 					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
 				} else {
-					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 					if(CURRENT_MAP_INDEX==1){
 						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("The Midway Planets");
 					}else{
@@ -249,12 +257,16 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 				mapFlipper.setOutAnimation(this, R.anim.out_to_left);
 				CURRENT_MAP_INDEX++;
 				if (CURRENT_MAP_INDEX == 2) {
-					findViewById(R.id.btnmapnext).setVisibility(View.GONE);
-					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapnext).setVisibility(View.GONE);
+					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					fadeOutAnimation(findViewById(R.id.btnmapnext), 500);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Galaxy's End");
 				} else {
-					findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-					findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 					if(CURRENT_MAP_INDEX==0){
 						((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
 					}else{
@@ -283,12 +295,16 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			// increment the view index;
 			CURRENT_MAP_INDEX++;
 			if (CURRENT_MAP_INDEX == 2) {
-				findViewById(R.id.btnmapnext).setVisibility(View.GONE);
-				findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapnext).setVisibility(View.GONE);
+				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				fadeOutAnimation(findViewById(R.id.btnmapnext), 500);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 				((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Galaxy's End");
 			} else {
-				findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-				findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 				if(CURRENT_MAP_INDEX==0){
 					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
 				}else{
@@ -307,12 +323,16 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			// increment the view index;
 			CURRENT_MAP_INDEX--;
 			if (CURRENT_MAP_INDEX == 0) {
-				findViewById(R.id.btnmapprev).setVisibility(View.GONE);
-				findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapprev).setVisibility(View.GONE);
+				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+				fadeOutAnimation(findViewById(R.id.btnmapprev), 500);
 				((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("Your Journey Begins");
 			} else {
-				findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-				findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
+				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
 				if(CURRENT_MAP_INDEX==1){
 					((TextView) getActionBar().getCustomView().findViewById(R.id.title)).setText("The Midway Planets");
 				}else{
@@ -431,5 +451,66 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			getProgressDialog().hide();
 		}
 	}
+	
+	private void fadeInAnimation(final View view, long duration ){
+		if(view.getVisibility()==View.VISIBLE) return;
+		Animation fadeIn = new AlphaAnimation(0, 1);
+	    fadeIn.setInterpolator(new DecelerateInterpolator()); // add this
+	    fadeIn.setDuration(duration);
+	    fadeIn.setFillAfter(false);
+	    fadeIn.setAnimationListener(new AnimationListener() {
+			
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				// TODO Auto-generated method stub
+				view.setVisibility(View.VISIBLE);
+				view.clearAnimation();
+			}
+		});
+	    view.startAnimation(fadeIn);
+	}
+
+	private void fadeOutAnimation(final View view, long duration ){
+		if(view.getVisibility()==View.INVISIBLE) return;
+		Animation fadeOut = new AlphaAnimation(1, 0);
+		fadeOut.setInterpolator(new DecelerateInterpolator()); // add this
+		fadeOut.setDuration(duration);
+		fadeOut.setFillAfter(false);
+		fadeOut.setAnimationListener(new AnimationListener() {
+			
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				// TODO Auto-generated method stub
+				view.setVisibility(View.INVISIBLE);
+				view.clearAnimation();
+			}
+		});
+	    view.startAnimation(fadeOut);
+	}
+
 
 }
