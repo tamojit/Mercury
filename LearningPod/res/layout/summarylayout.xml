@@ -32,7 +32,7 @@
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="70dp"
                 android:background="@drawable/star"
-                android:visibility="visible" />
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/correctpercentage"

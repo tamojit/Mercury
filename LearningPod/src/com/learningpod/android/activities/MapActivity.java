@@ -78,11 +78,11 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache()
 				.getLoggedInUserProfile();
 		modifyActionBar(userProfileBean.getName());
-		/*if(CURRENT_MAP_INDEX==0) setContentView(R.layout.dummymapview1);		
+		if(CURRENT_MAP_INDEX==0) setContentView(R.layout.dummymapview1);		
 		if(CURRENT_MAP_INDEX==1) setContentView(R.layout.dummymapview2);		
 		if(CURRENT_MAP_INDEX==2) setContentView(R.layout.dummymapview3);		
-		new LoadMapTask().execute("");*/
-		createMapScreen();	
+		new LoadMapTask().execute("");
+		//createMapScreen();	
 	}
 	
 	private void createMapScreen(){
