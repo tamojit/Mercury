@@ -30,6 +30,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -37,6 +38,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.animation.AlphaAnimation;
@@ -70,6 +72,15 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 	public static int TYPE_MOBILE = 2;
 	public static int TYPE_NOT_CONNECTED = 0;
 	public static int CURRENT_MAP_INDEX = 0;
+	int[] planetBtnArray = { R.id.planet1, R.id.planet2, R.id.planet3,
+			R.id.planet4, R.id.planet5, R.id.planet6, R.id.planet7,
+			R.id.planet8, R.id.planet9, R.id.planet10, R.id.planet11,
+			R.id.planet12, R.id.planet13, R.id.planet14, R.id.planet15 };
+	int[] planetNameArray = { R.id.planet1name, R.id.planet2name, R.id.planet3name,
+			R.id.planet4name, R.id.planet5name, R.id.planet6name,
+			R.id.planet7name, R.id.planet8name, R.id.planet9name,
+			R.id.planet10name, R.id.planet11name, R.id.planet12name,
+			R.id.planet13name, R.id.planet14name, R.id.planet15name, };
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -99,200 +110,12 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		View mapView1 = inflater.inflate(R.layout.mapview1, null);
 		View mapView2 = inflater.inflate(R.layout.mapview2, null);
 		View mapView3 = inflater.inflate(R.layout.mapview3, null);
-
-		((ImageButton) mapView1.findViewById(R.id.planet1))
-				.setOnClickListener(this);
-		((ImageButton) mapView1.findViewById(R.id.planet1)).setTag(new Integer(
-				1).toString());
-		((ImageButton) mapView1.findViewById(R.id.planet2))
-				.setOnClickListener(this);
-		((ImageButton) mapView1.findViewById(R.id.planet2)).setTag(new Integer(
-				2).toString());
-		((ImageButton) mapView1.findViewById(R.id.planet3))
-				.setOnClickListener(this);
-		((ImageButton) mapView1.findViewById(R.id.planet3)).setTag(new Integer(
-				3).toString());
-		((ImageButton) mapView1.findViewById(R.id.planet4))
-				.setOnClickListener(this);
-		((ImageButton) mapView1.findViewById(R.id.planet4)).setTag(new Integer(
-				4).toString());
-		((ImageButton) mapView1.findViewById(R.id.planet5))
-				.setOnClickListener(this);
-		((ImageButton) mapView1.findViewById(R.id.planet5)).setTag(new Integer(
-				5).toString());
-
-		((TextView) mapView1.findViewById(R.id.planet1name))
-				.setOnClickListener(this);
-		((TextView) mapView1.findViewById(R.id.planet1name))
-				.setTag(new Integer(1).toString());
-		((TextView) mapView1.findViewById(R.id.planet2name))
-				.setOnClickListener(this);
-		((TextView) mapView1.findViewById(R.id.planet2name))
-				.setTag(new Integer(2).toString());
-		((TextView) mapView1.findViewById(R.id.planet3name))
-				.setOnClickListener(this);
-		((TextView) mapView1.findViewById(R.id.planet3name))
-				.setTag(new Integer(3).toString());
-		((TextView) mapView1.findViewById(R.id.planet4name))
-				.setOnClickListener(this);
-		((TextView) mapView1.findViewById(R.id.planet4name))
-				.setTag(new Integer(4).toString());
-		((TextView) mapView1.findViewById(R.id.planet5name))
-				.setOnClickListener(this);
-		((TextView) mapView1.findViewById(R.id.planet5name))
-				.setTag(new Integer(5).toString());
-
-		((ImageButton) mapView2.findViewById(R.id.planet6))
-				.setOnClickListener(this);
-		((ImageButton) mapView2.findViewById(R.id.planet6)).setTag(new Integer(
-				6).toString());
-		((ImageButton) mapView2.findViewById(R.id.planet7))
-				.setOnClickListener(this);
-		((ImageButton) mapView2.findViewById(R.id.planet7)).setTag(new Integer(
-				7).toString());
-		((ImageButton) mapView2.findViewById(R.id.planet8))
-				.setOnClickListener(this);
-		((ImageButton) mapView2.findViewById(R.id.planet8)).setTag(new Integer(
-				8).toString());
-		((ImageButton) mapView2.findViewById(R.id.planet9))
-				.setOnClickListener(this);
-		((ImageButton) mapView2.findViewById(R.id.planet9)).setTag(new Integer(
-				9).toString());
-		((ImageButton) mapView2.findViewById(R.id.planet10))
-				.setOnClickListener(this);
-		((ImageButton) mapView2.findViewById(R.id.planet10))
-				.setTag(new Integer(10).toString());
-
-		((TextView) mapView2.findViewById(R.id.planet6name))
-				.setOnClickListener(this);
-		((TextView) mapView2.findViewById(R.id.planet6name))
-				.setTag(new Integer(6).toString());
-		((TextView) mapView2.findViewById(R.id.planet7name))
-				.setOnClickListener(this);
-		((TextView) mapView2.findViewById(R.id.planet7name))
-				.setTag(new Integer(7).toString());
-		((TextView) mapView2.findViewById(R.id.planet8name))
-				.setOnClickListener(this);
-		((TextView) mapView2.findViewById(R.id.planet8name))
-				.setTag(new Integer(8).toString());
-		((TextView) mapView2.findViewById(R.id.planet9name))
-				.setOnClickListener(this);
-		((TextView) mapView2.findViewById(R.id.planet9name))
-				.setTag(new Integer(9).toString());
-		((TextView) mapView2.findViewById(R.id.planet10name))
-				.setOnClickListener(this);
-		((TextView) mapView2.findViewById(R.id.planet10name))
-				.setTag(new Integer(10).toString());
-
-		((ImageButton) mapView3.findViewById(R.id.planet11))
-				.setOnClickListener(this);
-		((ImageButton) mapView3.findViewById(R.id.planet11))
-				.setTag(new Integer(11).toString());
-		((ImageButton) mapView3.findViewById(R.id.planet12))
-				.setOnClickListener(this);
-		((ImageButton) mapView3.findViewById(R.id.planet12))
-				.setTag(new Integer(12).toString());
-		((ImageButton) mapView3.findViewById(R.id.planet13))
-				.setOnClickListener(this);
-		((ImageButton) mapView3.findViewById(R.id.planet13))
-				.setTag(new Integer(13).toString());
-		((ImageButton) mapView3.findViewById(R.id.planet14))
-				.setOnClickListener(this);
-		((ImageButton) mapView3.findViewById(R.id.planet14))
-				.setTag(new Integer(14).toString());
-		((ImageButton) mapView3.findViewById(R.id.planet15))
-				.setOnClickListener(this);
-		((ImageButton) mapView3.findViewById(R.id.planet15))
-				.setTag(new Integer(15).toString());
-
-		((TextView) mapView3.findViewById(R.id.planet11name))
-				.setOnClickListener(this);
-		((TextView) mapView3.findViewById(R.id.planet11name))
-				.setTag(new Integer(11).toString());
-		((TextView) mapView3.findViewById(R.id.planet12name))
-				.setOnClickListener(this);
-		((TextView) mapView3.findViewById(R.id.planet12name))
-				.setTag(new Integer(12).toString());
-		((TextView) mapView3.findViewById(R.id.planet13name))
-				.setOnClickListener(this);
-		((TextView) mapView3.findViewById(R.id.planet13name))
-				.setTag(new Integer(13).toString());
-		((TextView) mapView3.findViewById(R.id.planet14name))
-				.setOnClickListener(this);
-		((TextView) mapView3.findViewById(R.id.planet14name))
-				.setTag(new Integer(14).toString());
-		((TextView) mapView3.findViewById(R.id.planet15name))
-				.setOnClickListener(this);
-		((TextView) mapView3.findViewById(R.id.planet15name))
-				.setTag(new Integer(15).toString());
-
-		((TextView) mapView1.findViewById(R.id.planet1name))
-				.setTypeface(headerFont);
-		((TextView) mapView1.findViewById(R.id.planet2name))
-				.setTypeface(headerFont);
-		((TextView) mapView1.findViewById(R.id.planet3name))
-				.setTypeface(headerFont);
-		((TextView) mapView1.findViewById(R.id.planet4name))
-				.setTypeface(headerFont);
-		((TextView) mapView1.findViewById(R.id.planet5name))
-				.setTypeface(headerFont);
-
-		((TextView) mapView2.findViewById(R.id.planet6name))
-				.setTypeface(headerFont);
-		((TextView) mapView2.findViewById(R.id.planet7name))
-				.setTypeface(headerFont);
-		((TextView) mapView2.findViewById(R.id.planet8name))
-				.setTypeface(headerFont);
-		((TextView) mapView2.findViewById(R.id.planet9name))
-				.setTypeface(headerFont);
-		((TextView) mapView2.findViewById(R.id.planet10name))
-				.setTypeface(headerFont);
-
-		((TextView) mapView3.findViewById(R.id.planet11name))
-				.setTypeface(headerFont);
-		((TextView) mapView3.findViewById(R.id.planet12name))
-				.setTypeface(headerFont);
-		((TextView) mapView3.findViewById(R.id.planet13name))
-				.setTypeface(headerFont);
-		((TextView) mapView3.findViewById(R.id.planet14name))
-				.setTypeface(headerFont);
-		((TextView) mapView3.findViewById(R.id.planet15name))
-				.setTypeface(headerFont);
-
-		if (isSmallerScreen) {
-			((TextView) mapView1.findViewById(R.id.planet1name))
-					.setTextSize(14);
-			((TextView) mapView1.findViewById(R.id.planet2name))
-					.setTextSize(14);
-			((TextView) mapView1.findViewById(R.id.planet3name))
-					.setTextSize(14);
-			((TextView) mapView1.findViewById(R.id.planet4name))
-					.setTextSize(14);
-			((TextView) mapView1.findViewById(R.id.planet5name))
-					.setTextSize(14);
-
-			((TextView) mapView2.findViewById(R.id.planet6name))
-					.setTextSize(14);
-			((TextView) mapView2.findViewById(R.id.planet7name))
-					.setTextSize(14);
-			((TextView) mapView2.findViewById(R.id.planet8name))
-					.setTextSize(14);
-			((TextView) mapView2.findViewById(R.id.planet9name))
-					.setTextSize(14);
-			((TextView) mapView2.findViewById(R.id.planet10name))
-					.setTextSize(14);
-
-			((TextView) mapView3.findViewById(R.id.planet11name))
-					.setTextSize(14);
-			((TextView) mapView3.findViewById(R.id.planet12name))
-					.setTextSize(14);
-			((TextView) mapView3.findViewById(R.id.planet13name))
-					.setTextSize(14);
-			((TextView) mapView3.findViewById(R.id.planet14name))
-					.setTextSize(14);
-			((TextView) mapView3.findViewById(R.id.planet15name))
-					.setTextSize(14);
-		}
+		
+		// initialize the map components for each screen
+		initializeMaps(mapView1, 0);
+		initializeMaps(mapView2, 5);
+		initializeMaps(mapView3, 10);
+		
 
 		// add listeners to next and previous buttons.
 		// also add animations
@@ -324,6 +147,38 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		mapFlipper.addView(mapView3, 2);
 		mapFlipper.setDisplayedChild(0);
 		// setContentView(mapFlipper);
+	}
+	
+	private void initializeMaps(View mapView, int startIndex){
+		
+		for(int idx=startIndex;idx<startIndex+5;idx++){
+			ImageButton planet =(ImageButton) mapView.findViewById(planetBtnArray[idx]);
+			planet.setOnClickListener(this);		
+			planet.setTag(Integer.valueOf(idx).toString());
+			
+			final TextView planetName = (TextView) mapView.findViewById(planetNameArray[idx]);
+			planetName.setOnClickListener(this);			
+			planetName.setTag(Integer.valueOf(idx).toString());
+			planetName.setTypeface(headerFont);
+			if(isSmallerScreen){
+				planetName.setTextSize(14);
+			}		
+			/*planetName.setOnTouchListener(new OnTouchListener() {
+				
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					// TODO Auto-generated method stub
+					if(event.getAction()==MotionEvent.ACTION_DOWN){
+						planetName.setShadowLayer(30, 20, 20, Color.parseColor("#ffffff"));
+					}
+					else if(event.getAction()==MotionEvent.ACTION_UP){
+						planetName.setShadowLayer(0, 0, 0, 0);
+					}
+					return false;
+				}
+			});*/
+			
+		}
 	}
 
 	public void LoginDialogPopUp() {
@@ -568,10 +423,10 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			// showLoginWindow();
 			LoginDialogPopUp();
 		} else if (v instanceof TextView) {
-			// if account text has been clicked
-			// dismiss the login dialog
-			loginPopup.dismiss();
+			// if account email id text has been clicked					
 			if (v.getTag().toString().equalsIgnoreCase("email")) {
+				// dismiss the login dialog	
+				loginPopup.dismiss();
 				if (getConnectivityStatus(this) == TYPE_NOT_CONNECTED) {
 					showCustomDialogForNoInternet();
 					return;
@@ -606,7 +461,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			// if planet text has been clicked. absence
 			else {
 				selectedPlatentId = Integer.parseInt(v.getTag().toString());
-				isPlanetClicked = true;
+				isPlanetClicked = true;				
 				// showLoginWindow();
 				LoginDialogPopUp();
 			}
