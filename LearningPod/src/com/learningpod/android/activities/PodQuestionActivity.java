@@ -38,6 +38,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -839,6 +840,11 @@ public class PodQuestionActivity extends BaseActivity {
 		final Dialog popupmail = new Dialog(context);
 		popupmail.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		popupmail.setContentView(R.layout.email_popup);
+		WindowManager.LayoutParams wmlp = popupmail.getWindow().getAttributes();
+
+		 wmlp.gravity = Gravity.CENTER;
+		 wmlp.x = -11;   //x position
+		 wmlp.y = -74;   //y position
 		final EditText recipient = (EditText) popupmail
 				.findViewById(R.id.toaddress);
 
