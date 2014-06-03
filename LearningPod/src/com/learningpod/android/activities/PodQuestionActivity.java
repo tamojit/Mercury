@@ -942,13 +942,13 @@ public class PodQuestionActivity extends BaseActivity {
 	private String createMailBody(){
 		StringBuffer summary = new StringBuffer();
 		// create the initial html
-		summary.append("<html><body><br><br><br><div><p><font color=\"#445766\"><strong>&nbsp;&nbsp;Summary Of "+ContentCacheStore.getContentCache().getLoggedInUserProfile().getGiven_name()+ " for " + selectedPod.getTitle() +"</strong></font></p></div></br></br><div><p><font color=\"#445766\">&nbsp;&nbsp;<big>Percentage Score: " + percentage + "%</big></font></p></div><div><p><font color=\"#162032\"><strong> &nbsp;&nbsp;&nbsp;&nbsp;  Question #  &nbsp;  Result  &nbsp;   Student Answer  &nbsp;</strong></font><br>");
-		summary.append("&nbsp;_______________________________________</p>");
+		summary.append("<html><body><br><br><br><div><p><font color=\"#445766\"><strong>&nbsp;&nbsp;Summary Of "+ContentCacheStore.getContentCache().getLoggedInUserProfile().getGiven_name()+ " for " + selectedPod.getTitle() +"</strong></font></p></div></br></br><div><p><font color=\"#445766\">&nbsp;&nbsp;Percentage Score: " + percentage + "%</font></p></div><div><p><font color=\"#162032\"><strong> &nbsp;&nbsp;&nbsp;&nbsp;  Question #  &nbsp;&nbsp;  Result  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Student Answer  &nbsp;</strong></font><br>");
+		summary.append("&nbsp;___________________________________________</p>");
 		for(int idx=0;idx<userProgressCompleted.size();idx++){
 			UserProgressInfo userProgress = userProgressCompleted.get(idx);			
 			
 			summary.append("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=\"#162032\" >"+ (idx+1)+".</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color = \"" + (userProgress.isChoiceCorrect()?"#9acc4e":"#e6855b")+ "\">" +(userProgress.isChoiceCorrect()?"Correct&nbsp;&nbsp;&nbsp;":"Incorrect")+"</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font color=\"#162032\">"+getChoiceSequence(userProgress.getQuestionId(), userProgress.getChoiceId()).substring(0,1)+"</font>  &nbsp;<br>");
-			summary.append("&nbsp;_______________________________________</p>");
+			summary.append("&nbsp;___________________________________________</p>");
 		}
 		
 		return summary.toString();

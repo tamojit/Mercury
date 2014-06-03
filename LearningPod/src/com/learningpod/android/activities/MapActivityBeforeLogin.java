@@ -154,11 +154,11 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		for(int idx=startIndex;idx<startIndex+5;idx++){
 			ImageButton planet =(ImageButton) mapView.findViewById(planetBtnArray[idx]);
 			planet.setOnClickListener(this);		
-			planet.setTag(Integer.valueOf(idx).toString());
+			planet.setTag(Integer.valueOf(idx+1).toString());
 			
 			final TextView planetName = (TextView) mapView.findViewById(planetNameArray[idx]);
 			planetName.setOnClickListener(this);			
-			planetName.setTag(Integer.valueOf(idx).toString());
+			planetName.setTag(Integer.valueOf(idx+1).toString());
 			planetName.setTypeface(headerFont);
 			if(isSmallerScreen){
 				planetName.setTextSize(14);
@@ -255,14 +255,14 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				if (CURRENT_MAP_INDEX == 0) {
 					//findViewById(R.id.btnmapprev).setVisibility(View.GONE);
 					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-					fadeOutAnimation(findViewById(R.id.btnmapprev), 500);					
-					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
+					fadeOutAnimation(findViewById(R.id.btnmapprev), 600);					
+					fadeInAnimation(findViewById(R.id.btnmapnext), 600);
 					getActionBar().setTitle("Your Journey Begins");
 				} else {
 					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
-					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+					fadeInAnimation(findViewById(R.id.btnmapnext), 600);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 					if(CURRENT_MAP_INDEX==1){
 						getActionBar().setTitle("The Midway Planets");
 					}else{
@@ -286,14 +286,14 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				if (CURRENT_MAP_INDEX == 2) {
 					//findViewById(R.id.btnmapnext).setVisibility(View.GONE);
 					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-					fadeOutAnimation(findViewById(R.id.btnmapnext), 500);
-					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+					fadeOutAnimation(findViewById(R.id.btnmapnext), 600);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 					getActionBar().setTitle("Galaxy's End");
 				} else {
 					//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 					//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-					fadeInAnimation(findViewById(R.id.btnmapnext), 500);
-					fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+					fadeInAnimation(findViewById(R.id.btnmapnext), 600);
+					fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 					if(CURRENT_MAP_INDEX==1){
 						getActionBar().setTitle("The Midway Planets");
 					}else{
@@ -366,14 +366,14 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			if (CURRENT_MAP_INDEX == 2) {
 				//findViewById(R.id.btnmapnext).setVisibility(View.GONE);				
 				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-				fadeOutAnimation(findViewById(R.id.btnmapnext), 500);
-				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+				fadeOutAnimation(findViewById(R.id.btnmapnext), 600);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 				getActionBar().setTitle("Galaxy's End");
 			} else {
 				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
-				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 600);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 				if(CURRENT_MAP_INDEX==0){
 					getActionBar().setTitle("Your Journey Begins");
 				}else{
@@ -394,14 +394,14 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			if (CURRENT_MAP_INDEX == 0) {
 				//findViewById(R.id.btnmapprev).setVisibility(View.INVISIBLE);
 				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
-				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
-				fadeOutAnimation(findViewById(R.id.btnmapprev), 500);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 600);
+				fadeOutAnimation(findViewById(R.id.btnmapprev), 600);
 				getActionBar().setTitle("Your Journey Begins");
 			} else {
 				//findViewById(R.id.btnmapnext).setVisibility(View.VISIBLE);
 				//findViewById(R.id.btnmapprev).setVisibility(View.VISIBLE);
-				fadeInAnimation(findViewById(R.id.btnmapnext), 500);
-				fadeInAnimation(findViewById(R.id.btnmapprev), 500);
+				fadeInAnimation(findViewById(R.id.btnmapnext), 600);
+				fadeInAnimation(findViewById(R.id.btnmapprev), 600);
 				if(CURRENT_MAP_INDEX==1){
 					getActionBar().setTitle("The Midway Planets");
 				}else{
@@ -480,7 +480,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			@Override
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
-				
+				view.setOnClickListener(null);
 			}
 			
 			@Override
@@ -494,6 +494,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				// TODO Auto-generated method stub
 				view.setVisibility(View.VISIBLE);
 				view.clearAnimation();
+				view.setOnClickListener(MapActivityBeforeLogin.this);
 			}
 		});
 	    view.startAnimation(fadeIn);
@@ -510,7 +511,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			@Override
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
-				
+				view.setOnClickListener(null);
 			}
 			
 			@Override
@@ -524,6 +525,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 				// TODO Auto-generated method stub
 				view.setVisibility(View.INVISIBLE);
 				view.clearAnimation();
+				view.setOnClickListener(MapActivityBeforeLogin.this);
 			}
 		});
 	    view.startAnimation(fadeOut);

@@ -1,6 +1,6 @@
 <learningpod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" title="Homographs and Homophones" data-uuid="a330b48e-d1de-487e-96f9-fa6b9f71e2c9" xsi:schemaLocation="http://www.learningpod.com/xsd/item/1.0 learningpod-item.xsd">
   <choiceQuestion>
-    <questionBody><p><b>The hotel <u>suite</u> actually has three rooms.</b></p><p><b>Even for Michaela, the candy was too <u>sweet</u>.</b></p></questionBody>
+    <questionBody><p><b>The hotel <u>suite</u> actually has three rooms.</b></p><p><b> Even for Michaela, the candy was too <u>sweet</u>.</b></p></questionBody>
     <choiceInteraction singleSelect="true" interactionId="1">
       <simpleChoice correct="false" choiceId="answerChoice1"><p>Homograph</p></simpleChoice>
       <simpleChoice correct="true" choiceId="answerChoice2"><p>Homophone</p></simpleChoice>
