@@ -109,7 +109,7 @@ public class WordListActivity extends BaseActivity
 		//populateList(i);
 		populatehardcodedlist(i);
 		adapter =new ListviewAdapter(WordListActivity.this, list);
-		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*78));
+		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*85));
 		wordList.setAdapter(adapter);
 		wordListContentView.addView(wordListView);
 		
