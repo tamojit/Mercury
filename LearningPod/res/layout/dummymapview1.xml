@@ -9,8 +9,8 @@
     		    android:id = "@+id/planet1"
     		    android:layout_width="83dp"
     		    android:layout_height="80dp"
-    		    android:layout_marginLeft="44dp"
-    		    android:layout_marginTop="64dp"
+    		    android:layout_marginLeft="43dp"
+    		    android:layout_marginTop="62dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet1_bg"/>
     		
@@ -33,16 +33,15 @@
     		    android:layout_marginTop="8dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
-    		    android:layout_height="80dp"
+    		    android:layout_height="78dp"
     		    android:background="@drawable/spaceshipwithoutflag"/>
     		
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="64dp" 
+    		    android:layout_marginTop="63dp" 
     		    android:orientation="horizontal"    		     
     		    android:layout_marginLeft="106dp"
-    		    
     		    android:weightSum="1">
     		    
     		    <View
@@ -64,10 +63,10 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet2"
-    		    android:layout_width="100dp"
+    		    android:layout_width="105dp"
     		    android:layout_height="82dp"
-    		    android:layout_marginLeft="178dp"
-    		    android:layout_marginTop="176dp"
+    		    android:layout_marginLeft="183dp"
+    		    android:layout_marginTop="192dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet2_bg"/>
     		
@@ -80,14 +79,14 @@
     		    android:textStyle="bold"
     		    android:text = "Tier II Nouns"
     		    android:layout_toRightOf="@+id/planet2"
-    		    android:layout_marginTop="193dp"
+    		    android:layout_marginTop="210dp"
     		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet2ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="214dp"
-    		    android:layout_marginTop="122dp" 
+    		    android:layout_marginLeft="221dp"
+    		    android:layout_marginTop="138dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -96,9 +95,9 @@
     		<LinearLayout 
     		    android:layout_width="100dp"    		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="176dp" 
+    		    android:layout_marginTop="192dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="249dp"
+    		    android:layout_marginLeft="256dp"
     		    android:weightSum="1">
     		   
     		    <View
@@ -121,8 +120,8 @@
     		    android:id = "@+id/planet3"    		    
     		    android:layout_width="80dp"
     		    android:layout_height="79dp"
-    		    android:layout_marginLeft="356dp"
-    		    android:layout_marginTop="256dp"
+    		    android:layout_marginLeft="392dp"
+    		    android:layout_marginTop="247dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet3_bg"/>
     		
@@ -135,14 +134,14 @@
     		    android:textStyle="bold"
     		    android:text = "Tier II Verbs"
     		    android:layout_toRightOf="@+id/planet3"
-    		    android:layout_marginTop="276dp"
+    		    android:layout_marginTop="270dp"
     		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet3ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="383dp"
-    		    android:layout_marginTop="200dp" 
+    		    android:layout_marginLeft="420dp"
+    		    android:layout_marginTop="190dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -152,9 +151,9 @@
     		    android:layout_width="100dp"
     		     
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="254dp" 
+    		    android:layout_marginTop="246dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="418dp"
+    		    android:layout_marginLeft="455dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -177,8 +176,8 @@
     		    android:id = "@+id/planet4"    		    
     		    android:layout_width="88dp"
     		    android:layout_height="86dp"
-    		    android:layout_marginLeft="521dp"
-    		    android:layout_marginTop="186dp"
+    		    android:layout_marginLeft="538dp"
+    		    android:layout_marginTop="168dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet4_bg"/>
     		
@@ -191,14 +190,14 @@
     		    android:textStyle="bold"
     		    android:text = "Tier III Vocabulary"
     		    android:layout_toRightOf="@+id/planet4"
-    		    android:layout_marginTop="201dp"
+    		    android:layout_marginTop="183dp"
     		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet4ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="551dp"
-    		    android:layout_marginTop="132dp" 
+    		    android:layout_marginLeft="567dp"
+    		    android:layout_marginTop="114dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -208,9 +207,9 @@
     		    android:layout_width="100dp"
     		    
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="187dp" 
+    		    android:layout_marginTop="170dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="586dp"
+    		    android:layout_marginLeft="601dp"
     		 
     		    android:weightSum="1">
     		    
@@ -235,8 +234,8 @@
     		    android:id = "@+id/planet5"
     		    android:layout_width="86dp"
     		    android:layout_height="84dp"
-    		    android:layout_marginLeft="700dp"
-    		    android:layout_marginTop="115dp"
+    		    android:layout_marginLeft="715dp"
+    		    android:layout_marginTop="106dp"
     		    android:adjustViewBounds="true" 
     		    android:background="@drawable/custom_planet5_bg"/>
     		
@@ -249,14 +248,14 @@
     		    android:textStyle="bold"
     		    android:text = "Context Clues (Level A)"
     		    android:layout_toRightOf="@+id/planet5"
-    		    android:layout_marginTop="128dp"
+    		    android:layout_marginTop="123dp"
     		    android:layout_marginLeft="-10dp"/>
     		
     		<ImageView
     		    android:id = "@+id/planet5ss"
     		    android:visibility="invisible"
-    		    android:layout_marginLeft="727dp"
-    		    android:layout_marginTop="60dp" 
+    		    android:layout_marginLeft="744dp"
+    		    android:layout_marginTop="52dp" 
     		    android:adjustViewBounds="true"
     		    android:layout_width="62dp"
     		    android:layout_height="80dp"
@@ -266,9 +265,9 @@
     		    android:layout_width="100dp"
     		   
     		    android:layout_height="9dp"
-    		    android:layout_marginTop="115dp" 
+    		    android:layout_marginTop="107dp" 
     		    android:orientation="horizontal"
-    		    android:layout_marginLeft="762dp"
+    		    android:layout_marginLeft="779dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -286,9 +285,7 @@
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
-    		</LinearLayout>
-    
-    
+    		</LinearLayout>    
    			
       <Button
         android:id="@+id/wordlist"
