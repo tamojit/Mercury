@@ -100,6 +100,7 @@ public class WordListActivity extends BaseActivity
 		TextView ListHeadings=(TextView)wordListView.findViewById(R.id.wordListText);
 		ListHeadings.setTypeface(headerFont);
 		ListHeadings.setText(ListHeading[i]);
+		
 		TextView word=(TextView)wordListView.findViewById(R.id.FirstcolumnText);
 		TextView partofspeech=(TextView)wordListView.findViewById(R.id.secondColumnText);
 		TextView meaning=(TextView)wordListView.findViewById(R.id.thirdColumnText);
@@ -109,8 +110,10 @@ public class WordListActivity extends BaseActivity
 		//populateList(i);
 		populatehardcodedlist(i);
 		adapter =new ListviewAdapter(WordListActivity.this, list);
-		wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*85));
+	//	wordList.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, list.size()*85));
 		wordList.setAdapter(adapter);
+		wordListContentView.setOnClickListener(null);
+		
 		wordListContentView.addView(wordListView);
 		
     	}

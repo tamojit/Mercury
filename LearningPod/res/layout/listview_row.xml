@@ -9,7 +9,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
- 
+        android:clickable="false"
     	android:id="@+id/FirstText"
     	android:layout_height="wrap_content"
     	android:layout_weight=".37"
@@ -33,6 +33,7 @@
         android:paddingBottom="2dp"
         android:textColor="#ffffff"  
         android:layout_weight=".381"
+        android:clickable="false"
         >
     </TextView>
     
@@ -47,6 +48,7 @@
         android:textColor="#ffffff"
         android:textSize="19dp"
         android:layout_weight=".25"
+        android:clickable="false"
     >
     
     </TextView>
