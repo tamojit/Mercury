@@ -79,8 +79,10 @@ public class ListviewAdapter extends BaseAdapter {
 					.findViewById(R.id.relativeLayout1);
 
 			convertView.setTag(holder);
+		
 		} else {
 			holder = (ViewHolder) convertView.getTag();
+			
 		}
 
 		Font = Typeface.createFromAsset(this.activity.getAssets(),
