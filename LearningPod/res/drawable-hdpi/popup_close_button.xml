@@ -4,9 +4,17 @@
 
     <item android:state_pressed="true" >
         <shape>
+            
+            <corners
+             android:bottomRightRadius="20dp"
+             android:bottomLeftRadius="20dp"
+             android:topLeftRadius="20dp"
+             android:topRightRadius="20dp"
+             />
             <gradient
-                android:startColor="#e6855b"
-                android:endColor="#e6855b"
+                
+                android:startColor="#42afe3"
+                android:endColor="#42afe3"
                 android:angle="270" />
         </shape>
     </item>

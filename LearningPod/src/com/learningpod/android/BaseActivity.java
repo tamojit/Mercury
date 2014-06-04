@@ -20,9 +20,12 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Html.ImageGetter;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
 import android.util.DisplayMetrics;
@@ -33,6 +36,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -50,7 +54,8 @@ public class BaseActivity extends Activity implements
 	private PopupWindow menuitempopup;
 	private Account[] accounts = null;
 	private View loginWindowView;
-	 
+	private ImageGetter imgGetter;
+	int imageNumber=1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,26 +72,34 @@ public class BaseActivity extends Activity implements
 
 	private void menupopup(String detail) {
 
+		int width = (int) TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP, 416, getResources()
+						.getDisplayMetrics());
 		DisplayMetrics metrics = BaseActivity.this.getResources().getDisplayMetrics();
-		int width = metrics.widthPixels;
+		//int width = metrics.widthPixels;
 		int height = metrics.heightPixels;
-		menuitempopup = new PopupWindow(width/2,height);
+		menuitempopup = new PopupWindow(width,height);
+		
+		
+		
 		
 		if(detail=="HELP")
 		{
-			
+		
 			loginWindowView = getLayoutInflater().inflate(
 					R.layout.popup_menuitem, null);
 			menuitempopup.setContentView(loginWindowView);
 			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
 			TextView wordlist=(TextView)loginWindowView.findViewById(R.id.textdetail3);
-		    wordlist.setText(Html.fromHtml(" <img src=“wordlist.png”/>You can access the<b> Word List </b> from the map. You’ll find a list of words for four planets: Tier II Nouns, Tier II Verbs, Tier III Vocabulary, and Relationship and Transition Words."));
-			
-			
+		    wordlist.setText(Html.fromHtml("You can access the<b> Word List </b> from the map."));
+		
 			TextView practicingquestions=(TextView)loginWindowView.findViewById(R.id.textdetail4);
-			practicingquestions.setText(Html.fromHtml("Select an answer choice and tap <b>Submit</b>. A green check mark [green check] means you got the answer right and a red x mark [red x mark] means you didn’t. You’ll also get a short explanation.<br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
+		practicingquestions.setText(Html.fromHtml("Select an answer choice and tap <b>Submit</b>.A green check"));
+		TextView practicingquestions2=(TextView)loginWindowView.findViewById(R.id.textdetailzz);
+		practicingquestions2.setText(Html.fromHtml(" explanation.<br /> <br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
+		//A green check mark [green check] means you got the answer right and a red x mark [red x mark] means 	
 			TextView completequestions=(TextView)loginWindowView.findViewById(R.id.textdetail5);
-			completequestions.setText(Html.fromHtml("Once you complete all the questions in a planet, you’ll see a summary screen that shows how well you did. From this screen, you can email your results to your teacher or parent.<br />You can review the questions by tapping on a question number or using <b>Back</b>."));
+			completequestions.setText(Html.fromHtml("Once you complete all the questions in a planet, you’ll see a summary screen that shows how well you did. From this screen, you can email your results to your teacher or parent.<br /><br />You can review the questions by tapping on a question number or using <b>Back</b>."));
 			LinearLayout closebutton3 = (LinearLayout)loginWindowView.findViewById(R.id.closebutton3);
 			
 			closebutton3 .setOnClickListener(new OnClickListener() {
