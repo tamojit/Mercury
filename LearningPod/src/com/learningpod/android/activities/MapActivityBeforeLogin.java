@@ -160,6 +160,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			planetName.setOnClickListener(this);			
 			planetName.setTag(Integer.valueOf(idx+1).toString());
 			planetName.setTypeface(headerFont);
+			planetName.setTextColor(getResources().getColorStateList(R.color.planet_text_color));
 			if(isSmallerScreen){
 				planetName.setTextSize(14);
 			}		
@@ -356,6 +357,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		// go to login screen
 
 		if (v.getId() == R.id.btnmapnext) {
+			// if the view is invisible, don't act
+			if(v.getVisibility()==View.INVISIBLE) return;
 			// set the required Animation type to mapFlipper
 			// The Next screen will come in form Right and current Screen will
 			// go OUT from Left
@@ -383,7 +386,8 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 			// Show The Previous Screen
 			mapFlipper.showNext();
 		} else if (v.getId() == R.id.btnmapprev) {
-
+			// if the view is invisible, don't act
+			if(v.getVisibility()==View.INVISIBLE) return;
 			// set the required Animation type to mapFlipper
 			// The Next screen will come in form Left and current Screen will go
 			// OUT from Right

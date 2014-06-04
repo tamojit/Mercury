@@ -20,7 +20,7 @@
     		    android:layout_height = "wrap_content"
     		    android:textSize="16sp"
     		    android:textColor="#ffffff"
-    		    android:textStyle="bold"
+    		    android:textStyle="bold"    		    
     		    android:text = "Context Clues – Nonsense Words"
     		    android:layout_toRightOf="@+id/planet1"
     		    android:layout_marginTop="78dp"
@@ -287,12 +287,12 @@
     		        android:background="#8896a3"/>
     		</LinearLayout>    
    			
-      <Button
+     <Button
         android:id="@+id/wordlist"
-        android:layout_width="121dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="780dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="766dp"
+        android:layout_marginTop="0dp"
         android:adjustViewBounds="true"
         android:background="@drawable/wordlist" />
     

@@ -33,7 +33,7 @@
         android:visibility="gone" />
      
      <ImageView
-	         android:layout_height="wrap_content"
+	         android:layout_height="82dp"
 	         android:layout_width="700dp"
 	         android:layout_marginLeft="53dp"
 	         android:layout_alignParentBottom="true"
