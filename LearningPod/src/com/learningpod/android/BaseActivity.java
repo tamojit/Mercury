@@ -17,9 +17,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Display;
@@ -33,6 +38,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.TextView.BufferType;
 
 public class BaseActivity extends Activity implements
 		DialogInterface.OnClickListener {
@@ -74,7 +80,9 @@ public class BaseActivity extends Activity implements
 			menuitempopup.setContentView(loginWindowView);
 			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
 			TextView wordlist=(TextView)loginWindowView.findViewById(R.id.textdetail3);
-			wordlist.setText(Html.fromHtml("[word list meteorite + label] You can access the<b> Word List </b> from the map. You’ll find a list of words for four planets: Tier II Nouns, Tier II Verbs, Tier III Vocabulary, and Relationship and Transition Words."));
+		    wordlist.setText(Html.fromHtml(" <img src=“wordlist.png”/>You can access the<b> Word List </b> from the map. You’ll find a list of words for four planets: Tier II Nouns, Tier II Verbs, Tier III Vocabulary, and Relationship and Transition Words."));
+			
+			
 			TextView practicingquestions=(TextView)loginWindowView.findViewById(R.id.textdetail4);
 			practicingquestions.setText(Html.fromHtml("Select an answer choice and tap <b>Submit</b>. A green check mark [green check] means you got the answer right and a red x mark [red x mark] means you didn’t. You’ll also get a short explanation.<br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
 			TextView completequestions=(TextView)loginWindowView.findViewById(R.id.textdetail5);

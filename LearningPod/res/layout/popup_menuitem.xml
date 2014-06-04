@@ -161,6 +161,9 @@
        android:layout_toRightOf="@+id/help3"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
+        
+        
+     
        
          <TextView
        android:id="@+id/textdetail3"
@@ -168,9 +171,12 @@
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help3"         
        android:text=""
+          
        android:layout_marginLeft="25dp"
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="13dip" 
+      
+       />
          
       <View android:layout_width="fill_parent"
     android:layout_height="1dip"
