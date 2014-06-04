@@ -3,6 +3,7 @@
  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:orientation="vertical"
    android:background="#526576"
+   
      >  
      
      <TextView
@@ -11,7 +12,7 @@
        android:layout_height="wrap_content" 
        android:layout_marginTop="5dp"            
        android:text="HELP"
-       android:layout_marginLeft="28dp"
+       android:layout_marginLeft="18dp"
        android:textColor="@android:color/white"
        android:textSize="20dip"
        android:textStyle="bold" />
@@ -22,7 +23,7 @@
          android:layout_height="28dp"
          android:layout_width="28dp"
          android:layout_toRightOf="@+id/texthelp" 
-         android:layout_marginLeft="355dp"
+         android:layout_marginLeft="299dp"
          android:layout_marginTop="7dp"
          android:orientation="horizontal"
          android:background="@drawable/popup_close_button"
@@ -30,10 +31,10 @@
         >
          
              <ImageView android:id = "@+id/maparrow"
-             android:layout_width="20dp"
-	       	 android:layout_height="20dp"
-	       	 android:layout_marginLeft="4dp"
-             android:layout_marginTop="4dp"
+             android:layout_width="18dp"
+	       	 android:layout_height="18dp"
+	       	 android:layout_marginLeft="6dp"
+             android:layout_marginTop="6dp"
 	       	 android:background="@drawable/popupclosebutton"
 	       	 />
      </LinearLayout>
@@ -42,14 +43,14 @@
     android:layout_height="1dip"
     android:background="#FFFFFF" 
     android:layout_below="@+id/texthelp"
-    android:layout_marginLeft="28dp"
+    android:layout_marginLeft="18dp"
     android:layout_marginTop="4dp"
     android:layout_marginRight="20dp"/>
      
  <ScrollView   
       android:id="@+id/ScrollView01" 
       android:layout_marginTop="50dp"
-      android:layout_marginLeft="10dp"
+      android:layout_marginLeft="5dp"
       android:layout_marginBottom="36dp"
       android:layout_marginRight="10dp" 
       android:layout_height="wrap_content"   
@@ -62,9 +63,9 @@
             
             <ImageButton 
     		    android:id = "@+id/help1"
-    		    android:layout_width="35dp"
+    		    android:layout_width="32dp"
     		    android:layout_height="30dp"
-    		    android:layout_marginLeft="20dp"  
+    		    android:layout_marginLeft="10dp"  
     		    android:paddingTop="16dp"  		     
     		    android:background="@drawable/popuphelp5"/>
       
@@ -86,107 +87,259 @@
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help1"         
        android:text="Log in with your Google account to start answering questions. We’ll store your practice on your device so you can always resume where you left off."
-       android:layout_marginLeft="25dp"
+       android:layout_marginLeft="10dp"
     
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="14dip" />
          
        <View android:layout_width="fill_parent"
     android:layout_height="1dip"
-    android:background="#FFFFFF" 
+    android:background="#999999" 
     android:layout_below="@+id/textdetail"
-    android:layout_marginLeft="28dp"
+    android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="12dp"/>  
          
          
        <ImageButton 
        android:id = "@+id/help2"
-       android:layout_width="33dp"
+       android:layout_width="30dp"
        android:layout_height="30dp"
-       android:layout_marginLeft="25dp"  
+       android:layout_marginLeft="10dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="94dp"		     
+       android:layout_marginTop="105dp"		     
        android:background="@drawable/popuphelp3"/>
-      
+       
         <TextView
        android:id="@+id/texttitle2"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
        android:text="Navigating the Map"
        android:textStyle="bold"
-       android:paddingLeft="3dp"
-       android:layout_marginTop="99dp"
+       android:paddingLeft="4dp"
+       android:layout_marginTop="110dp"
        android:layout_toRightOf="@+id/help2"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
-       
+      
+        <RelativeLayout 
+         android:id="@+id/innersection0" 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/help2"
+         android:paddingTop="5dp"> 
+        
          <TextView
        android:id="@+id/textdetail2"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content"    
-       android:layout_below="@+id/help2"         
-       android:text="You can choose any planet on the map at any time.\n[planet] Each planet is a question set on a specific topic, like “Context Clues - Nonsense Words.”\n[planet with building + progress bar] If you’re practicing a set, a little building will appear on top of the planet, along with a progress bar.\n[planet with building + flag] Once you’ve completed a planet, a flag will appear on top of the building. "
-       android:layout_marginLeft="25dp"
+       android:layout_height="wrap_content"           
+       android:text="You can choose any planet on the map at any time."
+       android:layout_marginLeft="10dp"
        android:textColor="@android:color/white"
-       android:textSize="13dip" 
-       />
+       android:textSize="14dip" 
+         />
+       
+       <ImageView
+       android:id="@+id/planetimage"
+       android:layout_below="@id/textdetail2"
+       android:layout_width="24dp"
+       android:layout_marginLeft="7dp"
+       android:layout_height="24dp"
+       android:paddingTop="8dp"
+       android:src="@drawable/planetforpopup"
+       />  
+         
+       <TextView
+       android:id="@+id/textdetail20"
+       android:layout_below="@id/textdetail2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+       android:layout_toRightOf="@+id/planetimage" 
+       android:paddingLeft="1dp" 
+       android:paddingTop="8dp"     
+       android:text="Each planet is a question set on a specific topic,like"      
+       android:textColor="@android:color/white"
+       android:textSize="14dip" 
+         /> 
+       
+       
+        <TextView
+       android:id="@+id/textdetail21"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+       android:layout_below="@+id/textdetail20"        
+       android:text="“Context Clues - Nonsense Words.” "
+       android:layout_marginLeft="10dp"
+       android:paddingTop="2dp"
+       android:textColor="@android:color/white"
+       android:textSize="14dip" 
+         />
+        <ImageView
+       android:id="@+id/planetimage2"
+       android:layout_below="@+id/textdetail21"
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       android:layout_marginTop="2dp"
+       android:src="@drawable/planetpopupprog"
+       android:layout_marginLeft="10dp"
+       />  
+         <TextView
+       android:id="@+id/textdetail22"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+       android:layout_toRightOf="@+id/planetimage2"  
+       android:layout_below="@+id/textdetail21"  
+           android:layout_marginTop="7dp"
+       android:text="If you’re practicing a set, a little building will appear "      
+       android:textColor="@android:color/white"
+       android:paddingLeft="3dp"
+       android:textSize="14dip"       
+     />    
+         
+        <TextView
+       android:id="@+id/textdetail23"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+        android:layout_marginLeft="10dp"
+        android:paddingTop="4dp"
+       android:layout_below="@+id/textdetail22"      
+       android:text=" on top of the planet, along with a progress bar."      
+       android:textColor="@android:color/white"
+       android:textSize="14dip"       
+     />    
+       
+      <ImageView
+       android:id="@+id/planetimage3"
+       android:layout_below="@+id/textdetail23"
+       android:layout_width="48dp"
+       android:layout_height="34dp"
+       android:layout_marginTop="-2dp"
+       android:layout_marginLeft="-3dp"
+       android:src="@drawable/planetpopupflag"
+     
+       />  
+         <TextView
+       android:id="@+id/textdetail24"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+       android:layout_toRightOf="@+id/planetimage3"  
+       android:layout_below="@+id/textdetail23"  
+       android:layout_marginLeft="-12dp" 
+       android:layout_marginTop="8dp"   
+       android:text="Once you’ve completed a planet, a flag will appear on   "      
+       android:textColor="@android:color/white"
+       android:textSize="14dip"       
+     />      
+        <TextView
+       android:id="@+id/textdetail25"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"   
+        android:layout_marginLeft="10dp"
+       android:layout_below="@+id/textdetail24"      
+       android:text=" top of the building. "  
+       android:paddingTop="1dp"    
+       android:textColor="@android:color/white"
+       android:textSize="14dip"       
+     /> 
         
-         <View android:layout_width="fill_parent"
+         
+         </RelativeLayout>
+         
+    <View android:layout_width="fill_parent"
     android:layout_height="1dip"
-    android:background="#FFFFFF" 
-    android:layout_below="@+id/textdetail2"
-    android:layout_marginLeft="28dp"
+    android:background="#999999" 
+    android:layout_below="@+id/innersection0"
+    android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="12dp"/>
          
          
         <ImageButton 
        android:id = "@+id/help3"
-       android:layout_width="35dp"
-       android:layout_height="30dp"
-       android:layout_marginLeft="25dp"  
+       android:layout_width="33dp"
+       android:layout_height="25dp"
+       android:layout_marginLeft="10dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="260dp"		     
+       android:layout_marginTop="325dp"		     
        android:background="@drawable/popuphelp4"/>
       
+         
+        
+        
+        
         <TextView
        android:id="@+id/texttitle3"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
        android:text="Using the Word List"
        android:textStyle="bold"
-       android:layout_marginTop="264dp"
+       android:layout_marginTop="329dp"
        android:paddingLeft="4dp"
        android:layout_toRightOf="@+id/help3"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
+        
+        
+       <RelativeLayout 
+         android:id="@+id/innersection" 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/help3"
+         android:paddingTop="5dp"> 
+     
+       <ImageView
+       android:id="@+id/wordimage"
+       android:layout_marginLeft="10dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/worldlistinpopup"
+       />
        
-         <TextView
+       <TextView
        android:id="@+id/textdetail3"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content"    
-       android:layout_below="@+id/help3"         
-       android:text=""
-       android:layout_marginLeft="25dp"
+       android:layout_height="wrap_content"             
+       android:text=""     
+       android:layout_marginLeft="5dp"
+       android:layout_marginTop="-3dp"
+       android:layout_toRightOf="@+id/wordimage"
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="14dip" 
+      
+       />
+       <TextView
+       android:id="@+id/textdetailx"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"             
+       android:text="You’ll find a list of words for four planets: Tier II Nouns, Tier II Verbs, Tier III Vocabulary, and Relationship and Transition Words."  
+       android:layout_alignParentLeft="true"
+       android:layout_marginLeft="10dp"
+       android:layout_below="@id/wordimage"
+      
+       android:textColor="@android:color/white"
+       android:textSize="14dip" 
+      
+       />
+       
+       
+     </RelativeLayout>    
+         
          
       <View android:layout_width="fill_parent"
     android:layout_height="1dip"
-    android:background="#FFFFFF" 
+    android:background="#999999" 
     android:layout_marginTop="10dp"
-    android:layout_below="@+id/textdetail3"
-    android:layout_marginLeft="28dp"
+    android:layout_below="@+id/innersection"
+    android:layout_marginLeft="10dp"
     android:layout_marginRight="12dp"/>     
          
          <ImageButton 
        android:id = "@+id/help4"
        android:layout_width="35dp"
-       android:layout_height="30dp"
-       android:layout_marginLeft="25dp"  
+       android:layout_height="28dp"
+       android:layout_marginLeft="10dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="362dp"		     
+       android:layout_marginTop="445dp"		     
        android:background="@drawable/popuphelp2"/>
       
         <TextView
@@ -194,28 +347,118 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"             
        android:text="Practicing Questions"
-       android:layout_marginTop="367dp"
+       android:layout_marginTop="445dp"
        android:layout_marginLeft="4dp"
        android:textStyle="bold"
        android:layout_toRightOf="@+id/help4"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
        
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        android:id="@+id/innersection2"
+	        android:layout_below="@+id/help4"
+	        android:paddingTop="5dp"  >
+       
+            
          <TextView
        android:id="@+id/textdetail4"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content"    
-       android:layout_below="@+id/help4"         
-       android:text="Select an answer choice and tap Submit. A green check mark [green check] means you got the answer right and a red x mark [red x mark] means you didn’t. You’ll also get a short explanation.\nTap Next to go to a new question and Back to go to the question you just practiced."
-       android:layout_marginLeft="25dp"
+       android:layout_height="wrap_content"          
+       android:text=""
+       android:layout_marginLeft="10dp"
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="14dip" />
+         
+         <TextView
+       android:id="@+id/textdetail44"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"          
+       android:text="mark"
+       android:layout_below="@+id/textdetail4"
+       android:layout_marginLeft="10dp"
+       android:textColor="@android:color/white"
+       android:textSize="14dip" />
+         
+       <ImageView
+       android:id="@+id/tickimage"
+       android:layout_toRightOf="@+id/textdetail44"
+       android:layout_below="@+id/textdetail4"
+       android:layout_width="wrap_content"
+       android:paddingTop="3dp"
+       android:paddingLeft="4dp"
+       android:layout_height="wrap_content"
+       android:src="@drawable/tickinpopup"             
+       />
+         <TextView
+       android:id="@+id/textdetaily"
+       android:layout_below="@id/textdetail4"
+       android:layout_width="wrap_content"
+       android:layout_toRightOf="@+id/tickimage"       
+       android:layout_height="wrap_content" 
+       android:paddingLeft="4dp"         
+       android:text="means you got the answer right and a red x"
+       android:textColor="@android:color/white"
+       android:textSize="14dip" />
+         
+         <TextView
+       android:id="@+id/textdetail444"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"          
+       android:text="mark"
+       android:layout_below="@+id/textdetaily"
+       android:layout_marginLeft="10dp"
+       android:textColor="@android:color/white"
+       android:textSize="14dip" /> 
+         
+         <ImageView
+       android:id="@+id/crossimage"
+       android:layout_toRightOf="@+id/textdetail444"
+       android:layout_width="wrap_content"
+       android:layout_below="@+id/textdetaily"
+       android:layout_height="wrap_content"
+       android:src="@drawable/closeinpopup" 
+       android:paddingLeft="4dp"
+       android:paddingTop="2dp"
+       />
+         
+       
+         
+       <TextView
+       android:id="@+id/textdetailz"
+       android:layout_below="@id/textdetaily"
+       android:layout_width="wrap_content"
+       android:layout_toRightOf="@+id/crossimage"
+       android:layout_height="wrap_content"          
+       android:text=" means you didn't. You’ll also get a short"
+       
+       android:textColor="@android:color/white"
+       android:textSize="14dip" />          
+       
+     <TextView
+       android:id="@+id/textdetailzz"
+       android:layout_below="@id/textdetailz"
+       android:layout_width="wrap_content"
+       
+       android:layout_height="wrap_content"          
+       android:text=""
+       android:layout_marginLeft="10dp"
+       android:textColor="@android:color/white"
+       android:textSize="14dip" />  
+       
+            
+       </RelativeLayout>
+         
+         
          
          <View android:layout_width="fill_parent"
     android:layout_height="1dip"
-    android:background="#FFFFFF" 
-    android:layout_below="@+id/textdetail4"
-    android:layout_marginLeft="28dp"
+    android:background="#999999" 
+    android:layout_below="@+id/innersection2"
+    android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="12dp"/> 
      
@@ -223,9 +466,9 @@
        android:id = "@+id/help5"
        android:layout_width="35dp"
        android:layout_height="30dp"
-       android:layout_marginLeft="25dp"  
+       android:layout_marginLeft="10dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="495dp"		     
+       android:layout_marginTop="630dp"		     
        android:background="@drawable/popuphelp1"/>
       
         <TextView
@@ -234,7 +477,7 @@
        android:layout_height="wrap_content"             
        android:text="Completing a Planet"
        android:textStyle="bold"
-       android:layout_marginTop="500dp"
+       android:layout_marginTop="635dp"
        android:paddingLeft="2dp"
        android:layout_toRightOf="@+id/help5"       
        android:textColor="@android:color/white"
@@ -246,15 +489,15 @@
        android:layout_height="wrap_content"    
        android:layout_below="@+id/help5"         
        android:text=""
-       android:layout_marginLeft="25dp"
+       android:layout_marginLeft="10dp"
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="14dip" />
         
          <View android:layout_width="fill_parent"
     android:layout_height="1dip"
-    android:background="#FFFFFF" 
+    android:background="#999999" 
     android:layout_below="@+id/textdetail5"
-    android:layout_marginLeft="28dp"
+    android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="12dp"/>  
          
@@ -262,9 +505,9 @@
        android:id = "@+id/help6"
        android:layout_width="wrap_content"
        android:layout_height="25dp"
-       android:layout_marginLeft="40dp"  
+       android:layout_marginLeft="20dp"  
        android:paddingTop="15dp"  
-       android:layout_marginTop="629dp"		     
+       android:layout_marginTop="788dp"		     
        android:background="@drawable/popuphelp0"/>
       
         <TextView
@@ -274,7 +517,7 @@
        android:text="Contact Us"
        android:textStyle="bold"
        android:paddingLeft="15dp"
-       android:layout_marginTop="629dp"
+       android:layout_marginTop="788dp"
        android:layout_toRightOf="@+id/help6"       
        android:textColor="@android:color/white"
        android:textSize="16dip" />
@@ -286,9 +529,9 @@
        android:layout_below="@+id/help6"  
        android:autoLink="email"       
        android:text="@string/Learningpodemail"
-       android:layout_marginLeft="25dp"
+       android:layout_marginLeft="10dp"
        android:textColor="@android:color/white"
-       android:textSize="13dip" />
+       android:textSize="14dip" />
          
       </RelativeLayout>
      
