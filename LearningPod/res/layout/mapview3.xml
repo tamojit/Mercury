@@ -7,7 +7,7 @@
     
 	<ImageButton 
     		    android:id = "@+id/planet11"
-    		    android:layout_width="82dp"
+    		    android:layout_width="83dp"
     		    android:layout_height="83dp"
     		    android:layout_marginLeft="43dp"
     		    android:layout_marginTop="155dp"
@@ -117,7 +117,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet13"
-    		    android:layout_width="80dp"
+    		    android:layout_width="78dp"
     		    android:layout_height="78dp"
     		    android:layout_marginLeft="375dp"
     		    android:layout_marginTop="96dp"
@@ -172,7 +172,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet14" 
-    		    android:layout_width="110dp"
+    		    android:layout_width="104dp"
     		    android:layout_height="79dp"
     		    android:layout_marginLeft="503dp"
     		    android:layout_marginTop="215dp"
@@ -195,7 +195,7 @@
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
  
-    		    android:layout_marginLeft="548dp"
+    		    android:layout_marginLeft="545dp"
     		    android:layout_marginTop="160dp" 
  
     		    android:adjustViewBounds="true"
@@ -209,7 +209,7 @@
  
     		    android:layout_marginTop="216dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="584dp"
+    		    android:layout_marginLeft="582dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -230,7 +230,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet15"
-    		    android:layout_width="86dp"
+    		    android:layout_width="82dp"
     		    android:layout_height="82dp"
     		    android:layout_marginLeft="744dp"
     		    android:layout_marginTop="135dp"
