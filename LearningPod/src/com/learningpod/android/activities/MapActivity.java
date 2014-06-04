@@ -77,12 +77,64 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		// get user profile from content cache
 		UserProfileBean userProfileBean = ContentCacheStore.getContentCache()
 				.getLoggedInUserProfile();
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		isSmallerScreen = false;
+		if (metrics.heightPixels <= 800) {
+			isSmallerScreen = true;
+		}
 		headerFont = Typeface.createFromAsset(getAssets(),
 				"fonts/PaytoneOne.ttf");
 		modifyActionBar(userProfileBean.getName());
-		if(CURRENT_MAP_INDEX==0) setContentView(R.layout.dummymapview1);		
-		if(CURRENT_MAP_INDEX==1) setContentView(R.layout.dummymapview2);		
-		if(CURRENT_MAP_INDEX==2) setContentView(R.layout.dummymapview3);		
+		if(CURRENT_MAP_INDEX==0) {
+			setContentView(R.layout.dummymapview1);
+			((Button)findViewById(R.id.btnmapnext)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet1name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet2name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet3name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet4name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet5name)).setTypeface(headerFont);
+			if(isSmallerScreen){
+				((TextView)findViewById(R.id.planet1name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet2name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet3name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet4name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet5name)).setTextSize(14);
+			}
+		}
+		if(CURRENT_MAP_INDEX==1){
+			setContentView(R.layout.dummymapview2);
+			((Button)findViewById(R.id.btnmapnext)).setTypeface(headerFont);
+			((Button)findViewById(R.id.btnmapprev)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet6name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet7name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet8name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet9name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet10name)).setTypeface(headerFont);
+			if(isSmallerScreen){
+				((TextView)findViewById(R.id.planet6name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet7name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet8name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet9name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet10name)).setTextSize(14);
+			}
+		}
+		if(CURRENT_MAP_INDEX==2){
+			setContentView(R.layout.dummymapview3);
+			((Button)findViewById(R.id.btnmapprev)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet11name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet12name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet13name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet14name)).setTypeface(headerFont);
+			((TextView)findViewById(R.id.planet15name)).setTypeface(headerFont);
+			if(isSmallerScreen){
+				((TextView)findViewById(R.id.planet11name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet12name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet13name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet14name)).setTextSize(14);
+				((TextView)findViewById(R.id.planet15name)).setTextSize(14);
+			}
+		}
 		new LoadMapTask().execute("");
 		//createMapScreen();	
 	}
@@ -164,6 +216,7 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			TextView txtNamePlanet = (TextView) mapView
 					.findViewById(txtPlntArry[i]);
 			txtNamePlanet.setTypeface(headerFont);
+			txtNamePlanet.setTextColor(getResources().getColorStateList(R.color.planet_text_color));
 			if (isSmallerScreen) {
 				txtNamePlanet.setTextSize(14);
 			}
@@ -288,6 +341,8 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 		// TODO Auto-generated method stub
 
 		if (v.getId() == R.id.btnmapnext) {
+			// if the view is invisible, don't act
+			if(v.getVisibility()==View.INVISIBLE) return;
 			// set the required Animation type to mapFlipper
 			// The Next screen will come in form Right and current Screen will
 			// go OUT from Left
@@ -315,7 +370,8 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			// Show The Previous Screen
 			mapFlipper.showNext();
 		} else if (v.getId() == R.id.btnmapprev) {
-
+			// if the view is invisible, don't act
+			if(v.getVisibility()==View.INVISIBLE) return;
 			// set the required Animation type to mapFlipper
 			// The Next screen will come in form Left and current Screen will go
 			// OUT from Right
@@ -409,12 +465,7 @@ public class MapActivity extends BaseActivity implements OnClickListener {
 			rootView.findViewById(R.id.wordlist).setOnClickListener(MapActivity.this);
 			headerFont = Typeface.createFromAsset(getAssets(),
 					"fonts/PaytoneOne.ttf");
-			DisplayMetrics metrics = new DisplayMetrics();
-			getWindowManager().getDefaultDisplay().getMetrics(metrics);
-			isSmallerScreen = false;
-			if (metrics.heightPixels <= 800) {
-				isSmallerScreen = true;
-			}
+			
 			
 			// get list of pods. getting
 			pods = ContentCacheStore.getContentCache().getPods();

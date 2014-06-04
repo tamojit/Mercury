@@ -5,9 +5,10 @@
     <item android:state_pressed="true" >
         <shape>
             <gradient
-                android:startColor="#BDBDBD"
-                android:endColor="#BDBDBD"
-                android:angle="270" />
+                android:startColor="#2f455b"
+                android:endColor="#2f455b"
+                android:angle="270" />        
+             
         </shape>
     </item>
     

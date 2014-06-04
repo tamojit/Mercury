@@ -1480,7 +1480,7 @@ public class PodQuestionActivity extends BaseActivity {
 		translateAnimation.setFillAfter(false);
 		// create rotation animation
 		final Animation rotateAnimation = new RotateAnimation(0f,30f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-		rotateAnimation.setDuration(400);
+		rotateAnimation.setDuration(250);
 		rotateAnimation.setFillAfter(false);
 		
 		rotateAnimation.setAnimationListener(new AnimationListener() {
