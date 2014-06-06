@@ -133,4 +133,5 @@
      <string name="Learningpodlink"><a href="http://www.learningpod.com">www.learningpod.com</a></string>  
      <string name="Learningpodemail">Please email <a href="support@learningpod.com">support@learningpod.com</a> if you have feedback or questions.</string>
       <string name="Learningpodlessonemail">Please email <a href="teach@learningpod.com">teach@learningpod.com</a> to request a free lesson plan for Stellar Vocabulary Grade 5.</string>
+ <string name="Learningpodtermsemail">For any questions or comments concerning to this Agreement, please email:<a href="info@learningpod.com">info@learningpod.com</a>.</string>
 </resources>
