@@ -357,6 +357,7 @@ public class MapActivityBeforeLogin extends BaseActivity implements
 		// go to login screen
 
 		if (v.getId() == R.id.btnmapnext) {
+			findViewById(R.id.bac_dim_layout).setVisibility(View.VISIBLE);
 			// if the view is invisible, don't act
 			if(v.getVisibility()==View.INVISIBLE) return;
 			// set the required Animation type to mapFlipper
