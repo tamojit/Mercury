@@ -2,6 +2,10 @@
  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:orientation="vertical"
    android:background="#526576"
+   android:layout_width="400dp"
+   android:layout_height="fill_parent"
+   
+   
      >  
      
      <TextView
@@ -22,7 +26,7 @@
          android:layout_width="28dp"
        
          android:layout_marginLeft="368dp"
-         android:layout_marginTop="7dp"
+         android:layout_marginTop="6dp"
          android:orientation="horizontal"
          android:background="@drawable/popup_close_button"
         

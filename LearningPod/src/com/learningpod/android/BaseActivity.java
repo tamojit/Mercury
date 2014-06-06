@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.accounts.Account;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -36,6 +37,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -51,10 +53,11 @@ public class BaseActivity extends Activity implements
 
 	private ProgressDialog progressDialog;
 	private AlertDialog alertDialog;
+	private Dialog menuitempopup1;
 	private PopupWindow menuitempopup;
 	private Account[] accounts = null;
 	private View loginWindowView;
-	private ImageGetter imgGetter;
+	
 	int imageNumber=1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +82,7 @@ public class BaseActivity extends Activity implements
 		//int width = metrics.widthPixels;
 		int height = metrics.heightPixels;
 		menuitempopup = new PopupWindow(width,height);
-		
-		
-		
-		
+
 		if(detail=="HELP")
 		{
 		
@@ -139,6 +139,8 @@ public class BaseActivity extends Activity implements
 		}
 		if(detail=="TERMS")
 		{
+			
+			
 			loginWindowView = getLayoutInflater().inflate(
 					R.layout.popup_menuitemterms, null);
 			menuitempopup.setContentView(loginWindowView);
@@ -157,10 +159,70 @@ public class BaseActivity extends Activity implements
 				}
 			});
 		}
+		
+		if(detail=="LESSON")
+		{
+			
+			
+			loginWindowView = getLayoutInflater().inflate(
+					R.layout.popup_menuitemlesson, null);
+			menuitempopup.setContentView(loginWindowView);
+			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
+			
+			LinearLayout closebutton1 = (LinearLayout)loginWindowView.findViewById(R.id.closebutton2);
+			closebutton1.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					{
+						menuitempopup.dismiss();
+					}
+
+				}
+			});
+		}	
+		
 		//textinpopup.setText(detail);
 		// close the popup window
 
 	}
+		
+	//dialog	
+		
+		private void menudialog(String detail) {
+			
+			DisplayMetrics metrics = BaseActivity.this.getResources().getDisplayMetrics();
+			//int width = metrics.widthPixels;
+			int height = metrics.heightPixels;
+			menuitempopup1 = new Dialog(BaseActivity.this);
+			menuitempopup1.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//	menuitempopup1.getWindow().setLayout(600, 400);
+			WindowManager.LayoutParams wmlp = menuitempopup1.getWindow().getAttributes();
+          //  menuitempopup1.getWindow().setLayout(300,300);
+			wmlp.gravity = Gravity.RIGHT;
+		//	wmlp.width=500;
+		    wmlp.height=height;
+		//	 loginWindowView = getLayoutInflater().inflate(
+		//				R.layout.popup_menuitemterms, null);
+			 //menuitempopup1.setContentView(R.layout.popup_menuitemterms);
+			 menuitempopup1.show();
+			 /*LinearLayout closebutton1 = (LinearLayout)menuitempopup1.findViewById(R.id.closebutton1);
+				closebutton1.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						{
+							menuitempopup1.dismiss();
+						}
+
+					}
+				});*/
+		}	
+		
+		
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -179,21 +241,27 @@ public class BaseActivity extends Activity implements
 		// TODO Auto-generated method stub
 		if (item.getItemId() == R.id.help) {			
 			menupopup("HELP");
-			menuitempopup.showAtLocation(findViewById(android.R.id.content)
-					.getRootView(), Gravity.CENTER, 0, 0);
+		//	menuitempopup.showAtLocation(findViewById(android.R.id.content)
+		//			.getRootView(), Gravity.CENTER, 0, 0);
 		}
-
+        
+		if (item.getItemId() == R.id.Lesson) {			
+			menupopup("LESSON");
+		//	menuitempopup.showAtLocation(findViewById(android.R.id.content)
+		//			.getRootView(), Gravity.CENTER, 0, 0);
+		} 
+		
 		else if (item.getItemId() == R.id.about) {		
 			menupopup("ABOUT");
-			menuitempopup.showAtLocation(findViewById(android.R.id.content)
-					.getRootView(), Gravity.CENTER, 0, 0);
+		//	menuitempopup.showAtLocation(findViewById(android.R.id.content)
+		//			.getRootView(), Gravity.CENTER, 0, 0);
 		} 
 		
 		else if (item.getItemId() == R.id.terms) {
-			
-			menupopup("TERMS");
-			menuitempopup.showAtLocation(findViewById(android.R.id.content)
-					.getRootView(), Gravity.CENTER, 0, 0);
+			menudialog("TERMS");
+		//	menupopup("TERMS");
+		//	menuitempopup.showAtLocation(findViewById(android.R.id.content)
+		//			.getRootView(), Gravity.CENTER, 0, 0);
 		} 
 		else if(item.getItemId()==R.id.login){
 			if(this instanceof MapActivityBeforeLogin){
