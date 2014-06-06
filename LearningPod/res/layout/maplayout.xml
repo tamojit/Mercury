@@ -51,10 +51,10 @@
     		    android:src="@drawable/planetnavigation"/>
      
      <Button android:layout_width="120dp" 
+    			    android:layout_height="70dp"
     			    android:layout_marginTop="316dp"
     			    android:layout_marginLeft="55dp"		    
-	                android:id="@+id/btnmapprev"	                 
-	                android:layout_height="75dp"
+	                android:id="@+id/btnmapprev"
 	                android:textSize="18sp"
 	                android:paddingLeft="39dp"
 	                android:text = "BACK"
@@ -64,15 +64,18 @@
 	                
 	                />
      
-     <Button android:layout_width="120dp" 
+     <Button 
+         		android:layout_width="120dp" 
+   			    android:layout_height="70dp"
    			    android:layout_marginTop="316dp"
    			    android:layout_marginLeft="781dp"   			    
                 android:id="@+id/btnmapnext"
                 android:layout_gravity="right"
-                android:layout_height="75dp"
+                
                 android:textSize="18sp"
                 android:text = "NEXT"
-                 android:paddingLeft="-33dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="25dp"
                 android:background="@drawable/next"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"	                
