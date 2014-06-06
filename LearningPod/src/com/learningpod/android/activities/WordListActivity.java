@@ -60,7 +60,7 @@ public class WordListActivity extends BaseActivity
     }    
     
     // String []description1={"Tier1","Tier2","Tier3"};
-    String []ListHeading = {"NEW NOUNS","NEW VERBS","ADVANCED VOCABULARY","RELATIONSHIP WORDS"};
+    String []ListHeading = {"TIER II NOUNS","TIER II VERBS","TIER III VOCABULARY","RELATIONSHIP WORDS"};
     
 	private void modifyActionBar() {
 		// get the action bar
