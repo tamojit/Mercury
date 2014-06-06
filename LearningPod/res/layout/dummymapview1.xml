@@ -7,7 +7,7 @@
 	     
     		<ImageButton 
     		    android:id = "@+id/planet1"
-    		    android:layout_width="83dp"
+    		    android:layout_width="80dp"
     		    android:layout_height="80dp"
     		    android:layout_marginLeft="43dp"
     		    android:layout_marginTop="62dp"
@@ -20,7 +20,7 @@
     		    android:layout_height = "wrap_content"
     		    android:textSize="16sp"
     		    android:textColor="#ffffff"
-    		    android:textStyle="bold"    		    
+    		    android:textStyle="bold"
     		    android:text = "Context Clues – Nonsense Words"
     		    android:layout_toRightOf="@+id/planet1"
     		    android:layout_marginTop="78dp"
@@ -64,7 +64,7 @@
     		<ImageButton 
     		    android:id = "@+id/planet2"
     		    android:layout_width="105dp"
-    		    android:layout_height="82dp"
+    		    android:layout_height="80dp"
     		    android:layout_marginLeft="183dp"
     		    android:layout_marginTop="192dp"
     		    android:adjustViewBounds="true" 
@@ -174,7 +174,7 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet4"    		    
-    		    android:layout_width="88dp"
+    		    android:layout_width="86dp"
     		    android:layout_height="86dp"
     		    android:layout_marginLeft="538dp"
     		    android:layout_marginTop="168dp"
@@ -232,7 +232,7 @@
     		
     		<ImageButton 
     		    android:id = "@+id/planet5"
-    		    android:layout_width="86dp"
+    		    android:layout_width="84dp"
     		    android:layout_height="84dp"
     		    android:layout_marginLeft="715dp"
     		    android:layout_marginTop="106dp"
@@ -285,9 +285,9 @@
     		        android:layout_height="9dp"
     		        android:visibility="invisible"
     		        android:background="#8896a3"/>
-    		</LinearLayout>    
-   			
-     <Button
+    		</LinearLayout>
+    
+    		 <Button
         android:id="@+id/wordlist"
         android:layout_width="150dp"
         android:layout_height="54dp"
@@ -307,7 +307,7 @@
         android:visibility="gone" />
      
      <ImageView
-	         android:layout_height="wrap_content"
+	         android:layout_height="82dp"
 	         android:layout_width="700dp"
 	         android:layout_marginLeft="53dp"
 	         android:layout_alignParentBottom="true"
@@ -326,21 +326,26 @@
      
      
      
-     <Button android:layout_width="120dp" 
+     <Button 
+         		android:layout_width="120dp" 
+   			    android:layout_height="70dp"
    			    android:layout_marginTop="316dp"
    			    android:layout_marginLeft="781dp"   			    
                 android:id="@+id/btnmapnext"
                 android:layout_gravity="right"
-                android:layout_height="75dp"
+                
                 android:textSize="18sp"
                 android:text = "NEXT"
-                 android:paddingLeft="-33dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="25dp"
                 android:background="@drawable/next"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"	                
                 
                 />
     		
+   			
+      
      
     
 </RelativeLayout>

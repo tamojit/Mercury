@@ -7,7 +7,7 @@
     
 	<ImageButton 
     		    android:id = "@+id/planet11"
-    		    android:layout_width="82dp"
+    		    android:layout_width="83dp"
     		    android:layout_height="83dp"
     		    android:layout_marginLeft="43dp"
     		    android:layout_marginTop="155dp"
@@ -117,7 +117,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet13"
-    		    android:layout_width="80dp"
+    		    android:layout_width="78dp"
     		    android:layout_height="78dp"
     		    android:layout_marginLeft="375dp"
     		    android:layout_marginTop="96dp"
@@ -172,7 +172,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet14" 
-    		    android:layout_width="110dp"
+    		    android:layout_width="104dp"
     		    android:layout_height="79dp"
     		    android:layout_marginLeft="503dp"
     		    android:layout_marginTop="215dp"
@@ -195,7 +195,7 @@
     		    android:id = "@+id/planet14ss"
     		    android:visibility="invisible"
  
-    		    android:layout_marginLeft="548dp"
+    		    android:layout_marginLeft="545dp"
     		    android:layout_marginTop="160dp" 
  
     		    android:adjustViewBounds="true"
@@ -209,7 +209,7 @@
  
     		    android:layout_marginTop="216dp" 
     		    android:orientation="horizontal"    		     
-    		    android:layout_marginLeft="584dp"
+    		    android:layout_marginLeft="582dp"
     		    android:weightSum="1">
     		    
     		    <View
@@ -230,7 +230,7 @@
     
     <ImageButton 
     		    android:id = "@+id/planet15"
-    		    android:layout_width="86dp"
+    		    android:layout_width="82dp"
     		    android:layout_height="82dp"
     		    android:layout_marginLeft="744dp"
     		    android:layout_marginTop="135dp"
@@ -283,9 +283,21 @@
     		        android:background="#8896a3"/>
     		</LinearLayout>
     
-        	    
-   			
-      <Button
+        
+
+         
+             	 <ImageView
+    		    android:id = "@+id/planetnavigation2"
+    		    android:visibility="gone"
+    		    android:layout_marginLeft="694dp"
+    		    android:layout_marginTop="300dp" 
+    		    android:layout_gravity="right"
+    		    android:layout_width="83dp"
+    		    android:layout_height="80dp"
+    		    android:src="@drawable/planetnavigation"/>
+    
+    
+    		 <Button
         android:id="@+id/wordlist"
         android:layout_width="150dp"
         android:layout_height="54dp"
@@ -305,7 +317,7 @@
         android:visibility="gone" />
      
      <ImageView
-	         android:layout_height="wrap_content"
+	         android:layout_height="82dp"
 	         android:layout_width="700dp"
 	         android:layout_marginLeft="53dp"
 	         android:layout_alignParentBottom="true"
@@ -323,10 +335,10 @@
     		    android:src="@drawable/planetnavigation"/>
      
      <Button android:layout_width="120dp" 
+    			    android:layout_height="70dp"
     			    android:layout_marginTop="316dp"
     			    android:layout_marginLeft="55dp"		    
-	                android:id="@+id/btnmapprev"	                 
-	                android:layout_height="75dp"
+	                android:id="@+id/btnmapprev"
 	                android:textSize="18sp"
 	                android:paddingLeft="39dp"
 	                android:text = "BACK"
@@ -336,11 +348,24 @@
 	                
 	                />
      
-     
-    		
-
-         
-             
+     <Button 
+         		android:layout_width="120dp" 
+   			    android:layout_height="70dp"
+   			    android:layout_marginTop="316dp"
+   			    android:layout_marginLeft="781dp"   			    
+                android:id="@+id/btnmapnext"
+                android:layout_gravity="right"
+                
+                android:textSize="18sp"
+                android:text = "NEXT"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="25dp"
+                android:background="@drawable/next"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"	                
+                
+                />
+    			
              
              
     

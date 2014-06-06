@@ -139,6 +139,7 @@ public class PodQuestionActivity extends BaseActivity {
 			return;
 		}
 		
+		// settting the content for the question explanation layout
 		setContentView(R.layout.podquestionrelativeview);
 		// create the question progress bar
 		createProgressBar(userProgressTemp);
@@ -325,8 +326,11 @@ public class PodQuestionActivity extends BaseActivity {
 			} else {
 				btnSubmitNext.setBackgroundResource(R.drawable.next);
 				btnSubmitNext.setText("NEXT ");
-				btnSubmitNext.setGravity(Gravity.CENTER);
-				btnSubmitNext.setPadding(0, 0, 0, 0);
+				btnSubmitNext.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
+				
+				btnSubmitNext.setPadding((int) TypedValue
+						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
+								getResources().getDisplayMetrics()), 0, 0, 0);
 				btnSubmitNext.getLayoutParams().height = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
 								getResources().getDisplayMetrics());
