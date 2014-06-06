@@ -43,6 +43,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
@@ -56,7 +57,7 @@ import android.app.ActionBar;
 import android.app.Dialog;
 
 
-public class PodQuestionActivity extends BaseActivity {
+public class PodQuestionActivity extends BaseActivity  {
 
 	private ArrayList<QuestionBean> questions;
 	private ArrayList<ArrayList<ExplanationBean>> explanations;
@@ -139,7 +140,6 @@ public class PodQuestionActivity extends BaseActivity {
 			return;
 		}
 		
-		// settting the content for the question explanation layout
 		setContentView(R.layout.podquestionrelativeview);
 		// create the question progress bar
 		createProgressBar(userProgressTemp);
@@ -326,11 +326,8 @@ public class PodQuestionActivity extends BaseActivity {
 			} else {
 				btnSubmitNext.setBackgroundResource(R.drawable.next);
 				btnSubmitNext.setText("NEXT ");
-				btnSubmitNext.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
-				
-				btnSubmitNext.setPadding((int) TypedValue
-						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
-								getResources().getDisplayMetrics()), 0, 0, 0);
+				btnSubmitNext.setGravity(Gravity.CENTER);
+				btnSubmitNext.setPadding(0, 0, 0, 0);
 				btnSubmitNext.getLayoutParams().height = (int) TypedValue
 						.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
 								getResources().getDisplayMetrics());
@@ -1469,7 +1466,68 @@ public class PodQuestionActivity extends BaseActivity {
 		final ImageView alienForExp = (ImageView) findViewById(R.id.alienforexplanation);
 		final ImageView alienForExpLight = (ImageView) findViewById(R.id.alienforexplanationlight);
 		final ImageView alienForExpIntermediate = (ImageView) findViewById(R.id.alienforexplanationintermediate);
-		int[] origLocation = new int[2];
+ 
+	
+		alienForQues.bringToFront();
+		alienForQues.requestLayout();
+		alienForQues.invalidate();	
+		
+		Animation animTogether = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.rotatethirty);
+		alienForExpIntermediate.startAnimation(animTogether);
+		animTogether.setAnimationListener(new AnimationListener() {	
+
+	    @Override
+    public void onAnimationEnd(Animation animation) {
+		
+	    	alienForExpIntermediate.clearAnimation();
+			
+			alienForExp.setVisibility(View.VISIBLE);
+			alienForExpLight.setVisibility(View.VISIBLE);
+			// show the explanation container and the alien image
+			LinearLayout explanationContainer = (LinearLayout) findViewById(R.id.explanationcontainer);
+
+			// make the explanation container visible
+			explanationContainer.setBackgroundColor(Color
+					.parseColor("#F4FA58"));
+
+			// enable the next/summary button
+			((Button) findViewById(R.id.btnsubmitnext)).setEnabled(true);
+			btnBack.setEnabled(true);
+
+	     }
+
+	@Override
+	public void onAnimationRepeat(Animation animation) {
+		// TODO Auto-generated method stub
+
+	    }
+
+	@Override
+	public void onAnimationStart(Animation animation) {
+		
+		// TODO Auto-generated method stub
+		// switch off the alien space ship light
+		btnBack.setEnabled(false);
+		alienForQuesLight.setVisibility(View.INVISIBLE);
+		alienForQues.clearAnimation();
+		alienForQues.setVisibility(View.INVISIBLE);
+		alienForQuesLight.setVisibility(View.INVISIBLE);
+		// change the colour of highlighted question
+		TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
+		questionHighlightedView.setBackgroundColor(Color
+				.parseColor("#8896a3"));
+		((LinearLayout) findViewById(R.id.explanationcontainer))
+				.setVisibility(View.VISIBLE);
+		((LinearLayout) findViewById(R.id.explanationcontainer))
+				.setBackgroundColor(Color.parseColor("#8896a3"));	
+		
+	}
+	});
+		
+		/*	
+		
+	    int[] origLocation = new int[2];
 		int[] destLocation = new int[2];
 		
 		alienForQues.getLocationOnScreen(origLocation);
@@ -1562,6 +1620,8 @@ public class PodQuestionActivity extends BaseActivity {
 		set.addAnimation(translateAnimation);
 		//set.addAnimation(rotateAnimation);
 		alienForQues.startAnimation(set);
+		
+	*/
 
 	}
 
