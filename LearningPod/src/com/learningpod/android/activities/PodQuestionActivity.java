@@ -78,7 +78,7 @@ public class PodQuestionActivity extends BaseActivity  {
 	private Typeface headerFont = null;
 	 
     private String email;
-    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    private String emailPattern = "[a-zA-Z0-9._-]+@[a-zA-Z]+\\.+[a-zA-Z]+";
     private Button btnBack;
 	private String putinmailaddress;
 	private String teacheremail;
@@ -843,9 +843,9 @@ public class PodQuestionActivity extends BaseActivity  {
 		popupmail.setContentView(R.layout.email_popup);
 		WindowManager.LayoutParams wmlp = popupmail.getWindow().getAttributes();
 
-		 wmlp.gravity = Gravity.CENTER;
-		 wmlp.x = -11;   //x position
-		 wmlp.y = -74;   //y position
+		wmlp.gravity = Gravity.CENTER;
+		wmlp.x = -11; // x position
+		wmlp.y = -74; // y position
 		final EditText recipient = (EditText) popupmail
 				.findViewById(R.id.toaddress);
 
@@ -865,58 +865,48 @@ public class PodQuestionActivity extends BaseActivity  {
 		Button sendBtn = (Button) popupmail.findViewById(R.id.sendEmail);
 		sendBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
-				
-			//check internet connection	
-		
-	         
-	     	    {   
-			
-			     email= recipient.getText().toString().trim();
-			    //check whether a valid email is entered
-			    if(recipient.getText().length()==0)
-			    {
-			    	recipient.setError("Please enter a valid Email");	
-			    	recipient.setFocusable(true);	
-			    }
-			 
-			    if (!email.matches(emailPattern))
-		    	{
-		        recipient.setError("Please enter a valid Email");	
-		    	recipient.setFocusable(true);
-		    	//Toast.makeText(getApplicationContext(),"invalid email address",Toast.LENGTH_LONG).show();
-		    	
-		    	}
-			   
-			    else{
-			  			    			   
-				LearningpodDbHandler dbHandler = new LearningpodDbHandler(
-						PodQuestionActivity.this);
-				dbHandler.open();
-				uid = ContentCacheStore.getContentCache()
-						.getLoggedInUserProfile().getId();
-				teacheremail = recipient.getText().toString();
-				dbHandler.storeUserTeacherMapping(uid, teacheremail);
-				dbHandler.close();
-				sendEmail(recipient.getText().toString());
-				popupmail.dismiss();
-			    }
-			    }
-		
-		
+
+				email = recipient.getText().toString().trim();
+				// check whether a valid email is entered
+				if (recipient.getText().length() == 0) {
+					recipient.setFocusable(true);
+					recipient.requestFocus();
+					recipient.setError("Please enter a valid Email");
+					
+				}
+
+				else if (!email.matches(emailPattern)) {
+					//recipient.setFocusable(true);
+					recipient.setError("Please enter a valid Email");
+				}
+
+				else {
+
+					LearningpodDbHandler dbHandler = new LearningpodDbHandler(
+							PodQuestionActivity.this);
+					dbHandler.open();
+					uid = ContentCacheStore.getContentCache()
+							.getLoggedInUserProfile().getId();
+					teacheremail = recipient.getText().toString();
+					dbHandler.storeUserTeacherMapping(uid, teacheremail);
+					dbHandler.close();
+					sendEmail(recipient.getText().toString());
+					popupmail.dismiss();
+				}
 			}
+
 		});
-		// set the focus on dummy button so that the keyboard is not open when the 
+		// set the focus on dummy button so that the keyboard is not open when
+		// the
 		// popup window is displayed
-		Button dummyBtn = (Button)popupmail.findViewById(R.id.sendEmailDummy);
+		Button dummyBtn = (Button) popupmail.findViewById(R.id.sendEmailDummy);
 		dummyBtn.setFocusable(true);
 		dummyBtn.setFocusableInTouchMode(true);
 		dummyBtn.requestFocus();
 		popupmail.show();
-		 
 
 	}
 
-	
 	private void sendEmail(String recipient) {
 
 		Intent email = new Intent(Intent.ACTION_SEND);
@@ -1026,6 +1016,108 @@ public class PodQuestionActivity extends BaseActivity  {
 		return "";			 
 	}
 
+	
+	private void animateAlienImageView() {
+		final ImageView alienForQues = (ImageView) findViewById(R.id.alienforquestion);
+		final ImageView alienForQuesLight = (ImageView) findViewById(R.id.alienforquestionlight);
+		final ImageView alienForExp = (ImageView) findViewById(R.id.alienforexplanation);
+		final ImageView alienForExpLight = (ImageView) findViewById(R.id.alienforexplanationlight);
+		final ImageView alienForExpIntermediate = (ImageView) findViewById(R.id.alienforexplanationintermediate);
+		int[] origLocation = new int[2];
+		int[] destLocation = new int[2];
+		
+		alienForQues.getLocationOnScreen(origLocation);
+		alienForQues.bringToFront();
+		alienForQues.requestLayout();
+		alienForQues.invalidate();
+		alienForExpIntermediate.getLocationOnScreen(destLocation);
+		TranslateAnimation translateAnimation = new TranslateAnimation(0,
+				destLocation[0] - origLocation[0], 0, destLocation[1]
+						- origLocation[1]);
+		translateAnimation.setDuration(1000);
+		translateAnimation.setFillAfter(false);
+		// create rotation animation
+		final Animation rotateAnimation = new RotateAnimation(0f,30f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+		rotateAnimation.setDuration(250);
+		rotateAnimation.setFillAfter(false);
+		
+		rotateAnimation.setAnimationListener(new AnimationListener() {
+			
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				alienForExpIntermediate.clearAnimation();
+				alienForExpIntermediate.setVisibility(View.INVISIBLE);
+				alienForExp.setVisibility(View.VISIBLE);
+				alienForExpLight.setVisibility(View.VISIBLE);
+				// show the explanation container and the alien image
+				LinearLayout explanationContainer = (LinearLayout) findViewById(R.id.explanationcontainer);
+
+				// make the explanation container visible
+				explanationContainer.setBackgroundColor(Color
+						.parseColor("#F4FA58"));
+
+				// enable the next/summary button
+				((Button) findViewById(R.id.btnsubmitnext)).setEnabled(true);
+				btnBack.setEnabled(true);
+				
+			}
+		});
+		translateAnimation.setAnimationListener(new AnimationListener() {
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				
+				alienForQues.clearAnimation();
+				alienForQues.setVisibility(View.INVISIBLE);
+				alienForQuesLight.setVisibility(View.INVISIBLE);
+				alienForExpIntermediate.setVisibility(View.VISIBLE);
+				alienForExpIntermediate.startAnimation(rotateAnimation);
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				// switch off the alien space ship light
+				btnBack.setEnabled(false);
+				alienForQuesLight.setVisibility(View.INVISIBLE);
+				// change the colour of highlighted question
+				TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
+				questionHighlightedView.setBackgroundColor(Color
+						.parseColor("#8896a3"));
+				((LinearLayout) findViewById(R.id.explanationcontainer))
+						.setVisibility(View.VISIBLE);
+				((LinearLayout) findViewById(R.id.explanationcontainer))
+						.setBackgroundColor(Color.parseColor("#8896a3"));
+			}
+
+		});
+		
+		// create animation set for storing both animations
+		
+		AnimationSet set = new AnimationSet(false);
+		set.addAnimation(translateAnimation);
+		//set.addAnimation(rotateAnimation);
+		alienForQues.startAnimation(set);
+
+	}
 	
 	private void animateShootingStar(){
 		
@@ -1460,170 +1552,8 @@ public class PodQuestionActivity extends BaseActivity  {
 		
 		
 	}
-	private void animateAlienImageView() {
-		final ImageView alienForQues = (ImageView) findViewById(R.id.alienforquestion);
-		final ImageView alienForQuesLight = (ImageView) findViewById(R.id.alienforquestionlight);
-		final ImageView alienForExp = (ImageView) findViewById(R.id.alienforexplanation);
-		final ImageView alienForExpLight = (ImageView) findViewById(R.id.alienforexplanationlight);
-		final ImageView alienForExpIntermediate = (ImageView) findViewById(R.id.alienforexplanationintermediate);
- 
-	
-		alienForQues.bringToFront();
-		alienForQues.requestLayout();
-		alienForQues.invalidate();	
-		
-		Animation animTogether = AnimationUtils.loadAnimation(getApplicationContext(),
-				R.anim.rotatethirty);
-		alienForExpIntermediate.startAnimation(animTogether);
-		animTogether.setAnimationListener(new AnimationListener() {	
-
-	    @Override
-    public void onAnimationEnd(Animation animation) {
-		
-	    	alienForExpIntermediate.clearAnimation();
-			
-			alienForExp.setVisibility(View.VISIBLE);
-			alienForExpLight.setVisibility(View.VISIBLE);
-			// show the explanation container and the alien image
-			LinearLayout explanationContainer = (LinearLayout) findViewById(R.id.explanationcontainer);
-
-			// make the explanation container visible
-			explanationContainer.setBackgroundColor(Color
-					.parseColor("#F4FA58"));
-
-			// enable the next/summary button
-			((Button) findViewById(R.id.btnsubmitnext)).setEnabled(true);
-			btnBack.setEnabled(true);
-
-	     }
-
-	@Override
-	public void onAnimationRepeat(Animation animation) {
-		// TODO Auto-generated method stub
-
-	    }
-
-	@Override
-	public void onAnimationStart(Animation animation) {
-		
-		// TODO Auto-generated method stub
-		// switch off the alien space ship light
-		btnBack.setEnabled(false);
-		alienForQuesLight.setVisibility(View.INVISIBLE);
-		alienForQues.clearAnimation();
-		alienForQues.setVisibility(View.INVISIBLE);
-		alienForQuesLight.setVisibility(View.INVISIBLE);
-		// change the colour of highlighted question
-		TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
-		questionHighlightedView.setBackgroundColor(Color
-				.parseColor("#8896a3"));
-		((LinearLayout) findViewById(R.id.explanationcontainer))
-				.setVisibility(View.VISIBLE);
-		((LinearLayout) findViewById(R.id.explanationcontainer))
-				.setBackgroundColor(Color.parseColor("#8896a3"));	
-		
-	}
-	});
-		
-		/*	
-		
-	    int[] origLocation = new int[2];
-		int[] destLocation = new int[2];
-		
-		alienForQues.getLocationOnScreen(origLocation);
-		alienForQues.bringToFront();
-		alienForQues.requestLayout();
-		alienForQues.invalidate();
-		alienForExpIntermediate.getLocationOnScreen(destLocation);
-		TranslateAnimation translateAnimation = new TranslateAnimation(0,
-				destLocation[0] - origLocation[0], 0, destLocation[1]
-						- origLocation[1]);
-		translateAnimation.setDuration(1000);
-		translateAnimation.setFillAfter(false);
-		// create rotation animation
-		final Animation rotateAnimation = new RotateAnimation(0f,30f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-		rotateAnimation.setDuration(250);
-		rotateAnimation.setFillAfter(false);
-		
-		rotateAnimation.setAnimationListener(new AnimationListener() {
-			
-			@Override
-			public void onAnimationStart(Animation animation) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				alienForExpIntermediate.clearAnimation();
-				alienForExpIntermediate.setVisibility(View.INVISIBLE);
-				alienForExp.setVisibility(View.VISIBLE);
-				alienForExpLight.setVisibility(View.VISIBLE);
-				// show the explanation container and the alien image
-				LinearLayout explanationContainer = (LinearLayout) findViewById(R.id.explanationcontainer);
-
-				// make the explanation container visible
-				explanationContainer.setBackgroundColor(Color
-						.parseColor("#F4FA58"));
-
-				// enable the next/summary button
-				((Button) findViewById(R.id.btnsubmitnext)).setEnabled(true);
-				btnBack.setEnabled(true);
-				
-			}
-		});
-		translateAnimation.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				
-				alienForQues.clearAnimation();
-				alienForQues.setVisibility(View.INVISIBLE);
-				alienForQuesLight.setVisibility(View.INVISIBLE);
-				alienForExpIntermediate.setVisibility(View.VISIBLE);
-				alienForExpIntermediate.startAnimation(rotateAnimation);
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation animation) {
-				// TODO Auto-generated method stub
-				// switch off the alien space ship light
-				btnBack.setEnabled(false);
-				alienForQuesLight.setVisibility(View.INVISIBLE);
-				// change the colour of highlighted question
-				TextView questionHighlightedView = (TextView) findViewById(R.id.quesbodyhighlighted);
-				questionHighlightedView.setBackgroundColor(Color
-						.parseColor("#8896a3"));
-				((LinearLayout) findViewById(R.id.explanationcontainer))
-						.setVisibility(View.VISIBLE);
-				((LinearLayout) findViewById(R.id.explanationcontainer))
-						.setBackgroundColor(Color.parseColor("#8896a3"));
-			}
-
-		});
-		
-		// create animation set for storing both animations
-		
-		AnimationSet set = new AnimationSet(false);
-		set.addAnimation(translateAnimation);
-		//set.addAnimation(rotateAnimation);
-		alienForQues.startAnimation(set);
-		
-	*/
-
-	}
+	 
+	 
 
 	public void setCurrentSelectedChoiceCorrect(
 			boolean currentSelectedChoiceCorrect) {

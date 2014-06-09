@@ -28,110 +28,92 @@
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="title_activity_word_list">WordListActivity</string>
-   <!-- <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>-->
+    <!--
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    -->
 
-   <string-array name="nounwordlist">
-        
+    <string-array name="nounwordlist">
         <item>component</item>
         <item>noun</item>
         <item>section or part of something</item>
-      
-     <!--   <item>Dimension</item>
+
+        <!--
+        <item>Dimension</item>
         <item>Noun</item>
-        <item>Measure from beginning to end</item>  -->
-        
+        <item>Measure from beginning to end</item>
+        -->
+
         <item>frequency</item>
         <item>noun</item>
         <item>how often something accurs</item>
-         
         <item>initiative</item>
         <item>noun</item>
         <item>first step towards a goal</item>
-        
         <item>priority</item>
         <item>noun</item>
         <item>item or issue having greater importance</item>
-        
         <item>technique</item>
         <item>noun</item>
         <item>style or technical method</item>
-        
-        </string-array>
-      
-       <string-array name="verbwordlist">
+    </string-array>
+    <string-array name="verbwordlist">
         <item>combat</item>
         <item>verb</item>
         <item>struggle with or fight off</item>
-     
         <item>discriminate</item>
         <item>verb</item>
         <item>sense difference or judge</item>
-        
         <item>perceive</item>
         <item>verb</item>
         <item>become aware of</item>
-        
         <item>scan</item>
         <item>verb</item>
         <item>read or examine</item>
-        
         <item>vary</item>
         <item>verb</item>
         <item>show differences</item>
-        
-       </string-array>
-      
-        <string-array name="vocabularywordlist">
-            
+    </string-array>
+    <string-array name="vocabularywordlist">
         <item>agricultural</item>
         <item>adjective</item>
         <item>related to farming</item>
-     
         <item>drought</item>
         <item>noun</item>
         <item>period of extreme dryness</item>
-        
         <item>olfactory</item>
         <item>adjective</item>
         <item>relating to sense of smell</item>
-        
         <item>ratio</item>
         <item>noun</item>
         <item>relationship between quantities; quotient</item>
-        
         <item>stimuli</item>
         <item>noun</item>
         <item>something that leads to a reaction, especially in science</item>
-        
-      </string-array>
-
-      <string-array name="Relationshipwords">
-            
+    </string-array>
+    <string-array name="Relationshipwords">
         <item>although</item>
         <item>conjunction</item>
         <item>in spite of</item>
-     
         <item>furthermore</item>
         <item>adverb</item>
         <item>moreover</item>
-        
         <item>however</item>
         <item>adverb</item>
         <item>on the other hand</item>
-        
         <item>regardless</item>
         <item>adverb</item>
         <item>in spite of</item>
-        
         <item>similarly</item>
         <item>adverb</item>
         <item>in the same manner; likewise</item>
-        
-      </string-array>
-      
-     <string name="Learningpodlink"><a href="http://www.learningpod.com">www.learningpod.com</a></string>  
-     <string name="Learningpodemail">Please email <a href="support@learningpod.com">support@learningpod.com</a> if you have feedback or questions.</string>
-      <string name="Learningpodlessonemail">Please email <a href="teach@learningpod.com">teach@learningpod.com</a> to request a free lesson plan for Stellar Vocabulary Grade 5.</string>
- <string name="Learningpodtermsemail">For any questions or comments concerning to this Agreement, please email:<a href="info@learningpod.com">info@learningpod.com</a>.</string>
+    </string-array>
+
+    <string name="Learningpodlink"><a href="http://www.learningpod.com">www.learningpod.com</a></string>
+    <string name="Learningpodemail">Please email <a href="support@learningpod.com">support@learningpod.com</a> if you have feedback or questions.</string>
+    <string name="Learningpodlessonemail">Please email <a href="teach@learningpod.com">teach@learningpod.com</a> to request a free lesson plan for Stellar Vocabulary Grade 5.</string>
+    <string name="Learningpodtermsemail">For any questions or comments concerning to this Agreement, please email: <a href="info@learningpod.com">info@learningpod.com</a>.</string>
+	
+    
+    <string name="termsdetail1">This app uses Google Authentication and Authorization services (collectively known as “Auth”) for access, including registration and log in. If any consent is required for you or your students (“Users”) to enter information for Auth or otherwise use functionality and tools (“Services”), such as from your students, their parents or the school, you represent that you have obtained any such consents. Additionally, access and use of the app from Educational Institutions will be subject to the respective Educational Institution\'s Terms of Use and Policies. <p>We do not collect or store personally identifying information (“PII”) about Users, such as first and last name, email or phone number. The App may create anonymous user accounts on Learningpod that do not contain PII for the purpose of storing progress and performance data (“Performance Data”) that is generated within the App. The App does not use any location services.</p><p>We may collect information about the App device, including hardware and operating system versions, and data related to App performance and stability (collectively, "App Info"). App Info is only used to analyze and fix potential App-related bugs and issues and does not include any PII.</p> </string>
 </resources>

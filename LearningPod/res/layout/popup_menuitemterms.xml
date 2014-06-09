@@ -1,248 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:orientation="vertical"
-   android:background="#526576"
-   
-   
-   
-     >  
-     
-     <TextView
-       android:id="@+id/textterms"
-       android:layout_marginTop="5dp"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="Terms of Service"
-       android:layout_marginLeft="20dp"
-       android:textColor="@android:color/white"      
-       android:textSize="20dip"
-       android:textStyle="bold"/>
-      
-        
-     <LinearLayout 
-         android:id="@+id/closebutton1"
-         android:layout_height="28dp"
-         android:layout_width="28dp"
-       
-         android:layout_marginLeft="368dp"
-         android:layout_marginTop="3dp"
-         android:orientation="horizontal"
-         android:background="@drawable/popup_close_button"
-        
-        >
-         
-             <ImageView android:id = "@+id/maparrow"
-             android:layout_width="18dp"
-             android:layout_marginLeft="5dp"
-             android:layout_marginTop="5dp"
-	       	 android:layout_height="18dp"
-	       	 android:background="@drawable/popupclosebutton"
-	       	 />
-     </LinearLayout>
-     
-     <View android:layout_width="fill_parent"
-    android:layout_height="1.3dip"
-    android:background="#FFFFFF" 
-    android:layout_below="@+id/textterms"
-    android:layout_marginLeft="18dp"
-    android:layout_marginRight="18dp"
-    android:layout_marginTop="4dp"/>
- <ScrollView   
-      android:id="@+id/ScrollView01" 
-      android:layout_marginTop="50dp"
-      android:layout_marginLeft="10dp"
-      android:layout_marginBottom="36dp"
-      android:layout_marginRight="10dp" 
-      android:layout_height="wrap_content"   
-      android:layout_width="wrap_content">  
-    
-     <RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#526576"
+    android:orientation="vertical"
+    android:layout_width="416dp"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp" >
+
+    <TextView
+        android:id="@+id/textterms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Terms of Service"
+        android:textColor="@android:color/white"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/closeterms"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/textterms"
+        android:background="@drawable/popup_close_button"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/maparrow"
+            android:contentDescription="@string/app_name"
+            android:layout_width="12dp"
+            android:layout_height="12dp"           
+            android:adjustViewBounds="true"
+            android:background="@drawable/popupclosebutton" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.3dip"
+        android:layout_below="@+id/textterms"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" />
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp" >
+
+        <RelativeLayout
             android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
-	        android:orientation="vertical" >
-                
-        <TextView
-       android:id="@+id/textdetailtop"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="Stellar Vocabulary for 5th(“the App”)is owned by Learningpod, Inc. (“we or us”).By using the App you agree to be bound by these Terms of Use and Private Policy(“the Agreement”). "
-       android:layout_marginLeft="10dp"      
-       android:textColor="@android:color/white"
-       android:layout_marginTop="5dp"
-       android:textSize="13dip" /> 
-       
-       <TextView
-       android:id="@+id/texttitle1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="Accessing and Using the App from Educational Institutions:"
-       android:textStyle="bold"
-       android:layout_marginTop="60dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="This app uses Google Authentication and Authorization services (collectively known as “Auth”) for access, including registration and log in. If any consent is required for you or your students (“Users”) to enter information for Auth or otherwise use functionality and tools (“Services”), such as from your students, their parents or the school, you represent that you have obtained any such consents. Additionally, access and use of the app from Educational Institutions will be subject to the respective Educational Institution's Terms of Use and Policies.We do not collect or store personally identifying information (“PII”) about Users, such as first and last name, email or phone number. The App may create anonymous user accounts on Learningpod that do not contain PII for the purpose of storing progress and performance data (“Performance Data”) that is generated within the App. The App does not use any location services. "
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle1" 
-       android:textColor="@android:color/white"
-      
-       android:textSize="13dip" />
-         
-       <TextView
-       android:id="@+id/texttitle2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="How We Use Information:"
-       android:textStyle="bold"
-       android:layout_marginTop="320dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="We may use information, notably Performance Data, to: keep multiple devices in sync for Users; display User interactions with Services via a teacher dashboard; provide school-, district- or state-level reporting as requested; and enhance, develop, support and administer Services."
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle2" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />      
-      
-       <TextView
-       android:id="@+id/texttitle3"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="Disclosure of Information:"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginTop="430dp"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail3"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="We do not share your information with third parties for their marketing purposes.  We may share your information with service providers who help us to run the App or to fulfill your request. We may disclose your information in response to legal process, to protect our rights, or as otherwise required by law. If we sell our company or part of it, or our business enters into a joint venture with another business entity, we may disclose your information to our new business partners or owners."
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle3" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-       
-       <TextView
-       android:id="@+id/texttitle4"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="DISCLAIMERS; LIMITATIONS ON LIABILITY. "
-       android:textStyle="bold"
-       android:layout_marginTop="586dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail4"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="YOUR USE OF THE APP IS AT YOUR OWN RISK. ALL INFORMATION ON OR VIA THE APP IS PROVIDED TO YOU AS IS WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL LEARNINGPOD BE LIABLE TO YOU FOR ANY DAMAGES (INCLUDING INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES) ARISING OUT OF YOUR USE OF, OR INABILITY TO USE, THE APP."
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle4" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-       
-       <TextView
-       android:id="@+id/texttitle5"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="No Rights of Third Parties:"
-       android:textStyle="bold"
-       android:layout_marginTop="720dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail5"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="This Agreement does not create rights enforceable by third parties."
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle5" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-       
-       <TextView
-       android:id="@+id/texttitle6"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="Choice of Law and Forum: "
-       android:textStyle="bold"
-       android:layout_marginTop="780dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail6"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="Any dispute between us arising from or related to these Terms and Conditions will be governed by New York law and the exclusive forum for disputes arising from or related to this agreement shall be the state and federal courts of New York. "
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle6" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-       
-        <TextView
-       android:id="@+id/texttitle7"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="Severability:  "
-       android:textStyle="bold"
-       android:layout_marginTop="876dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail7"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"          
-       android:text="If any provision of this Agreement is ruled unenforceable, that provision will be severed from this Agreement, and the other provisions will remain effective and enforceable."
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle7" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-        <TextView
-       android:id="@+id/texttitle8"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"             
-       android:text="How to Contact Us:  "
-       android:textStyle="bold"
-       android:layout_marginTop="954dp"
-       android:textColor="@android:color/white"
-       android:textSize="14dip"
-       android:layout_marginLeft="10dp" />
-       
-       <TextView
-       android:id="@+id/textdetail8"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" 
-       android:autoLink="email"         
-       android:text="@string/Learningpodtermsemail"
-       android:layout_marginLeft="10dp"
-       android:layout_below="@+id/texttitle8" 
-       android:textColor="@android:color/white"
-       android:textSize="13dip" />
-       
-      </RelativeLayout>
-     
-      
-    </ScrollView>  
-      
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textdetailtop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Stellar Vocabulary for 5th(“the App”)is owned by Learningpod, Inc. (“we or us”).By using the App you agree to be bound by these Terms of Use and Private Policy(“the Agreement”). "
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/textdetailtop"
+                android:text="Accessing and Using the App from Educational Institutions:"
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                 android:id="@+id/texttitle1sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle1"
+                android:layout_marginLeft="10dp"
+                android:text= "@string/termsdetail1"
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle1sub"
+                android:text="How We Use Information:"
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle2sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle2"
+                android:layout_marginLeft="10dp"
+                android:text="We may use information, notably Performance Data, to: keep multiple devices in sync for Users; display User interactions with Services via a teacher dashboard; provide school-, district- or state-level reporting as requested; and enhance, develop, support and administer Services."
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle2sub"
+                android:text="Disclosure of Information:"
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle3sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle3"
+                android:layout_marginLeft="10dp"
+                android:text="We do not share your information with third parties for their marketing purposes.  We may share your information with service providers who help us to run the App or to fulfill your request. We may disclose your information in response to legal process, to protect our rights, or as otherwise required by law. If we sell our company or part of it, or our business enters into a joint venture with another business entity, we may disclose your information to our new business partners or owners."
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle3sub"
+                android:text="DISCLAIMERS; LIMITATIONS ON LIABILITY. "
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle4sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle4"
+                android:layout_marginLeft="10dp"
+                android:text="YOUR USE OF THE APP IS AT YOUR OWN RISK. ALL INFORMATION ON OR VIA THE APP IS PROVIDED TO YOU AS IS WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL LEARNINGPOD BE LIABLE TO YOU FOR ANY DAMAGES (INCLUDING INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES) ARISING OUT OF YOUR USE OF, OR INABILITY TO USE, THE APP."
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle4sub"
+                android:text="No Rights of Third Parties:"
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle5sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle5"
+                android:layout_marginLeft="10dp"
+                android:text="This Agreement does not create rights enforceable by third parties."
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle5sub"
+                android:text="Choice of Law and Forum: "
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle6sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle6"
+                android:layout_marginLeft="10dp"
+                android:text="Any dispute between us arising from or related to these Terms and Conditions will be governed by New York law and the exclusive forum for disputes arising from or related to this agreement shall be the state and federal courts of New York. "
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle6sub"
+                android:text="Severability:  "
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle7sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle7"
+                android:layout_marginLeft="10dp"
+                android:text="If any provision of this Agreement is ruled unenforceable, that provision will be severed from this Agreement, and the other provisions will remain effective and enforceable."
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/texttitle8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/texttitle7sub"
+                android:text="How to Contact Us:  "
+                android:textColor="@android:color/white"
+                android:textSize="18dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttitle8sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttitle8"
+                android:layout_marginLeft="10dp"
+                android:autoLink="email"
+                android:text="@string/Learningpodtermsemail"
+                android:textColor="@android:color/white"
+                android:textSize="18dip" />
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

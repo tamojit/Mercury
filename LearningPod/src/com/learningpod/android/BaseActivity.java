@@ -20,6 +20,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
@@ -53,7 +54,7 @@ public class BaseActivity extends Activity implements
 	private Dialog menuitempopup1;
 	private PopupWindow menuitempopup;
 	private Account[] accounts = null;
-	private View loginWindowView;
+	private View menuPopupWindow;
 
 	int imageNumber = 1;
 
@@ -72,6 +73,9 @@ public class BaseActivity extends Activity implements
 	}
 
 	private void menupopup(String detail) {
+		// get the fonts
+		Typeface headerFont = Typeface.createFromAsset(getAssets(),
+	    			"fonts/PaytoneOne.ttf");
 		// making the dark overlay visible
 		findViewById(R.id.bac_dim_layout).setVisibility(View.VISIBLE);
 		int width = (int) TypedValue.applyDimension(
@@ -85,33 +89,34 @@ public class BaseActivity extends Activity implements
 
 		if (detail == "HELP") {
 
-			loginWindowView = getLayoutInflater().inflate(
+			menuPopupWindow = getLayoutInflater().inflate(
 					R.layout.popup_menuitem, null);
-			menuitempopup.setContentView(loginWindowView);
-			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
-			TextView wordlist = (TextView) loginWindowView
+			menuitempopup.setContentView(menuPopupWindow);
+			menuitempopup.showAtLocation(menuPopupWindow, Gravity.RIGHT, 0, 0);
+			((TextView)menuPopupWindow.findViewById(R.id.texthelp)).setTypeface(headerFont);
+			TextView wordlist = (TextView) menuPopupWindow
 					.findViewById(R.id.textdetail3);
 			wordlist.setText(Html
-					.fromHtml("You can access the<b> Word List </b> from the map."));
+					.fromHtml("You can access the<b> Word List </b>"));
 
-			TextView practicingquestions = (TextView) loginWindowView
+			TextView practicingquestions = (TextView) menuPopupWindow
 					.findViewById(R.id.textdetail4);
 			practicingquestions
 					.setText(Html
-							.fromHtml("Select an answer choice and tap <b>Submit</b>.A green check"));
-			TextView practicingquestions2 = (TextView) loginWindowView
+							.fromHtml("Select an answer choice and tap <b>Submit</b>.A "));
+			TextView practicingquestions2 = (TextView) menuPopupWindow
 					.findViewById(R.id.textdetailzz);
 			practicingquestions2
 					.setText(Html
-							.fromHtml(" explanation.<br /> <br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
+							.fromHtml(" also get a short explanation.<br /> <br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
 			// A green check mark [green check] means you got the answer right
 			// and a red x mark [red x mark] means
-			TextView completequestions = (TextView) loginWindowView
-					.findViewById(R.id.textdetail5);
+			TextView completequestions = (TextView) menuPopupWindow
+					.findViewById(R.id.textcompleplanet);
 			completequestions
 					.setText(Html
 							.fromHtml("Once you complete all the questions in a planet, you’ll see a summary screen that shows how well you did. From this screen, you can email your results to your teacher or parent.<br /><br />You can review the questions by tapping on a question number or using <b>Back</b>."));
-			LinearLayout closebutton3 = (LinearLayout) loginWindowView
+			LinearLayout closebutton3 = (LinearLayout) menuPopupWindow
 					.findViewById(R.id.closebutton3);
 
 			closebutton3.setOnClickListener(new OnClickListener() {
@@ -131,13 +136,13 @@ public class BaseActivity extends Activity implements
 		}
 
 		if (detail == "ABOUT") {
-			loginWindowView = getLayoutInflater().inflate(
+			menuPopupWindow = getLayoutInflater().inflate(
 					R.layout.popup_menuitemabout, null);
-			menuitempopup.setContentView(loginWindowView);
-			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
-
-			LinearLayout closebutton2 = (LinearLayout) loginWindowView
-					.findViewById(R.id.closebutton);
+			menuitempopup.setContentView(menuPopupWindow);
+			menuitempopup.showAtLocation(menuPopupWindow, Gravity.RIGHT, 0, 0);
+			((TextView)menuPopupWindow.findViewById(R.id.textAbout)).setTypeface(headerFont);
+			LinearLayout closebutton2 = (LinearLayout) menuPopupWindow
+					.findViewById(R.id.closeabout);
 			closebutton2.setOnClickListener(new OnClickListener() {
 
 				@Override
@@ -155,13 +160,13 @@ public class BaseActivity extends Activity implements
 		}
 		if (detail == "TERMS") {
 
-			loginWindowView = getLayoutInflater().inflate(
+			menuPopupWindow = getLayoutInflater().inflate(
 					R.layout.popup_menuitemterms, null);
-			menuitempopup.setContentView(loginWindowView);
-			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
-
-			LinearLayout closebutton1 = (LinearLayout) loginWindowView
-					.findViewById(R.id.closebutton1);
+			menuitempopup.setContentView(menuPopupWindow);
+			menuitempopup.showAtLocation(menuPopupWindow, Gravity.RIGHT, 0, 0);
+			((TextView)menuPopupWindow.findViewById(R.id.textterms)).setTypeface(headerFont);
+			LinearLayout closebutton1 = (LinearLayout) menuPopupWindow
+					.findViewById(R.id.closeterms);
 			closebutton1.setOnClickListener(new OnClickListener() {
 
 				@Override
@@ -179,13 +184,13 @@ public class BaseActivity extends Activity implements
 
 		if (detail == "LESSON") {
 
-			loginWindowView = getLayoutInflater().inflate(
+			menuPopupWindow = getLayoutInflater().inflate(
 					R.layout.popup_menuitemlesson, null);
-			menuitempopup.setContentView(loginWindowView);
-			menuitempopup.showAtLocation(loginWindowView, Gravity.RIGHT, 0, 0);
-
-			LinearLayout closebutton1 = (LinearLayout) loginWindowView
-					.findViewById(R.id.closebutton2);
+			menuitempopup.setContentView(menuPopupWindow);
+			menuitempopup.showAtLocation(menuPopupWindow, Gravity.RIGHT, 0, 0);
+			((TextView)menuPopupWindow.findViewById(R.id.textlesson)).setTypeface(headerFont);
+			LinearLayout closebutton1 = (LinearLayout) menuPopupWindow
+					.findViewById(R.id.closelessonplan);
 			closebutton1.setOnClickListener(new OnClickListener() {
 
 				@Override

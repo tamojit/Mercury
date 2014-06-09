@@ -257,7 +257,7 @@
         android:id="@+id/bac_dim_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C0000000"        
+        android:background="#66000000"        
         android:visibility="gone" >
 	</RelativeLayout>
     
