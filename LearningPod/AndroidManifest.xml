@@ -23,16 +23,14 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme"
         android:largeHeap="true"
-        
-        >
+        android:theme="@style/CustomActionBarTheme" >
         <activity
             android:name="com.learningpod.android.activities.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/MySplashTheme"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape"
+            android:theme="@style/MySplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -88,14 +86,9 @@
             android:screenOrientation="landscape" >
         </activity>
 
-       
-
-
-    
-
-    <meta-data android:name="com.crashlytics.ApiKey" android:value="abdd2f7d6c396f4d2ba632da3bbc4856626b626a"/>
-
-        
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="abdd2f7d6c396f4d2ba632da3bbc4856626b626a" />
     </application>
 
 </manifest>
