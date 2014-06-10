@@ -52,10 +52,10 @@
         android:id="@+id/ScrollView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="50dp" >
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="36dp" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -69,15 +69,15 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/popuphelp5"
-                android:paddingTop="16dp" />
+                android:layout_marginTop="6dp" />
 
             <TextView
                 android:id="@+id/texttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/help1"
-                android:paddingLeft="5dp"
-                android:paddingTop="3dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
                 android:text="Log In"
                 android:textColor="@android:color/white"
                 android:textSize="20dp"
@@ -89,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/help1"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="5dp"
                 android:text="Log in with your Google account to start answering questions. We’ll store your practice on your device so you can always resume where you left off."
                 android:textColor="@android:color/white"
                 android:textSize="18dp" />
@@ -108,9 +109,10 @@
                 android:id="@+id/texttitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_below="@+id/linenavigatingthemap"
                 android:paddingLeft="10dp"
+                
                 android:text="Navigating the Map"
                 android:textColor="@android:color/white"
                 android:textSize="20dp"
@@ -128,8 +130,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="15dp"
+                    android:lineSpacingExtra="5dp"
                     android:text="You can choose any planet on the map at any time."
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
@@ -153,6 +156,7 @@
                     android:layout_toRightOf="@+id/planetimage"
                     android:paddingLeft="-2dp"
                     android:paddingTop="8dp"
+                    android:lineSpacingExtra="5dp"
                     android:text="Each planet is a question set on a specific"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
@@ -163,7 +167,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textdetail20"
                     android:layout_marginLeft="10dp"
-                    android:paddingTop="2dp"
+                    
+                    android:lineSpacingExtra="5dp"
                     android:text=" topic like “Context Clues - Nonsense Words.” "
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="15dp"
@@ -186,6 +191,7 @@
                     android:layout_marginTop="7dp"
                     android:layout_toRightOf="@+id/planetimage2"
                     android:paddingLeft="10dp"
+                    android:lineSpacingExtra="5dp"
                     android:text="If you’re practicing a set, a "
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
@@ -196,10 +202,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textdetail22"
                     android:layout_marginLeft="10dp"
-                    android:paddingTop="1dp"
+                   
                     android:text=" little building will appear  on top of the planet, along with a progress bar."
                     android:textColor="@android:color/white"
                     android:layout_marginBottom="15dp"
+                    android:lineSpacingExtra="5dp"
                     android:textSize="18dip" />
 
                 <ImageView
@@ -218,6 +225,7 @@
                     android:layout_below="@+id/textdetail23"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="5dp"
                     android:layout_toRightOf="@+id/planetimage3"
                     android:text="Once you’ve completed a planet, a flag "
                     android:textColor="@android:color/white"
@@ -229,7 +237,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textdetail24"
                     android:layout_marginLeft="10dp"
-                    android:paddingTop="1dp"
+                    
+                    android:lineSpacingExtra="5dp"
                     android:text=" will appear on top of the building. "
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
@@ -272,6 +281,7 @@
                     android:layout_height="21dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
+                    
                     android:adjustViewBounds="true"
                     android:src="@drawable/worldlistinpopup" />
 
@@ -281,6 +291,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="0dp"
+                    android:lineSpacingExtra="5dp"
                     android:layout_toRightOf="@+id/wordimage"
                     android:text="this is for alignment test"
                     android:textColor="@android:color/white"
@@ -293,8 +304,10 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@id/wordimage"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
                     android:text="from the map. You’ll find a list of words for four planets: New Nouns, New Verbs, Advanced Vocabulary, and Relationship and Transition Words."
                     android:textColor="@android:color/white"
+                    android:lineSpacingExtra="6dp"
                     android:textSize="18dip" />
             </RelativeLayout>
 
@@ -313,7 +326,8 @@
                 android:id="@+id/help4"
                 android:layout_width="42dp"
                 android:layout_height="24dp"
-                android:layout_marginLeft="10dp"                
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"                  
                 android:background="@drawable/popuphelp2"
                 android:paddingTop="15dp"
                 android:layout_below="@+id/linebeforepractisequestions" />
@@ -322,7 +336,8 @@
                 android:id="@+id/texttitle4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"      
+                android:layout_marginLeft="7dp"  
+                android:layout_marginTop="8dp"    
                 android:layout_below="@+id/linebeforepractisequestions"          
                 android:layout_toRightOf="@+id/help4"
                 android:text="Practicing Questions"
@@ -344,6 +359,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text=""
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
 
@@ -353,7 +369,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textdetail4"
                     android:layout_marginLeft="10dp"
-                    android:text="green mark"
+                    android:text="green check mark"
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
 
@@ -364,7 +381,8 @@
                     android:layout_below="@+id/textdetail4"
                     android:layout_toRightOf="@+id/textdetail44"
                     android:layout_marginTop="3dp"
-                   android:layout_marginLeft="2dp"
+                   android:layout_marginLeft="4dp"
+                   android:lineSpacingExtra="5dp"
                    android:layout_marginRight="2dp"
                     android:src="@drawable/tick" />
 
@@ -375,7 +393,8 @@
                     android:layout_below="@id/textdetail4"
                     android:layout_toRightOf="@+id/tickimage"
                   	android:layout_marginLeft="4dp"
-                    android:text="means you got the answer right"
+                  	android:lineSpacingExtra="5dp"
+                    android:text="means you got the"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
 
@@ -385,7 +404,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textdetaily"
                     android:layout_marginLeft="10dp"
-                    android:text="and a red mark"
+                    android:text="answer right and a red x mark"
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
 
@@ -406,7 +426,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textdetaily"
                     android:layout_toRightOf="@+id/crossimage"
-                    android:text=" means you didn&apos;t. You’ll "
+                    android:text=" means you"
+                    android:lineSpacingExtra="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
 
@@ -416,7 +437,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textdetailz"
                     android:layout_marginLeft="10dp"
-                    android:text="also get a short explanation"
+                    android:lineSpacingExtra="5dp"
+                    android:text="didn&apos;t. You’ll also get a short explanation"
                     android:textColor="@android:color/white"
                     android:textSize="18dip" />
             </RelativeLayout>
@@ -440,7 +462,7 @@
                 android:layout_below="@+id/linebeforecompletingplanet"
                 android:adjustViewBounds="true"
                 android:background="@drawable/popuphelp1"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="22dp" />
 
             <TextView
                 android:id="@+id/texttitle5"
@@ -448,11 +470,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linebeforecompletingplanet"
                 android:layout_toRightOf="@+id/help5"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="7dp"
                 android:text="Completing a Planet"
                 android:textColor="@android:color/white"
                 android:textSize="20dip"
-                 android:layout_marginTop="10dp"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginTop="22dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -461,8 +484,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/help5"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="20dp"
                 android:text="Once You"
+                android:lineSpacingExtra="5dp"
                 android:textColor="@android:color/white"
                 android:textSize="18dip" />
 
@@ -484,6 +508,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
                 android:layout_below="@+id/linebeforecontactus"
                 android:text="Contact Us"
                 android:textColor="@android:color/white"
@@ -497,7 +522,7 @@
                 android:layout_below="@+id/texttitle6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"  
-                 
+                android:lineSpacingExtra="5dp"
                 android:paddingBottom="50dp"             
                 android:autoLink="email"
                 android:text="@string/Learningpodemail"

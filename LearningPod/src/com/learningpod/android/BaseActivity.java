@@ -103,12 +103,12 @@ public class BaseActivity extends Activity implements
 					.findViewById(R.id.textdetail4);
 			practicingquestions
 					.setText(Html
-							.fromHtml("Select an answer choice and tap <b>Submit</b>.A "));
+							.fromHtml("Select an answer choice and tap <b>Submit</b>. A "));
 			TextView practicingquestions2 = (TextView) menuPopupWindow
 					.findViewById(R.id.textdetailzz);
 			practicingquestions2
 					.setText(Html
-							.fromHtml(" also get a short explanation.<br /> <br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
+							.fromHtml("didn&apos;t. You’ll also get a short explanation.<br /> <br /> Tap <b>Next</b> to go to a new question and <b>Back</b> to go to the question you just practiced."));
 			// A green check mark [green check] means you got the answer right
 			// and a red x mark [red x mark] means
 			TextView completequestions = (TextView) menuPopupWindow
