@@ -21,11 +21,11 @@
         android:id="@+id/closeterms"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginLeft="195dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:layout_toRightOf="@+id/textterms"
+        android:layout_alignParentRight="true"
         android:background="@drawable/popup_close_button"
         android:orientation="horizontal" >
 
@@ -40,10 +40,10 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1.3dip"
+        android:layout_height="1.8dp"
         android:layout_below="@+id/textterms"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="#FFFFFF" />
 
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="16dp"
         android:layout_marginTop="50dp" >
 
         <RelativeLayout
@@ -63,6 +63,7 @@
 
             <TextView
                 android:id="@+id/textdetailtop"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -73,6 +74,7 @@
 
             <TextView
                 android:id="@+id/texttitle1"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -85,6 +87,7 @@
 
             <TextView
                  android:id="@+id/texttitle1sub"
+                 android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle1"
@@ -95,6 +98,7 @@
 
             <TextView
                 android:id="@+id/texttitle2"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -107,6 +111,7 @@
 
             <TextView
                 android:id="@+id/texttitle2sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle2"
@@ -117,6 +122,7 @@
 
             <TextView
                 android:id="@+id/texttitle3"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -129,6 +135,7 @@
 
             <TextView
                 android:id="@+id/texttitle3sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle3"
@@ -139,6 +146,7 @@
 
             <TextView
                 android:id="@+id/texttitle4"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -151,6 +159,7 @@
 
             <TextView
                 android:id="@+id/texttitle4sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle4"
@@ -161,6 +170,7 @@
 
             <TextView
                 android:id="@+id/texttitle5"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -173,6 +183,7 @@
 
             <TextView
                 android:id="@+id/texttitle5sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle5"
@@ -183,6 +194,7 @@
 
             <TextView
                 android:id="@+id/texttitle6"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -195,6 +207,7 @@
 
             <TextView
                 android:id="@+id/texttitle6sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle6"
@@ -205,6 +218,7 @@
 
             <TextView
                 android:id="@+id/texttitle7"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -217,6 +231,7 @@
 
             <TextView
                 android:id="@+id/texttitle7sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle7"
@@ -227,6 +242,7 @@
 
             <TextView
                 android:id="@+id/texttitle8"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -239,6 +255,7 @@
 
             <TextView
                 android:id="@+id/texttitle8sub"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/texttitle8"

@@ -21,10 +21,10 @@
         android:id="@+id/closelessonplan"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="5dp"       
         android:layout_marginTop="8dp"
-        android:layout_toRightOf="@+id/textlesson"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
         android:background="@drawable/popup_close_button"
         android:gravity="center"
         android:orientation="horizontal" >
@@ -40,12 +40,12 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1.3dip"
+        android:layout_height="1.8dip"
         android:layout_below="@+id/textlesson"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="0dp"
         android:background="#FFFFFF" />
 
     <ScrollView
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="50dp" >
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -71,6 +71,7 @@
 
             <TextView
                 android:id="@+id/linktext1"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -82,6 +83,7 @@
 
             <TextView
                 android:id="@+id/text2"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                                
@@ -94,6 +96,7 @@
             
              <TextView
                 android:id="@+id/text3"
+                android:lineSpacingExtra="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"                              
                 android:layout_below="@+id/lessonplanimage"   

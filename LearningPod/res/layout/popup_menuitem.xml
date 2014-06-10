@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="416dp"
     android:layout_height="match_parent"
-    android:layout_marginTop="-300dp"
+    android:layout_marginTop="0dp"
      >
 
     <TextView
@@ -22,11 +22,11 @@
         android:id="@+id/closebutton3"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginLeft="299dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:layout_toRightOf="@+id/texthelp"
+        android:layout_alignParentRight="true"
         android:background="@drawable/popup_close_button"
         android:orientation="horizontal" >
 
@@ -43,7 +43,7 @@
         android:layout_width="fill_parent"
         android:layout_height="1dip"
         android:layout_below="@+id/texthelp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="#FFFFFF" />
